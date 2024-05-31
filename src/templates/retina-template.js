@@ -5,9 +5,9 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 import Layout from '../components/layout'
 
-class EyeCareTemplate extends React.Component {
+class RetinaTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulEyeCare')
+    const post = get(this.props, 'data.contentfulRetina')
     const document = JSON.parse(post.body.raw)
 
     const options = {
@@ -27,11 +27,11 @@ class EyeCareTemplate extends React.Component {
   }
 }
 
-export default EyeCareTemplate
+export default RetinaTemplate
 
 export const pageQuery = graphql`
-  query EyeCareById($id: String!) {
-    contentfulEyeCare(id: { eq: $id }) {
+  query RetinaById($id: String!) {
+    contentfulRetina(id: { eq: $id }) {
       heading
       body {
         raw
