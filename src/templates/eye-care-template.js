@@ -1,6 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -20,9 +20,7 @@ class EyeCareTemplate extends React.Component {
 export default EyeCareTemplate
 
 export const pageQuery = graphql`
-  query EyeCareById(
-    $id: String!
-  ) {
+  query EyeCareById($id: String!) {
     contentfulEyeCare(id: { eq: $id }) {
       heading
     }

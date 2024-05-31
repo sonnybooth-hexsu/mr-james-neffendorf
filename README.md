@@ -2,7 +2,7 @@
 
 Create a [Gatsby](http://gatsbyjs.com/) blog powered by [Contentful](https://www.contentful.com).
 
-![An article page of the starter blog](./screenshot.png "An article page of the starter blog")
+![An article page of the starter blog](./screenshot.png 'An article page of the starter blog')
 
 Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
@@ -32,7 +32,6 @@ Use Deploy Now to get started in [Gatsby Cloud](https://gatsbyjs.com/products/cl
 [<img src="https://www.gatsbyjs.com/deploynow.png" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/contentful/starter-gatsby-blog)
 
 If you use Deploy Now, Gatsby Cloud will run the `gatsby-provision` script on your behalf, if you choose, after you Quick Connected to your empty Contentful Space. That script will add the necessary content models and content to support this site.
-
 
 Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 

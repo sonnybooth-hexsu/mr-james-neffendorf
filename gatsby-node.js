@@ -6,18 +6,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const eyeCarePost = path.resolve('./src/templates/eye-care-template.js')
 
-  const result = await graphql(
-    `
-      {
-        allContentfulEyeCare {
-          nodes {
-            id
-            slug
-          }
+  const result = await graphql(`
+    {
+      allContentfulEyeCare {
+        nodes {
+          id
+          slug
         }
       }
-    `
-  )
+    }
+  `)
 
   if (result.errors) {
     reporter.panicOnBuild(
@@ -28,7 +26,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulEyeCare.nodes
-  
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
