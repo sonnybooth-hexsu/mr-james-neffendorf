@@ -1,11 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
 import jamesMain from '../assets/james-main.png'
-import jamesLeaning from '../assets/james-leaning.jpg'
 import jamesTreatment from '../assets/james-treatment.jpg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
-import quoteMark from '../assets/quote-mark.svg'
 import aao from '../assets/aao.svg'
 import beavrs from '../assets/beavrs.svg'
 import escrs from '../assets/escrs.svg'
@@ -15,11 +13,23 @@ import rocopth from '../assets/rocopth.svg'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import grade from '../assets/grade.svg'
+import { Helmet } from 'react-helmet'
+
+const Home = () => (
+  <div>
+    <Helmet>
+      <title>Your Page Title</title>
+      <meta name="description" content="Your page description" />
+      <link rel="stylesheet" href="https://use.typekit.net/nak2vhf.css" />
+    </Helmet>
+  </div>
+)
 
 class RootIndex extends React.Component {
   render() {
     return (
       <Layout>
+        <Home />
         <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%]">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">

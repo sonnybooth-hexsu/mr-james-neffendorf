@@ -1,19 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
 import jamesLeaning from '../assets/james-leaning.jpg'
-import eyeExam from '../assets/eye-exam.jpg'
-import eyeExam2 from '../assets/eye-exam-2.jpg'
-import eyeExam3 from '../assets/eye-exam-3.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
-import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
-import iconOutlineEyeball from '../assets/eyeball.svg'
-import iconOutlineCataract from '../assets/cataract.svg'
-import iconOutlineTear from '../assets/eye-tear.svg'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
-
 import grade from '../assets/grade.svg'
+import iconTrophy from '../assets/icon-trophy.svg'
 
 class About extends React.Component {
   render() {
@@ -25,7 +18,7 @@ class About extends React.Component {
             <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
                 <p className="mb-2 overlined">ABOUT</p>
-                <h1 className="mb-2 font-bold">Mr James Neffendorf </h1>
+                <h1 className="mb-2">Mr James Neffendorf </h1>
                 <p className="mb-4 text-sm font-bold text-black md:text-md md:mb-6">
                   MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                 </p>
@@ -51,12 +44,10 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-
+        {/* Intro to James */}
         <section class="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div class="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-            <h3 class="text-4xl font-bold leading-[1.2] md:text-5xl lg:text-6xl">
-              Leading Ophthalmologist and Vitreoretinal Surgeon
-            </h3>
+            <h2 class="">Leading Ophthalmologist and Vitreoretinal Surgeon</h2>
             <div>
               <p class="mb-5 md:mb-6 md:text-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -110,9 +101,7 @@ class About extends React.Component {
             <div className="grid items-center grid-cols-1 col-start-1 col-end-2 row-start-1 row-end-2 gap-x-4 gap-y-10">
               <div></div>
               <div className="pl-8 border-l-2 border-black cursor-pointer">
-                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Short heading goes here
-                </h3>
+                <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
@@ -121,9 +110,7 @@ class About extends React.Component {
                 </p>
               </div>
               <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Short heading goes here
-                </h3>
+                <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
@@ -132,9 +119,7 @@ class About extends React.Component {
                 </p>
               </div>
               <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                  Short heading goes here
-                </h3>
+                <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
@@ -158,78 +143,89 @@ class About extends React.Component {
         {/* Awards & Achievements */}
         <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-            <h3 className="font-bold leading-[1.2]">Awards & Achievements </h3>
+            <h2>Awards & Achievements </h2>
             <div>
-              <div className="grid grid-cols-1 gap-4 py-2">
-                <div className="flex self-start">
-                  <div className="self-start flex-none mr-4">
+              <div className="grid grid-cols-1 gap-6 py-2">
+                <div className="flex items-center">
+                  <div className="flex-none mr-4">
                     <img
-                      className="inline-block size-6"
-                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                      alt="Relume logo 1"
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover size-full"
                     />
                   </div>
-                  <p>
-                    <span className="font-bold"> 2023 </span> Excellence in
-                    Ophthalmic Research Medal
-                  </p>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    2023{' '}
+                    <span className="font-normal text-gray-500">
+                      Excellence in Ophthalmic Research Medal
+                    </span>
+                  </h3>
                 </div>
-                <div className="flex self-start">
-                  <div className="self-start flex-none mr-4">
+                <div className="flex items-center">
+                  <div className="flex-none mr-4">
                     <img
-                      className="inline-block size-6"
-                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                      alt="Relume logo 2"
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover size-full"
                     />
                   </div>
-                  <p>
-                    <span className="font-bold"> 2021 </span> AI in Medicine
-                    Honorary Distinction
-                  </p>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    2021{' '}
+                    <span className="font-normal text-gray-500">
+                      AI in Medicine Honorary Distinction
+                    </span>
+                  </h3>
                 </div>
-                <div className="flex self-start">
-                  <div className="self-start flex-none mr-4">
+                <div className="flex items-center">
+                  <div className="flex-none mr-4">
                     <img
-                      className="inline-block size-6"
-                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                      alt="Relume logo 3"
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover size-full"
                     />
                   </div>
-                  <p>
-                    <span className="font-bold"> 2019 </span> The Golden Lens
-                    Award
-                  </p>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    2019{' '}
+                    <span className="font-normal text-gray-500">
+                      The Golden Lens Award
+                    </span>
+                  </h3>
                 </div>
-                <div className="flex self-start">
-                  <div className="self-start flex-none mr-4">
+                <div className="flex items-center">
+                  <div className="flex-none mr-4">
                     <img
-                      className="inline-block size-6"
-                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                      alt="Relume logo 2"
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover size-full"
                     />
                   </div>
-                  <p>
-                    <span className="font-bold"> 2021 </span> AI in Medicine
-                    Honorary Distinction
-                  </p>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    2021{' '}
+                    <span className="font-normal text-gray-500">
+                      AI in Medicine Honorary Distinction
+                    </span>
+                  </h3>
                 </div>
-                <div className="flex self-start">
-                  <div className="self-start flex-none mr-4">
+                <div className="flex items-center">
+                  <div className="flex-none mr-4">
                     <img
-                      className="inline-block size-6"
-                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                      alt="Relume logo 2"
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover size-full"
                     />
                   </div>
-                  <p>
-                    <span className="font-bold"> 2021 </span> AI in Medicine
-                    Honorary Distinction
-                  </p>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    2021{' '}
+                    <span className="font-normal text-gray-500">
+                      AI in Medicine Honorary Distinction
+                    </span>
+                  </h3>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         {/* Quote */}
         <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container">
@@ -270,11 +266,10 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-
         {/* Education */}
         <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-            <h3 className="font-bold leading-[1.2]">Education </h3>
+            <h2 className="leading-[1.2]">Education </h2>
             <div>
               <div className="grid grid-cols-1 gap-4 py-2">
                 <div className="flex self-start">
@@ -359,9 +354,7 @@ class About extends React.Component {
             className="absolute -bottom-10 -left-10"
           />
           <div className="container text-center">
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Book a Consultation
-            </h2>
+            <h2 className="mb-5 md:mb-6 md:">Book a Consultation</h2>
             <p className="md:text-md">
               Book a consultation with Mr James Neffendorf for expert ophthalmic
               care and treatment.

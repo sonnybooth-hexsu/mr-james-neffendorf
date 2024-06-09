@@ -34,7 +34,6 @@ class RetinaTemplate extends React.Component {
           <div className="container">
             <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="overlined tag">TREATMENT</p>
                 <h1 className="mt-4 mb-4 font-bold">{post.heading}</h1>
 
                 <p className="mb-8 md:text-md">
@@ -58,12 +57,23 @@ class RetinaTemplate extends React.Component {
                   </div>
                 </div>
               </div>
-              <div>
+              <div className="">
                 <img
                   src={retinaHeader}
-                  className="object-cover w-full"
+                  className="relative object-cover w-full "
                   alt="Placeholder image"
                 />
+                <div className="absolute bottom-0 flex p-4 bg-white shadow-xl -right-5">
+                  <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
+                    Excellent
+                  </p>
+                  <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
+                  <img
+                    src={doctifyLogo}
+                    className="ml-2 max-h-12"
+                    alt="Placeholder image"
+                  />
+                </div>
               </div>
             </div>
           </div>
