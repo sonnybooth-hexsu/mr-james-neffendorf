@@ -13,6 +13,8 @@ import escrs from '../assets/escrs.svg'
 import eurina from '../assets/eurina.svg'
 import pembroke from '../assets/pembroke.svg'
 import rocopth from '../assets/rocopth.svg'
+import topRightSvg from '../assets/top-right.svg'
+import bottomLeftSvg from '../assets/bottom-left.svg'
 
 class RootIndex extends React.Component {
   render() {
@@ -210,7 +212,6 @@ class RootIndex extends React.Component {
             </div>
           </div>
         </section>
-
         {/* Professional affiliations Large */}
         <section className="hidden px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white lg:block md:py-16 lg:py-16">
           <div className="container mx-auto">
@@ -595,10 +596,22 @@ class RootIndex extends React.Component {
             </div>
           </div>
         </section>
-
-        <section className="px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40">
-          <div className="container max-w-lg text-center">
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl"></h2>
+        {/* Call To Action */}
+        <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden">
+          <img
+            src={topRightSvg}
+            alt="Top right background decoration"
+            className="absolute -top-20 -right-20"
+          />
+          <img
+            src={bottomLeftSvg}
+            alt="Bottom left background decoration"
+            className="absolute -bottom-10 -left-10"
+          />
+          <div className="container text-center">
+            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              Book a Consultation
+            </h2>
             <p className="md:text-md">
               Book a consultation with Mr James Neffendorf for expert ophthalmic
               care and treatment.
@@ -643,7 +656,7 @@ class RootIndex extends React.Component {
               <img
                 src={doctifyLogo}
                 className="ml-2 mr-2 max-h-12"
-                alt="Placeholder image"
+                alt="Doctify logo"
               />
               <p className="mr-2">4.94 out of 5</p>
             </div>
