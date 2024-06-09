@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
     return (
       <Layout>
         <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%] md:pt-24 lg:pt-28">
-          <div className="container mx-auto px-[8%] lg:px-[5%]">
+          <div className="container mx-auto px-[5%]">
             <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
                 <div className="flex">
@@ -136,120 +136,120 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Professional affiliations Small */}
+        <section className="py-12 px-[8%] lg:px-[5%] md:px-[10%] overflow-hidden bg-gray-50 lg:hidden md:py-16 lg:py-16">
+  <div className="container mx-auto">
+    <div className="w-full max-w-lg mx-auto mb-8 md:mb-10 lg:mb-12 lg:max-w-full lg:flex lg:justify-between">
+      <h1 className="text-center text-base font-bold leading-[1.2] md:text-md md:leading-[1.2] lg:text-left">
+        Professional affiliations
+      </h1>
+    </div>
+    <div className="flex items-center pt-[28px] md:pt-0 lg:justify-end">
+      <div className="flex items-center space-x-6 shrink-0 animate-loop-horizontally lg:overflow-hidden md:space-x-8">
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={rocopth}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={aao}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={eurina}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={escrs}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={pembroke}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={beavrs}
+          alt="Checkmark"
+        />
+      </div>
+      <div className="flex items-center space-x-4 shrink-0 animate-loop-horizontally lg:overflow-hidden lg:space-x-10">
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={rocopth}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={aao}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={eurina}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={escrs}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={pembroke}
+          alt="Checkmark"
+        />
+        <img
+          className="max-h-6 md:max-h-8 lg:max-h-12"
+          src={beavrs}
+          alt="Checkmark"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section className="py-12 px-[8%] lg:px-[5%] md-[10%] overflow-hidden bg-gray-50 lg:hidden md:py-16 lg:py-16">
-        <div className="container mx-auto">
-            <div className="w-full max-w-lg mx-auto mb-8 md:mb-10 lg:mb-12 lg:max-w-full lg:flex lg:justify-between">
-              <h1 className="text-center text-base font-bold leading-[1.2] md:text-md md:leading-[1.2] lg:text-left">
-                Professional affiliations
-              </h1>
-            </div>
-            <div className="flex items-center pt-[28px] md:pt-0 lg:justify-end">
-              <div className="flex items-center shrink-0 animate-loop-horizontally lg:overflow-hidden lg:space-x-6">
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={rocopth}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={aao}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={eurina}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={escrs}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={pembroke}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={beavrs}
-                  alt="Checkmark"
-                />
-              </div>
-              <div className="flex items-center shrink-0 animate-loop-horizontally lg:overflow-hidden lg:space-x-6">
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={rocopth}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={aao}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={eurina}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={escrs}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={pembroke}
-                  alt="Checkmark"
-                />
-                <img
-                  className="mx-0 max-h-12 shrink-0 md:mx-0 md:max-h-14 lg:mx-0"
-                  src={beavrs}
-                  alt="Checkmark"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Professional affiliations Large */}
-        <section className="hidden py-12 overflow-hidden bg-gray-50 lg:block md:py-16 lg:py-16">
-          <div className="container px-[5%] md:px-[10%] lg:px-[5%]">
+        <section className="hidden px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white lg:block md:py-16 lg:py-16">
+        <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
               <div className="w-full mb-8 lg:w-auto lg:mb-0">
                 <h1 className="text-center lg:text-left text-base font-bold leading-[1.2] md:text-md md:leading-[1.2]">
                   Professional affiliations
                 </h1>
               </div>
-              <div className="flex flex-wrap items-center justify-center space-x-6 lg:justify-end">
+              <div className="flex flex-wrap items-center justify-center space-x-6 xl:space-x-6 lg:justify-end">
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={rocopth}
                   alt="Checkmark"
                 />
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={aao}
                   alt="Checkmark"
                 />
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={eurina}
                   alt="Checkmark"
                 />
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={escrs}
                   alt="Checkmark"
                 />
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={pembroke}
                   alt="Checkmark"
                 />
                 <img
-                  className="max-h-12 md:max-h-14"
+                  className="lg:max-h-8 xl:max-h-10"
                   src={beavrs}
                   alt="Checkmark"
                 />
