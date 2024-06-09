@@ -1,174 +1,116 @@
 import React from 'react'
 import Layout from '../components/layout'
 import jamesLeaning from '../assets/james-leaning.jpg'
+import eyeExam from '../assets/eye-exam.jpg'
+import eyeExam2 from '../assets/eye-exam-2.jpg'
+import eyeExam3 from '../assets/eye-exam-3.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
+import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
+import iconOutlineEyeball from '../assets/eyeball.svg'
+import iconOutlineCataract from '../assets/cataract.svg'
+import iconOutlineTear from '../assets/eye-tear.svg'
+import topRightSvg from '../assets/top-right.svg'
+import bottomLeftSvg from '../assets/bottom-left.svg'
+
+import grade from '../assets/grade.svg'
 
 class About extends React.Component {
   render() {
     return (
       <Layout>
         {/* Hero */}
-        <section className="px-[5%] bg-white pt-16 md:pt-24 lg:pt-28">
-          <div className="container">
-            <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+        <section class="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
+          <div class="container">
+            <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
                 <p className="mb-2 overlined">ABOUT</p>
                 <h1 className="mb-2 font-bold">Mr James Neffendorf </h1>
                 <p className="mb-4 text-sm font-bold text-black md:text-md md:mb-6">
                   MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                 </p>
-                <p className="md:text-md">
+                <p class="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
+                <div class="mt-6 flex gap-x-4 md:mt-8">
+                  <button className="inline-flex text-sm items-center mt-4 justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                    Book an appointment
+                  </button>
+                </div>
               </div>
               <div>
                 <img
                   src={jamesLeaning}
-                  className="object-cover w-full"
+                  class="w-full object-cover"
                   alt="Placeholder image"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Benefits */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28">
-          <div className="container grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="flex items-start rounded-lg">
-              <div className="mr-4">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM17.65 9.2L11 16.6L7.35 13.1L8.4 11.8L11 14.3L16.6 8.8L17.65 9.2Z"
-                    fill="#0073E6"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h2 className="mb-2 text-xl font-bold md:text-2xl">
-                  Vitreoretinal Surgery Specialist
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Eu felis quis nibh
-                  ultrices diam rutrum leo.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start rounded-lg">
-              <div className="mr-4">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM17.65 9.2L11 16.6L7.35 13.1L8.4 11.8L11 14.3L16.6 8.8L17.65 9.2Z"
-                    fill="#0073E6"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                  Pioneering Ocular Research
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Eu felis quis nibh
-                  ultrices diam rutrum leo.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start rounded-lg">
-              <div className="mr-4">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM17.65 9.2L11 16.6L7.35 13.1L8.4 11.8L11 14.3L16.6 8.8L17.65 9.2Z"
-                    fill="#0073E6"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h3 className="mb-2 text-xl font-bold md:text-2xl">
-                  Integrating AI with Eye Care
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Eu felis quis nibh
-                  ultrices diam rutrum leo.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* About */}
-        <section className="px-[5%] bg-white pb-16 md:pb-24 lg:pb-28">
-          <div className="container">
-            <div className="grid items-start grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-              <div>
-                <h2 className="mb-5 font-bold md:mb-6">
-                  Leading Ophthalmologist and Vitreoretinal Surgeon{' '}
-                </h2>
-                <div className="prose">
+        <section class="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          <div class="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+            <h3 class="text-4xl font-bold leading-[1.2] md:text-5xl lg:text-6xl">
+              Leading Ophthalmologist and Vitreoretinal Surgeon
+            </h3>
+            <div>
+              <p class="mb-5 md:mb-6 md:text-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </p>
+              <div class="grid grid-cols-1 gap-4 py-2">
+                <div class="flex self-start">
+                  <div class="mr-4 flex-none self-start">
+                    <img
+                      class="inline-block size-6"
+                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
+                      alt="Relume logo 1"
+                    />
+                  </div>
                   <p>
-                    Morbi sed imperdiet in ipsum, adipiscing elit dui lectus.
-                    Tellus id scelerisque est ultricies ultricies. Duis est sit
-                    sed leo nisl, blandit elit sagittis. Quisque tristique
-                    consequat quam sed. Nisl at scelerisque amet nulla purus
-                    habitasse.
-                  </p>
-                  <p>
-                    Nunc sed faucibus bibendum feugiat sed interdum. Ipsum
-                    egestas condimentum mi massa. In tincidunt pharetra
-                    consectetur sed duis facilisis metus. Etiam egestas in nec
-                    sed et. Quis lobortis at sit dictum eget nibh tortor commodo
-                    cursus.
-                  </p>
-                  <p>
-                    Odio felis sagittis, morbi feugiat tortor vitae feugiat
-                    fusce aliquet. Nam elementum urna nisi aliquet erat dolor
-                    enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut
-                    id eget consectetur dictum. Donec posuere pharetra odio
-                    consequat scelerisque et, nunc tortor. Nulla adipiscing erat
-                    a erat. Condimentum lorem posuere gravida enim posuere
-                    cursus diam.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-              </div>
-              <div>
-                <img
-                  src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                  className="object-cover w-full"
-                  alt="Placeholder image"
-                />
+                <div class="flex self-start">
+                  <div class="mr-4 flex-none self-start">
+                    <img
+                      class="inline-block size-6"
+                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
+                      alt="Relume logo 2"
+                    />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div class="flex self-start">
+                  <div class="mr-4 flex-none self-start">
+                    <img
+                      class="inline-block size-6"
+                      src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
+                      alt="Relume logo 3"
+                    />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section
-          className="px-[5%] bg-white
-         py-16 md:py-24 lg:py-28"
-        >
-          {/* Specialities */}
-          <div className="container grid items-center grid-cols-1 bg-white gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-            <div className="grid grid-cols-1 gap-y-10">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          <div className="container grid items-center grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
+            <div className="grid items-center grid-cols-1 col-start-1 col-end-2 row-start-1 row-end-2 gap-x-4 gap-y-10">
+              <div></div>
               <div className="pl-8 border-l-2 border-black cursor-pointer">
-                <h3 className="mb-3 font-bold md:mb-4 md:leading-[1.3]">
+                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
                   Short heading goes here
                 </h3>
                 <p>
@@ -179,7 +121,7 @@ class About extends React.Component {
                 </p>
               </div>
               <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                <h3 className="mb-3 font-bold md:mb-4 md:leading-[1.3]">
+                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
                   Short heading goes here
                 </h3>
                 <p>
@@ -190,7 +132,7 @@ class About extends React.Component {
                 </p>
               </div>
               <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                <h3 className="mb-3 font-bold md:mb-4 md:leading-[1.3] ">
+                <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
                   Short heading goes here
                 </h3>
                 <p>
@@ -206,14 +148,15 @@ class About extends React.Component {
                 <img
                   src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
                   alt="Placeholder image 1"
-                  className="object-cover w-full h-full"
+                  className="object-cover size-full"
                 />
               </div>
             </div>
           </div>
         </section>
+
         {/* Awards & Achievements */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28">
+        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h3 className="font-bold leading-[1.2]">Awards & Achievements </h3>
             <div>
@@ -288,9 +231,16 @@ class About extends React.Component {
           </div>
         </section>
         {/* Quote */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28">
+        <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container">
             <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+              <div>
+                <img
+                  src={jamesLeaning}
+                  className="object-cover w-full"
+                  alt="Placeholder image"
+                />
+              </div>
               <div>
                 <img
                   className="m-2 mb-5 max-h-6 shrink-0"
@@ -317,18 +267,12 @@ class About extends React.Component {
                   alt="Placeholder image"
                 />
               </div>
-              <div>
-                <img
-                  src={jamesLeaning}
-                  className="object-cover w-full"
-                  alt="Placeholder image"
-                />
-              </div>
             </div>
           </div>
         </section>
+
         {/* Education */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28">
+        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h3 className="font-bold leading-[1.2]">Education </h3>
             <div>
@@ -402,22 +346,69 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-        <section className="px-[5%] py-16 md:py-24 lg:py-28">
-          <div className="container max-w-lg text-center">
-            <h2 className="mb-5 font-bold md:mb-6">
-              Medium length heading goes here
+        {/* Call To Action */}
+        <section className="relative px-[8%] bg-gray-50 md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
+          <img
+            src={topRightSvg}
+            alt="Top right background decoration"
+            className="absolute -top-20 -right-20"
+          />
+          <img
+            src={bottomLeftSvg}
+            alt="Bottom left background decoration"
+            className="absolute -bottom-10 -left-10"
+          />
+          <div className="container text-center">
+            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              Book a Consultation
             </h2>
             <p className="md:text-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+              Book a consultation with Mr James Neffendorf for expert ophthalmic
+              care and treatment.
             </p>
-            <div className="flex items-center justify-center gap-4 mt-6 md:mt-8">
-              <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary bg-background-alternative text-text-alternative">
-                Button
+            <div className="flex flex-col items-center justify-center gap-4 mt-6 lg:flex-row md:mt-8">
+              <button className="items-center justify-center w-full gap-3 px-8 py-4 font-medium transition-colors border rounded-full lg:w-auto lg:inline-flex focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative">
+                Book an appointment
               </button>
-              <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">
-                Button
+              <button className="items-center justify-center w-full gap-3 px-8 py-4 font-medium transition-colors border border-gray-300 rounded-full lg:w-auto lg:inline-flex focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                About Mr Neffendorf
               </button>
+            </div>
+
+            <div className="flex flex-row items-center justify-center mt-8">
+              <p className="mr-2 font-bold text-gray-900">Excellent</p>
+
+              <img
+                className="inline-block size-6"
+                src={grade}
+                alt="Checkmark"
+              />
+              <img
+                className="inline-block size-6"
+                src={grade}
+                alt="Checkmark"
+              />
+              <img
+                className="inline-block size-6"
+                src={grade}
+                alt="Checkmark"
+              />
+              <img
+                className="inline-block size-6"
+                src={grade}
+                alt="Checkmark"
+              />
+              <img
+                className="inline-block size-6"
+                src={grade}
+                alt="Checkmark"
+              />
+              <img
+                src={doctifyLogo}
+                className="ml-2 mr-2 max-h-12"
+                alt="Doctify logo"
+              />
+              <p className="mr-2">4.94 out of 5</p>
             </div>
           </div>
         </section>

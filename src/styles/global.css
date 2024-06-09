@@ -221,4 +221,10 @@ h1 {
     color: #6b7280; /* Tailwind gray-500 */
   }
   
-  
+  .tag {
+    @apply inline;
+    @apply px-4;
+    @apply py-2;
+    @apply bg-jamesLight;
+    @apply text-jamesBlue;
+  }

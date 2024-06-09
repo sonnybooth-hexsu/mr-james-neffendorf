@@ -5,7 +5,6 @@ import jamesLeaning from '../assets/james-leaning.jpg'
 import jamesTreatment from '../assets/james-treatment.jpg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
-import grade from '../assets/grade.svg'
 import quoteMark from '../assets/quote-mark.svg'
 import aao from '../assets/aao.svg'
 import beavrs from '../assets/beavrs.svg'
@@ -15,12 +14,13 @@ import pembroke from '../assets/pembroke.svg'
 import rocopth from '../assets/rocopth.svg'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
+import grade from '../assets/grade.svg'
 
 class RootIndex extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%] md:pt-24 lg:pt-28">
+        <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%]">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
@@ -256,6 +256,7 @@ class RootIndex extends React.Component {
             </div>
           </div>
         </section>
+        {/* Benefits */}
         <section className="px-[8%] md:px-[10%] lg:px-[5%] bg-white py-16 md:py-28 lg:py-32 xl:py-40">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h2 className="font-bold leading-[1.2]">
@@ -448,46 +449,7 @@ class RootIndex extends React.Component {
             </div>
           </div>
         </header>
-        {/* Quote */}
-        <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28">
-          <div className="container">
-            <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-              <div>
-                <img
-                  className="m-2 mb-5 max-h-6 shrink-0"
-                  src={quoteMark}
-                  alt="Quotation Mark Icon"
-                />
-                <blockquote className="mb-5 text-2xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse in eros elementum tristique.
-                </blockquote>
-                <p className="text-xl font-bold text-black">
-                  Mr James Neffendorf
-                </p>
-                <p>MA (Cantab) MBBS (Lond) MD (Res) FRCOphth</p>
-              </div>
-              <div className="absolute flex p-4 bg-white shadow-xl bottom-4 right-4">
-                <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
-                  Excellent
-                </p>
-                <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
-                <img
-                  src={doctifyLogo}
-                  className="ml-2 max-h-12"
-                  alt="Placeholder image"
-                />
-              </div>
-              <div>
-                <img
-                  src={jamesLeaning}
-                  className="object-cover w-full"
-                  alt="Placeholder image"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+
         {/* Testimonials */}
         <section className="bg-white px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28">
           <div className="container mx-auto">

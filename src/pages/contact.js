@@ -1,36 +1,26 @@
 import React from 'react'
 import Layout from '../components/layout'
+import londonClinic from '../assets/london-clinic.jpg'
 
 class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="px-[5%] py-16 md:py-24 lg:py-28">
-          <div className="container">
-            <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+        {/* Hero */}
+        <section class="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
+          <div class="container">
+            <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <h1 className="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
-                  Medium length hero heading goes here
-                </h1>
-                <p className="md:text-md">
+                <h1 className="mb-2 font-bold">Contact Mr Neffendorf</h1>
+                <p class="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat.
+                  Suspendisse varius enim in eros elementum tristique.
                 </p>
-                <div className="mt-6 flex gap-x-4 md:mt-8">
-                  <button className="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3">
-                    Button
-                  </button>
-                  <button className="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary px-6 py-3">
-                    Button
-                  </button>
-                </div>
               </div>
               <div>
                 <img
-                  src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                  className="w-full object-cover"
+                  src={londonClinic}
+                  class="w-full object-cover"
                   alt="Placeholder image"
                 />
               </div>
@@ -38,12 +28,11 @@ class Contact extends React.Component {
           </div>
         </section>
         <section className="px-[5%] py-16 md:py-24 lg:py-28">
-          <div className="container grid grid-cols-1 items-start gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16">
+          <div className="container grid items-start grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16">
             <div>
-              <p className="mb-3 font-semibold md:mb-4">Tagline</p>
               <div className="mb-6 md:mb-8">
                 <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                  Contact us
+                  Leave a message
                 </h2>
                 <p className="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -56,7 +45,7 @@ class Contact extends React.Component {
                     fill="currentColor"
                     strokeWidth="0"
                     viewBox="0 0 24 24"
-                    className="size-6 flex-none"
+                    className="flex-none size-6"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +60,7 @@ class Contact extends React.Component {
                     fill="currentColor"
                     strokeWidth="0"
                     viewBox="0 0 24 24"
-                    className="size-6 flex-none"
+                    className="flex-none size-6"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +75,7 @@ class Contact extends React.Component {
                     fill="currentColor"
                     strokeWidth="0"
                     viewBox="0 0 24 24"
-                    className="size-6 flex-none"
+                    className="flex-none size-6"
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,40 +85,41 @@ class Contact extends React.Component {
                   </svg>
                   <p>123 Sample St, Sydney NSW 2000 AU</p>
                 </div>
+                <h5 className="font-bold">Fees Information</h5>
               </div>
             </div>
             <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-6">
-              <div className="grid w-full items-center">
+              <div className="grid items-center w-full">
                 <label
-                  className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2"
+                  className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   htmlFor="name"
                 >
                   Name
                 </label>
                 <input
                   type="text"
-                  className="flex size-full min-h-11 border border-border-primary bg-background-primary px-3 py-2 align-middle file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex px-3 py-2 align-middle border size-full min-h-11 border-border-primary bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   id="name"
                   value=""
                 />
               </div>
-              <div className="grid w-full items-center">
+              <div className="grid items-center w-full">
                 <label
-                  className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2"
+                  className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   htmlFor="email"
                 >
                   Email
                 </label>
                 <input
                   type="email"
-                  className="flex size-full min-h-11 border border-border-primary bg-background-primary px-3 py-2 align-middle file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex px-3 py-2 align-middle border size-full min-h-11 border-border-primary bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   id="email"
                   value=""
                 />
               </div>
-              <div className="grid w-full items-center">
+              <div className="grid items-center w-full">
                 <label
-                  className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2"
+                  className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   htmlFor="message"
                 >
                   Message
@@ -140,7 +130,7 @@ class Contact extends React.Component {
                   placeholder="Type your message..."
                 ></textarea>
               </div>
-              <div className="mb-3 flex items-center space-x-2 text-sm md:mb-4">
+              <div className="flex items-center mb-3 space-x-2 text-sm md:mb-4">
                 <button
                   type="button"
                   role="checkbox"
@@ -157,12 +147,12 @@ class Contact extends React.Component {
                   value="on"
                 />
                 <label
-                  className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                  className="cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   htmlFor="terms"
                 >
                   I accept the
                   <a
-                    className="text-link-primary underline focus-visible:outline-none"
+                    className="underline text-link-primary focus-visible:outline-none"
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -172,7 +162,7 @@ class Contact extends React.Component {
                 </label>
               </div>
               <div>
-                <button className="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary bg-background-alternative text-text-alternative px-6 py-3">
+                <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary bg-background-alternative text-text-alternative">
                   Submit
                 </button>
               </div>
@@ -193,11 +183,11 @@ class Contact extends React.Component {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <button className="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary px-6 py-3">
+                <div className="flex items-center mt-6 gap-x-4 md:mt-8">
+                  <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">
                     Button
                   </button>
-                  <button className="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0">
+                  <button className="inline-flex items-center justify-center gap-2 p-0 transition-colors border-0 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                     Button
                     <svg
                       stroke="currentColor"
@@ -222,7 +212,7 @@ class Contact extends React.Component {
               <div>
                 <img
                   src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                  className="w-full object-cover"
+                  className="object-cover w-full"
                   alt="Placeholder image"
                 />
               </div>
@@ -243,11 +233,11 @@ class Contact extends React.Component {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <button className="focus-visible:ring-border-primary inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-border-primary text-text-primary px-6 py-3">
+                <div className="flex items-center mt-6 gap-x-4 md:mt-8">
+                  <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">
                     Button
                   </button>
-                  <button className="focus-visible:ring-border-primary inline-flex items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-0 text-text-primary gap-2 p-0">
+                  <button className="inline-flex items-center justify-center gap-2 p-0 transition-colors border-0 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                     Button
                     <svg
                       stroke="currentColor"
@@ -272,7 +262,7 @@ class Contact extends React.Component {
               <div>
                 <img
                   src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                  className="w-full object-cover"
+                  className="object-cover w-full"
                   alt="Placeholder image"
                 />
               </div>
