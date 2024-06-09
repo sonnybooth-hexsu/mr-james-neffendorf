@@ -71,7 +71,7 @@ export const Navigation = () => {
           </button>
         </div>
         <div
-          className={`overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${menuOpen ? 'block' : 'hidden'} lg:block`}
+          className={`overflow-hidden px-[5%] text-gray-600 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${menuOpen ? 'block' : 'hidden'} lg:block`}
         >
           <div className="font-bold first:pt-4 lg:first:pt-0">
             <a href="/" className={getLinkClass('/')}>

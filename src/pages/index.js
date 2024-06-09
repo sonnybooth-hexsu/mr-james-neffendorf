@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
     return (
       <Layout>
         <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%] md:pt-24 lg:pt-28">
-          <div className="container mx-auto px-[5%]">
+          <div className="container mx-auto">
             <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
                 <div className="flex">
