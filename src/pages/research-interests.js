@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Publications from '../components/publications'
+import doctifyLogo from '../assets/doctify-logo.svg'
 
 class ResearchInterests extends React.Component {
   render() {
@@ -50,7 +51,7 @@ class ResearchInterests extends React.Component {
             <div className="md:col-span-4 lg:col-span-2">
               <div className="flex gap-4 mb-4 lg:hidden">
                 <button
-                  className="flex items-center justify-center w-1/2 gap-2 px-4 py-2 text-gray-600 border border-gray-300 rounded"
+                  className="flex items-center justify-center w-1/2 gap-2 px-4 py-2 text-gray-500 border border-gray-300 rounded"
                   onclick="toggleFilters()"
                 >
                   <svg
@@ -107,7 +108,7 @@ class ResearchInterests extends React.Component {
             </div>
             <div className="md:col-span-4 lg:col-span-8">
               <div className="pb-4 mb-8 border-b">
-                <p className="font-semibold text-gray-600">Feb 2023</p>
+                <p className="font-semibold text-gray-500">Feb 2023</p>
                 <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
                   Effect of intravitreal anti-vascular endothelial growth factor
                   treatment for neovascular age-related macular degeneration on
@@ -130,7 +131,7 @@ class ResearchInterests extends React.Component {
                 </button>
               </div>
               <div className="pb-4 mb-8 border-b">
-                <p className="font-semibold text-gray-600">
+                <p className="font-semibold text-gray-500">
                   Feb 2023 <span className="text-yellow-500">🏆 Award won</span>
                 </p>
                 <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
@@ -154,7 +155,7 @@ class ResearchInterests extends React.Component {
                 </button>
               </div>
               <div className="pb-4 mb-8 border-b">
-                <p className="font-semibold text-gray-600">Sep 2022</p>
+                <p className="font-semibold text-gray-500">Sep 2022</p>
                 <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
                   The effect of intravitreal anti-vascular endothelial growth
                   factor treatment for neovascular age-related macular

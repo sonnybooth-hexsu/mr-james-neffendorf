@@ -209,4 +209,16 @@ h1 {
   p {
     @apply text-gray-500;
   }
+
+  .custom-ul {
+    list-style-type: disc;
+    padding-left: 1.5em; /* Adjust as needed */
+    color: #6b7280; /* Tailwind gray-500 */
+  }
+  
+  .custom-li {
+    list-style-position: inside;
+    color: #6b7280; /* Tailwind gray-500 */
+  }
+  
   
