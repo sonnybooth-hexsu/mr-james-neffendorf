@@ -1,29 +1,29 @@
-import React from 'react';
-import Layout from '../components/layout';
-import londonClinic from '../assets/london-clinic.jpg';
-import '../styles/global.css'; // Ensure this path is correct
+import React from 'react'
+import Layout from '../components/layout'
+import londonClinic from '../assets/london-clinic.jpg'
+import '../styles/global.css' // Ensure this path is correct
 
 class Contact extends React.Component {
   componentDidMount() {
-    this.handleScroll();
-    window.addEventListener('scroll', this.handleScroll);
+    this.handleScroll()
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   handleScroll = () => {
-    const elements = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll('.fade-in')
     elements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
+      const rect = el.getBoundingClientRect()
       if (rect.top <= window.innerHeight - 100) {
-        el.classList.add('visible');
+        el.classList.add('visible')
       } else {
-        el.classList.remove('visible');
+        el.classList.remove('visible')
       }
-    });
-  };
+    })
+  }
 
   render() {
     return (
@@ -203,8 +203,8 @@ class Contact extends React.Component {
                   <p className="md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
                   </p>
                   <div className="flex items-center mt-6 gap-x-4 md:mt-8">
                     <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">
@@ -253,8 +253,8 @@ class Contact extends React.Component {
                   <p className="md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                    commodo diam libero vitae erat.
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
                   </p>
                 </div>
                 <div>
@@ -269,8 +269,8 @@ class Contact extends React.Component {
           </section>
         </div>
       </Layout>
-    );
+    )
   }
 }
 
-export default Contact;
+export default Contact
