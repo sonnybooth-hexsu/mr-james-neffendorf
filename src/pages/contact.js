@@ -3,16 +3,37 @@ import Layout from '../components/layout'
 import londonClinic from '../assets/london-clinic.jpg'
 
 class Contact extends React.Component {
+  componentDidMount() {
+    this.handleScroll()
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const elements = document.querySelectorAll('.fade-in')
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= window.innerHeight - 100) {
+        el.classList.add('visible')
+      } else {
+        el.classList.remove('visible')
+      }
+    })
+  }
+
   render() {
     return (
       <Layout>
         {/* Hero */}
-        <section class="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
-          <div class="container">
-            <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+        <section className="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
+          <div className="container">
+            <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
                 <h1 className="mb-2 font-bold">Contact Mr Neffendorf</h1>
-                <p class="md:text-md">
+                <p className="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique.
                 </p>
@@ -20,7 +41,7 @@ class Contact extends React.Component {
               <div>
                 <img
                   src={londonClinic}
-                  class="w-full object-cover"
+                  className="object-cover w-full"
                   alt="Placeholder image"
                 />
               </div>

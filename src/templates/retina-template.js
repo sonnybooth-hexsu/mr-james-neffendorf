@@ -30,7 +30,7 @@ class RetinaTemplate extends React.Component {
           }}
         />
         {/* Main Content */}
-        <section className="px-[5%] bg-white border-b py-16 md:py-24 lg:py-28">
+        <section className="px-[5%]  border-b py-16 md:py-24 lg:py-28">
           <div className="container">
             <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>

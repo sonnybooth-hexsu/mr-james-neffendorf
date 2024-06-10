@@ -4,10 +4,31 @@ import Publications from '../components/publications'
 import doctifyLogo from '../assets/doctify-logo.svg'
 
 class ResearchInterests extends React.Component {
+  componentDidMount() {
+    this.handleScroll()
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const elements = document.querySelectorAll('.fade-in')
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= window.innerHeight - 100) {
+        el.classList.add('visible')
+      } else {
+        el.classList.remove('visible')
+      }
+    })
+  }
+
   render() {
     return (
       <Layout>
-        <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b border-t header-gradient">
+        <header className="relative px-[5%]  py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in">
           <div
             className="absolute inset-0 bg-center bg-cover opacity-10"
             style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
@@ -46,13 +67,13 @@ class ResearchInterests extends React.Component {
           </div>
         </header>
 
-        <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16">
+        <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16 fade-in">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-12">
             <div className="md:col-span-4 lg:col-span-2">
               <div className="flex gap-4 mb-4 lg:hidden">
                 <button
                   className="flex items-center justify-center w-1/2 gap-2 px-4 py-2 text-gray-500 border border-gray-300 rounded"
-                  onclick="toggleFilters()"
+                  onClick="toggleFilters()"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +127,7 @@ class ResearchInterests extends React.Component {
                 </ul>
               </div>
             </div>
-            <div className="md:col-span-4 lg:col-span-8">
+            <div className="md:col-span-4 lg:col-span-8 fade-in">
               <div className="pb-4 mb-8 border-b">
                 <p className="font-semibold text-gray-500">Feb 2023</p>
                 <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
@@ -126,7 +147,7 @@ class ResearchInterests extends React.Component {
                   Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                   Co-Contributor, Co-Contributor
                 </p>
-                <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded">
+                <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded btn btn-primary">
                   View
                 </button>
               </div>
@@ -150,7 +171,7 @@ class ResearchInterests extends React.Component {
                   Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                   Co-Contributor, Co-Contributor
                 </p>
-                <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded">
+                <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded btn btn-primary">
                   View
                 </button>
               </div>
@@ -173,17 +194,17 @@ class ResearchInterests extends React.Component {
                   Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                   Co-Contributor, Co-Contributor
                 </p>
-                <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded">
+                <button className="py-2 mt-4 text-white bg-blue-600 rounded btn btn-secondary npx-4">
                   View
                 </button>
               </div>
             </div>
-            <div className="hidden lg:block lg:col-span-2"></div>
+            <div className="hidden lg:block lg:col-span-2 fade-in"></div>
           </div>
         </div>
 
         <Publications />
-        <section className="px-[5%] py-16 md:py-24 lg:py-28">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container max-w-lg text-center">
             <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
               Medium length heading goes here
@@ -193,7 +214,7 @@ class ResearchInterests extends React.Component {
               Suspendisse varius enim in eros elementum tristique.
             </p>
             <div className="flex items-center justify-center gap-4 mt-6 md:mt-8">
-              <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary bg-background-alternative text-text-alternative">
+              <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border btn btn-primary focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary bg-background-alternative text-text-alternative">
                 Button
               </button>
               <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">

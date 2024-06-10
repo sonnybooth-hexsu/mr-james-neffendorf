@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLocation } from '@reach/router'
 import logo from '../assets/logo.png'
+import '../styles/global.css' // Ensure this path is correct
 
 export const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,7 +11,7 @@ export const Navigation = () => {
   const dropdownRefs = useRef([])
 
   useEffect(() => {
-    console.log('Current pathname:', location.pathname) // Debugging line
+    console.log('Current pathname:', location.pathname)
   }, [location.pathname])
 
   const linkData = useStaticQuery(graphql`
@@ -41,7 +42,11 @@ export const Navigation = () => {
   }
 
   const getLinkClass = (path) =>
-    `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 lg:py-4 lg:text-base ${location.pathname === path ? 'text-jamesBlue border-b-4 border-jamesBlue' : 'hover:text-jamesBlue'}`
+    `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-3 lg:py-10 lg:text-base ${
+      location.pathname === path
+        ? 'text-gray-900 no-border-mobile'
+        : 'hover:text-jamesBlue'
+    }`
 
   const handleClickOutside = (event) => {
     if (dropdownRefs.current) {
@@ -61,35 +66,37 @@ export const Navigation = () => {
   }, [])
 
   return (
-    <nav className="flex border-b z-50 w-full items-center bg-white lg:min-h-18 lg:px-[5%]">
+    <nav className="flex fixed bg-jamesWhite border-b z-50 w-full items-center lg:min-h-28 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
-        <div className="flex min-h-16 items-center justify-between px-[8%] md:min-h-20 lg:min-h-full lg:px-0">
-          <img src={logo} alt="Logo image" className="h-10" />
+        <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-20 lg:min-h-full lg:px-0">
+          <img src={logo} alt="Logo image" className="h-8 lg:h-14" />
           <button
-            className="flex flex-col items-center justify-center -mr-2 size-12 lg:hidden"
+            className={`menu-icon ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <div className="my-[3px] h-0.5 w-6 bg-black"></div>
-            <div className="my-[3px] h-0.5 w-6 bg-black"></div>
-            <div className="my-[3px] h-0.5 w-6 bg-black"></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </button>
         </div>
         <div
-          className={`overflow-hidden px-[5%] text-gray-500 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${menuOpen ? 'block' : 'hidden'} lg:block`}
+          className={`mobile-nav overflow-hidden px-[5%] text-gray-500 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${
+            menuOpen ? 'block' : 'hidden'
+          } lg:block`}
         >
-          <div className="font-medium tracking-wider uppercase first:pt-4 lg:first:pt-0">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/" className={getLinkClass('/')}>
               Home
             </a>
           </div>
-          <div className="font-medium tracking-wider uppercase first:pt-4 lg:first:pt-0">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/about" className={getLinkClass('/about')}>
               About
             </a>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0">
+          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
-              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left uppercase transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
+              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
               onClick={() => toggleSubMenu('Cataract')}
             >
               <span>Cataract</span>
@@ -130,9 +137,9 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0">
+          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
-              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left uppercase transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
+              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
               onClick={() => toggleSubMenu('Retina')}
             >
               <span>Retina</span>
@@ -173,9 +180,9 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0">
+          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
-              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left uppercase transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
+              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
               onClick={() => toggleSubMenu('EyeCare')}
             >
               <span>Eye Care</span>
@@ -201,7 +208,7 @@ export const Navigation = () => {
             </button>
             <div
               ref={(el) => (dropdownRefs.current[2] = el)}
-              className={`lg:absolute lg:mt-2 uppercase lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['EyeCare'] ? 'block' : 'hidden'}`}
+              className={`lg:absolute lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['EyeCare'] ? 'block' : 'hidden'}`}
             >
               {linkData?.allContentfulEyeCare?.nodes.map(
                 ({ heading, slug }, id) => (
@@ -216,7 +223,7 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="text-base font-medium tracking-wider uppercase first:pt-4 lg:first:pt-0">
+          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
               href="/research-interests"
               className={getLinkClass('/research-interests')}
@@ -224,7 +231,7 @@ export const Navigation = () => {
               Research Interests
             </a>
           </div>
-          <div className="text-base font-medium tracking-wider uppercase first:pt-4 lg:first:pt-0">
+          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/contact" className={getLinkClass('/contact')}>
               Contact
             </a>

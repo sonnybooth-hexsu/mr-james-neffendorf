@@ -26,11 +26,32 @@ const Home = () => (
 )
 
 class RootIndex extends React.Component {
+  componentDidMount() {
+    this.handleScroll()
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const elements = document.querySelectorAll('.fade-in')
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= window.innerHeight - 100) {
+        el.classList.add('visible')
+      } else {
+        el.classList.remove('visible')
+      }
+    })
+  }
+
   render() {
     return (
       <Layout>
         <Home />
-        <section className="pt-16 px-[5%] md:px-[10%] lg:px-[5%]">
+        <section className="pt-16 bg-gray-50 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
@@ -40,14 +61,18 @@ class RootIndex extends React.Component {
                     className="object-cover mr-2 max-h-12"
                     alt="Placeholder image"
                   />
-                  <p className="text-sm font-semibold uppercase">Verified</p>
+                  <p className="text-sm font-medium tracking-wide uppercase">
+                    Verified
+                  </p>
                 </div>
                 <h1 className="mt-4 mb-5 font-bold md:mb-6">
                   Consultant Ophthalmologist and Retinal Surgeon
                 </h1>
                 <p className="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique.
+                  Suspendisse varius enim in eros elementum tristique. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  varius enim in eros elementum tristique.
                 </p>
                 <div className="flex flex-col mt-6 md:flex-row gap-x-2 md:mt-8">
                   <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
@@ -147,7 +172,7 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Professional affiliations Small */}
-        <section className="py-12 px-[8%] lg:px-[5%] md:px-[10%] overflow-hidden bg-gray-50 lg:hidden md:py-16 lg:py-16">
+        <section className="py-12 px-[8%] lg:px-[5%] md:px-[10%] overflow-hidden bg-gray-50 lg:hidden md:py-16 lg:py-16 fade-in">
           <div className="container mx-auto">
             <div className="w-full max-w-lg mx-auto mb-8 md:mb-10 lg:mb-12 lg:max-w-full lg:flex lg:justify-between">
               <h1 className="text-center text-base font-bold leading-[1.2] md:text-md md:leading-[1.2] lg:text-left">
@@ -223,7 +248,7 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Professional affiliations Large */}
-        <section className="hidden px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white lg:block md:py-16 lg:py-16">
+        <section className="hidden px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white lg:block md:py-16 lg:py-16 fade-in">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
               <div className="w-full mb-8 lg:w-auto lg:mb-0">
@@ -267,7 +292,7 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Benefits */}
-        <section className="px-[8%] md:px-[10%] lg:px-[5%] bg-white py-16 md:py-28 lg:py-32 xl:py-40">
+        <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] py-16 md:py-28 lg:py-32 xl:py-40 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h2 className="font-bold leading-[1.2]">
               Leading Ophthalmologist and Vitreoretinal Surgeon
@@ -315,7 +340,7 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Services */}
-        <header className="relative px-[8%] md:px-[10%] lg:px-[5%]">
+        <header className="relative px-[8%] md:px-[10%] lg:px-[5%] fade-in">
           <div className="container">
             <div className="flex items-center py-16 lg:pt-0 lg:pb-24">
               <div className="max-w-md">
@@ -461,7 +486,7 @@ class RootIndex extends React.Component {
         </header>
 
         {/* Testimonials */}
-        <section className="bg-white px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28">
+        <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container mx-auto">
             <div className="flex flex-col mb-12 md:flex-row md:justify-between md:items-center">
               <div className="lg:w-2/3 lg:pr-12">
@@ -569,7 +594,7 @@ class RootIndex extends React.Component {
           </div>
         </section>
         {/* Call To Action */}
-        <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden">
+        <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
           <img
             src={topRightSvg}
             alt="Top right background decoration"

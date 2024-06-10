@@ -9,27 +9,47 @@ import grade from '../assets/grade.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
 
 class About extends React.Component {
+  componentDidMount() {
+    this.handleScroll()
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const elements = document.querySelectorAll('.fade-in')
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= window.innerHeight - 100) {
+        el.classList.add('visible')
+      } else {
+        el.classList.remove('visible')
+      }
+    })
+  }
+
   render() {
     return (
       <Layout>
         {/* Hero */}
-        <section class="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
-          <div class="container">
-            <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+        <section className="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
+          <div className="container">
+            <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="mb-2 overlined">ABOUT</p>
-                <h1 className="mb-2">Mr James Neffendorf </h1>
+                <h1 className="mb-2">Meet Mr James Neffendorf </h1>
                 <p className="mb-4 text-sm font-bold text-black md:text-md md:mb-6">
                   MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                 </p>
-                <p class="md:text-md">
+                <p className="md:text-md">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <div class="mt-6 flex gap-x-4 md:mt-8">
-                  <button className="inline-flex text-sm items-center mt-4 justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                <div className="flex mt-2 gap-x-4 md:mt-4">
+                  <button className="inline-flex text-sm items-center mt-4 justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-jamesLight hover:border-jamesLight">
                     Book an appointment
                   </button>
                 </div>
@@ -37,7 +57,7 @@ class About extends React.Component {
               <div>
                 <img
                   src={jamesLeaning}
-                  class="w-full object-cover"
+                  className="object-cover w-full"
                   alt="Placeholder image"
                 />
               </div>
@@ -45,21 +65,23 @@ class About extends React.Component {
           </div>
         </section>
         {/* Intro to James */}
-        <section class="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
-          <div class="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-            <h2 class="">Leading Ophthalmologist and Vitreoretinal Surgeon</h2>
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+            <h2 className="">
+              Leading Ophthalmologist and Vitreoretinal Surgeon
+            </h2>
             <div>
-              <p class="mb-5 md:mb-6 md:text-md">
+              <p className="mb-5 md:mb-6 md:text-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat.
               </p>
-              <div class="grid grid-cols-1 gap-4 py-2">
-                <div class="flex self-start">
-                  <div class="mr-4 flex-none self-start">
+              <div className="grid grid-cols-1 gap-4 py-2">
+                <div className="flex self-start">
+                  <div className="self-start flex-none mr-4">
                     <img
-                      class="inline-block size-6"
+                      className="inline-block size-6"
                       src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
                       alt="Relume logo 1"
                     />
@@ -68,10 +90,10 @@ class About extends React.Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <div class="flex self-start">
-                  <div class="mr-4 flex-none self-start">
+                <div className="flex self-start">
+                  <div className="self-start flex-none mr-4">
                     <img
-                      class="inline-block size-6"
+                      className="inline-block size-6"
                       src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
                       alt="Relume logo 2"
                     />
@@ -80,10 +102,10 @@ class About extends React.Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <div class="flex self-start">
-                  <div class="mr-4 flex-none self-start">
+                <div className="flex self-start">
+                  <div className="self-start flex-none mr-4">
                     <img
-                      class="inline-block size-6"
+                      className="inline-block size-6"
                       src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
                       alt="Relume logo 3"
                     />
@@ -141,7 +163,7 @@ class About extends React.Component {
         </section>
 
         {/* Awards & Achievements */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h2>Awards & Achievements </h2>
             <div>
@@ -252,7 +274,7 @@ class About extends React.Component {
                 </p>
                 <p>MA (Cantab) MBBS (Lond) MD (Res) FRCOphth</p>
               </div>
-              <div className="absolute flex p-4 bg-white shadow-xl bottom-4 right-4">
+              <div className="absolute flex p-4 shadow-xl bottom-4 right-4">
                 <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
                   Excellent
                 </p>
@@ -260,14 +282,14 @@ class About extends React.Component {
                 <img
                   src={doctifyLogo}
                   className="ml-2 max-h-12"
-                  alt="Placeholder image"
+                  alt="Doctify logo"
                 />
               </div>
             </div>
           </div>
         </section>
         {/* Education */}
-        <section className="px-[5%] bg-white py-16 md:py-24 lg:py-28 fade-in">
+        <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
             <h2 className="leading-[1.2]">Education </h2>
             <div>
