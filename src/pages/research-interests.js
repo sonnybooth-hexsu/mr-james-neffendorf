@@ -28,6 +28,7 @@ class ResearchInterests extends React.Component {
   render() {
     return (
       <Layout>
+        <div className="main-content">
         <header className="relative px-[5%]  py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in">
           <div
             className="absolute inset-0 bg-center bg-cover opacity-10"
@@ -223,6 +224,7 @@ class ResearchInterests extends React.Component {
             </div>
           </div>
         </section>
+        </div>
       </Layout>
     )
   }

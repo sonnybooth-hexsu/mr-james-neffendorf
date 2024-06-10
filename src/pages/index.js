@@ -1,19 +1,19 @@
-import React from 'react'
-import Layout from '../components/layout'
-import jamesMain from '../assets/james-main.png'
-import jamesTreatment from '../assets/james-treatment.jpg'
-import doctifyLogo from '../assets/doctify-logo.svg'
-import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
-import aao from '../assets/aao.svg'
-import beavrs from '../assets/beavrs.svg'
-import escrs from '../assets/escrs.svg'
-import eurina from '../assets/eurina.svg'
-import pembroke from '../assets/pembroke.svg'
-import rocopth from '../assets/rocopth.svg'
-import topRightSvg from '../assets/top-right.svg'
-import bottomLeftSvg from '../assets/bottom-left.svg'
-import grade from '../assets/grade.svg'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import Layout from '../components/layout';
+import jamesMain from '../assets/james-main.png';
+import jamesTreatment from '../assets/james-treatment.jpg';
+import doctifyLogo from '../assets/doctify-logo.svg';
+import iconCheckmark from '../assets/IcSharpCheckCircle.svg';
+import aao from '../assets/aao.svg';
+import beavrs from '../assets/beavrs.svg';
+import escrs from '../assets/escrs.svg';
+import eurina from '../assets/eurina.svg';
+import pembroke from '../assets/pembroke.svg';
+import rocopth from '../assets/rocopth.svg';
+import topRightSvg from '../assets/top-right.svg';
+import bottomLeftSvg from '../assets/bottom-left.svg';
+import grade from '../assets/grade.svg';
+import { Helmet } from 'react-helmet';
 
 const Home = () => (
   <div>
@@ -23,274 +23,185 @@ const Home = () => (
       <link rel="stylesheet" href="https://use.typekit.net/nak2vhf.css" />
     </Helmet>
   </div>
-)
+);
 
 class RootIndex extends React.Component {
   componentDidMount() {
-    this.handleScroll()
-    window.addEventListener('scroll', this.handleScroll)
+    this.handleScroll();
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {
-    const elements = document.querySelectorAll('.fade-in')
+    const elements = document.querySelectorAll('.fade-in');
     elements.forEach((el) => {
-      const rect = el.getBoundingClientRect()
+      const rect = el.getBoundingClientRect();
       if (rect.top <= window.innerHeight - 100) {
-        el.classList.add('visible')
+        el.classList.add('visible');
       } else {
-        el.classList.remove('visible')
+        el.classList.remove('visible');
       }
-    })
-  }
+    });
+
+    const parallaxElements = document.querySelectorAll('.parallax');
+    parallaxElements.forEach((el) => {
+      const scrollPosition = window.scrollY;
+      const maxMovement = 20; // Maximum movement in pixels
+      const movement = Math.min(scrollPosition * 0.1, maxMovement);
+      el.style.transform = `translateY(${movement}px)`;
+    });
+  };
 
   render() {
     return (
       <Layout>
         <Home />
-        <section className="pt-16 bg-gray-50 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
-              <div>
-                <div className="flex">
-                  <img
-                    src={doctifyLogo}
-                    className="object-cover mr-2 max-h-12"
-                    alt="Placeholder image"
-                  />
-                  <p className="text-sm font-medium tracking-wide uppercase">
-                    Verified
-                  </p>
-                </div>
-                <h1 className="mt-4 mb-5 font-bold md:mb-6">
-                  Consultant Ophthalmologist and Retinal Surgeon
-                </h1>
-                <p className="md:text-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                  varius enim in eros elementum tristique.
-                </p>
-                <div className="flex flex-col mt-6 md:flex-row gap-x-2 md:mt-8">
-                  <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
-                    Book an appointment
-                  </button>
-
-                  <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-gray-300  text-text-primary">
-                    About Mr Neffendorf
-                  </button>
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src={jamesMain}
-                  className="object-cover w-full"
-                  alt="Placeholder image"
-                />
-                <div className="absolute left-0 flex p-4 bg-white rounded-md shadow-xl bottom-14 md:left-0">
-                  <p className="mr-2 text-sm font-bold text-gray-900">
-                    Excellent
-                  </p>
-                  <p className="mr-2 text-sm ">4.94 out of 5</p>
-                  <img
-                    src={doctifyLogo}
-                    className="ml-2 max-h-10"
-                    alt="Placeholder image"
-                  />
-                </div>
-                <div className="hidden md:absolute md:flex md:flex-col md:p-4 md:bg-white md:rounded-md md:shadow-xl md:top-40 md:right-0">
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
-                    </div>
-                    <p className="text-sm font-medium">Ophthalmologist</p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
-                    </div>
-                    <p className="text-sm font-medium">Retina Specialist</p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
-                    </div>
-                    <p className="text-sm font-medium">
-                      14 Years of Experience
+        <div className="main-content">
+          <section className="pt-16 bg-gray-100 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
+            <div className="container mx-auto">
+              <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+                <div>
+                  <div className="flex">
+                    <img
+                      src={doctifyLogo}
+                      className="object-cover mr-2 max-h-12"
+                      alt="Placeholder image"
+                    />
+                    <p className="text-sm font-medium tracking-wide uppercase">
+                      Verified
                     </p>
                   </div>
+                  <h1 className="mt-4 mb-5 font-bold md:mb-6">
+                    Consultant Ophthalmologist and Retinal Surgeon
+                  </h1>
+                  <p className="md:text-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    varius enim in eros elementum tristique.
+                  </p>
+                  <div className="gap-2 mt-6 button-group md:mt-8">
+                    <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                      Book an appointment
+                    </button>
+                    <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-gray-300 text-text-primary">
+                      About Mr Neffendorf
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="flex flex-col mt-6 bg-white rounded-md shadow-xl md:hidden">
-              <div className="flex self-start">
-                <div className="self-start flex-none mr-4">
+                <div className="relative">
                   <img
-                    className="inline-block size-6"
-                    src={iconCheckmark}
-                    alt="Checkmark"
+                    src={jamesMain}
+                    className="object-cover w-full"
+                    alt="Placeholder image"
                   />
+                  <div className="absolute left-0 flex p-4 bg-white rounded-md shadow-xl bottom-14 md:left-0 parallax">
+                    <p className="mr-2 text-sm font-bold text-gray-900">Excellent</p>
+                    <p className="mr-2 text-sm">4.94 out of 5</p>
+                    <img
+                      src={doctifyLogo}
+                      className="ml-2 max-h-10"
+                      alt="Placeholder image"
+                    />
+                  </div>
+                  <div className="absolute right-0 flex flex-col p-4 bg-white rounded-md shadow-xl top-40 parallax md:top-40 md:right-0 absolute-positioned">
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p className="text-sm font-medium">Ophthalmologist</p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p className="text-sm font-medium">Retina Specialist</p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p className="text-sm font-medium">
+                        14 Years of Experience
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p className="font-medium">Ophthalmologist</p>
-              </div>
-              <div className="flex self-start">
-                <div className="self-start flex-none mr-4">
-                  <img
-                    className="inline-block size-6"
-                    src={iconCheckmark}
-                    alt="Checkmark"
-                  />
-                </div>
-                <p className="font-medium">Retina Specialist</p>
-              </div>
-              <div className="flex self-start">
-                <div className="self-start flex-none mr-4">
-                  <img
-                    className="inline-block size-6"
-                    src={iconCheckmark}
-                    alt="Checkmark"
-                  />
-                </div>
-                <p className="font-medium">14 Years of Experience</p>
               </div>
             </div>
-          </div>
-        </section>
-        {/* Professional affiliations Small */}
-        <section className="py-12 px-[8%] lg:px-[5%] md:px-[10%] overflow-hidden bg-gray-50 lg:hidden md:py-16 lg:py-16 fade-in">
-          <div className="container mx-auto">
-            <div className="w-full max-w-lg mx-auto mb-8 md:mb-10 lg:mb-12 lg:max-w-full lg:flex lg:justify-between">
-              <h1 className="text-center text-base font-bold leading-[1.2] md:text-md md:leading-[1.2] lg:text-left">
-                Professional affiliations
-              </h1>
-            </div>
-            <div className="flex items-center pt-[28px] md:pt-0 lg:justify-end">
-              <div className="flex items-center space-x-6 shrink-0 animate-loop-horizontally lg:overflow-hidden md:space-x-8">
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={rocopth}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={aao}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={eurina}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={escrs}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={pembroke}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={beavrs}
-                  alt="Checkmark"
-                />
-              </div>
-              <div className="flex items-center space-x-4 shrink-0 animate-loop-horizontally lg:overflow-hidden lg:space-x-10">
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={rocopth}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={aao}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={eurina}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={escrs}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={pembroke}
-                  alt="Checkmark"
-                />
-                <img
-                  className="max-h-6 md:max-h-8 lg:max-h-12"
-                  src={beavrs}
-                  alt="Checkmark"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Professional affiliations Large */}
-        <section className="hidden px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white lg:block md:py-16 lg:py-16 fade-in">
-          <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-              <div className="w-full mb-8 lg:w-auto lg:mb-0">
-                <h1 className="text-center lg:text-left text-base font-bold leading-[1.2] md:text-md md:leading-[1.2]">
-                  Professional affiliations
-                </h1>
-              </div>
-              <div className="flex flex-wrap items-center justify-center space-x-6 xl:space-x-6 lg:justify-end">
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={rocopth}
-                  alt="Checkmark"
-                />
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={aao}
-                  alt="Checkmark"
-                />
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={eurina}
-                  alt="Checkmark"
-                />
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={escrs}
-                  alt="Checkmark"
-                />
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={pembroke}
-                  alt="Checkmark"
-                />
-                <img
-                  className="lg:max-h-8 xl:max-h-10"
-                  src={beavrs}
-                  alt="Checkmark"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+ {/* Professional affiliations Large */}
+<section className="px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
+  <div className="container mx-auto">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <div className="w-full mb-8 lg:w-auto lg:mb-0">
+        <h1 className="text-center lg:text-left text-base font-bold leading-[1.2] md:text-md md:leading-[1.2]">
+          Professional affiliations
+        </h1>
+      </div>
+      <div className="grid grid-cols-3 gap-4 justify-items-center lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-4">
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
+            src={rocopth}
+            alt="Checkmark"
+          />
+        </div>
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
+            src={eurina}
+            alt="Checkmark"
+          />
+        </div>
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
+            src={aao}
+            alt="Checkmark"
+          />
+        </div>
+      
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-4 md:max-h-6 lg:max-h-6 xl:max-h-6"
+            src={escrs}
+            alt="Checkmark"
+          />
+        </div>
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
+            src={pembroke}
+            alt="Checkmark"
+          />
+        </div>
+        <div className="flex justify-center lg:justify-start">
+          <img
+            className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
+            src={beavrs}
+            alt="Checkmark"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         {/* Benefits */}
         <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] py-16 md:py-28 lg:py-32 xl:py-40 fade-in">
           <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
@@ -659,9 +570,11 @@ class RootIndex extends React.Component {
             </div>
           </div>
         </section>
+
+        </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default RootIndex
+export default RootIndex;

@@ -358,4 +358,46 @@ h5 {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* global.css */
+.main-content {
+  padding-top: 60px; /* Adjust this value to match the height of your fixed nav */
+}
+
+/* Flexbox for buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-group > button {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .button-group > button {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button-group {
+    flex-direction: row;
+  }
+
+  .button-group > button {
+    width: auto;
+  }
+}
+
+/* Ensure absolute positioned elements are visible on mobile */
+.absolute-positioned {
+  display: flex !important;
+}
+
+/* Parallax effect */
+.parallax {
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
 
