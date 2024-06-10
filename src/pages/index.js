@@ -14,7 +14,7 @@ import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
-import jamesLeaning from '../assets/james-leaning.jpg'
+import eyeExam from '../assets/eye-exam.jpg'
 
 const Home = () => (
   <div>
@@ -265,59 +265,62 @@ class RootIndex extends React.Component {
           </section>
           {/* Benefits */}
           <section className="px-[8%] bg-gradient-to-b from-gray-50 to-white md:px-[10%] lg:px-[5%] pt-16 pb-8 md:pt-28 md:pb-12 lg:py-32 xl:py-40 fade-in">
-            <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-              <div>
+            <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+              <div className="aspect-w-1 aspect-h-1">
                 <img
-                  src={jamesLeaning}
-                  className="object-cover w-full"
-                  alt="James Leaning"
+                  src={eyeExam}
+                  className="object-cover w-full h-full"
+                  alt="Eye Exam"
                 />
               </div>
-              <div>
-                <h2 className="font-bold leading-[1.2] mb-5 md:mb-6">
-                  Leading Ophthalmologist and Vitreoretinal Surgeon
-                </h2>
-                <p className="mb-5 md:mb-6 md:text-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat.
-                </p>
-                <div className="grid grid-cols-1 gap-4 py-2">
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
+              <div className="flex items-center">
+                <div>
+                  <h2 className="font-bold leading-[1.2] mb-5 md:mb-6">
+                    Leading Ophthalmologist and Vitreoretinal Surgeon
+                  </h2>
+                  <p className="mb-5 md:mb-6 md:text-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
+                  </p>
+                  <div className="grid grid-cols-1 gap-4 py-2">
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-4">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Vitreoretinal Surgery Specialist</p>
                     </div>
-                    <p>Vitreoretinal Surgery Specialist</p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-4">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Pioneering Ocular Research</p>
                     </div>
-                    <p>Pioneering Ocular Research</p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmark}
-                        alt="Checkmark"
-                      />
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-4">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Integrating AI with Eye Care</p>
                     </div>
-                    <p>Integrating AI with Eye Care</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
           {/* Services */}
           <header className="relative py-8 lg:py-30 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container">

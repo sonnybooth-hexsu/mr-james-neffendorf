@@ -15,6 +15,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
   presets: [require('@relume_io/relume-tailwind')],
 }
