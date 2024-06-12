@@ -153,21 +153,20 @@ class RootIndex extends React.Component {
                 <div className="relative">
                   <img
                     src={jamesMain}
-                    className="relative object-cover w-full"
+                    className="relative z-10 object-cover w-full"
                     alt="Placeholder image"
                   />
                   <img
                     src={topRightSvg}
                     alt="Top right background decoration"
-                    className="absolute -top-20 -right-20"
+                    className="absolute top-0 right-0 z-0" // Adjusted from -top-20 to top-0 for example
                   />
                   <img
                     src={bottomLeftSvg}
                     alt="Bottom left background decoration"
-                    className="absolute -bottom-10 -left-10"
+                    className="absolute z-0 -bottom-10 -left-10"
                   />
-
-                  <div className="absolute left-0 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
+                  <div className="absolute left-0 z-20 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
                     <p className="mr-2 text-sm font-bold text-gray-900">
                       Excellent
                     </p>
@@ -178,7 +177,7 @@ class RootIndex extends React.Component {
                       alt="Placeholder image"
                     />
                   </div>
-                  <div className="absolute right-0 flex flex-col p-3 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
+                  <div className="absolute right-0 z-20 flex flex-col p-3 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
                         <img
@@ -220,6 +219,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
+
           {/* Professional affiliations Large */}
           <section className="px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
