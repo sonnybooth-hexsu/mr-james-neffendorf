@@ -119,7 +119,7 @@ class RootIndex extends React.Component {
       <Layout>
         <Home />
         <div className="main-content">
-          <section className="pt-12 md:pt-20 bg-gray-50 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
+          <section className="pt-12 md:pt-20 lg:pt-8 bg-gray-50 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
@@ -141,11 +141,11 @@ class RootIndex extends React.Component {
                     Suspendisse varius enim in eros elementum tristique. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
-                  <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8">
-                    <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
-                      Book an appointment
+                  <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                      Contact Mr Neffendorf
                     </button>
-                    <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-gray-300 text-text-primary">
+                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                       About Mr Neffendorf
                     </button>
                   </div>
@@ -329,6 +329,14 @@ class RootIndex extends React.Component {
                       </div>
                       <p>Integrating AI with Eye Care</p>
                     </div>
+                    <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                        Contact Mr Neffendorf
+                      </button>
+                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                        About Mr Neffendorf
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -493,11 +501,11 @@ class RootIndex extends React.Component {
                 Book a consultation with Mr James Neffendorf for expert
                 ophthalmic care and treatment.
               </p>
-              <div className="flex flex-col items-center justify-center gap-4 mt-6 lg:flex-row md:mt-8">
-                <button className="items-center justify-center w-full gap-3 px-8 py-4 font-medium transition-colors border rounded-full lg:w-auto lg:inline-flex focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative">
-                  Book an appointment
+              <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                  Contact Mr Neffendorf
                 </button>
-                <button className="items-center justify-center w-full gap-3 px-8 py-4 font-medium transition-colors border border-gray-300 rounded-full lg:w-auto lg:inline-flex focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                   About Mr Neffendorf
                 </button>
               </div>

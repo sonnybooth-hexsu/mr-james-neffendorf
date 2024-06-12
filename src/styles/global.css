@@ -306,7 +306,7 @@ h5 {
 
 @media (min-width: 1024px) {
   .no-border-mobile {
-    border-bottom: 4px solid #1a73e8; /* Change #1a73e8 to your blue color code */
+    border-bottom: 4px solid #1B57A6; /* Change #1a73e8 to your blue color code */
   }
 }
 
@@ -377,13 +377,27 @@ h5 {
   .menu-icon {
     display: flex;
   }
+
+  
 }
 
 
 
 /* global.css */
 .main-content {
-  padding-top: 60px; /* Adjust this value to match the height of your fixed nav */
+  padding-top: 64px; /* Adjust this value to match the height of your fixed nav */
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding-top: 112px;
+  }
 }
 
 /* Flexbox for buttons */
@@ -419,4 +433,37 @@ h5 {
   transition: transform 0.3s ease-out;
 }
 
+/* global.css */
+.btn-48 {
+  height: 48px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal; /* Reset line-height to avoid conflicts */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+
+/* global.css */
+:root {
+  --correct-blue: #1B57A6; /* Replace this with your correct blue color code */
+}
+
+.active-link {
+  color: var(--correct-blue);
+  border-bottom: 2px solid var(--correct-blue); /* Underline for active link */
+  padding-bottom: 4px; /* Adjust padding to space the underline properly */
+}
+
+@media (min-width: 1024px) {
+  .active-link {
+    color: #4a5568; /* Tailwind gray-700 */
+  }
+}
+
+@media (max-width: 1023px) {
+  .active-link {
+    border-bottom: none; /* Remove underline on mobile */
+  }
+}

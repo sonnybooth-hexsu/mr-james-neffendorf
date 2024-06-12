@@ -67,11 +67,11 @@ class PatientHub extends React.Component {
                 Book a consultation with Mr James Neffendorf for expert
                 ophthalmic care and treatment.
               </p>
-              <div className="flex flex-col items-center justify-center gap-4 mt-6 lg:flex-row md:mt-8">
-                <button className="btn btn-primary">
+              <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
                   Contact Mr Neffendorf
                 </button>
-                <button className="btn btn-secondary">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                   About Mr Neffendorf
                 </button>
               </div>
@@ -89,8 +89,14 @@ class PatientHub extends React.Component {
         <h3 className="mb-4 font-semibold text-md">{title}</h3>
         <p className="mb-4 text-gray-500">{description}</p>
         <div className="flex justify-between">
-          <button className="btn btn-primary">View</button>
-          <button className="btn btn-secondary">Download</button>
+          <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+            <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+              Contact Mr Neffendorf
+            </button>
+            <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+              About Mr Neffendorf
+            </button>
+          </div>
         </div>
       </div>
     )

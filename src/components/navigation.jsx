@@ -44,7 +44,7 @@ export const Navigation = () => {
   const getLinkClass = (path) =>
     `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-3 lg:py-10 lg:text-base ${
       location.pathname === path
-        ? 'text-gray-900 no-border-mobile'
+        ? 'text-gray-900 active-link'
         : 'hover:text-jamesBlue'
     }`
 
@@ -230,7 +230,7 @@ export const Navigation = () => {
               href="/research-interests"
               className={getLinkClass('/research-interests')}
             >
-              Research Interests
+              Research
             </a>
           </div>
           <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
