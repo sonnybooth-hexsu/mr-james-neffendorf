@@ -4,7 +4,7 @@ import jamesMain from '../assets/james-main.png'
 import jamesTreatment from '../assets/james-treatment.jpg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import iconCheckmark from '../assets/checkmark.svg'
-import aao from '../assets/aao.svg'
+import aao from '../assets/aao.png'
 import beavrs from '../assets/beavrs.svg'
 import escrs from '../assets/escrs.svg'
 import eurina from '../assets/eurina.svg'
@@ -133,16 +133,16 @@ class RootIndex extends React.Component {
                       Verified
                     </p>
                   </div>
-                  <h1 className="mt-4 mb-5 font-bold md:mb-6">
+                  <h1 className="mt-4 mb-2 font-bold">
                     Consultant Ophthalmologist and Retinal Surgeon
                   </h1>
-                  <p className="md:text-md">
+                  <p className="mb-6 md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                   <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                       Contact Mr Neffendorf
                     </button>
                     <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
@@ -153,7 +153,7 @@ class RootIndex extends React.Component {
                 <div className="relative">
                   <img
                     src={jamesMain}
-                    className="relative z-10 object-cover w-full"
+                    className="relative z-10 object-cover w-full mx-auto lg:w-3/4" // Adjusted image size for desktop
                     alt="Placeholder image"
                   />
                   <img
@@ -221,64 +221,67 @@ class RootIndex extends React.Component {
           </section>
 
           {/* Professional affiliations Large */}
-          <section className="px-[8%] lg:px-[5%] md:px-[10%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
+          <section className="px-[8%] lg:px-0 py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                <div className="w-full mb-8 lg:w-auto lg:mb-0">
-                  <h1 className="lg:text-left text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
+                <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
+                  <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
                     Professional affiliations
                   </h1>
                 </div>
-                <div className="grid grid-cols-3 gap-4 justify-items-center lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-4">
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
-                      src={rocopth}
-                      alt="Checkmark"
-                    />
+                <div className="grid gap-4 justify-items-center lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-4">
+                  <div className="flex justify-center">
+                    <div className="p-2">
+                      <img
+                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                        src={rocopth}
+                        alt="Checkmark"
+                      />
+                    </div>
                   </div>
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
-                      src={eurina}
-                      alt="Checkmark"
-                    />
+                  <div className="flex justify-center">
+                    <div className="p-2">
+                      <img
+                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                        src={eurina}
+                        alt="Checkmark"
+                      />
+                    </div>
                   </div>
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
-                      src={aao}
-                      alt="Checkmark"
-                    />
+                  <div className="flex justify-center">
+                    <div className="p-2">
+                      <img
+                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                        src={aao}
+                        alt="Checkmark"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2">
+                      <img
+                        className="max-h-[1.75rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
+                        src={escrs}
+                        alt="Checkmark"
+                      />
+                    </div>
                   </div>
 
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-4 md:max-h-6 lg:max-h-6 xl:max-h-6"
-                      src={escrs}
-                      alt="Checkmark"
-                    />
-                  </div>
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
-                      src={pembroke}
-                      alt="Checkmark"
-                    />
-                  </div>
-                  <div className="flex justify-center lg:justify-start">
-                    <img
-                      className="max-h-6 md:max-h-8 lg:max-h-8 xl:max-h-10"
-                      src={beavrs}
-                      alt="Checkmark"
-                    />
+                  <div className="flex justify-center">
+                    <div className="p-2">
+                      <img
+                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                        src={beavrs}
+                        alt="Checkmark"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           {/* Benefits */}
-          <section className="px-[8%] bg-gradient-to-b from-gray-50 to-white md:px-[10%] lg:px-[5%] pt-16 pb-8 md:py-16 fade-in">
+          <section className="px-[8%] md:px-[10%] lg:px-[5%] pt-16 pb-8 md:py-16 fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="aspect-w-1 aspect-h-1">
                 <img
@@ -330,7 +333,7 @@ class RootIndex extends React.Component {
                       <p>Integrating AI with Eye Care</p>
                     </div>
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                         Contact Mr Neffendorf
                       </button>
                       <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
@@ -425,7 +428,7 @@ class RootIndex extends React.Component {
               </div>
               <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
                 <div className="flex flex-col">
-                  <blockquote className='my-6 text-md font-bold leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
                     cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
@@ -443,12 +446,12 @@ class RootIndex extends React.Component {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <blockquote className='my-6 text-md font-bold leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
                     cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. Suspendisse varius enim in eros
-                    elementum tristique.
+                    elementum tristique. Duis cursus, mi quis viverra ornare.
                   </blockquote>
                   <img
                     src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
@@ -461,7 +464,7 @@ class RootIndex extends React.Component {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <blockquote className='my-6 text-md font-bold leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
                     cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
@@ -502,7 +505,7 @@ class RootIndex extends React.Component {
                 ophthalmic care and treatment.
               </p>
               <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                   Contact Mr Neffendorf
                 </button>
                 <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">

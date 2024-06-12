@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        jamesLight: '#529AD9',
+        jamesLight: '#186DDC',
         jamesBlue: '#1C58A6',
         darkerJamesBlue: '#032859',
         jamesWhite: '#FCFCFD',

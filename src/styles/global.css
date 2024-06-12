@@ -31,20 +31,7 @@ html {
   transform: translateY(0);
 }
 
-@layer components {
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Buttons */
-/* Global styles for primary and secondary buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -55,7 +42,7 @@ html {
   font-weight: 500;
   font-size: 0.875rem;
   transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-  border-radius: 9999px; /* Full round border */
+  border-radius: 9999px;
   outline: none;
   text-align: center;
   text-decoration: none;
@@ -78,8 +65,8 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-darkerJamesBlue);
-  border-color: var(--color-darkerJamesBlue);
+  background-color: var(--color-jamesLight);
+  border-color: var(--color-jamesLight);
 }
 
 /* Secondary button */
@@ -120,181 +107,172 @@ p {
 .overlined {
   font-weight: bold;
   @apply tracking-wider;
-  @apply text-base; /* Increased from text-sm */
-}
-
-/* Custom Utility Classes */
-.header-content {
-  position: relative;
-  z-index: 2;
-}
-
-.header-icon {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  z-index: 0;
-  width: 100px;
-  height: 100px;
-  opacity: 0.1;
-}
-
-.custom-ul {
-  list-style-type: disc;
-  padding-left: 1.5em; /* Adjust as needed */
-  color: #6b7280; /* Tailwind gray-500 */
-}
-
-.custom-li {
-  list-style-position: inside;
-  color: #6b7280; /* Tailwind gray-500 */
-}
-
-.tag {
-  @apply inline;
-  @apply px-4;
-  @apply py-2;
-  @apply bg-jamesLight;
-  @apply text-jamesBlue;
+  @apply text-base;
 }
 
 /* Headings */
 h1 {
-  font-size: clamp(2rem, 2.25vw + 1rem, 2.75rem); /* Decreased */
-  line-height: clamp(2.5rem, 2.5vw + 1.25rem, 3.5rem); /* Decreased */
+  font-size: clamp(2rem, 2.25vw + 1rem, 2.75rem);
+  line-height: clamp(2.5rem, 2.5vw + 1.25rem, 3.5rem);
 }
+
 @media (min-width: 640px) {
   h1 {
-    font-size: clamp(2.25rem, 2.5vw + 1.25rem, 3rem); /* Decreased */
-    line-height: clamp(2.75rem, 2.75vw + 1.25rem, 3.75rem); /* Decreased */
+    font-size: clamp(2.25rem, 2.5vw + 1.25rem, 3rem);
+    line-height: clamp(2.75rem, 2.75vw + 1.25rem, 3.75rem);
   }
 }
+
 @media (min-width: 768px) {
   h1 {
-    font-size: clamp(2.5rem, 2.75vw + 1.5rem, 3.25rem); /* Decreased */
-    line-height: clamp(3rem, 3vw + 1.5rem, 4rem); /* Decreased */
+    font-size: clamp(2.5rem, 2.75vw + 1.5rem, 3.25rem);
+    line-height: clamp(3rem, 3vw + 1.5rem, 4rem);
   }
 }
+
 @media (min-width: 1024px) {
   h1 {
-    font-size: clamp(2.75rem, 3vw + 1.75rem, 3.5rem); /* Decreased */
-    line-height: clamp(3.25rem, 3.25vw + 1.75rem, 4.25rem); /* Decreased */
+    font-size: 2.5rem; /* Set fixed size for lg */
+    line-height: 3rem; /* Set fixed line-height for lg */
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: clamp(2.75rem, 3vw + 1.75rem, 3.5rem);
+    line-height: clamp(3.25rem, 3.25vw + 1.75rem, 4.25rem);
   }
 }
 
 h2 {
-  font-size: clamp(1.75rem, 1.75vw + 0.875rem, 2rem); /* Decreased */
-  line-height: clamp(2.25rem, 2vw + 0.875rem, 2.75rem); /* Decreased */
+  font-size: clamp(1.75rem, 1.75vw + 0.875rem, 2rem);
+  line-height: clamp(2.25rem, 2vw + 0.875rem, 2.75rem);
 }
+
 @media (min-width: 640px) {
   h2 {
-    font-size: clamp(2rem, 2vw + 1rem, 2.25rem); /* Decreased */
-    line-height: clamp(2.5rem, 2.25vw + 1rem, 3rem); /* Decreased */
+    font-size: clamp(2rem, 2vw + 1rem, 2.25rem);
+    line-height: clamp(2.5rem, 2.25vw + 1rem, 3rem);
   }
 }
+
 @media (min-width: 768px) {
   h2 {
-    font-size: clamp(2.25rem, 2.25vw + 1.125rem, 2.5rem); /* Decreased */
-    line-height: clamp(2.75rem, 2.5vw + 1.125rem, 3.25rem); /* Decreased */
+    font-size: clamp(2.25rem, 2.25vw + 1.125rem, 2.5rem);
+    line-height: clamp(2.75rem, 2.5vw + 1.125rem, 3.25rem);
   }
 }
+
 @media (min-width: 1024px) {
   h2 {
-    font-size: clamp(2.5rem, 2.5vw + 1.25rem, 2.75rem); /* Decreased */
-    line-height: clamp(3rem, 2.75vw + 1.25rem, 3.5rem); /* Decreased */
+    font-size: clamp(2.5rem, 2.5vw + 1.25rem, 2.75rem);
+    line-height: clamp(3rem, 2.75vw + 1.25rem, 3.5rem);
   }
 }
+
 @media (min-width: 1280px) {
   h2 {
-    font-size: clamp(2.75rem, 2.75vw + 1.375rem, 3rem); /* Decreased */
-    line-height: clamp(3.25rem, 3vw + 1.375rem, 3.75rem); /* Decreased */
+    font-size: clamp(2.75rem, 2.75vw + 1.375rem, 3rem);
+    line-height: clamp(3.25rem, 3vw + 1.375rem, 3.75rem);
   }
 }
 
 h3 {
-  font-size: clamp(1.5rem, 1.5vw + 0.625rem, 1.75rem); /* Decreased */
-  line-height: clamp(2rem, 2vw + 0.625rem, 2.5rem); /* Decreased */
+  font-size: clamp(1.5rem, 1.5vw + 0.625rem, 1.75rem);
+  line-height: clamp(2rem, 2vw + 0.625rem, 2.5rem);
 }
+
 @media (min-width: 640px) {
   h3 {
-    font-size: clamp(1.75rem, 1.75vw + 0.75rem, 2rem); /* Decreased */
-    line-height: clamp(2.25rem, 2.25vw + 0.75rem, 2.75rem); /* Decreased */
+    font-size: clamp(1.75rem, 1.75vw + 0.75rem, 2rem);
+    line-height: clamp(2.25rem, 2.25vw + 0.75rem, 2.75rem);
   }
 }
+
 @media (min-width: 768px) {
   h3 {
-    font-size: clamp(2rem, 2vw + 0.875rem, 2.25rem); /* Decreased */
-    line-height: clamp(2.5rem, 2.5vw + 0.875rem, 3rem); /* Decreased */
+    font-size: clamp(2rem, 2vw + 0.875rem, 2.25rem);
+    line-height: clamp(2.5rem, 2.5vw + 0.875rem, 3rem);
   }
 }
+
 @media (min-width: 1024px) {
   h3 {
-    font-size: clamp(2.25rem, 2.25vw + 1rem, 2.5rem); /* Decreased */
-    line-height: clamp(2.75rem, 2.75vw + 1rem, 3.25rem); /* Decreased */
+    font-size: clamp(2.25rem, 2.25vw + 1rem, 2.5rem);
+    line-height: clamp(2.75rem, 2.75vw + 1rem, 3.25rem);
   }
 }
+
 @media (min-width: 1280px) {
   h3 {
-    font-size: clamp(2.5rem, 2.5vw + 1.125rem, 2.75rem); /* Decreased */
-    line-height: clamp(3rem, 3vw + 1.125rem, 3.5rem); /* Decreased */
+    font-size: clamp(2.5rem, 2.5vw + 1.125rem, 2.75rem);
+    line-height: clamp(3rem, 3vw + 1.125rem, 3.5rem);
   }
 }
 
 h4 {
-  font-size: clamp(1.25rem, 1.25vw + 0.625rem, 1.5rem); /* Decreased */
-  line-height: clamp(1.75rem, 1.75vw + 0.625rem, 2rem); /* Decreased */
+  font-size: clamp(1.25rem, 1.25vw + 0.625rem, 1.5rem);
+  line-height: clamp(1.75rem, 1.75vw + 0.625rem, 2rem);
 }
+
 @media (min-width: 640px) {
   h4 {
-    font-size: clamp(1.5rem, 1.5vw + 0.75rem, 1.75rem); /* Decreased */
-    line-height: clamp(2rem, 2vw + 0.75rem, 2.25rem); /* Decreased */
+    font-size: clamp(1.5rem, 1.5vw + 0.75rem, 1.75rem);
+    line-height: clamp(2rem, 2vw + 0.75rem, 2.25rem);
   }
 }
+
 @media (min-width: 768px) {
   h4 {
-    font-size: clamp(1.75rem, 1.75vw + 0.875rem, 2rem); /* Decreased */
-    line-height: clamp(2.25rem, 2.25vw + 0.875rem, 2.75rem); /* Decreased */
+    font-size: clamp(1.75rem, 1.75vw + 0.875rem, 2rem);
+    line-height: clamp(2.25rem, 2.25vw + 0.875rem, 2.75rem);
   }
 }
+
 @media (min-width: 1024px) {
   h4 {
-    font-size: clamp(2rem, 2vw + 1rem, 2.25rem); /* Decreased */
-    line-height: clamp(2.5rem, 2.5vw + 1rem, 3rem); /* Decreased */
+    font-size: clamp(2rem, 2vw + 1rem, 2.25rem);
+    line-height: clamp(2.5rem, 2.5vw + 1rem, 3rem);
   }
 }
+
 @media (min-width: 1280px) {
   h4 {
-    font-size: clamp(2.25rem, 2.25vw + 1.125rem, 2.5rem); /* Decreased */
-    line-height: clamp(2.75rem, 2.75vw + 1.125rem, 3.25rem); /* Decreased */
+    font-size: clamp(2.25rem, 2.25vw + 1.125rem, 2.5rem);
+    line-height: clamp(2.75rem, 2.75vw + 1.125rem, 3.25rem);
   }
 }
 
 h5 {
-  font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem); /* Decreased */
-  line-height: clamp(1.5rem, 1.25vw + 0.5rem, 1.75rem); /* Decreased */
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+  line-height: clamp(1.5rem, 1.25vw + 0.5rem, 1.75rem);
 }
+
 @media (min-width: 640px) {
   h5 {
-    font-size: clamp(1.25rem, 1.25vw + 0.625rem, 1.5rem); /* Decreased */
-    line-height: clamp(1.75rem, 1.5vw + 0.625rem, 2rem); /* Decreased */
+    font-size: clamp(1.25rem, 1.25vw + 0.625rem, 1.5rem);
+    line-height: clamp(1.75rem, 1.5vw + 0.625rem, 2rem);
   }
 }
+
 @media (min-width: 768px) {
   h5 {
-    font-size: clamp(1.375rem, 1.5vw + 0.75rem, 1.75rem); /* Decreased */
-    line-height: clamp(2rem, 1.75vw + 0.75rem, 2.25rem); /* Decreased */
+    font-size: clamp(1.375rem, 1.5vw + 0.75rem, 1.75rem);
+    line-height: clamp(2rem, 1.75vw + 0.75rem, 2.25rem);
   }
 }
+
 @media (min-width: 1024px) {
   h5 {
-    font-size: clamp(1.5rem, 1.75vw + 0.875rem, 2rem); /* Decreased */
-    line-height: clamp(2.25rem, 2vw + 0.875rem, 2.5rem); /* Decreased */
+    font-size: clamp(1.5rem, 1.75vw + 0.875rem, 2rem);
+    line-height: clamp(2.25rem, 2vw + 0.875rem, 2.5rem);
   }
 }
+
 @media (min-width: 1280px) {
   h5 {
-    font-size: clamp(1.625rem, 2vw + 1rem, 2.25rem); /* Decreased */
-    line-height: clamp(2.5rem, 2.25vw + 1rem, 2.75rem); /* Decreased */
+    font-size: clamp(1.625rem, 2vw + 1rem, 2.25rem);
+    line-height: clamp(2.5rem, 2.25vw + 1rem, 2.75rem);
   }
 }
 
@@ -306,18 +284,18 @@ h5 {
 
 @media (min-width: 1024px) {
   .no-border-mobile {
-    border-bottom: 4px solid #1B57A6; /* Change #1a73e8 to your blue color code */
+    border-bottom: 4px solid #1B57A6;
   }
 }
 
 .mobile-nav {
   height: 100vh;
-  overflow-y: auto; /* Allows scrolling if the content exceeds the viewport height */
+  overflow-y: auto;
 }
 
 @media (min-width: 1024px) {
   .mobile-nav {
-    height: auto; /* Resets height for desktop view */
+    height: auto;
   }
 }
 
@@ -377,15 +355,11 @@ h5 {
   .menu-icon {
     display: flex;
   }
-
-  
 }
 
-
-
-/* global.css */
+/* Main content padding adjustment */
 .main-content {
-  padding-top: 64px; /* Adjust this value to match the height of your fixed nav */
+  padding-top: 64px;
 }
 
 @media (min-width: 768px) {
@@ -400,8 +374,13 @@ h5 {
   }
 }
 
-/* Flexbox for buttons */
+@media (min-width: 1280px) {
+  .main-content {
+    padding-top: 112px;
+  }
+}
 
+/* Flexbox for buttons */
 .button-group > button {
   width: 100%;
 }
@@ -433,37 +412,34 @@ h5 {
   transition: transform 0.3s ease-out;
 }
 
-/* global.css */
 .btn-48 {
   height: 48px;
   padding-top: 0;
   padding-bottom: 0;
-  line-height: normal; /* Reset line-height to avoid conflicts */
+  line-height: normal;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-/* global.css */
 :root {
-  --correct-blue: #1B57A6; /* Replace this with your correct blue color code */
+  --correct-blue: #1B57A6;
 }
 
 .active-link {
   color: var(--correct-blue);
-  border-bottom: 2px solid var(--correct-blue); /* Underline for active link */
-  padding-bottom: 4px; /* Adjust padding to space the underline properly */
+  border-bottom: 2px solid var(--correct-blue);
+  padding-bottom: 4px;
 }
 
 @media (min-width: 1024px) {
   .active-link {
-    color: #4a5568; /* Tailwind gray-700 */
+    color: #4a5568;
   }
 }
 
 @media (max-width: 1023px) {
   .active-link {
-    border-bottom: none; /* Remove underline on mobile */
+    border-bottom: none;
   }
 }
