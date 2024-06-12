@@ -36,19 +36,18 @@ const accordionData = [
   {
     title: 'Cataract Surgery',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
+      'Age-related macular degeneration, Epiretinal membrane, macular hole, diabetic eye disease.',
     link: '/treatment/cataract-surgery',
   },
   {
     title: 'Emergency Eye Care',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
+      'Urgent eye problems such as red eye, painful eyes and loss of vision.',
     link: '/treatment/emergency-eye-care',
   },
   {
     title: 'General Eye Care',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
+    content: 'Conditions such as a dry eye, blepharitis and glaucoma.',
     link: '/treatment/general-eye-care',
   },
 ]
@@ -134,14 +133,18 @@ class RootIndex extends React.Component {
                     </p>
                   </div>
                   <h1 className="mt-4 mb-2 font-bold">
-                    Consultant Ophthalmologist and Retinal Surgeon
+                    Mr James E. Neffendorf
                   </h1>
-                  <p className="mb-6 md:text-md">
+                  <h2 className="inline text-xs font-bold tracking-wide text-gray-400 uppercase xl:text-lg lg:text-sm md:text-base">
+                    Consultant Ophthalmologist and Retinal Surgeon
+                  </h2>
+
+                  <p className="mt-2 md:text-md xl:text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
-                  <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                  <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
                     <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                       Contact Mr Neffendorf
                     </button>
@@ -346,9 +349,9 @@ class RootIndex extends React.Component {
             </div>
           </section>
           {/* Services */}
-          <header className="relative py-8 lg:py-30 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
+          <header className="relative py-8 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container">
-              <div className="flex items-center py-16 lg:pt-0 lg:pb-0">
+              <div className="flex items-center py-8 lg:pt-0 lg:pb-0">
                 <div className="max-w-md">
                   <div className="flex-col self-start">
                     {accordionData.map((item, index) => (
