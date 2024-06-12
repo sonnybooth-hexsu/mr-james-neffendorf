@@ -30,8 +30,8 @@ class RetinaTemplate extends React.Component {
           }}
         />
         {/* Main Content */}
-        <div className="main-content">
-          <section className="px-[5%]  border-b py-16 md:py-24 lg:py-28">
+        <div className="bg-red-500 main-content">
+          <section className="px-[5%] bg-red-500 border-b py-16 md:py-24 lg:py-28">
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
@@ -61,7 +61,7 @@ class RetinaTemplate extends React.Component {
                 <div className="">
                   <img
                     src={retinaHeader}
-                    className="relative object-cover w-full "
+                    className="relative object-cover w-full rounded-xl "
                     alt="Placeholder image"
                   />
                   <div className="absolute bottom-0 flex p-4 bg-white shadow-xl -right-5">

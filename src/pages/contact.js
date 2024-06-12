@@ -30,7 +30,8 @@ class Contact extends React.Component {
       <Layout>
         <div className="main-content">
           {/* Hero */}
-          <section className="px-[5%] border-b py-16 md:py-24 lg:py-28 fade-in">
+          <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">
+            {' '}
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
@@ -43,7 +44,7 @@ class Contact extends React.Component {
                 <div>
                   <img
                     src={londonClinic}
-                    className="object-cover w-full"
+                    className="object-cover w-full rounded-xl"
                     alt="Placeholder image"
                   />
                 </div>

@@ -471,3 +471,7 @@ h5 {
 .slick-dots li {
   margin: 0 1px; /* Adjust the margin value to move dots closer together or further apart */
 }
+
+.button-width {
+  width: 150px; /* Adjust this value to your preferred width */
+}

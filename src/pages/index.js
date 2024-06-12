@@ -648,79 +648,76 @@ class RootIndex extends React.Component {
               </Slider>
             </div>
           </section>
-        {/* Call To Action */}
-{/* Call To Action */}
-{/* Call To Action */}
-<section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
-  <img
-    src={topRightSvg}
-    alt="Top right background decoration"
-    className="absolute top-0 right-50"
-    style={{ zIndex: -1 }}
-  />
-  <img
-    src={bottomLeftSvg}
-    alt="Bottom left background decoration"
-    className="absolute bottom-0 left-50"
-    style={{ zIndex: -1 }}
-  />
-  <div className="container relative z-10 text-center">
-    <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-      Book a Consultation
-    </h2>
-    <p className="md:text-md">
-      Book a consultation with Mr James Neffendorf for expert
-      ophthalmic care and treatment.
-    </p>
-    <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
-        Contact Mr Neffendorf
-      </button>
-      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
-        About Mr Neffendorf
-      </button>
-    </div>
+          {/* Call To Action */}
+          {/* Call To Action */}
+          {/* Call To Action */}
+          <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
+            <img
+              src={topRightSvg}
+              alt="Top right background decoration"
+              className="absolute top-0 right-50"
+              style={{ zIndex: -1 }}
+            />
+            <img
+              src={bottomLeftSvg}
+              alt="Bottom left background decoration"
+              className="absolute bottom-0 left-50"
+              style={{ zIndex: -1 }}
+            />
+            <div className="container relative z-10 text-center">
+              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                Book a Consultation
+              </h2>
+              <p className="md:text-md">
+                Book a consultation with Mr James Neffendorf for expert
+                ophthalmic care and treatment.
+              </p>
+              <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                  Contact Mr Neffendorf
+                </button>
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                  About Mr Neffendorf
+                </button>
+              </div>
 
-    <div className="flex flex-row items-center justify-center mt-8">
-      <p className="mr-2 font-bold text-gray-900">Excellent</p>
+              <div className="flex flex-row items-center justify-center mt-8">
+                <p className="mr-2 font-bold text-gray-900">Excellent</p>
 
-      <img
-        className="inline-block size-6"
-        src={grade}
-        alt="Checkmark"
-      />
-      <img
-        className="inline-block size-6"
-        src={grade}
-        alt="Checkmark"
-      />
-      <img
-        className="inline-block size-6"
-        src={grade}
-        alt="Checkmark"
-      />
-      <img
-        className="inline-block size-6"
-        src={grade}
-        alt="Checkmark"
-      />
-      <img
-        className="inline-block size-6"
-        src={grade}
-        alt="Checkmark"
-      />
-      <img
-        src={doctifyLogo}
-        className="ml-2 mr-2 max-h-12"
-        alt="Doctify logo"
-      />
-      <p className="mr-2">4.94 out of 5</p>
-    </div>
-  </div>
-</section>
-
-
-
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  src={doctifyLogo}
+                  className="ml-2 mr-2 max-h-12"
+                  alt="Doctify logo"
+                />
+                <p className="mr-2">4.94 out of 5</p>
+              </div>
+            </div>
+          </section>
         </div>
       </Layout>
     )

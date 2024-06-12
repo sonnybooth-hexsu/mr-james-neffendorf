@@ -29,7 +29,7 @@ class ResearchInterests extends React.Component {
     return (
       <Layout>
         <div className="main-content">
-          <header className="relative px-[5%]  py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in">
+          <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in">
             <div
               className="absolute inset-0 bg-center bg-cover opacity-10"
               style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
@@ -132,68 +132,71 @@ class ResearchInterests extends React.Component {
               <div className="md:col-span-4 lg:col-span-8 fade-in">
                 <div className="pb-4 mb-8 border-b">
                   <p className="font-semibold text-gray-500">Feb 2023</p>
-                  <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
                     Effect of intravitreal anti-vascular endothelial growth
                     factor treatment for neovascular age-related macular
                     degeneration on renal function
                   </h3>
                   <p className="text-gray-500">
-                    Background: Risk factors such as low vitamin D level has
-                    been implicated in the etiology of multiple sclerosis (MS)
-                    and may be relevant to myopia, such that there may be an
-                    association between myopia and MS. Methods: Using linked
-                    Swedish national register data, we conducted a cohort study
-                    of men who were born in Sweden between 1950 and 1992, liv...
+                    <span className="font-semibold text-gray-500">
+                      Mr Neffendorf's Summary:{' '}
+                    </span>
+                    Risk factors such as low vitamin D level has been implicated
+                    in the etiology of multiple sclerosis (MS) and may be
+                    relevant to myopia, such that there may be an association
+                    between myopia and MS. Methods: Using linked Swedish
+                    national register data, we conducted a cohort study of men
+                    who were born in Sweden between 1950 and 1992, liv...
                   </p>
-                  <p className="mt-2 text-gray-500">
+                  <p className="mt-2 font-semibold text-gray-500">
                     Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                     Co-Contributor, Co-Contributor
                   </p>
-                  <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded btn btn-primary">
-                    View
-                  </button>
                 </div>
                 <div className="pb-4 mb-8 border-b">
                   <p className="font-semibold text-gray-500">
                     Feb 2023{' '}
                     <span className="text-yellow-500">🏆 Award won</span>
                   </p>
-                  <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
                     Myopia in late adolescence and subsequent multiple sclerosis
                     among men
                   </h3>
                   <p className="text-gray-500">
-                    Background: Risk factors such as low vitamin D level has
-                    been implicated in the etiology of multiple sclerosis (MS)
-                    and may be relevant to myopia, such that there may be an
-                    association between myopia and MS. Methods: Using linked
-                    Swedish national register data, we conducted a cohort study
-                    of men who were born in Sweden between 1950 and 1992, liv...
+                    <span className="font-semibold text-gray-500">
+                      Mr Neffendorf's Summary:{' '}
+                    </span>
+                    Risk factors such as low vitamin D level has been implicated
+                    in the etiology of multiple sclerosis (MS) and may be
+                    relevant to myopia, such that there may be an association
+                    between myopia and MS. Methods: Using linked Swedish
+                    national register data, we conducted a cohort study of men
+                    who were born in Sweden between 1950 and 1992, liv...
                   </p>
-                  <p className="mt-2 text-gray-500">
+                  <p className="mt-2 font-semibold text-gray-500">
                     Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                     Co-Contributor, Co-Contributor
                   </p>
-                  <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded btn btn-primary">
-                    View
-                  </button>
                 </div>
                 <div className="pb-4 mb-8 border-b">
                   <p className="font-semibold text-gray-500">Sep 2022</p>
-                  <h3 className="my-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
                     The effect of intravitreal anti-vascular endothelial growth
                     factor treatment for neovascular age-related macular
                     degeneration on renal function
                   </h3>
                   <p className="text-gray-500">
-                    Background: Risk factors such as low vitamin D level has
-                    been implicated in the etiology of multiple sclerosis (MS)
-                    and may be relevant to myopia, such that there may be an
-                    association between myopia and MS. Methods: Using linked
-                    Swedish national register data, we conducted a cohort study
-                    of men who were born in Sweden between 1950 and 1992, liv...
+                    <span className="font-semibold text-gray-500">
+                      Mr Neffendorf's Summary:{' '}
+                    </span>
+                    Risk factors such as low vitamin D level has been implicated
+                    in the etiology of multiple sclerosis (MS) and may be
+                    relevant to myopia, such that there may be an association
+                    between myopia and MS. Methods: Using linked Swedish
+                    national register data, we conducted a cohort study of men
+                    who were born in Sweden between 1950 and 1992, liv...
                   </p>
-                  <p className="mt-2 text-gray-500">
+                  <p className="mt-2 font-semibold text-gray-500">
                     Dr. James Neffendorf, Co-Contributor, Co-Contributor,
                     Co-Contributor, Co-Contributor
                   </p>
