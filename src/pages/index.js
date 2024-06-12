@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import jamesMain from '../assets/james-main.png'
 import jamesTreatment from '../assets/james-treatment.jpg'
 import doctifyLogo from '../assets/doctify-logo.svg'
-import iconCheckmark from '../assets/IcSharpCheckCircle.svg'
+import iconCheckmark from '../assets/checkmark.svg'
 import aao from '../assets/aao.svg'
 import beavrs from '../assets/beavrs.svg'
 import escrs from '../assets/escrs.svg'
@@ -65,8 +65,8 @@ class AccordionItem extends React.Component {
         <div
           className={`overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
         >
-          <p className="text-lg text-gray-900">{content}</p>
-          <a href={link} className="block mt-4 text-blue-600">
+          <p className="text-base text-gray-900 md:text-lg">{content}</p>
+          <a href={link} className="block mt-4 text-gray-500">
             View Treatment
           </a>
         </div>
@@ -119,7 +119,7 @@ class RootIndex extends React.Component {
       <Layout>
         <Home />
         <div className="main-content">
-          <section className="pt-16 bg-gray-100 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
+          <section className="pt-12 md:pt-20 bg-gray-50 px-[5%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
@@ -140,9 +140,8 @@ class RootIndex extends React.Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique.
                   </p>
-                  <div className="gap-2 mt-6 button-group md:mt-8">
+                  <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8">
                     <button className="inline-flex text-sm items-center justify-center gap-3 px-8 py-2.5 mb-2 font-medium transition-colors border rounded-full focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative shadow-md hover:bg-darkerJamesBlue hover:border-darkerJamesBlue">
                       Book an appointment
                     </button>
@@ -154,10 +153,21 @@ class RootIndex extends React.Component {
                 <div className="relative">
                   <img
                     src={jamesMain}
-                    className="object-cover w-full"
+                    className="relative object-cover w-full"
                     alt="Placeholder image"
                   />
-                  <div className="absolute left-0 flex p-4 bg-white rounded-md shadow-xl bottom-14 md:left-0 parallax">
+                  <img
+                    src={topRightSvg}
+                    alt="Top right background decoration"
+                    className="absolute -top-20 -right-20"
+                  />
+                  <img
+                    src={bottomLeftSvg}
+                    alt="Bottom left background decoration"
+                    className="absolute -bottom-10 -left-10"
+                  />
+
+                  <div className="absolute left-0 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
                     <p className="mr-2 text-sm font-bold text-gray-900">
                       Excellent
                     </p>
@@ -168,36 +178,40 @@ class RootIndex extends React.Component {
                       alt="Placeholder image"
                     />
                   </div>
-                  <div className="absolute right-0 flex flex-col p-4 bg-white rounded-md shadow-xl top-40 parallax md:top-40 md:right-0 absolute-positioned">
-                    <div className="flex self-start">
-                      <div className="self-start flex-none mr-2">
+                  <div className="absolute right-0 flex flex-col p-3 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
+                    <div className="flex items-center self-start">
+                      <div className="self-start flex-none mr-1">
                         <img
-                          className="inline-block size-6"
+                          className="inline-block w-5 h-5"
                           src={iconCheckmark}
                           alt="Checkmark"
                         />
                       </div>
-                      <p className="text-sm font-medium">Ophthalmologist</p>
+                      <p className="text-sm md:text-lg lg:text-base">
+                        Ophthalmologist
+                      </p>
                     </div>
-                    <div className="flex self-start">
-                      <div className="self-start flex-none mr-2">
+                    <div className="flex items-center self-start">
+                      <div className="self-start flex-none mr-1">
                         <img
-                          className="inline-block size-6"
+                          className="inline-block w-5 h-5"
                           src={iconCheckmark}
                           alt="Checkmark"
                         />
                       </div>
-                      <p className="text-sm font-medium">Retina Specialist</p>
+                      <p className="text-sm md:text-lg lg:text-base">
+                        Retina Specialist
+                      </p>
                     </div>
-                    <div className="flex self-start">
-                      <div className="self-start flex-none mr-2">
+                    <div className="flex items-center self-start">
+                      <div className="self-start flex-none mr-1">
                         <img
-                          className="inline-block size-6"
+                          className="inline-block w-5 h-5"
                           src={iconCheckmark}
                           alt="Checkmark"
                         />
                       </div>
-                      <p className="text-sm font-medium">
+                      <p className="text-sm md:text-lg lg:text-base">
                         14 Years of Experience
                       </p>
                     </div>
@@ -211,7 +225,7 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                 <div className="w-full mb-8 lg:w-auto lg:mb-0">
-                  <h1 className="text-center lg:text-left text-base font-bold leading-[1.2] md:text-md md:leading-[1.2]">
+                  <h1 className="lg:text-left text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
                     Professional affiliations
                   </h1>
                 </div>
@@ -264,18 +278,18 @@ class RootIndex extends React.Component {
             </div>
           </section>
           {/* Benefits */}
-          <section className="px-[8%] bg-gradient-to-b from-gray-50 to-white md:px-[10%] lg:px-[5%] pt-16 pb-8 md:pt-28 md:pb-12 lg:py-32 xl:py-40 fade-in">
-            <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+          <section className="px-[8%] bg-gradient-to-b from-gray-50 to-white md:px-[10%] lg:px-[5%] pt-16 pb-8 md:py-16 fade-in">
+            <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="aspect-w-1 aspect-h-1">
                 <img
                   src={eyeExam}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full rounded-xl"
                   alt="Eye Exam"
                 />
               </div>
               <div className="flex items-center">
                 <div>
-                  <h2 className="font-bold leading-[1.2] mb-5 md:mb-6">
+                  <h2 className="font-bold leading-[1.2] mb-5 md:mb-4">
                     Leading Ophthalmologist and Vitreoretinal Surgeon
                   </h2>
                   <p className="mb-5 md:mb-6 md:text-md">
@@ -284,7 +298,7 @@ class RootIndex extends React.Component {
                     cursus, mi quis viverra ornare, eros dolor interdum nulla,
                     ut commodo diam libero vitae erat.
                   </p>
-                  <div className="grid grid-cols-1 gap-4 py-2">
+                  <div className="grid grid-cols-1 gap-4 py-2 lg:gap-2">
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-4">
                         <img
@@ -320,7 +334,6 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-
           {/* Services */}
           <header className="relative py-8 lg:py-30 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container">
@@ -352,7 +365,6 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </header>
-
           {/* Testimonials */}
           <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container mx-auto">

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLocation } from '@reach/router'
 import logo from '../assets/logo.png'
-import '../styles/global.css' // Ensure this path is correct
+import '../styles/global.css'
 
 export const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -69,7 +69,9 @@ export const Navigation = () => {
     <nav className="flex fixed bg-jamesWhite border-b z-50 w-full items-center lg:min-h-28 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-20 lg:min-h-full lg:px-0">
-          <img src={logo} alt="Logo image" className="h-8 lg:h-14" />
+          <a href="/">
+            <img src={logo} alt="Logo image" className="h-8 lg:h-14" />
+          </a>
           <button
             className={`menu-icon ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -229,6 +231,11 @@ export const Navigation = () => {
               className={getLinkClass('/research-interests')}
             >
               Research Interests
+            </a>
+          </div>
+          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+            <a href="/patient-hub" className={getLinkClass('/patient-hub')}>
+              Patient Hub
             </a>
           </div>
           <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
