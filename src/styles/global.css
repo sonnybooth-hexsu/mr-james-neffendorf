@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://use.typekit.net/nak2vhf.css');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 
 /* Scroll */
 html {
@@ -442,4 +445,29 @@ h5 {
   .active-link {
     border-bottom: none;
   }
+}
+
+.arrow-container {
+  position: relative;
+}
+
+.paragraph-container {
+  height: 320px; /* Adjust this value as needed */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slick-dots li button:before {
+  font-size: 12px; /* Increase the font size to make the dots larger */
+  color: black; /* Optional: Change the color of the dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #1C58A6; /* Optional: Change the color of the active dot */
+}
+
+.slick-dots li {
+  margin: 0 1px; /* Adjust the margin value to move dots closer together or further apart */
 }

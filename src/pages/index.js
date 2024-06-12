@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from 'react-slick'
 import Layout from '../components/layout'
 import jamesMain from '../assets/james-main.png'
 import jamesTreatment from '../assets/james-treatment.jpg'
@@ -8,8 +9,8 @@ import aao from '../assets/aao.png'
 import beavrs from '../assets/beavrs.svg'
 import escrs from '../assets/escrs.svg'
 import eurina from '../assets/eurina.svg'
-import pembroke from '../assets/pembroke.svg'
 import rocopth from '../assets/rocopth.svg'
+import cmac from '../assets/cmac.png'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import grade from '../assets/grade.svg'
@@ -114,6 +115,113 @@ class RootIndex extends React.Component {
 
   render() {
     const { openIndex } = this.state
+
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+      ],
+      nextArrow: <SampleNextArrow />,
+    }
+
+    function SampleNextArrow(props) {
+      const { className, style, onClick } = props
+      return (
+        <div
+          className={className}
+          style={{
+            ...style,
+            display: 'block',
+            width: '40px',
+            height: '40px',
+            position: 'absolute',
+            right: '-20px', // Adjust this value to position the arrow as needed
+            top: '50%',
+            transform: 'translateY(-50%)',
+            cursor: 'pointer',
+            borderRadius: '50%',
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
+            background: 'white',
+          }}
+          onClick={onClick}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 0,
+              height: 0,
+              borderTop: '8px solid transparent',
+              borderBottom: '8px solid transparent',
+              borderLeft: '12px solid black',
+            }}
+          />
+        </div>
+      )
+    }
+
+    function SamplePrevArrow(props) {
+      const { className, style, onClick } = props
+      return (
+        <div
+          className={className}
+          style={{
+            ...style,
+            display: 'block',
+            width: '40px',
+            height: '40px',
+            position: 'absolute',
+            left: '-50px', // Adjust this value to position the arrow as needed
+            top: '50%',
+            transform: 'translateY(-50%)',
+            cursor: 'pointer',
+            borderRadius: '50%',
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
+            background: 'white',
+          }}
+          onClick={onClick}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 0,
+              height: 0,
+              borderTop: '8px solid transparent',
+              borderBottom: '8px solid transparent',
+              borderRight: '12px solid black',
+            }}
+          />
+        </div>
+      )
+    }
+
     return (
       <Layout>
         <Home />
@@ -132,17 +240,17 @@ class RootIndex extends React.Component {
                       Verified
                     </p>
                   </div>
-                  <h1 className="mt-4 mb-2 font-bold">
+                  <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="inline text-xs font-bold tracking-wide text-gray-400 uppercase xl:text-lg lg:text-sm md:text-base">
+                  <h2 className="inline text-xs font-bold tracking-wide text-gray-400 uppercase lg:text-sm md:text-base">
                     Consultant Ophthalmologist and Retinal Surgeon
                   </h2>
 
                   <p className="mt-2 md:text-md xl:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit.
+                    A leading London-based consultant eye surgeon with a
+                    specialist interest in cataract surgery, retinal surgery and
+                    emergency eye care
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
                     <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
@@ -222,9 +330,9 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-
           {/* Professional affiliations Large */}
-          <section className="px-[8%] lg:px-0 py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
+          {/* Professional affiliations Large */}
+          <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                 <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
@@ -232,59 +340,104 @@ class RootIndex extends React.Component {
                     Professional affiliations
                   </h1>
                 </div>
-                <div className="grid gap-4 justify-items-center lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-4">
+                <div className="grid grid-cols-2 gap-4 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
                   <div className="flex justify-center">
-                    <div className="p-2">
-                      <img
-                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
-                        src={rocopth}
-                        alt="Checkmark"
-                      />
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.rcophth.ac.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          src={rocopth}
+                          alt="Rocopth"
+                        />
+                      </a>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="p-2">
-                      <img
-                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
-                        src={eurina}
-                        alt="Checkmark"
-                      />
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://euretina.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          src={eurina}
+                          alt="Eurina"
+                        />
+                      </a>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="p-2">
-                      <img
-                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
-                        src={aao}
-                        alt="Checkmark"
-                      />
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.aao.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          src={aao}
+                          alt="AAO"
+                        />
+                      </a>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="p-2">
-                      <img
-                        className="max-h-[1.75rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
-                        src={escrs}
-                        alt="Checkmark"
-                      />
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.cmac.world/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          src={cmac}
+                          alt="CMAC"
+                        />
+                      </a>
                     </div>
                   </div>
-
                   <div className="flex justify-center">
-                    <div className="p-2">
-                      <img
-                        className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
-                        src={beavrs}
-                        alt="Checkmark"
-                      />
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.escrs.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[1.5rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
+                          src={escrs}
+                          alt="ESCRS"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.beavrs.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          src={beavrs}
+                          alt="BEAVRS"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
           {/* Benefits */}
-          <section className="px-[8%] md:px-[10%] lg:px-[5%] pt-16 pb-8 md:py-16 fade-in">
+          <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] pt-0 pb-8 md:pb-16 xl:pb-24 fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="aspect-w-1 aspect-h-1">
                 <img
@@ -295,14 +448,13 @@ class RootIndex extends React.Component {
               </div>
               <div className="flex items-center">
                 <div>
-                  <h2 className="font-bold leading-[1.2] mb-5 md:mb-4">
+                  <h2 className="font-bold leading-[1.2] mb-4 md:mb-4">
                     Leading Ophthalmologist and Vitreoretinal Surgeon
                   </h2>
-                  <p className="mb-5 md:mb-6 md:text-md">
+                  <p className="mb-5 md:mb-4 md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla.
                   </p>
                   <div className="grid grid-cols-1 gap-4 py-2 lg:gap-2">
                     <div className="flex self-start">
@@ -349,9 +501,9 @@ class RootIndex extends React.Component {
             </div>
           </section>
           {/* Services */}
-          <header className="relative py-8 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
+          <header className="relative py-12 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container">
-              <div className="flex items-center py-8 lg:pt-0 lg:pb-0">
+              <div className="flex items-center py-0 lg:pt-0 lg:pb-0">
                 <div className="max-w-md">
                   <div className="flex-col self-start">
                     {accordionData.map((item, index) => (
@@ -429,130 +581,146 @@ class RootIndex extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
-                <div className="flex flex-col">
-                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Suspendisse varius enim in eros
-                    elementum tristique. Duis cursus, mi quis viverra ornare.
+              <Slider {...settings}>
+                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                    If it wasn't for Mr James Neffendorf's diagnosis, quick
+                    response, and brilliant surgery, I’d be blind in one eye
+                    now. Mr Neffendorf has great bedside manner and excellent
+                    communication skills. I have no hesitation in recommending
+                    Mr Neffendorf to any patient, especially those who are
+                    nervous or require complicated surgery.
                   </blockquote>
-                  <img
-                    src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                    alt="Testimonial avatar 3"
-                    className="object-cover mb-4 rounded-full size-14 min-h-14 min-w-14"
-                  />
-                  <p className="font-semibold text-black">Name Surname</p>
+
+                  <p className="font-semibold text-black">
+                    Emergency Ophthalmology Patient
+                  </p>
                   <p>
-                    <span>Previous Client</span>, <span>Date</span>
+                    <span>26 Jan 2023</span>
                   </p>
                 </div>
-                <div className="flex flex-col">
-                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Suspendisse varius enim in eros
-                    elementum tristique. Duis cursus, mi quis viverra ornare.
+                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                    Mr James Neffendorf was friendly, kind, and professional. He
+                    took time to explain every aspect of my treatment and made
+                    me feel comfortable throughout. I have had no complications
+                    following my procedure and for the first time feel informed
+                    on how to effectively manage the care & treatment of my
+                    eyes.
                   </blockquote>
-                  <img
-                    src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                    alt="Testimonial avatar 3"
-                    className="object-cover mb-4 rounded-full size-14 min-h-14 min-w-14"
-                  />
-                  <p className="font-semibold text-black">Name Surname</p>
+                  <p className="font-semibold text-black">
+                    Eye problems Patient
+                  </p>
                   <p>
-                    <span>Previous Client</span>, <span>Date</span>
+                    <span>03 Jul 2023</span>
                   </p>
                 </div>
-                <div className="flex flex-col">
-                  <blockquote className='my-6 text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Suspendisse varius enim in eros
-                    elementum tristique. Duis cursus, mi quis viverra ornare.
+                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                    James is very professional and experienced and has improved
+                    my sight in both eyes following cataract operations. I am
+                    now able to pursue my hobbies of tennis, dancing and
+                    gardening without glasses. It is extremely important to have
+                    good wellbeing when working long hours in a very tough
+                    business.
                   </blockquote>
-                  <img
-                    src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                    alt="Testimonial avatar 3"
-                    className="object-cover mb-4 rounded-full size-14 min-h-14 min-w-14"
-                  />
-                  <p className="font-semibold text-black">Name Surname</p>
+
+                  <p className="font-semibold text-black">Cataracts Patient</p>
                   <p>
-                    <span>Previous Client</span>, <span>Date</span>
+                    <span>19 Dec 2023</span>
                   </p>
                 </div>
-              </div>
+                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                    If it wasn't for Mr James Neffendorf's diagnosis, quick
+                    response, and brilliant surgery, I’d be blind in one eye
+                    now. Mr Neffendorf has great bedside manner and excellent
+                    communication skills. I have no hesitation in recommending
+                    Mr Neffendorf to any patient, especially those who are
+                    nervous or require complicated surgery.
+                  </blockquote>
+
+                  <p className="font-semibold text-black">Cataracts Patient</p>
+                  <p>
+                    <span>19 Dec 2023</span>
+                  </p>
+                </div>
+              </Slider>
             </div>
           </section>
-          {/* Call To Action */}
-          <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
-            <img
-              src={topRightSvg}
-              alt="Top right background decoration"
-              className="absolute -top-20 -right-20"
-            />
-            <img
-              src={bottomLeftSvg}
-              alt="Bottom left background decoration"
-              className="absolute -bottom-10 -left-10"
-            />
-            <div className="container text-center">
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                Book a Consultation
-              </h2>
-              <p className="md:text-md">
-                Book a consultation with Mr James Neffendorf for expert
-                ophthalmic care and treatment.
-              </p>
-              <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
-                  Contact Mr Neffendorf
-                </button>
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
-                  About Mr Neffendorf
-                </button>
-              </div>
+        {/* Call To Action */}
+{/* Call To Action */}
+{/* Call To Action */}
+<section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
+  <img
+    src={topRightSvg}
+    alt="Top right background decoration"
+    className="absolute top-0 right-50"
+    style={{ zIndex: -1 }}
+  />
+  <img
+    src={bottomLeftSvg}
+    alt="Bottom left background decoration"
+    className="absolute bottom-0 left-50"
+    style={{ zIndex: -1 }}
+  />
+  <div className="container relative z-10 text-center">
+    <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+      Book a Consultation
+    </h2>
+    <p className="md:text-md">
+      Book a consultation with Mr James Neffendorf for expert
+      ophthalmic care and treatment.
+    </p>
+    <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+        Contact Mr Neffendorf
+      </button>
+      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+        About Mr Neffendorf
+      </button>
+    </div>
 
-              <div className="flex flex-row items-center justify-center mt-8">
-                <p className="mr-2 font-bold text-gray-900">Excellent</p>
+    <div className="flex flex-row items-center justify-center mt-8">
+      <p className="mr-2 font-bold text-gray-900">Excellent</p>
 
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  src={doctifyLogo}
-                  className="ml-2 mr-2 max-h-12"
-                  alt="Doctify logo"
-                />
-                <p className="mr-2">4.94 out of 5</p>
-              </div>
-            </div>
-          </section>
+      <img
+        className="inline-block size-6"
+        src={grade}
+        alt="Checkmark"
+      />
+      <img
+        className="inline-block size-6"
+        src={grade}
+        alt="Checkmark"
+      />
+      <img
+        className="inline-block size-6"
+        src={grade}
+        alt="Checkmark"
+      />
+      <img
+        className="inline-block size-6"
+        src={grade}
+        alt="Checkmark"
+      />
+      <img
+        className="inline-block size-6"
+        src={grade}
+        alt="Checkmark"
+      />
+      <img
+        src={doctifyLogo}
+        className="ml-2 mr-2 max-h-12"
+        alt="Doctify logo"
+      />
+      <p className="mr-2">4.94 out of 5</p>
+    </div>
+  </div>
+</section>
+
+
+
         </div>
       </Layout>
     )
