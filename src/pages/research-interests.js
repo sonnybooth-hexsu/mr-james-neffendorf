@@ -166,35 +166,41 @@ class ResearchInterests extends React.Component {
     return (
       <Layout>
         <div className="main-content">
-          <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b  header-gradient fade-in overflow-hidden">
+          <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b header-gradient fade-in overflow-hidden">
             <div
               className="absolute inset-0 bg-center bg-cover opacity-10"
               style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
             ></div>
             <div className="container relative z-10 text-left">
-              <p className="mb-2 text-white tag">Mr James Neffendorf's</p>
-
-              <h1 className="my-4 tracking-wide text-gray-800 fade-in">
-                Clinical Interests & Research
-              </h1>
-              <p className="mb-4 text-gray-500 opacity-75 md:text-md fade-in">
-                Mr James Neffendorf has been involved in a wide range of
-                academic research, and is currently focusing his interests on
-                vitreoretinal surgery, retinal detachment, artificial
-                intelligence, and the exploration of ocular biomarkers for
-                neurological diseases.
-              </p>
+              <div className="lg:flex lg:items-baseline">
+                <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
+                  Clinical Interests & Research
+                </h1>
+                <p className="mb-4 text-gray-500 opacity-75 lg:w-1/2 md:text-md fade-in lg:ml-4">
+                  Mr James Neffendorf has been involved in a wide range of
+                  academic research, and is currently focusing his interests on
+                  vitreoretinal surgery, retinal detachment, artificial
+                  intelligence, and the exploration of ocular biomarkers for
+                  neurological diseases.
+                </p>
+              </div>
               <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3">
-                <div className="pl-4 text-left border-l-4 border-jamesBlue">
-                  <p className="text-4xl font-bold text-gray-800">14+</p>
+                <div className="pl-4 text-left border-l-8 border-gray-300">
+                  <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
+                    14+
+                  </p>
                   <p className="text-gray-500">Years of Experience</p>
                 </div>
-                <div className="pl-4 text-left border-l-4 border-jamesBlue">
-                  <p className="text-4xl font-bold text-gray-800">100+</p>
+                <div className="pl-4 text-left border-l-8 border-gray-300">
+                  <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
+                    100+
+                  </p>
                   <p className="text-gray-500">Published Papers</p>
                 </div>
-                <div className="pl-4 text-left border-l-4 border-jamesBlue">
-                  <p className="text-4xl font-bold text-gray-800">10+</p>
+                <div className="pl-4 text-left border-l-8 border-gray-300">
+                  <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
+                    10+
+                  </p>
                   <p className="text-gray-500">Awards & Recognitions</p>
                 </div>
               </div>
@@ -265,7 +271,7 @@ class ResearchInterests extends React.Component {
                     ].map((year) => (
                       <li
                         key={year}
-                        className={`cursor-pointer ${selectedYear === year ? 'text-blue-600' : 'text-gray-500'}`}
+                        className={`cursor-pointer ${selectedYear === year ? 'text-jamesBlue' : 'text-gray-500'}`}
                         onClick={() => this.handleFilterChange(year)}
                       >
                         {year}
