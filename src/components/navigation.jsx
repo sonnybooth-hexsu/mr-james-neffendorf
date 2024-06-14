@@ -73,17 +73,23 @@ export const Navigation = () => {
             </a>
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
-            <a href="/about" className={getLinkClass('/about')}>
+            <a href="/about" className={getLinkClass('/about/')}>
               About
             </a>
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
-            <a href="/cataract/cataract-1/" className={getLinkClass('/about')}>
+            <a
+              href="/cataract/cataract-1/"
+              className={getLinkClass('/cataract/cataract-1/')}
+            >
               Cataract
             </a>
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
-            <a href="/retina/retina-1/" className={getLinkClass('/about')}>
+            <a
+              href="/retina/retina-1/"
+              className={getLinkClass('/retina/retina-1/')}
+            >
               Retina
             </a>
           </div>
@@ -133,18 +139,18 @@ export const Navigation = () => {
           <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
               href="/research-interests"
-              className={getLinkClass('/research-interests')}
+              className={getLinkClass('/research-interests/')}
             >
               Research
             </a>
           </div>
           <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
-            <a href="/patient-hub" className={getLinkClass('/patient-hub')}>
+            <a href="/patient-hub" className={getLinkClass('/patient-hub/')}>
               Patient Hub
             </a>
           </div>
           <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
-            <a href="/contact" className={getLinkClass('/contact')}>
+            <a href="/contact" className={getLinkClass('/contact/')}>
               Contact
             </a>
           </div>

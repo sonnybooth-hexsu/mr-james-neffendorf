@@ -24,8 +24,8 @@ class CataractTemplate extends React.Component {
 
     return (
       <Layout>
-        <div className="bg-red-500 main-content">
-          <section className="px-[5%] bg-red-500 border-b py-16 md:py-24 lg:py-28">
+        <div className="main-content">
+          <section className="px-[5%] border-b py-16 md:py-24 lg:py-28">
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 md:grid-cols-2 lg:items-center">
                 <div>
@@ -73,7 +73,7 @@ class CataractTemplate extends React.Component {
           <section className="px-[5%]">
             <main className="container py-16 mx-auto">
               <div className="grid md:grid-cols-4 md:gap-x-10">
-                <div className="bg-blue-100 md:col-span-3 md:col-start-1">
+                <div className="md:col-span-3 md:col-start-1">
                   <section>
                     <h2 className="mb-2 text-2xl font-semibold">Overview</h2>
                     <div
@@ -116,20 +116,6 @@ class CataractTemplate extends React.Component {
                         </Accordion>
                       </div>
                     )}
-                    <h2 className="mb-2 text-2xl font-semibold">
-                      Why choose Mr James Neffendorf?
-                    </h2>
-                    <p className="mb-4 text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    </p>
-
-                    <h2 className="mb-2 text-2xl font-semibold">
-                      Frequently Asked Questions
-                    </h2>
-                    <p className="mb-4 text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Volutpat a, aliquet massa ullamcorper sagittis, fusce.
-                    </p>
                     {post.faqs && (
                       <>
                         <h2>Frequently asked question</h2>
@@ -151,7 +137,7 @@ class CataractTemplate extends React.Component {
                     )}
                   </section>
                 </div>
-                <div className="p-8 bg-yellow-100 rounded-lg shadow-md md:col-span-1 md:col-start-4">
+                <div className="rounded-lg shadow-md md:col-span-1 md:col-start-4">
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>

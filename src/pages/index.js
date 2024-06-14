@@ -13,6 +13,7 @@ import rocopth from '../assets/rocopth.svg'
 import cmac from '../assets/cmac.png'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
+import swoosh from '../assets/swoosh.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
 import eyeExam from '../assets/eye-exam.jpg'
@@ -649,22 +650,13 @@ class RootIndex extends React.Component {
             </div>
           </section>
           {/* Call To Action */}
-          {/* Call To Action */}
-          {/* Call To Action */}
-          <section className="relative px-[8%] md:px-[10%] lg:px-[5%] py-24 md:py-28 lg:py-40 overflow-hidden fade-in">
+          <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
             <img
-              src={topRightSvg}
-              alt="Top right background decoration"
-              className="absolute top-0 right-50"
-              style={{ zIndex: -1 }}
+              src={swoosh}
+              className="absolute inset-0 object-cover w-full h-full"
+              alt="Placeholder image"
             />
-            <img
-              src={bottomLeftSvg}
-              alt="Bottom left background decoration"
-              className="absolute bottom-0 left-50"
-              style={{ zIndex: -1 }}
-            />
-            <div className="container relative z-10 text-center">
+            <div className="container relative z-10 py-24 text-center md:py-28 lg:py-40">
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
                 Book a Consultation
               </h2>
@@ -672,7 +664,7 @@ class RootIndex extends React.Component {
                 Book a consultation with Mr James Neffendorf for expert
                 ophthalmic care and treatment.
               </p>
-              <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+              <div className="flex items-center justify-center mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                 <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                   Contact Mr Neffendorf
                 </button>
@@ -680,10 +672,8 @@ class RootIndex extends React.Component {
                   About Mr Neffendorf
                 </button>
               </div>
-
               <div className="flex flex-row items-center justify-center mt-8">
                 <p className="mr-2 font-bold text-gray-900">Excellent</p>
-
                 <img
                   className="inline-block size-6"
                   src={grade}
