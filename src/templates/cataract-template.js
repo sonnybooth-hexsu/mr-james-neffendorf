@@ -90,7 +90,7 @@ class CataractTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mb-2">Solutions</h2>
+                        <h2 className="mt-6 mb-2 font-semibold">Solutions</h2>
                         <p className="mb-4 text-gray-500">{post.solutions}</p>
                       </>
                     )}
