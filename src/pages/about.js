@@ -1,12 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import jamesLeaning from '../assets/james-leaning.jpg'
+import jamesSuit from '../assets/james-suit.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import grade from '../assets/grade.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
+import iconEducation from '../assets/education.svg'
 
 class About extends React.Component {
   componentDidMount() {
@@ -60,7 +62,7 @@ class About extends React.Component {
                 </div>
                 <div>
                   <img
-                    src={jamesLeaning}
+                    src={jamesSuit}
                     className="object-cover w-full rounded-xl"
                     alt="Placeholder image"
                   />
@@ -122,9 +124,9 @@ class About extends React.Component {
               </div>
             </div>
           </section>
-          <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          <section className="px-[5%] py-8 md:py-12 lg:py-16 fade-in">
             <div className="container grid items-center grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-              <div className="grid items-center grid-cols-1 col-start-1 col-end-2 row-start-1 row-end-2 gap-x-4 gap-y-10">
+              <div className="grid items-center grid-cols-1 col-start-1 col-end-2 row-start-1 row-end-2 gap-x-4 gap-y-4">
                 <div></div>
                 <div className="pl-8 border-l-2 border-black cursor-pointer">
                   <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
@@ -144,28 +146,18 @@ class About extends React.Component {
                     ut commodo diam libero vitae erat.
                   </p>
                 </div>
-                <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                  <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
-                  </p>
-                </div>
               </div>
-              <div className="flex h-[600px] max-h-full w-full items-center justify-center overflow-hidden">
+              <div className="flex items-center justify-center w-full h-auto overflow-hidden">
                 <div style={{ opacity: 1 }}>
                   <img
                     src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
                     alt="Placeholder image 1"
-                    className="object-cover size-full"
+                    className="object-cover w-full h-full"
                   />
                 </div>
               </div>
             </div>
           </section>
-
           {/* Awards & Achievements */}
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
@@ -177,10 +169,10 @@ class About extends React.Component {
                       <img
                         src={iconTrophy}
                         alt="Placeholder image 1"
-                        className="object-cover size-full"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-900">
                       2023{' '}
                       <span className="font-normal text-gray-500">
                         Excellence in Ophthalmic Research Medal
@@ -192,10 +184,10 @@ class About extends React.Component {
                       <img
                         src={iconTrophy}
                         alt="Placeholder image 1"
-                        className="object-cover size-full"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-900">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -207,10 +199,10 @@ class About extends React.Component {
                       <img
                         src={iconTrophy}
                         alt="Placeholder image 1"
-                        className="object-cover size-full"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-900">
                       2019{' '}
                       <span className="font-normal text-gray-500">
                         The Golden Lens Award
@@ -222,10 +214,10 @@ class About extends React.Component {
                       <img
                         src={iconTrophy}
                         alt="Placeholder image 1"
-                        className="object-cover size-full"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-900">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -237,10 +229,10 @@ class About extends React.Component {
                       <img
                         src={iconTrophy}
                         alt="Placeholder image 1"
-                        className="object-cover size-full"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-900">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -253,15 +245,26 @@ class About extends React.Component {
           </section>
 
           {/* Quote */}
-          <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          <section className="px-[5%] bg-gray-50 lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container">
               <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-                <div>
+                <div className="relative">
                   <img
                     src={jamesLeaning}
-                    className="object-cover w-full"
+                    className="object-cover w-full rounded-lg"
                     alt="Placeholder image"
                   />
+                  <div className="absolute flex items-center p-4 bg-white shadow-xl bottom-4 right-4">
+                    <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
+                      Excellent
+                    </p>
+                    <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
+                    <img
+                      src={doctifyLogo}
+                      className="ml-2 max-h-12"
+                      alt="Doctify logo"
+                    />
+                  </div>
                 </div>
                 <div>
                   <img
@@ -278,17 +281,6 @@ class About extends React.Component {
                   </p>
                   <p>MA (Cantab) MBBS (Lond) MD (Res) FRCOphth</p>
                 </div>
-                <div className="absolute flex p-4 shadow-xl bottom-4 right-4">
-                  <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
-                    Excellent
-                  </p>
-                  <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
-                  <img
-                    src={doctifyLogo}
-                    className="ml-2 max-h-12"
-                    alt="Doctify logo"
-                  />
-                </div>
               </div>
             </div>
           </section>
@@ -301,9 +293,9 @@ class About extends React.Component {
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-4">
                       <img
-                        className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 1"
+                        src={iconEducation}
+                        alt="Placeholder image 1"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
                     <p>
@@ -314,9 +306,9 @@ class About extends React.Component {
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-4">
                       <img
-                        className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 2"
+                        src={iconEducation}
+                        alt="Placeholder image 1"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
                     <p>
@@ -327,9 +319,9 @@ class About extends React.Component {
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-4">
                       <img
-                        className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 3"
+                        src={iconEducation}
+                        alt="Placeholder image 1"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
                     <p>
@@ -340,9 +332,9 @@ class About extends React.Component {
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-4">
                       <img
-                        className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 2"
+                        src={iconEducation}
+                        alt="Placeholder image 1"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
                     <p>
@@ -353,9 +345,9 @@ class About extends React.Component {
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-4">
                       <img
-                        className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 2"
+                        src={iconEducation}
+                        alt="Placeholder image 1"
+                        className="object-cover h-8 size-full"
                       />
                     </div>
                     <p>
