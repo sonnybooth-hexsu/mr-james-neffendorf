@@ -33,7 +33,7 @@ class RetinaTemplate extends React.Component {
         <div className="bg-red-500 main-content">
           <section className="px-[5%] bg-red-500 border-b py-16 md:py-24 lg:py-28">
             <div className="container">
-              <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+              <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 md:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mt-4 mb-4 font-bold">{post.heading}</h1>
 
@@ -58,13 +58,13 @@ class RetinaTemplate extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div className="">
+                <div className="relative">
                   <img
                     src={retinaHeader}
-                    className="relative object-cover w-full rounded-xl "
+                    className="object-cover w-full rounded-xl "
                     alt="Placeholder image"
                   />
-                  <div className="absolute bottom-0 flex p-4 bg-white shadow-xl -right-5">
+                  <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
                     <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
                       Excellent
                     </p>
@@ -72,7 +72,7 @@ class RetinaTemplate extends React.Component {
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-12"
-                      alt="Placeholder image"
+                      alt="Doctify logo"
                     />
                   </div>
                 </div>
@@ -83,8 +83,9 @@ class RetinaTemplate extends React.Component {
           {/* Content Section */}
           <section className="px-[5%]">
             <main className="container py-16 mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-10">
-                <div className="lg:col-span-3 lg:col-start-1">
+              <div className="grid md:grid-cols-4 md:gap-x-10">
+                {/* Left content */}
+                <div className="bg-blue-100 md:col-span-3 md:col-start-1">
                   <section>
                     <h2 className="mb-2 text-2xl font-semibold">Overview</h2>
                     <p className="mb-8">
@@ -93,11 +94,7 @@ class RetinaTemplate extends React.Component {
                       in risus lectus felis, lectus. Tellus egestas venenatis
                       euismod nunc id praesent enim pretium pellentesque.
                     </p>
-                    {/* <div className="flex items-center justify-center h-64 mb-8 bg-gray-200">
-                  EMBEDDED VIDEO
-                </div> */}
-                  </section>
-                  <section>
+
                     <h2 className="mb-2 text-2xl font-semibold">Symptoms</h2>
                     <p className="mb-4 text-gray-500">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -110,9 +107,7 @@ class RetinaTemplate extends React.Component {
                       <li className="custom-li">Symptom 2</li>
                       <li className="custom-li">Symptom 3</li>
                     </ul>
-                  </section>
 
-                  <section>
                     <h2 className="mb-2 text-2xl font-semibold">Solutions</h2>
                     <p className="mb-4 text-gray-500">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -152,16 +147,14 @@ class RetinaTemplate extends React.Component {
                         </AccordionItem>
                       </Accordion>
                     </div>
-                  </section>
-                  <section className="mb-8">
+
                     <h2 className="mb-2 text-2xl font-semibold">
                       Why choose Mr James Neffendorf?
                     </h2>
                     <p className="mb-4 text-gray-500">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                     </p>
-                  </section>
-                  <section className="mb-8">
+
                     <h2 className="mb-2 text-2xl font-semibold">
                       Frequently Asked Questions
                     </h2>
@@ -199,7 +192,8 @@ class RetinaTemplate extends React.Component {
                     </div>
                   </section>
                 </div>
-                <div className="p-8 rounded-lg shadow-md lg:col-span-1 lg:col-start-4 lg:ml-10">
+                {/* Right form */}
+                <div className="p-8 bg-yellow-100 rounded-lg shadow-md md:col-span-1 md:col-start-4">
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>
@@ -270,14 +264,9 @@ class RetinaTemplate extends React.Component {
                         </span>
                       </label>
                     </div>
-                    <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
-                        Contact Mr Neffendorf
-                      </button>
-                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
-                        About Mr Neffendorf
-                      </button>
-                    </div>
+                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                      Submit
+                    </button>
                   </form>
                 </div>
               </div>
