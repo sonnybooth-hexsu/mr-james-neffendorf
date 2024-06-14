@@ -16,12 +16,14 @@ class EyeCareTemplate extends React.Component {
 
     return (
       <Layout>
-        <p>{post.heading}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: documentToHtmlString(document, options),
-          }}
-        />
+        <div className="main-content">
+          <p>{post.heading}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: documentToHtmlString(document, options),
+            }}
+          />
+        </div>
       </Layout>
     )
   }

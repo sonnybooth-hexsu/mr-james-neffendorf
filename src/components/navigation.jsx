@@ -10,10 +10,6 @@ export const Navigation = () => {
   const location = useLocation()
   const dropdownRefs = useRef([])
 
-  useEffect(() => {
-    console.log('Current pathname:', location.pathname)
-  }, [location.pathname])
-
   const linkData = useStaticQuery(graphql`
     query {
       allContentfulEyeCare {
@@ -37,33 +33,16 @@ export const Navigation = () => {
     }
   `)
 
-  const toggleSubMenu = (category) => {
-    setSubMenuOpen((prev) => ({ ...prev, [category]: !prev[category] }))
+  const toggleSubMenu = (e, category) => {
+    setSubMenuOpen({ [category]: !subMenuOpen[category] })
   }
 
   const getLinkClass = (path) =>
-    `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-3 lg:py-10 lg:text-base ${
+    `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-3 lg:text-base ${
       location.pathname === path
         ? 'text-gray-900 active-link'
         : 'hover:text-jamesBlue'
     }`
-
-  const handleClickOutside = (event) => {
-    if (dropdownRefs.current) {
-      dropdownRefs.current.forEach((ref) => {
-        if (ref && !ref.contains(event.target)) {
-          setSubMenuOpen({})
-        }
-      })
-    }
-  }
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [])
 
   return (
     <nav className="flex fixed bg-jamesWhite border-b z-50 w-full items-center lg:min-h-28 lg:px-[5%]">
@@ -74,7 +53,9 @@ export const Navigation = () => {
           </a>
           <button
             className={`menu-icon ${menuOpen ? 'open' : ''}`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => {
+              setMenuOpen(!menuOpen)
+            }}
           >
             <div></div>
             <div></div>
@@ -96,10 +77,10 @@ export const Navigation = () => {
               About
             </a>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
               className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
-              onClick={() => toggleSubMenu('Cataract')}
+              onClick={(e) => toggleSubMenu(e, 'Cataract')}
             >
               <span>Cataract</span>
               <div>
@@ -124,7 +105,7 @@ export const Navigation = () => {
             </button>
             <div
               ref={(el) => (dropdownRefs.current[0] = el)}
-              className={`lg:absolute lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['Cataract'] ? 'block' : 'hidden'}`}
+              className={`lg:absolute top-minus-full lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['Cataract'] ? 'block' : 'hidden'}`}
             >
               {linkData?.allContentfulCataract?.nodes.map(
                 ({ heading, slug }, id) => (
@@ -139,10 +120,10 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
               className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
-              onClick={() => toggleSubMenu('Retina')}
+              onClick={(e) => toggleSubMenu(e, 'Retina')}
             >
               <span>Retina</span>
               <div>
@@ -167,7 +148,7 @@ export const Navigation = () => {
             </button>
             <div
               ref={(el) => (dropdownRefs.current[1] = el)}
-              className={`lg:absolute lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['Retina'] ? 'block' : 'hidden'}`}
+              className={`lg:absolute top-minus-full lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['Retina'] ? 'block' : 'hidden'}`}
             >
               {linkData?.allContentfulRetina?.nodes.map(
                 ({ heading, slug }, id) => (
@@ -182,10 +163,10 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="relative first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
               className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
-              onClick={() => toggleSubMenu('EyeCare')}
+              onClick={(e) => toggleSubMenu(e, 'EyeCare')}
             >
               <span>Eye Care</span>
               <div>
@@ -210,7 +191,7 @@ export const Navigation = () => {
             </button>
             <div
               ref={(el) => (dropdownRefs.current[2] = el)}
-              className={`lg:absolute lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['EyeCare'] ? 'block' : 'hidden'}`}
+              className={`lg:absolute top-minus-full lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['EyeCare'] ? 'block' : 'hidden'}`}
             >
               {linkData?.allContentfulEyeCare?.nodes.map(
                 ({ heading, slug }, id) => (

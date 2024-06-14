@@ -2,8 +2,110 @@ import React from 'react'
 import Layout from '../components/layout'
 import Publications from '../components/publications'
 import doctifyLogo from '../assets/doctify-logo.svg'
+import hub from '../assets/hub.svg'
 
 class ResearchInterests extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedYear: 'ALL',
+      sortBy: 'Date',
+      articles: [
+        {
+          date: 'Feb 2023',
+          title:
+            'Effect of intravitreal anti-vascular endothelial growth factor treatment for neovascular age-related macular degeneration on renal function',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2022',
+          title:
+            'The effect of intravitreal anti-vascular endothelial growth factor treatment for neovascular age-related macular degeneration on renal function',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2021',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2020',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2019',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2018',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2017',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2016',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2015',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2014',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        {
+          date: 'Sep 2013',
+          title: 'Placeholder publication',
+          summary:
+            'Risk factors such as low vitamin D level has been implicated in the etiology of multiple sclerosis (MS) and may be relevant to myopia, such that there may be an association between myopia and MS. Methods: Using linked Swedish national register data, we conducted a cohort study of men who were born in Sweden between 1950 and 1992, liv...',
+          contributors:
+            'Dr. James Neffendorf, Co-Contributor, Co-Contributor, Co-Contributor, Co-Contributor',
+        },
+        // Add more articles here...
+      ],
+    }
+  }
+
   componentDidMount() {
     this.handleScroll()
     window.addEventListener('scroll', this.handleScroll)
@@ -25,48 +127,117 @@ class ResearchInterests extends React.Component {
     })
   }
 
+  handleFilterChange = (year) => {
+    this.setState({ selectedYear: year })
+  }
+
+  handleSortChange = (sortBy) => {
+    this.setState({ sortBy })
+  }
+
+  filterArticles = () => {
+    const { selectedYear, articles } = this.state
+    if (selectedYear === 'ALL') {
+      return articles
+    }
+    return articles.filter((article) => article.date.includes(selectedYear))
+  }
+
+  sortArticles = (articles) => {
+    const { sortBy } = this.state
+    return articles.sort((a, b) => {
+      if (sortBy === 'Date') {
+        const dateA = new Date(a.date.split(' ')[1])
+        const dateB = new Date(b.date.split(' ')[1])
+        return dateB - dateA
+      }
+      if (sortBy === 'Title') {
+        return a.title.localeCompare(b.title)
+      }
+      return articles
+    })
+  }
+
   render() {
+    const { selectedYear, sortBy } = this.state
+    const filteredArticles = this.filterArticles()
+    const sortedArticles = this.sortArticles(filteredArticles)
+
     return (
       <Layout>
         <div className="main-content">
-          <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in">
+          <header className="relative px-[5%] bg-jamesBlue py-16 md:py-24 lg:py-28 border-b border-t header-gradient fade-in overflow-hidden">
             <div
               className="absolute inset-0 bg-center bg-cover opacity-10"
               style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
             ></div>
-            <div className="container relative flex flex-col items-center max-w-screen-md px-4 mx-auto text-left text-center header-content md:px-8 lg:px-16">
-              <svg
-                width="48px"
-                height="48px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="animate-bounce fade-in"
-              >
-                <path
-                  d="M6 2H14C14.2652 2 14.5196 2.10536 14.7071 2.29289L19.7071 7.29289C19.8946 7.48043 20 7.73478 20 8V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2Z"
-                  fill="#007FFF"
-                />
-                <path d="M14 2V6C14 6.55228 14.4477 7 15 7H19" fill="#007FFF" />
-                <path
-                  d="M8 12H16M8 16H12M8 8H12"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <h1 className="mt-4 mb-5 font-bold md:mb-6 fade-in">
+            <div className="container relative z-10 text-left">
+              <p className="text-white">Mr James Neffendorf's</p>
+              <h1 className="my-4 tracking-wide text-white fade-in">
                 Clinical Interests & Research
               </h1>
-              <p className="text-sm text-gray-700 md:text-lg fade-in">
+              <p className="mb-4 opacity-75 text-lightOnDark md:text-md fade-in">
                 Mr James Neffendorf has been involved in a wide range of
                 academic research, and is currently focusing his interests on
                 vitreoretinal surgery, retinal detachment, artificial
                 intelligence, and the exploration of ocular biomarkers for
                 neurological diseases.
               </p>
+              <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3">
+                <div className="pl-4 text-left border-l-2 border-white">
+                  <p className="text-4xl font-bold text-white">14+</p>
+                  <p className="text-lightOnDark">Years of Experience</p>
+                </div>
+                <div className="pl-4 text-left border-l-2 border-white">
+                  <p className="text-4xl font-bold text-white">100+</p>
+                  <p className="text-lightOnDark">Published Papers</p>
+                </div>
+                <div className="pl-4 text-left border-l-2 border-white">
+                  <p className="text-4xl font-bold text-white">10+</p>
+                  <p className="text-lightOnDark">Awards & Recognitions</p>
+                </div>
+              </div>
             </div>
+            {/* <svg
+    className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 opacity-25"
+    width="800"
+    height="800"
+    viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="100"
+      cy="100"
+      r="80"
+      stroke="#cccccc"
+      strokeWidth="1"
+      fill="none"
+    />
+    <circle
+      cx="100"
+      cy="100"
+      r="60"
+      stroke="#cccccc"
+      strokeWidth="1"
+      fill="none"
+    />
+    <circle
+      cx="100"
+      cy="100"
+      r="40"
+      stroke="#cccccc"
+      strokeWidth="1"
+      fill="none"
+    />
+    <circle
+      cx="100"
+      cy="100"
+      r="20"
+      stroke="#cccccc"
+      strokeWidth="1"
+      fill="none"
+    />
+  </svg> */}
           </header>
 
           <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16 fade-in">
@@ -75,7 +246,7 @@ class ResearchInterests extends React.Component {
                 <div className="flex gap-4 mb-4 lg:hidden">
                   <button
                     className="flex items-center justify-center w-1/2 gap-2 px-4 py-2 text-gray-500 border border-gray-300 rounded"
-                    onClick="toggleFilters()"
+                    onClick={() => this.handleFilterChange('ALL')}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -92,11 +263,14 @@ class ResearchInterests extends React.Component {
                     Filters
                   </button>
                   <div className="relative w-1/2">
-                    <select className="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:bg-white focus:border-gray-500">
-                      <option>Sort By</option>
-                      <option>Date</option>
-                      <option>Title</option>
-                      <option>Relevance</option>
+                    <select
+                      className="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:bg-white focus:border-gray-500"
+                      onChange={(e) => this.handleSortChange(e.target.value)}
+                      value={sortBy}
+                    >
+                      <option value="Date">Sort By</option>
+                      <option value="Date">Date</option>
+                      <option value="Title">Title</option>
                     </select>
                     <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
                       <svg
@@ -113,97 +287,52 @@ class ResearchInterests extends React.Component {
                   id="filters"
                   className="hidden overflow-hidden lg:block transition-max-height max-h-0 md:max-h-full md:overflow-visible"
                 >
-                  <ul className="space-y-4 font-bold text-blue-600">
-                    <li className="cursor-pointer">ALL</li>
-                    <li className="cursor-pointer">2023</li>
-                    <li className="cursor-pointer">2022</li>
-                    <li className="cursor-pointer">2021</li>
-                    <li className="cursor-pointer">2020</li>
-                    <li className="cursor-pointer">2019</li>
-                    <li className="cursor-pointer">2018</li>
-                    <li className="cursor-pointer">2017</li>
-                    <li className="cursor-pointer">2016</li>
-                    <li className="cursor-pointer">2015</li>
-                    <li className="cursor-pointer">2014</li>
-                    <li className="cursor-pointer">2013</li>
+                  <ul className="space-y-4 font-bold">
+                    {[
+                      'ALL',
+                      '2023',
+                      '2022',
+                      '2021',
+                      '2020',
+                      '2019',
+                      '2018',
+                      '2017',
+                      '2016',
+                      '2015',
+                      '2014',
+                      '2013',
+                    ].map((year) => (
+                      <li
+                        key={year}
+                        className={`cursor-pointer ${selectedYear === year ? 'text-blue-600' : 'text-gray-500'}`}
+                        onClick={() => this.handleFilterChange(year)}
+                      >
+                        {year}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
               <div className="md:col-span-4 lg:col-span-8 fade-in">
-                <div className="pb-4 mb-8 border-b">
-                  <p className="font-semibold text-gray-500">Feb 2023</p>
-                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                    Effect of intravitreal anti-vascular endothelial growth
-                    factor treatment for neovascular age-related macular
-                    degeneration on renal function
-                  </h3>
-                  <p className="text-gray-500">
-                    <span className="font-semibold text-gray-500">
-                      Mr Neffendorf's Summary:{' '}
-                    </span>
-                    Risk factors such as low vitamin D level has been implicated
-                    in the etiology of multiple sclerosis (MS) and may be
-                    relevant to myopia, such that there may be an association
-                    between myopia and MS. Methods: Using linked Swedish
-                    national register data, we conducted a cohort study of men
-                    who were born in Sweden between 1950 and 1992, liv...
-                  </p>
-                  <p className="mt-2 font-semibold text-gray-500">
-                    Dr. James Neffendorf, Co-Contributor, Co-Contributor,
-                    Co-Contributor, Co-Contributor
-                  </p>
-                </div>
-                <div className="pb-4 mb-8 border-b">
-                  <p className="font-semibold text-gray-500">
-                    Feb 2023{' '}
-                    <span className="text-yellow-500">🏆 Award won</span>
-                  </p>
-                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                    Myopia in late adolescence and subsequent multiple sclerosis
-                    among men
-                  </h3>
-                  <p className="text-gray-500">
-                    <span className="font-semibold text-gray-500">
-                      Mr Neffendorf's Summary:{' '}
-                    </span>
-                    Risk factors such as low vitamin D level has been implicated
-                    in the etiology of multiple sclerosis (MS) and may be
-                    relevant to myopia, such that there may be an association
-                    between myopia and MS. Methods: Using linked Swedish
-                    national register data, we conducted a cohort study of men
-                    who were born in Sweden between 1950 and 1992, liv...
-                  </p>
-                  <p className="mt-2 font-semibold text-gray-500">
-                    Dr. James Neffendorf, Co-Contributor, Co-Contributor,
-                    Co-Contributor, Co-Contributor
-                  </p>
-                </div>
-                <div className="pb-4 mb-8 border-b">
-                  <p className="font-semibold text-gray-500">Sep 2022</p>
-                  <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                    The effect of intravitreal anti-vascular endothelial growth
-                    factor treatment for neovascular age-related macular
-                    degeneration on renal function
-                  </h3>
-                  <p className="text-gray-500">
-                    <span className="font-semibold text-gray-500">
-                      Mr Neffendorf's Summary:{' '}
-                    </span>
-                    Risk factors such as low vitamin D level has been implicated
-                    in the etiology of multiple sclerosis (MS) and may be
-                    relevant to myopia, such that there may be an association
-                    between myopia and MS. Methods: Using linked Swedish
-                    national register data, we conducted a cohort study of men
-                    who were born in Sweden between 1950 and 1992, liv...
-                  </p>
-                  <p className="mt-2 font-semibold text-gray-500">
-                    Dr. James Neffendorf, Co-Contributor, Co-Contributor,
-                    Co-Contributor, Co-Contributor
-                  </p>
-                  <button className="py-2 mt-4 text-white bg-blue-600 rounded btn btn-secondary npx-4">
-                    View
-                  </button>
-                </div>
+                {sortedArticles.map((article, index) => (
+                  <div className="pb-4 mb-8 border-b" key={index}>
+                    <p className="font-semibold text-gray-500">
+                      {article.date}
+                    </p>
+                    <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-500">
+                      <span className="font-semibold text-gray-500">
+                        Mr Neffendorf's Summary:{' '}
+                      </span>
+                      {article.summary}
+                    </p>
+                    <p className="mt-2 font-semibold text-gray-500">
+                      {article.contributors}
+                    </p>
+                  </div>
+                ))}
               </div>
               <div className="hidden lg:block lg:col-span-2 fade-in"></div>
             </div>

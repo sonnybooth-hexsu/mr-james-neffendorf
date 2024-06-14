@@ -13,6 +13,7 @@ module.exports = {
         jamesBlue: '#1C58A6',
         darkerJamesBlue: '#032859',
         jamesWhite: '#FCFCFD',
+        lightOnDark: '#E6EFFF',
       },
     },
   },

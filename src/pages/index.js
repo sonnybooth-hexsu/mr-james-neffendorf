@@ -537,31 +537,31 @@ class RootIndex extends React.Component {
               <div className="flex flex-col mb-12 md:flex-row md:justify-between md:items-center">
                 <div className="lg:w-2/3 lg:pr-12">
                   <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    Customer testimonials
+                    Patient testimonials
                   </h1>
                   <p className="mb-4 md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <div className="flex flex-col lg:w-1/3 lg:items-end">
-                  <div className="flex flex-row mb-4">
+                <div className="flex flex-col justify-end lg:flex-row lg:w-full lg:items-center">
+                  <div className="flex flex-row mb-4 mr-4 lg:mb-0">
                     <img
-                      className="inline-block size-6"
+                      className="inline-block -mr-1 size-6"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block size-6"
+                      className="inline-block -mr-1 size-6"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block size-6"
+                      className="inline-block -mr-1 size-6"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block size-6"
+                      className="inline-block -mr-1 size-6"
                       src={grade}
                       alt="Checkmark"
                     />
@@ -572,7 +572,7 @@ class RootIndex extends React.Component {
                     />
                   </div>
                   <div className="flex flex-row items-center">
-                    <p className="mr-2">4.94 out of 5</p>
+                    <p className="mr-">4.94 out of 5</p>
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-12"
