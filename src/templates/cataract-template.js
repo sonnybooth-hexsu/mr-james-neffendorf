@@ -69,13 +69,11 @@ class CataractTemplate extends React.Component {
               </div>
             </div>
           </section>
-
           <section className="px-[5%]">
             <main className="container py-16 mx-auto">
               <div className="grid md:grid-cols-4 md:gap-x-10">
                 <div className="md:col-span-3 md:col-start-1">
                   <section>
-                    <h2 className="mb-2 text-2xl font-semibold">Overview</h2>
                     <div
                       className="mb-8"
                       dangerouslySetInnerHTML={{
@@ -83,7 +81,7 @@ class CataractTemplate extends React.Component {
                       }}
                     />
 
-                    <h2 className="mb-2 text-2xl font-semibold">Symptoms</h2>
+                    <h2 className="mb-2">Symptoms</h2>
                     <div
                       className="mb-4 text-gray-500"
                       dangerouslySetInnerHTML={{
@@ -92,9 +90,7 @@ class CataractTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mb-2 text-2xl font-semibold">
-                          Solutions
-                        </h2>
+                        <h2 className="mb-2">Solutions</h2>
                         <p className="mb-4 text-gray-500">{post.solutions}</p>
                       </>
                     )}
@@ -103,8 +99,12 @@ class CataractTemplate extends React.Component {
                         <Accordion type="multiple">
                           {post.solutionsAccordion.items.map(
                             ({ title, content }, id) => (
-                              <AccordionItem key={id} value={`solution${id}`}>
-                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                              <AccordionItem
+                                key={id}
+                                value={`solution${id}`}
+                                className={id === 0 ? 'border-top-none' : ''}
+                              >
+                                <AccordionTrigger className="cursor-pointer py-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -120,10 +120,14 @@ class CataractTemplate extends React.Component {
                       <>
                         <h2>Frequently asked question</h2>
                         <div className="mb-8">
-                          <Accordion type="multiple">
+                          <Accordion type="multiple ">
                             {post.faqs.items.map(({ title, content }, id) => (
-                              <AccordionItem key={id} value={`solution${id}`}>
-                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                              <AccordionItem
+                                key={id}
+                                value={`faq${id}`}
+                                className={id === 0 ? 'border-top-none' : ''}
+                              >
+                                <AccordionTrigger className="cursor-pointer border-top-nonep-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">

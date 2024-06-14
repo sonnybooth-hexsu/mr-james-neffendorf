@@ -101,7 +101,11 @@ class RetinaTemplate extends React.Component {
                         <Accordion type="multiple">
                           {post.solutionsAccordion.items.map(
                             ({ title, content }, id) => (
-                              <AccordionItem key={id} value={`solution${id}`}>
+                              <AccordionItem
+                                key={id}
+                                value={`solution${id}`}
+                                className={id === 0 ? 'border-top-none' : ''}
+                              >
                                 <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
@@ -120,7 +124,11 @@ class RetinaTemplate extends React.Component {
                         <div className="mb-8">
                           <Accordion type="multiple">
                             {post.faqs.items.map(({ title, content }, id) => (
-                              <AccordionItem key={id} value={`solution${id}`}>
+                              <AccordionItem
+                                key={id}
+                                value={`solution${id}`}
+                                className={id === 0 ? 'border-top-none' : ''}
+                              >
                                 <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>

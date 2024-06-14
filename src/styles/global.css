@@ -441,6 +441,14 @@ h5 {
   }
 }
 
+.border-top-none {
+  border-top: none !important;
+  border-left: none;
+  border-right: none;
+  border-color: black;
+  border-width: 1px;
+}
+
 @media (max-width: 1023px) {
   .active-link {
     border-bottom: none;

@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import Publications from '../components/publications'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import hub from '../assets/hub.svg'
+import swoosh2 from '../assets/swoosh-2.svg'
+import grade from '../assets/grade.svg'
 
 class ResearchInterests extends React.Component {
   constructor(props) {
@@ -306,22 +308,62 @@ class ResearchInterests extends React.Component {
           </div>
 
           <Publications />
-          <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
-            <div className="container max-w-lg text-center">
+          {/* Call To Action */}
+          <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
+            <img
+              src={swoosh2}
+              className="absolute inset-0 object-cover w-full h-full"
+              alt="Placeholder image"
+            />
+            <div className="container relative z-10 py-24 text-center md:py-28 lg:py-40">
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                Medium length heading goes here
+                Book a Consultation
               </h2>
               <p className="md:text-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique.
+                Book a consultation with Mr James Neffendorf for expert
+                ophthalmic care and treatment.
               </p>
-              <div className="flex items-center justify-center gap-4 mt-6 md:mt-8">
-                <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border btn btn-primary focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary bg-background-alternative text-text-alternative">
-                  Button
+              <div className="flex items-center justify-center mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                  Contact Mr Neffendorf
                 </button>
-                <button className="inline-flex items-center justify-center gap-3 px-6 py-3 transition-colors border focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-border-primary text-text-primary">
-                  Button
+                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                  About Mr Neffendorf
                 </button>
+              </div>
+              <div className="flex flex-row items-center justify-center mt-8">
+                <p className="mr-2 font-bold text-gray-900">Excellent</p>
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  className="inline-block size-6"
+                  src={grade}
+                  alt="Checkmark"
+                />
+                <img
+                  src={doctifyLogo}
+                  className="ml-2 mr-2 max-h-12"
+                  alt="Doctify logo"
+                />
+                <p className="mr-2">4.94 out of 5</p>
               </div>
             </div>
           </section>

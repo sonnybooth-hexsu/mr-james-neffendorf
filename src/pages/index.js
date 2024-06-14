@@ -13,7 +13,7 @@ import rocopth from '../assets/rocopth.svg'
 import cmac from '../assets/cmac.png'
 import topRightSvg from '../assets/top-right.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
-import swoosh from '../assets/swoosh.svg'
+import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
 import eyeExam from '../assets/eye-exam.jpg'
@@ -652,7 +652,7 @@ class RootIndex extends React.Component {
           {/* Call To Action */}
           <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
             <img
-              src={swoosh}
+              src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
               alt="Placeholder image"
             />
