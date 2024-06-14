@@ -75,7 +75,6 @@ class EyeCareTemplate extends React.Component {
               <div className="grid md:grid-cols-4 md:gap-x-10">
                 <div className="md:col-span-3 md:col-start-1">
                   <section>
-                    <h2 className="mb-2 text-2xl font-semibold">Overview</h2>
                     <div
                       className="mb-8"
                       dangerouslySetInnerHTML={{
@@ -83,7 +82,7 @@ class EyeCareTemplate extends React.Component {
                       }}
                     />
 
-                    <h2 className="mb-2 text-2xl font-semibold">Symptoms</h2>
+                    <h2 className="mb-2 font-semibold">Symptoms</h2>
                     <div
                       className="mb-4 text-gray-500"
                       dangerouslySetInnerHTML={{
@@ -92,9 +91,7 @@ class EyeCareTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mb-2 text-2xl font-semibold">
-                          Solutions
-                        </h2>
+                        <h2 className="mb-2 font-semibold">Solutions</h2>
                         <p className="mb-4 text-gray-500">{post.solutions}</p>
                       </>
                     )}
