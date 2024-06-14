@@ -176,7 +176,7 @@ class ResearchInterests extends React.Component {
                 <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
                   Clinical Interests & Research
                 </h1>
-                <p className="mb-4 text-gray-500 opacity-75 lg:w-1/2 md:text-md fade-in lg:ml-4">
+                <p className="mb-4 text-gray-500 opacity-75 lg:w-1/2 md:text-md lg:text-lg fade-in lg:ml-4">
                   Mr James Neffendorf has been involved in a wide range of
                   academic research, and is currently focusing his interests on
                   vitreoretinal surgery, retinal detachment, artificial
@@ -184,20 +184,20 @@ class ResearchInterests extends React.Component {
                   neurological diseases.
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3">
-                <div className="pl-4 text-left border-l-8 border-gray-300">
+              <div className="grid grid-cols-1 gap-4 mt-8 lg:mt-12 md:grid-cols-3">
+                <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
                     14+
                   </p>
                   <p className="text-gray-500">Years of Experience</p>
                 </div>
-                <div className="pl-4 text-left border-l-8 border-gray-300">
+                <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
                     100+
                   </p>
                   <p className="text-gray-500">Published Papers</p>
                 </div>
-                <div className="pl-4 text-left border-l-8 border-gray-300">
+                <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
                     10+
                   </p>

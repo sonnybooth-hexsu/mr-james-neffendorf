@@ -3,7 +3,6 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import grade from '../assets/grade.svg'
-import retinaHeader from '../assets/retina-header.jpg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import Layout from '../components/layout'
 import {
@@ -16,7 +15,8 @@ import {
 class RetinaTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulRetina')
-    const document = JSON.parse(post.body.raw)
+    const symptomsDocument = JSON.parse(post.symptoms.raw)
+    const overviewDocument = JSON.parse(post.overview.raw)
 
     const options = {
       preserveWhitespace: true,
@@ -24,24 +24,14 @@ class RetinaTemplate extends React.Component {
 
     return (
       <Layout>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: documentToHtmlString(document, options),
-          }}
-        />
-        {/* Main Content */}
         <div className="bg-red-500 main-content">
           <section className="px-[5%] bg-red-500 border-b py-16 md:py-24 lg:py-28">
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 md:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mt-4 mb-4 font-bold">{post.heading}</h1>
-
                   <p className="mb-8 md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
+                    {post.introductionText.introductionText}
                   </p>
                   <div className="flex items-center">
                     <img
@@ -60,7 +50,7 @@ class RetinaTemplate extends React.Component {
                 </div>
                 <div className="relative">
                   <img
-                    src={retinaHeader}
+                    src={post.headingImage.url}
                     className="object-cover w-full rounded-xl "
                     alt="Placeholder image"
                   />
@@ -80,74 +70,52 @@ class RetinaTemplate extends React.Component {
             </div>
           </section>
 
-          {/* Content Section */}
           <section className="px-[5%]">
             <main className="container py-16 mx-auto">
               <div className="grid md:grid-cols-4 md:gap-x-10">
-                {/* Left content */}
                 <div className="bg-blue-100 md:col-span-3 md:col-start-1">
                   <section>
                     <h2 className="mb-2 text-2xl font-semibold">Overview</h2>
-                    <p className="mb-8">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Volutpat a, aliquet massa ullamcorper sagittis, fusce. Ac
-                      in risus lectus felis, lectus. Tellus egestas venenatis
-                      euismod nunc id praesent enim pretium pellentesque.
-                    </p>
+                    <div
+                      className="mb-8"
+                      dangerouslySetInnerHTML={{
+                        __html: documentToHtmlString(overviewDocument, options),
+                      }}
+                    />
 
                     <h2 className="mb-2 text-2xl font-semibold">Symptoms</h2>
-                    <p className="mb-4 text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Volutpat a, aliquet massa ullamcorper sagittis, fusce. Ac
-                      in risus lectus felis, lectus. Tellus egestas venenatis
-                      euismod nunc id praesent enim pretium pellentesque.
-                    </p>
-                    <ul className="mb-8 custom-ul">
-                      <li className="custom-li">Symptom 1</li>
-                      <li className="custom-li">Symptom 2</li>
-                      <li className="custom-li">Symptom 3</li>
-                    </ul>
-
-                    <h2 className="mb-2 text-2xl font-semibold">Solutions</h2>
-                    <p className="mb-4 text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Volutpat a, aliquet massa ullamcorper sagittis, fusce.
-                    </p>
-                    <div className="mb-8">
-                      <Accordion type="multiple">
-                        <AccordionItem value="solution1">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 1
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">
-                              Lorem ipsum dolor sit amet...
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="solution2">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 2
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">
-                              Lorem ipsum dolor sit amet...
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="solution3">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 3
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">
-                              Lorem ipsum dolor sit amet...
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                    </div>
-
+                    <div
+                      className="mb-4 text-gray-500"
+                      dangerouslySetInnerHTML={{
+                        __html: documentToHtmlString(symptomsDocument, options),
+                      }}
+                    />
+                    {post.solutions && (
+                      <>
+                        <h2 className="mb-2 text-2xl font-semibold">
+                          Solutions
+                        </h2>
+                        <p className="mb-4 text-gray-500">{post.solutions}</p>
+                      </>
+                    )}
+                    {post.solutionsAccordion && (
+                      <div className="mb-8">
+                        <Accordion type="multiple">
+                          {post.solutionsAccordion.items.map(
+                            ({ title, content }, id) => (
+                              <AccordionItem key={id} value={`solution${id}`}>
+                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                                  {title}
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4">
+                                  <p className="text-gray-500">{content}</p>
+                                </AccordionContent>
+                              </AccordionItem>
+                            )
+                          )}
+                        </Accordion>
+                      </div>
+                    )}
                     <h2 className="mb-2 text-2xl font-semibold">
                       Why choose Mr James Neffendorf?
                     </h2>
@@ -162,37 +130,27 @@ class RetinaTemplate extends React.Component {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Volutpat a, aliquet massa ullamcorper sagittis, fusce.
                     </p>
-                    <div className="mb-8">
-                      <Accordion type="multiple">
-                        <AccordionItem value="solution1">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 1
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">Question 1</p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="solution2">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 2
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">Question 2</p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="solution3">
-                          <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
-                            Solution 3
-                          </AccordionTrigger>
-                          <AccordionContent className="p-4">
-                            <p className="text-gray-500">Question 3</p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                    </div>
+                    {post.faqs && (
+                      <>
+                        <h2>Frequently asked question</h2>
+                        <div className="mb-8">
+                          <Accordion type="multiple">
+                            {post.faqs.items.map(({ title, content }, id) => (
+                              <AccordionItem key={id} value={`solution${id}`}>
+                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                                  {title}
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4">
+                                  <p className="text-gray-500">{content}</p>
+                                </AccordionContent>
+                              </AccordionItem>
+                            ))}
+                          </Accordion>
+                        </div>
+                      </>
+                    )}
                   </section>
                 </div>
-                {/* Right form */}
                 <div className="p-8 bg-yellow-100 rounded-lg shadow-md md:col-span-1 md:col-start-4">
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
@@ -284,9 +242,31 @@ export const pageQuery = graphql`
   query RetinaById($id: String!) {
     contentfulRetina(id: { eq: $id }) {
       heading
-      body {
+      headingImage {
+        url
+      }
+      introductionText {
+        introductionText
+      }
+      overview {
         raw
       }
+      symptoms {
+        raw
+      }
+      solutionsAccordion {
+        items {
+          title
+          content
+        }
+      }
+      faqs {
+        items {
+          title
+          content
+        }
+      }
+      solutions
     }
   }
 `
