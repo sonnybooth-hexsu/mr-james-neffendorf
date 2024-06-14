@@ -43,11 +43,6 @@ class PatientHub extends React.Component {
                 Resources on eye health and treatments. If you can't find what
                 you're looking for, please get in touch.
               </p>
-              <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
-                <button className="flex items-center justify-center gap-2 px-8 py-2 mb-2 text-sm font-medium text-white transition-opacity border border-white rounded-full shadow-md opacity-75 btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:opacity-100">
-                  Contact Mr Neffendorf
-                </button>
-              </div>
             </div>
             <svg
               className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 opacity-25"

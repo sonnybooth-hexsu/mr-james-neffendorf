@@ -120,7 +120,7 @@ class RetinaTemplate extends React.Component {
                     )}
                     {post.faqs && (
                       <>
-                        <h2>Frequently asked question</h2>
+                        <h2>Frequently asked questions</h2>
                         <div className="mb-8">
                           <Accordion type="multiple">
                             {post.faqs.items.map(({ title, content }, id) => (

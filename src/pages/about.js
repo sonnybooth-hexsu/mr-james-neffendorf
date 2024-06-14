@@ -4,8 +4,6 @@ import jamesLeaning from '../assets/james-leaning.jpg'
 import jamesSuit from '../assets/james-suit.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
-import topRightSvg from '../assets/top-right.svg'
-import bottomLeftSvg from '../assets/bottom-left.svg'
 import grade from '../assets/grade.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
 import iconEducation from '../assets/education.svg'
@@ -53,11 +51,11 @@ class About extends React.Component {
                     ut commodo diam libero vitae erat.
                   </p>
                   <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                    <button
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      onClick={() => (window.location.href = '/contact')}
+                    >
                       Contact Mr Neffendorf
-                    </button>
-                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
-                      About Mr Neffendorf
                     </button>
                   </div>
                 </div>
@@ -375,11 +373,18 @@ class About extends React.Component {
                 Book a consultation with Mr James Neffendorf for expert
                 ophthalmic care and treatment.
               </p>
-              <div className="flex items-center justify-center mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+              <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
+                <button
+                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                  onClick={() => (window.location.href = '/contact')}
+                >
                   Contact Mr Neffendorf
                 </button>
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+
+                <button
+                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                  onClick={() => (window.location.href = '/about')}
+                >
                   About Mr Neffendorf
                 </button>
               </div>

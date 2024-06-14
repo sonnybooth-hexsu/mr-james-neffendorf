@@ -17,6 +17,8 @@ import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
 import eyeExam from '../assets/eye-exam.jpg'
+import quoteMark from '../assets/quote-mark.svg'
+import patient from '../assets/patient.jpg'
 
 const Home = () => (
   <div>
@@ -254,10 +256,17 @@ class RootIndex extends React.Component {
                     emergency eye care
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
-                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                    <button
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      onClick={() => (window.location.href = '/contact')}
+                    >
                       Contact Mr Neffendorf
                     </button>
-                    <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+
+                    <button
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                      onClick={() => (window.location.href = '/about')}
+                    >
                       About Mr Neffendorf
                     </button>
                   </div>
@@ -331,7 +340,6 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-          {/* Professional affiliations Large */}
           {/* Professional affiliations Large */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
@@ -489,10 +497,17 @@ class RootIndex extends React.Component {
                       <p>Integrating AI with Eye Care</p>
                     </div>
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                      <button
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                        onClick={() => (window.location.href = '/contact')}
+                      >
                         Contact Mr Neffendorf
                       </button>
-                      <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+
+                      <button
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                        onClick={() => (window.location.href = '/about')}
+                      >
                         About Mr Neffendorf
                       </button>
                     </div>
@@ -501,37 +516,6 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-          {/* Services */}
-          <header className="relative py-12 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
-            <div className="container">
-              <div className="flex items-center py-0 lg:pt-0 lg:pb-0">
-                <div className="max-w-md">
-                  <div className="flex-col self-start">
-                    {accordionData.map((item, index) => (
-                      <AccordionItem
-                        key={index}
-                        title={item.title}
-                        content={item.content}
-                        isOpen={openIndex === index}
-                        onClick={() => this.handleAccordionClick(index)}
-                        link={item.link}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="absolute inset-0 -z-10">
-              <img
-                src={jamesTreatment}
-                className="object-cover w-full h-full"
-                alt="Placeholder image"
-              />
-              <div className="absolute inset-0 bg-white/55">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/100 to-transparent"></div>
-              </div>
-            </div>
-          </header>
           {/* Testimonials */}
           <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container mx-auto">
@@ -625,7 +609,6 @@ class RootIndex extends React.Component {
                     good wellbeing when working long hours in a very tough
                     business.
                   </blockquote>
-
                   <p className="font-semibold text-black">Cataracts Patient</p>
                   <p>
                     <span>19 Dec 2023</span>
@@ -649,6 +632,73 @@ class RootIndex extends React.Component {
               </Slider>
             </div>
           </section>
+          {/* Services */}
+          <header className="relative py-12 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
+            <div className="container">
+              <div className="flex items-center py-0 lg:pt-0 lg:pb-0">
+                <div className="max-w-md">
+                  <div className="flex-col self-start">
+                    {accordionData.map((item, index) => (
+                      <AccordionItem
+                        key={index}
+                        title={item.title}
+                        content={item.content}
+                        isOpen={openIndex === index}
+                        onClick={() => this.handleAccordionClick(index)}
+                        link={item.link}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 -z-10">
+              <img
+                src={jamesTreatment}
+                className="object-cover w-full h-full"
+                alt="Placeholder image"
+              />
+              <div className="absolute inset-0 bg-white/55">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/100 to-transparent"></div>
+              </div>
+            </div>
+          </header>
+          {/* Patient Story */}
+          <section className="px-[5%] bg-gray-50 lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+            <div className="container">
+              <h2 className="mb-8 font-bold text-center">Patient Story</h2>
+              <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+                  <img
+                    className="m-2 mb-5 max-h-6 shrink-0"
+                    src={quoteMark}
+                    alt="Quotation Mark Icon"
+                  />
+                  <blockquote className="mb-5 text-xl font-bold text-black md:text-2xl lg:text-3xl">
+                    ‘I had cataract surgery on both eyes under James’ care. I am
+                    a young patient and had an unusual type of cataract, meaning
+                    the surgery was more complex. I was extremely nervous, but
+                    James made me feel very at ease and relaxed. He explained
+                    everything in detail to me about what needed to be done. So
+                    grateful for the outcome and cannot thank James enough for
+                    what he has done to help me see properly again.’
+                  </blockquote>
+                  <p className="text-xl font-bold text-black">
+                    Previous Patient
+                  </p>
+                  <p>Seen by Mr Neffendorf for Emergency Cataract Surgery</p>
+                </div>
+                <div className="">
+                  <img
+                    src={patient}
+                    className="object-cover w-full p-8 rounded-md"
+                    alt="Placeholder image"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Call To Action */}
           <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
             <img
@@ -664,11 +714,18 @@ class RootIndex extends React.Component {
                 Book a consultation with Mr James Neffendorf for expert
                 ophthalmic care and treatment.
               </p>
-              <div className="flex items-center justify-center mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+              <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
+                <button
+                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                  onClick={() => (window.location.href = '/contact')}
+                >
                   Contact Mr Neffendorf
                 </button>
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+
+                <button
+                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                  onClick={() => (window.location.href = '/about')}
+                >
                   About Mr Neffendorf
                 </button>
               </div>
