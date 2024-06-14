@@ -172,7 +172,8 @@ class ResearchInterests extends React.Component {
               style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
             ></div>
             <div className="container relative z-10 text-left">
-              <p className="text-gray-500">Mr James Neffendorf's</p>
+              <p className="mb-2 text-white tag">Mr James Neffendorf's</p>
+
               <h1 className="my-4 tracking-wide text-gray-800 fade-in">
                 Clinical Interests & Research
               </h1>
