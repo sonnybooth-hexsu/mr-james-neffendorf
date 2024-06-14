@@ -37,7 +37,7 @@ class PatientHub extends React.Component {
           <section className="relative px-[5%] bg-jamesBlue py-16 md:py-20 fade-in overflow-hidden">
             <div className="container relative z-10 text-left">
               <img src={hub} alt="Hub Image" className="mb-4" />
-              <p className="text-white opacity-75 tag">Resources</p>
+              <p className="mb-2 text-white tag">Resources</p>
               <h1 className="mb-4 tracking-wide text-white">Patient Hub</h1>
               <p className="mb-4 text-white opacity-75 md:text-md">
                 Resources on eye health and treatments. If you can't find what
@@ -61,7 +61,7 @@ class PatientHub extends React.Component {
                 cy="100"
                 r="80"
                 stroke="#cccccc"
-                strokeWidth="1"
+                strokeWidth=".5"
                 fill="none"
               />
               <circle
@@ -69,7 +69,7 @@ class PatientHub extends React.Component {
                 cy="100"
                 r="60"
                 stroke="#cccccc"
-                strokeWidth="1"
+                strokeWidth=".5"
                 fill="none"
               />
               <circle
@@ -77,7 +77,7 @@ class PatientHub extends React.Component {
                 cy="100"
                 r="40"
                 stroke="#cccccc"
-                strokeWidth="1"
+                strokeWidth=".5"
                 fill="none"
               />
               <circle
@@ -85,15 +85,15 @@ class PatientHub extends React.Component {
                 cy="100"
                 r="20"
                 stroke="#cccccc"
-                strokeWidth="1"
+                strokeWidth=".5"
                 fill="none"
               />
             </svg>
           </section>
 
           {/* Patient Hub Content */}
-          <section className="px-[5%] bg-gray-100 py-16 shadow-xl fade-in">
-            <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <section className="px-[5%] bg-gray-100 py-12 shadow-xl fade-in">
+            <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {this.renderCard(
                 'Cataract Surgery',
                 'Preparing for Cataract Surgery: A Patient Checklist',
@@ -144,7 +144,7 @@ class PatientHub extends React.Component {
           </section>
 
           {/* Call to Action Section */}
-          <section className="py-16 shadow-lg bg-gray-50 md:py-24 lg:py-28 fade-in">
+          <section className="py-12 shadow-lg bg-gray-50 md:py-24 lg:py-28 fade-in">
             <div className="container text-center">
               <h2 className="mb-4">Book a consultation with Mr Neffendorf</h2>
               <p className="md:text-md">
@@ -152,10 +152,10 @@ class PatientHub extends React.Component {
                 ophthalmic care and treatment.
               </p>
               <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                <button className="inline-flex items-center justify-center gap-3 px-2 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                   Contact Mr Neffendorf
                 </button>
-                <button className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
+                <button className="inline-flex items-center justify-center gap-3 px-2 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary">
                   About Mr Neffendorf
                 </button>
               </div>
@@ -168,7 +168,7 @@ class PatientHub extends React.Component {
 
   renderCard(category, title, description) {
     return (
-      <div className="flex flex-col justify-between h-full p-12 bg-white rounded-lg shadow-md border-1">
+      <div className="flex flex-col justify-between h-full p-8 bg-white rounded-lg shadow-md border-1">
         <div>
           <h2 className="mb-2 text-sm font-bold text-gray-500">{category}</h2>
           <h3 className="mb-4 font-semibold text-md">{title}</h3>
@@ -176,10 +176,10 @@ class PatientHub extends React.Component {
         </div>
         <div className="flex justify-between mt-auto">
           <div className="grid grid-cols-2 gap-2 md:mt-4 lg:flex lg:space-x-2">
-            <button className="items-center justify-center inline gap-3 px-8 py-2 font-medium transition-colors border border-2 rounded-full shadow-md rouned-sm button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesLight hover:border-jamesBlue">
+            <button className="items-center justify-center inline gap-0 px-8 py-2 mr-0 font-medium transition-colors border border-2 rounded-full shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesBlue hover:text-white">
               View PDF
             </button>
-            <button className="flex items-center justify-center gap-2 px-8 py-2 font-medium transition-colors shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesLight hover:border-jamesBlue">
+            <button className="flex items-center justify-center gap-0 px-8 py-2 ml-0 font-medium transition-colors shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue">
               <img src={downloadIcon} alt="Download" className="w-6 h-6" />
               Download
             </button>
