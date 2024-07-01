@@ -40,11 +40,31 @@ class RetinaTemplate extends React.Component {
                       alt="Placeholder image"
                     />
                     <div className="flex">
-                      <img src={grade} alt="Star" className="w-6 h-6" />
-                      <img src={grade} alt="Star" className="w-6 h-6" />
-                      <img src={grade} alt="Star" className="w-6 h-6" />
-                      <img src={grade} alt="Star" className="w-6 h-6" />
-                      <img src={grade} alt="Star" className="w-6 h-6" />
+                      <img
+                        src={grade}
+                        alt="Star"
+                        className="inline-block size-6 reduce-space"
+                      />
+                      <img
+                        src={grade}
+                        alt="Star"
+                        className="inline-block size-6 reduce-space"
+                      />
+                      <img
+                        src={grade}
+                        alt="Star"
+                        className="inline-block size-6 reduce-space"
+                      />
+                      <img
+                        src={grade}
+                        alt="Star"
+                        className="inline-block size-6 reduce-space"
+                      />
+                      <img
+                        src={grade}
+                        alt="Star"
+                        className="inline-block size-6 reduce-space"
+                      />
                     </div>
                   </div>
                 </div>
@@ -55,7 +75,7 @@ class RetinaTemplate extends React.Component {
                     alt="Placeholder image"
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
-                    <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
+                    <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
                       Excellent
                     </p>
                     <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
@@ -91,7 +111,7 @@ class RetinaTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mt-6 mb-2 font-semibold">Solutions</h2>
+                        <h2 className="mt-10 mb-4">Solutions</h2>
                         <p className="mb-4 text-gray-500">{post.solutions}</p>
                       </>
                     )}
@@ -105,7 +125,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -119,7 +139,9 @@ class RetinaTemplate extends React.Component {
                     )}
                     {post.faqs && (
                       <>
-                        <h2>Frequently asked questions</h2>
+                        <h2 className="mt-10 mb-4">
+                          Frequently asked questions
+                        </h2>
                         <div className="mb-8">
                           <Accordion type="multiple">
                             {post.faqs.items.map(({ title, content }, id) => (
@@ -128,7 +150,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">

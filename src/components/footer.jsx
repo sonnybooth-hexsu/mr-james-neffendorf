@@ -46,25 +46,46 @@ const Footer = () => (
             </div>
           </div>
           <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3 gap-y-0">
-            <a href="#" className="focus-visible:outline-none">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="size-6 text-gray-50"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="https://www.linkedin.com/in/james-neffendorf-0b601a90/?originalSubdomain=uk"
+              className="focus-visible:outline-none"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                style={{
+                  backgroundColor: 'white',
+                  display: 'inline-block',
+                  borderRadius: '4px',
+                  padding: '2px',
+                }}
               >
-                <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
-              </svg>
+                <svg
+                  stroke="currentColor"
+                  fill="#0077B5"
+                  strokeWidth="0"
+                  viewBox="0 0 24 24"
+                  className="size-6"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
+                </svg>
+              </div>
             </a>
-            <img
-              src={doctifyIcon}
-              className="object-cover mr-2 max-h-12"
-              alt="Doctify Icon"
-            />
+
+            <a
+              href="https://www.doctify.com/uk/specialist/james-neffendorf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={doctifyIcon}
+                className="object-cover mr-2 max-h-12"
+                alt="Doctify Icon"
+              />
+            </a>
           </div>
         </div>
         <div className="grid items-start grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
@@ -155,8 +176,8 @@ const Footer = () => (
         </div>
       </div>
       <div className="w-full h-px bg-gray-50"></div>
-      <div className="flex flex-col-reverse items-start justify-between pt-6 text-sm text-gray-400 md:flex-row md:items-center md:pt-8">
-        <p className="mt-8 text-gray-400 md:mt-0 ">
+      <div className="flex flex-col-reverse items-start justify-between pt-6 text-sm text-gray-500 md:flex-row md:items-center md:pt-8">
+        <p className="mt-8 text-gray-500 md:mt-0 ">
           © 2024 Mr James Neffendorf. All rights reserved.
         </p>
         <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">

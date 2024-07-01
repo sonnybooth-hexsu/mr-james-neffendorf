@@ -68,7 +68,7 @@ class AccordionItem extends React.Component {
         <div
           className={`overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
         >
-          <p className="text-base text-gray-900 md:text-lg">{content}</p>
+          <p className="text-base text-gray-800 md:text-lg">{content}</p>
           <a href={link} className="block mt-4 text-gray-500">
             View Treatment
           </a>
@@ -246,7 +246,7 @@ class RootIndex extends React.Component {
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="inline text-xs font-bold tracking-wide text-gray-400 uppercase lg:text-sm md:text-base">
+                  <h2 className="inline text-xs font-bold tracking-wide text-gray-500 uppercase lg:text-sm md:text-base">
                     Consultant Ophthalmologist and Retinal Surgeon
                   </h2>
 
@@ -288,7 +288,7 @@ class RootIndex extends React.Component {
                     className="absolute z-0 -bottom-10 -left-10"
                   />
                   <div className="absolute left-0 z-20 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
-                    <p className="mr-2 text-sm font-bold text-gray-900">
+                    <p className="mr-2 text-sm font-bold text-gray-800">
                       Excellent
                     </p>
                     <p className="mr-2 text-sm">4.94 out of 5</p>
@@ -531,27 +531,27 @@ class RootIndex extends React.Component {
                 <div className="flex flex-col justify-end lg:flex-row lg:w-full lg:items-center">
                   <div className="flex flex-row mb-4 mr-4 lg:mb-0">
                     <img
-                      className="inline-block -mr-1 size-6"
+                      className="inline-block size-6 reduce-space"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block -mr-1 size-6"
+                      className="inline-block size-6 reduce-space"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block -mr-1 size-6"
+                      className="inline-block size-6 reduce-space"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block -mr-1 size-6"
+                      className="inline-block size-6 reduce-space"
                       src={grade}
                       alt="Checkmark"
                     />
                     <img
-                      className="inline-block size-6"
+                      className="inline-block size-6 reduce-space"
                       src={grade}
                       alt="Checkmark"
                     />
@@ -568,7 +568,7 @@ class RootIndex extends React.Component {
               </div>
               <Slider {...settings}>
                 <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
                     If it wasn't for Mr James Neffendorf's diagnosis, quick
                     response, and brilliant surgery, I’d be blind in one eye
                     now. Mr Neffendorf has great bedside manner and excellent
@@ -576,16 +576,17 @@ class RootIndex extends React.Component {
                     Mr Neffendorf to any patient, especially those who are
                     nervous or require complicated surgery.
                   </blockquote>
-
-                  <p className="font-semibold text-black">
+                  <p className="mb-1 font-semibold text-gray-800">
                     Emergency Ophthalmology Patient
                   </p>
                   <p>
-                    <span>26 Jan 2023</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">
+                      26 Jan 2023
+                    </span>
                   </p>
                 </div>
                 <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
                     Mr James Neffendorf was friendly, kind, and professional. He
                     took time to explain every aspect of my treatment and made
                     me feel comfortable throughout. I have had no complications
@@ -593,15 +594,17 @@ class RootIndex extends React.Component {
                     on how to effectively manage the care & treatment of my
                     eyes.
                   </blockquote>
-                  <p className="font-semibold text-black">
+                  <p className="mb-1 font-semibold text-gray-800">
                     Eye problems Patient
                   </p>
                   <p>
-                    <span>03 Jul 2023</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">
+                      03 Jul 2023
+                    </span>
                   </p>
                 </div>
                 <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
                     James is very professional and experienced and has improved
                     my sight in both eyes following cataract operations. I am
                     now able to pursue my hobbies of tennis, dancing and
@@ -609,13 +612,17 @@ class RootIndex extends React.Component {
                     good wellbeing when working long hours in a very tough
                     business.
                   </blockquote>
-                  <p className="font-semibold text-black">Cataracts Patient</p>
+                  <p className="mb-1 font-semibold text-gray-800">
+                    Cataracts Patient
+                  </p>
                   <p>
-                    <span>19 Dec 2023</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">
+                      19 Dec 2023
+                    </span>
                   </p>
                 </div>
                 <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] after:content-["\201D"] md:my-8 md:text-xl'>
+                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
                     If it wasn't for Mr James Neffendorf's diagnosis, quick
                     response, and brilliant surgery, I’d be blind in one eye
                     now. Mr Neffendorf has great bedside manner and excellent
@@ -624,9 +631,13 @@ class RootIndex extends React.Component {
                     nervous or require complicated surgery.
                   </blockquote>
 
-                  <p className="font-semibold text-black">Cataracts Patient</p>
+                  <p className="mb-1 font-semibold text-gray-800">
+                    Cataracts Patient
+                  </p>
                   <p>
-                    <span>19 Dec 2023</span>
+                    <span className="text-xs font-semibold tracking-wider uppercase">
+                      19 Dec 2023
+                    </span>
                   </p>
                 </div>
               </Slider>
@@ -674,7 +685,7 @@ class RootIndex extends React.Component {
                     src={quoteMark}
                     alt="Quotation Mark Icon"
                   />
-                  <blockquote className="mb-5 text-xl font-bold text-black md:text-2xl lg:text-3xl">
+                  <blockquote className="mb-5 text-xl font-bold text-gray-800 md:text-2xl lg:text-3xl">
                     ‘I had cataract surgery on both eyes under James’ care. I am
                     a young patient and had an unusual type of cataract, meaning
                     the surgery was more complex. I was extremely nervous, but
@@ -683,7 +694,7 @@ class RootIndex extends React.Component {
                     grateful for the outcome and cannot thank James enough for
                     what he has done to help me see properly again.’
                   </blockquote>
-                  <p className="text-xl font-bold text-black">
+                  <p className="text-xl font-bold text-gray-800">
                     Previous Patient
                   </p>
                   <p>Seen by Mr Neffendorf for Emergency Cataract Surgery</p>
@@ -729,39 +740,46 @@ class RootIndex extends React.Component {
                   About Mr Neffendorf
                 </button>
               </div>
-              <div className="flex flex-row items-center justify-center mt-8">
-                <p className="mr-2 font-bold text-gray-900">Excellent</p>
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  src={doctifyLogo}
-                  className="ml-2 mr-2 max-h-12"
-                  alt="Doctify logo"
-                />
-                <p className="mr-2">4.94 out of 5</p>
+              <div className="flex flex-col items-center justify-center mt-8 md:flex-row">
+                <div className="flex flex-row">
+                  <p className="mr-2 font-bold text-gray-800">Excellent</p>
+                  <div>
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark"
+                    />
+                  </div>
+
+                  <img
+                    src={doctifyLogo}
+                    className="ml-2 mr-2 max-h-12"
+                    alt="Doctify logo"
+                  />
+                </div>
+                <div>
+                  <p className="mr-2">4.94 out of 5</p>
+                </div>
               </div>
             </div>
           </section>

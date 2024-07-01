@@ -41,7 +41,7 @@ class About extends React.Component {
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mb-2">Meet Mr James E. Neffendorf </h1>
-                  <p className="mb-4 text-sm font-bold text-black md:text-md md:mb-6">
+                  <p className="mb-4 text-sm font-bold text-gray-800 md:text-md md:mb-2">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                   </p>
                   <p className="md:text-md">
@@ -50,7 +50,7 @@ class About extends React.Component {
                     cursus, mi quis viverra ornare, eros dolor interdum nulla,
                     ut commodo diam libero vitae erat.
                   </p>
-                  <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
+                  <div className="grid mt-4 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                     <button
                       className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                       onClick={() => (window.location.href = '/contact')}
@@ -171,7 +171,7 @@ class About extends React.Component {
                         className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-800">
                       2023{' '}
                       <span className="font-normal text-gray-500">
                         Excellence in Ophthalmic Research Medal
@@ -186,7 +186,7 @@ class About extends React.Component {
                         className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-800">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -201,7 +201,7 @@ class About extends React.Component {
                         className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-800">
                       2019{' '}
                       <span className="font-normal text-gray-500">
                         The Golden Lens Award
@@ -216,7 +216,7 @@ class About extends React.Component {
                         className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-800">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -231,7 +231,7 @@ class About extends React.Component {
                         className="object-cover h-8 size-full"
                       />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">
+                    <h3 className="text-base font-bold text-gray-800">
                       2021{' '}
                       <span className="font-normal text-gray-500">
                         AI in Medicine Honorary Distinction
@@ -254,7 +254,7 @@ class About extends React.Component {
                     alt="Placeholder image"
                   />
                   <div className="absolute flex items-center p-4 bg-white shadow-xl bottom-4 right-4">
-                    <p className="mr-2 text-xs font-bold text-gray-900 md:text-sm">
+                    <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
                       Excellent
                     </p>
                     <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
@@ -271,11 +271,11 @@ class About extends React.Component {
                     src={quoteMark}
                     alt="Quotation Mark Icon"
                   />
-                  <blockquote className="mb-5 text-2xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl">
+                  <blockquote className="mb-5 text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl xl:text-5xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse in eros elementum tristique.
                   </blockquote>
-                  <p className="text-xl font-bold text-black">
+                  <p className="text-xl font-bold text-gray-800">
                     Mr James Neffendorf
                   </p>
                   <p>MA (Cantab) MBBS (Lond) MD (Res) FRCOphth</p>
@@ -389,29 +389,29 @@ class About extends React.Component {
                 </button>
               </div>
               <div className="flex flex-row items-center justify-center mt-8">
-                <p className="mr-2 font-bold text-gray-900">Excellent</p>
+                <p className="mr-2 font-bold text-gray-800">Excellent</p>
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />

@@ -233,7 +233,7 @@ class ResearchInterests extends React.Component {
                   </button>
                   <div className="relative w-1/2">
                     <select
-                      className="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="block w-full px-4 py-4 pr-8 leading-tight bg-white border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:bg-white focus:border-gray-500"
                       onChange={(e) => this.handleSortChange(e.target.value)}
                       value={sortBy}
                     >
@@ -332,29 +332,29 @@ class ResearchInterests extends React.Component {
                 </button>
               </div>
               <div className="flex flex-row items-center justify-center mt-8">
-                <p className="mr-2 font-bold text-gray-900">Excellent</p>
+                <p className="mr-2 font-bold text-gray-800">Excellent</p>
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />
                 <img
-                  className="inline-block size-6"
+                  className="inline-block size-6 reduce-space"
                   src={grade}
                   alt="Checkmark"
                 />

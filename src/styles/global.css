@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://use.typekit.net/nak2vhf.css');
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
 
 /* Scroll */
 html {
@@ -93,7 +93,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-gray-700;
+  @apply text-gray-800;
   @apply tracking-tight;
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
@@ -425,6 +425,11 @@ h5 {
   justify-content: center;
 }
 
+.reduce-space {
+  margin: -3px;
+  padding: 0;
+}
+
 :root {
   --correct-blue: #1B57A6;
 }
@@ -495,7 +500,39 @@ h5 {
   text-transform: uppercase;
 }
 
-
 .top-minus-full {
   top: calc(100% - 8px);
+}
+
+/* Custom Checkbox Styles */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem; /* 6 x 0.25rem = 1.5rem */
+  height: 1.5rem;
+  border: 2px solid #d1d5db; /* gray-300 */
+  border-radius: 0.25rem; /* optional, for rounded corners */
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'futura-pt', sans-serif;
+  font-weight: bold;
+}
+
+.custom-checkbox:checked {
+  background-color: #1C58A6;
+  border-color: #1C58A6;
+}
+
+.custom-checkbox:checked::before {
+  content: '\2713'; /* Unicode for checkmark */
+  color: white;
+  font-size: 1rem; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }

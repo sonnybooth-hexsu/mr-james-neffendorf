@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import londonClinic from '../assets/london-clinic.jpg'
 import underground from '../assets/underground.svg'
+import kings from '../assets/kings_college_london.svg'
 import walk from '../assets/directions_walk.svg'
 import '../styles/global.css'
 
@@ -33,7 +34,6 @@ class Contact extends React.Component {
         <div className="main-content">
           {/* Hero */}
           <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">
-            {' '}
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
@@ -66,8 +66,8 @@ class Contact extends React.Component {
                   <div className="grid grid-cols-1 gap-4 py-2 mt-4">
                     <div className="flex items-center gap-4">
                       <svg
-                        stroke="currentColor"
-                        fill="currentColor"
+                        stroke="jamesBlue"
+                        fill="jamesBlue"
                         strokeWidth="0"
                         viewBox="0 0 24 24"
                         className="flex-none size-6"
@@ -105,7 +105,7 @@ class Contact extends React.Component {
                 <h2 className="mt-4 mb-2 text-lg font-bold md:mt-8">
                   Paying for treatment
                 </h2>
-                <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">
+                <h3 className="mt-4 mb-2 text-base font-bold">
                   Private Patients
                 </h3>
                 <p className="mt-0 md:mb-4">
@@ -124,11 +124,26 @@ class Contact extends React.Component {
                   </li>
                 </ul>
                 <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">NHS</h3>
-                <p className="mt-2 md:mb-4">
-                  James sees NHS patients at Kings College London
-                </p>
+                <div className="flex items-center space-x-2 md:mb-4">
+                  <img
+                    src={kings}
+                    className="object-cover h-6"
+                    alt="Placeholder image"
+                  />
+                  <p className="mt-0">
+                    James sees NHS patients at{' '}
+                    <a
+                      href="https://www.kcl.ac.uk/"
+                      className="underline text-jamesBlue"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      King's College London
+                    </a>
+                  </p>
+                </div>
               </div>
-              <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-6">
+              <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-4">
                 <div className="grid items-center w-full">
                   <label
                     className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -170,10 +185,10 @@ class Contact extends React.Component {
                     placeholder="Type your message..."
                   ></textarea>
                 </div>
-                <div className="flex items-center space-x-2 text-sm md:mb-4">
+                <div className="flex items-center space-x-2 text-sm md:mb-2">
                   <input
                     type="checkbox"
-                    className="w-6 h-6 border-gray-300"
+                    className="w-6 h-6 custom-checkbox"
                     id="terms"
                   />
                   <label
@@ -221,8 +236,9 @@ class Contact extends React.Component {
                         <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
+
                       <p className="text-md">
-                        34 Great Titchfield St., London W1W 8BQ
+                        34 Great Titchfield St, London W1W 8BQ
                       </p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -232,7 +248,10 @@ class Contact extends React.Component {
                         alt="Placeholder image"
                       />
                       <p className="text-md">
-                        Nearest tube station: Regent's Park Station
+                        <span className="font-medium">
+                          Nearest tube station:
+                        </span>{' '}
+                        Regent's Park Station
                       </p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -241,7 +260,7 @@ class Contact extends React.Component {
                         className="object-cover rounded-xl"
                         alt="Placeholder image"
                       />
-                      <p className="text-md">5 min walk</p>
+                      <p className="font-medium text-md">5 min walk</p>
                     </div>
                   </div>
                 </div>
@@ -294,7 +313,10 @@ class Contact extends React.Component {
                         alt="Underground icon"
                       />
                       <p className="text-md">
-                        Nearest tube station: Bond Street Station
+                        <span className="font-medium">
+                          Nearest tube station:
+                        </span>{' '}
+                        Bond Street Station
                       </p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -303,7 +325,7 @@ class Contact extends React.Component {
                         className="object-cover rounded-xl"
                         alt="Walking icon"
                       />
-                      <p className="text-md">6 min walk</p>
+                      <p className="font-medium text-md">6 min walk</p>
                     </div>
                   </div>
                 </div>
