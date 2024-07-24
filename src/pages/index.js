@@ -19,6 +19,7 @@ import { Helmet } from 'react-helmet'
 import eyeExam from '../assets/eye-exam.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import patient from '../assets/patient.jpg'
+import iconCheckmarkSmall from '../assets/check_small.svg'
 
 const Home = () => (
   <div>
@@ -32,26 +33,25 @@ const Home = () => (
 
 const accordionData = [
   {
-    title: 'Retina',
-    content:
-      'Age-related macular degeneration, Epiretinal membrane, macular hole, diabetic eye disease, retinal detachment.',
-    link: '/treatment/retina',
-  },
-  {
     title: 'Cataract Surgery',
-    content:
-      'Age-related macular degeneration, Epiretinal membrane, macular hole, diabetic eye disease.',
+    content: 'Complex and routine cataract surgery',
     link: '/treatment/cataract-surgery',
   },
   {
-    title: 'Emergency Eye Care',
+    title: 'Retina Conditions and Surgery',
     content:
-      'Urgent eye problems such as red eye, painful eyes and loss of vision.',
+      'Age-related Macular Degeneration (AMD), Epiretinal Membrane, Macular Hole, Diabetic Eye Disease, Retinal Detachment.',
+    link: '/treatment/retina',
+  },
+  {
+    title: 'Emergency Eye Care',
+    content: 'Red Eye, Painful Eye, Loss of Vision.',
     link: '/treatment/emergency-eye-care',
   },
   {
     title: 'General Eye Care',
-    content: 'Conditions such as a dry eye, blepharitis and glaucoma.',
+    content:
+      'Conditions such as Dry Eye, Blepharitis,Chalazion (stye) and Glaucoma.',
     link: '/treatment/general-eye-care',
   },
 ]
@@ -68,9 +68,12 @@ class AccordionItem extends React.Component {
         <div
           className={`overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
         >
-          <p className="text-base text-gray-800 md:text-lg">{content}</p>
-          <a href={link} className="block mt-4 text-gray-500">
-            View Treatment
+          <p className="text-gray-800 text-md md:text-lg">{content}</p>
+          <a
+            href={link}
+            className="block mt-4 text-gray-500 text-md md:text-lg"
+          >
+            Details
           </a>
         </div>
       </div>
@@ -233,54 +236,47 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <div className="flex">
-                    <img
-                      src={doctifyLogo}
-                      className="object-cover mr-2 max-h-12"
-                      alt="Placeholder image"
-                    />
-                    <p className="text-sm font-medium tracking-wide uppercase">
-                      Verified
-                    </p>
-                  </div>
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="inline text-xs font-bold tracking-wide text-gray-500 uppercase lg:text-sm md:text-base">
-                    Consultant Ophthalmologist and Retinal Surgeon
+                  <h2 className="mb-4 text-base tracking-wide uppercase lg:text-md font-md">
+                    MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
 
-                  <p className="mt-2 md:text-md xl:text-lg">
-                    A leading London-based consultant eye surgeon with a
-                    specialist interest in cataract surgery, retinal surgery and
-                    emergency eye care
+                  <h2 className="text-xs font-bold tracking-wide text-gray-500 uppercase lg:text-sm md:text-base">
+                    Consultant ophthalmologist, cataract &amp; retinal surgeon
+                  </h2>
+
+                  <p className="mt-1 md:text-md xl:text-lg">
+                    A leading London-based consultant eye surgeon.
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                       onClick={() => (window.location.href = '/contact')}
                     >
-                      Contact Mr Neffendorf
+                      Contact
                     </button>
 
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
                       onClick={() => (window.location.href = '/about')}
                     >
-                      About Mr Neffendorf
+                      About
                     </button>
                   </div>
                 </div>
+                {/* right col */}
                 <div className="relative">
                   <img
                     src={jamesMain}
-                    className="relative z-10 object-cover w-full mx-auto lg:w-3/4" // Adjusted image size for desktop
+                    className="relative z-10 object-cover w-full mx-auto lg:w-3/4"
                     alt="Placeholder image"
                   />
                   <img
                     src={topRightSvg}
                     alt="Top right background decoration"
-                    className="absolute top-0 right-0 z-0" // Adjusted from -top-20 to top-0 for example
+                    className="absolute top-0 right-0 z-0"
                   />
                   <img
                     src={bottomLeftSvg}
@@ -289,7 +285,7 @@ class RootIndex extends React.Component {
                   />
                   <div className="absolute left-0 z-20 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
                     <p className="mr-2 text-sm font-bold text-gray-800">
-                      Excellent
+                      Rated Excellent
                     </p>
                     <p className="mr-2 text-sm">4.94 out of 5</p>
                     <img
@@ -298,7 +294,7 @@ class RootIndex extends React.Component {
                       alt="Placeholder image"
                     />
                   </div>
-                  <div className="absolute right-0 z-20 flex flex-col p-3 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
+                  <div className="absolute right-0 z-10 flex flex-col p-3 mt-4 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
                         <img
@@ -308,7 +304,19 @@ class RootIndex extends React.Component {
                         />
                       </div>
                       <p className="text-sm md:text-lg lg:text-base">
-                        Ophthalmologist
+                        Consultant Eye Surgeon
+                      </p>
+                    </div>
+                    <div className="flex items-center self-start">
+                      <div className="self-start flex-none mr-1">
+                        <img
+                          className="inline-block w-5 h-5"
+                          src={iconCheckmark}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p className="text-sm md:text-lg lg:text-base">
+                        Cataract Specialist
                       </p>
                     </div>
                     <div className="flex items-center self-start">
@@ -336,6 +344,22 @@ class RootIndex extends React.Component {
                       </p>
                     </div>
                   </div>
+
+                  {/* Add iframe here */}
+                  {/* <div className="absolute top-0 left-0 z-20 p-2 bg-white rounded-md shadow-xl">
+                    <iframe
+                      src="https://www.topdoctors.co.uk/ws/show_widget/5cc3749a6e56ef6d656735dff9176074/2"
+                      scrolling="no"
+                      style={{
+                        border: '0px',
+                        width: '100%',
+                        height: '100%',
+                        maxWidth: '200px',
+                        overflow: 'hidden',
+                      }}
+                      title="Top Doctors Widget"
+                    ></iframe>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -349,7 +373,7 @@ class RootIndex extends React.Component {
                     Professional affiliations
                   </h1>
                 </div>
-                <div className="grid grid-cols-2 gap-4 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
+                <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -358,7 +382,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
                           src={rocopth}
                           alt="Rocopth"
                         />
@@ -373,7 +397,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
                           src={eurina}
                           alt="Eurina"
                         />
@@ -388,7 +412,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
                           src={aao}
                           alt="AAO"
                         />
@@ -403,7 +427,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
                           src={cmac}
                           alt="CMAC"
                         />
@@ -418,7 +442,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[1.5rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
+                          className="max-h-[1.75rem] md:max-h-7 lg:max-h-7 xl:max-h-7"
                           src={escrs}
                           alt="ESCRS"
                         />
@@ -433,7 +457,7 @@ class RootIndex extends React.Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          className="max-h-[2.25rem] md:max-h-8 lg:max-h-8 xl:max-h-10"
+                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
                           src={beavrs}
                           alt="BEAVRS"
                         />
@@ -458,43 +482,70 @@ class RootIndex extends React.Component {
               <div className="flex items-center">
                 <div>
                   <h2 className="font-bold leading-[1.2] mb-4 md:mb-4">
-                    Leading Ophthalmologist and Vitreoretinal Surgeon
+                    Excellence in Personalised Eye Care
                   </h2>
                   <p className="mb-5 md:mb-4 md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla.
+                    A Cambridge educated surgeon who places high priority on
+                    providing bespoke care using the latest technology for his
+                    patients. Plays a major role training, teaching and
+                    educating the next generation of eye surgeons.
                   </p>
                   <div className="grid grid-cols-1 gap-4 py-2 lg:gap-2">
                     <div className="flex self-start">
-                      <div className="self-start flex-none mr-4">
+                      <div className="self-start flex-none mr-2">
                         <img
                           className="inline-block size-6"
-                          src={iconCheckmark}
+                          src={iconCheckmarkSmall}
                           alt="Checkmark"
                         />
                       </div>
-                      <p>Vitreoretinal Surgery Specialist</p>
+                      <p>18 academic prizes and awards</p>
                     </div>
                     <div className="flex self-start">
-                      <div className="self-start flex-none mr-4">
+                      <div className="self-start flex-none mr-2">
                         <img
                           className="inline-block size-6"
-                          src={iconCheckmark}
+                          src={iconCheckmarkSmall}
                           alt="Checkmark"
                         />
                       </div>
-                      <p>Pioneering Ocular Research</p>
+                      <p>39 scientific publications</p>
                     </div>
                     <div className="flex self-start">
-                      <div className="self-start flex-none mr-4">
+                      <div className="self-start flex-none mr-2">
                         <img
                           className="inline-block size-6"
-                          src={iconCheckmark}
+                          src={iconCheckmarkSmall}
                           alt="Checkmark"
                         />
                       </div>
-                      <p>Integrating AI with Eye Care</p>
+                      <p>
+                        Regularly presenting research at international
+                        conferences
+                      </p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>
+                        NHS consultant at world-leading King’s College Hospital
+                        NHS Foundation Trust.
+                      </p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Examiner for the Royal College of Ophthalmologists</p>
                     </div>
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                       <button
@@ -522,11 +573,8 @@ class RootIndex extends React.Component {
               <div className="flex flex-col mb-12 md:flex-row md:justify-between md:items-center">
                 <div className="lg:w-2/3 lg:pr-12">
                   <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    Patient testimonials
+                    Patient Testimonials
                   </h1>
-                  <p className="mb-4 md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
                 </div>
                 <div className="flex flex-col justify-end lg:flex-row lg:w-full lg:items-center">
                   <div className="flex flex-row mb-4 mr-4 lg:mb-0">
@@ -678,14 +726,14 @@ class RootIndex extends React.Component {
           <section className="px-[5%] bg-gray-50 lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container">
               <h2 className="mb-8 font-bold text-center">Patient Story</h2>
-              <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-                <div>
+              <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-3 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div className="md:col-span-2">
                   <img
                     className="m-2 mb-5 max-h-6 shrink-0"
                     src={quoteMark}
                     alt="Quotation Mark Icon"
                   />
-                  <blockquote className="mb-5 text-xl font-bold text-gray-800 md:text-2xl lg:text-3xl">
+                  <blockquote className="text-xl text-gray-800 md:col-span-2 md:text-2xl">
                     ‘I had cataract surgery on both eyes under James’ care. I am
                     a young patient and had an unusual type of cataract, meaning
                     the surgery was more complex. I was extremely nervous, but
@@ -694,92 +742,35 @@ class RootIndex extends React.Component {
                     grateful for the outcome and cannot thank James enough for
                     what he has done to help me see properly again.’
                   </blockquote>
-                  <p className="text-xl font-bold text-gray-800">
-                    Previous Patient
-                  </p>
-                  <p>Seen by Mr Neffendorf for Emergency Cataract Surgery</p>
                 </div>
-                <div className="">
+                <div className="bg-gray-200 md:col-span-1 md:col-start-3 ">
                   <img
                     src={patient}
-                    className="object-cover w-full p-8 rounded-md"
+                    className="object-cover w-full p-20 rounded-md md:p-0"
                     alt="Placeholder image"
                   />
                 </div>
               </div>
             </div>
           </section>
-
           {/* Call To Action */}
-          <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
+          <section className="relative border-t px-[5%] lg:px-[5%] overflow-hidden fade-in">
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
-              alt="Placeholder image"
+              alt="Background image"
             />
-            <div className="container relative z-10 py-24 text-center md:py-28 lg:py-40">
+            <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
                 Book a Consultation
               </h2>
-              <p className="md:text-md">
-                Book a consultation with Mr James Neffendorf for expert
-                ophthalmic care and treatment.
-              </p>
-              <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:justify-center lg:space-x-2">
+              <div className="flex justify-center mt-4">
                 <button
                   className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                   onClick={() => (window.location.href = '/contact')}
                 >
-                  Contact Mr Neffendorf
+                  Book a Consultation
                 </button>
-
-                <button
-                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
-                  onClick={() => (window.location.href = '/about')}
-                >
-                  About Mr Neffendorf
-                </button>
-              </div>
-              <div className="flex flex-col items-center justify-center mt-8 md:flex-row">
-                <div className="flex flex-row">
-                  <p className="mr-2 font-bold text-gray-800">Excellent</p>
-                  <div>
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                  </div>
-
-                  <img
-                    src={doctifyLogo}
-                    className="ml-2 mr-2 max-h-12"
-                    alt="Doctify logo"
-                  />
-                </div>
-                <div>
-                  <p className="mr-2">4.94 out of 5</p>
-                </div>
               </div>
             </div>
           </section>

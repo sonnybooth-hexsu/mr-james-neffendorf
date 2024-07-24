@@ -7,38 +7,70 @@ const Footer = () => (
     <div className="container">
       <div className="grid grid-cols-1 gap-x-[4vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-20">
         <div>
-          <div className="mb-6 md:mb-8">
-            <img src={logo} alt="Logo image" className="h-8" />
-          </div>
           <div className="mb-6 text-gray-50 md:mb-8">
-            <div>
-              <p className="mb-1 text-sm font-semibold text-white">
-                London Lauriston Clinic
-              </p>
-              <p className="mb-5 text-sm text-gray-50 md:mb-6">
-                34 Great Titchfield St., London W1W 8BQ
-              </p>
+            <div className="mb-6">
+              <h2 className="mb-5 text-3xl text-gray-50 md:mb-6">
+                Mr. James E Neffendorf
+              </h2>
+              <div>
+                <div className="flex items-center mb-1">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 24 24"
+                    className="flex-none size-6"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+                    <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+                  </svg>
+                  <p className="ml-2 font-semibold text-white text-md">
+                    London Lauriston Clinic
+                  </p>
+                </div>
+                <p className="ml-8 text-md text-gray-50">
+                  34 Great Titchfield St., London W1W 8BQ
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="mb-1 text-sm font-semibold text-white">
-                The Guthrie Clinic
-              </p>
-              <p className="mb-5 text-sm text-gray-50 md:mb-6">
+            <div className="mb-6">
+              <div className="flex items-center mb-1">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 24 24"
+                  className="flex-none size-6"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+                  <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+                </svg>
+                <p className="ml-2 font-semibold text-white text-md">
+                  The Guthrie Clinic
+                </p>
+              </div>
+              <p className="ml-8 text-md text-gray-50">
                 King’s College Hospital, Denmark Hill, London SE5 9RS
               </p>
             </div>
             <div>
-              <p className="mb-1 text-sm font-semibold text-white">Contact:</p>
-              <p className="flex flex-col text-sm underline text-gray-50 decoration-gray-50 underline-offset-1 md:mb-6">
+              <p className="mb-1 font-semibold text-white text-md">Contact:</p>
+              <p className="flex flex-col text-sm underline text-gray-50 decoration-gray-50 underline-offset-1 md:mb-8">
                 <a
                   href="tel:1800 123 4567"
-                  className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
+                  className="text-md text-gray-50 md:mb-1 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
                 >
-                  XXX XXX XXX
+                  +44 7849 425743
                 </a>
                 <a
                   href="mailto:clinic@mrjamesneffendorf.com"
-                  className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
+                  className="text-md text-gray-50 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
                 >
                   clinic@mrjamesneffendorf.com
                 </a>
@@ -90,7 +122,7 @@ const Footer = () => (
         </div>
         <div className="grid items-start grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
           <ul>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -98,7 +130,7 @@ const Footer = () => (
                 Link One
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -106,7 +138,7 @@ const Footer = () => (
                 Link Two
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -114,7 +146,7 @@ const Footer = () => (
                 Link Three
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -122,7 +154,7 @@ const Footer = () => (
                 Link Four
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -132,7 +164,7 @@ const Footer = () => (
             </li>
           </ul>
           <ul>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -140,7 +172,7 @@ const Footer = () => (
                 Link Six
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -148,7 +180,7 @@ const Footer = () => (
                 Link Seven
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -156,7 +188,7 @@ const Footer = () => (
                 Link Eight
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -164,7 +196,7 @@ const Footer = () => (
                 Link Nine
               </a>
             </li>
-            <li className="py-2 text-sm font-semibold text-white">
+            <li className="py-2 font-semibold text-white text-md">
               <a
                 href="#"
                 className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
@@ -176,11 +208,11 @@ const Footer = () => (
         </div>
       </div>
       <div className="w-full h-px bg-gray-50"></div>
-      <div className="flex flex-col-reverse items-start justify-between pt-6 text-sm text-gray-500 md:flex-row md:items-center md:pt-8">
-        <p className="mt-8 text-gray-500 md:mt-0 ">
+      <div className="flex flex-col-reverse items-start justify-between pt-6 text-gray-400 md:flex-row md:items-center md:pt-8">
+        <p className="mt-8 text-gray-400 md:mt-0 ">
           © 2024 Mr James Neffendorf. All rights reserved.
         </p>
-        <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
+        <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
           <li className="underline">
             <a
               href="#"

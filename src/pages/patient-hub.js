@@ -37,12 +37,9 @@ class PatientHub extends React.Component {
           <section className="relative px-[5%] bg-jamesBlue py-16 md:py-20 fade-in overflow-hidden">
             <div className="container relative z-10 text-left">
               <img src={hub} alt="Hub Image" className="mb-4" />
-              <p className="mb-2 text-white tag">Resources</p>
-              <h1 className="mb-4 tracking-wide text-white">Patient Hub</h1>
-              <p className="mb-4 text-white opacity-75 md:text-md">
-                Resources on eye health and treatments. If you can't find what
-                you're looking for, please get in touch.
-              </p>
+              <h1 className="mb-4 tracking-wide text-white">
+                Patient Information
+              </h1>
             </div>
             <svg
               className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 opacity-25"

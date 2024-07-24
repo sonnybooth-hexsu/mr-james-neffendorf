@@ -6,8 +6,8 @@ import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import grade from '../assets/grade.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
-import iconEducation from '../assets/education.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
+import iconCheckmarkSmall from '../assets/check_small.svg'
 
 class About extends React.Component {
   componentDidMount() {
@@ -40,22 +40,24 @@ class About extends React.Component {
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <h1 className="mb-2">Meet Mr James E. Neffendorf </h1>
+                  <h1 className="mb-2">Meet Mr Neffendorf </h1>
                   <p className="mb-4 text-sm font-bold text-gray-800 md:text-md md:mb-2">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                   </p>
                   <p className="md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
+                    Consultant Ophthalmic and Vitreoretinal Surgeon with
+                    specialist interest in cataract surgery, retinal surgery and
+                    emergency eye care. He is appointed as a Consultant
+                    Ophthalmologist at King’s College Hospital NHS Foundation
+                    Trust and the Deputy Medical Director at the London
+                    Lauriston Private Clinic in Central London.
                   </p>
                   <div className="grid mt-4 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                       onClick={() => (window.location.href = '/contact')}
                     >
-                      Contact Mr Neffendorf
+                      Contact
                     </button>
                   </div>
                 </div>
@@ -73,7 +75,7 @@ class About extends React.Component {
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <h2 className="">
-                Leading Ophthalmologist and Vitreoretinal Surgeon
+                Educated and trained at world leading institutions
               </h2>
               <div>
                 <p className="mb-5 md:mb-6 md:text-md">
@@ -84,39 +86,67 @@ class About extends React.Component {
                 </p>
                 <div className="grid grid-cols-1 gap-4 py-2">
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
+                    <div className="self-start flex-none mr-2">
                       <img
                         className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 1"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
                       />
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      University of Cambridge - Medical degree (Developmental
+                      Biology and Embryology)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
+                    <div className="self-start flex-none mr-2">
                       <img
                         className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 2"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
                       />
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      University College London - Clinical Medicine and Surgery
+                      degree (Distinction)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
+                    <div className="self-start flex-none mr-2">
                       <img
                         className="inline-block size-6"
-                        src="https://relume-assets.s3.amazonaws.com/relume-icon.svg"
-                        alt="Relume logo 3"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
                       />
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      King’s College London - Higher level MD degree in
+                      Age-related Macular Degeneration
+                    </p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>
+                      Oxford Medical Deanery - Ophthalmology specialist training
+                    </p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>
+                      St. Thomas’ Hospital London - Advanced senior fellowship
+                      training
                     </p>
                   </div>
                 </div>
@@ -124,120 +154,198 @@ class About extends React.Component {
             </div>
           </section>
           <section className="px-[5%] py-8 md:py-12 lg:py-16 fade-in">
-            <div className="container grid items-center grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-              <div className="grid items-center grid-cols-1 col-start-1 col-end-2 row-start-1 row-end-2 gap-x-4 gap-y-4">
-                <div></div>
-                <div className="pl-8 border-l-2 border-black cursor-pointer">
-                  <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
-                  </p>
-                </div>
-                <div className="pl-8 border-l-2 border-transparent cursor-pointer">
-                  <h3 className="mb-3 md:mb-4">Short heading goes here</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                    ut commodo diam libero vitae erat.
-                  </p>
-                </div>
+            <div className="container grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
+              <div className="flex flex-col">
+                <h3 className="mb-1 text-2xl font-semibold">Research</h3>
+                <p className="mb-3">
+                  Key research interests in vitreoretinal surgery, new drugs and
+                  devices in retinal diseases such as age-related macular
+                  degeneration and artificial intelligence using ophthalmic
+                  biomarkers.
+                </p>
+                <ul className="mb-6 custom-list">
+                  <li>Published 39 scientific papers</li>
+                  <li>Presented at 40 international and national meetings</li>
+                </ul>
+
+                <h3 className="mb-1 text-2xl font-semibold">Roles</h3>
+                <ul className="mb-6 custom-list">
+                  <li>Examiner for Royal College of Ophthalmologists</li>
+                  <li>Reviewer for many leading scientific journals</li>
+                  <li>Director of Retina and Macula Disease, Ocuplan UK</li>
+                  <li>
+                    Lead, Clinical Innovation and Discovery, Ophthalmology,
+                    Panacea Innovation
+                  </li>
+                  <li>
+                    Medical Director for Ophthalmology, Solvemed (International
+                    Artificial Intelligence Company)
+                  </li>
+                </ul>
               </div>
               <div className="flex items-center justify-center w-full h-auto overflow-hidden">
-                <div style={{ opacity: 1 }}>
-                  <img
-                    src="https://relume-assets.s3.amazonaws.com/placeholder-image.svg"
-                    alt="Placeholder image 1"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+                <div style={{ opacity: 1 }}></div>
               </div>
             </div>
           </section>
           {/* Awards & Achievements */}
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
-            <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-              <h2>Awards & Achievements </h2>
-              <div>
-                <div className="grid grid-cols-1 gap-6 py-2">
-                  <div className="flex items-center">
-                    <div className="flex-none mr-4">
-                      <img
-                        src={iconTrophy}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">
-                      2023{' '}
-                      <span className="font-normal text-gray-500">
-                        Excellence in Ophthalmic Research Medal
-                      </span>
-                    </h3>
+            <div className="container">
+              <div className="mb-8">
+                <h2>Selected Awards and Prizes</h2>
+              </div>
+              <div className="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
                   </div>
-                  <div className="flex items-center">
-                    <div className="flex-none mr-4">
-                      <img
-                        src={iconTrophy}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">
-                      2021{' '}
-                      <span className="font-normal text-gray-500">
-                        AI in Medicine Honorary Distinction
-                      </span>
-                    </h3>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2023{' '}
+                    <span className="font-normal text-gray-500">
+                      Kidney Research UK Research Project Grant, Co-Investigator
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
                   </div>
-                  <div className="flex items-center">
-                    <div className="flex-none mr-4">
-                      <img
-                        src={iconTrophy}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">
-                      2019{' '}
-                      <span className="font-normal text-gray-500">
-                        The Golden Lens Award
-                      </span>
-                    </h3>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2018{' '}
+                    <span className="font-normal text-gray-500">
+                      Oxford Annual Updates 1st Prize
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
                   </div>
-                  <div className="flex items-center">
-                    <div className="flex-none mr-4">
-                      <img
-                        src={iconTrophy}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">
-                      2021{' '}
-                      <span className="font-normal text-gray-500">
-                        AI in Medicine Honorary Distinction
-                      </span>
-                    </h3>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2017{' '}
+                    <span className="font-normal text-gray-500">
+                      British and Eire Association of Vitreoretinal Surgeons
+                      Certificate of Merit
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
                   </div>
-                  <div className="flex items-center">
-                    <div className="flex-none mr-4">
-                      <img
-                        src={iconTrophy}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <h3 className="text-base font-bold text-gray-800">
-                      2021{' '}
-                      <span className="font-normal text-gray-500">
-                        AI in Medicine Honorary Distinction
-                      </span>
-                    </h3>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2016{' '}
+                    <span className="font-normal text-gray-500">
+                      EURetina Annual Conference, highest scoring free papers
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
                   </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2015{' '}
+                    <span className="font-normal text-gray-500">
+                      American Academy of Ophthalmology Annual Conference, Best
+                      Poster, Cataract
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2016{' '}
+                    <span className="font-normal text-gray-500">
+                      EURetina Annual Conference, highest scoring free papers
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2016{' '}
+                    <span className="font-normal text-gray-500">
+                      EURetina Annual Conference, highest scoring free papers
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2016{' '}
+                    <span className="font-normal text-gray-500">
+                      EURetina Annual Conference, highest scoring free papers
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2016{' '}
+                    <span className="font-normal text-gray-500">
+                      EURetina Annual Conference, highest scoring free papers
+                    </span>
+                  </h3>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-none mr-4">
+                    <img
+                      src={iconTrophy}
+                      alt="Placeholder image 1"
+                      className="object-cover h-6 size-full"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-800">
+                    2009{' '}
+                    <span className="font-normal text-gray-500">
+                      Allen Goldsmith Prize in Ophthalmology, UCL
+                    </span>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -255,7 +363,7 @@ class About extends React.Component {
                   />
                   <div className="absolute flex items-center p-4 bg-white shadow-xl bottom-4 right-4">
                     <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
-                      Excellent
+                      Rated Excellent
                     </p>
                     <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
                     <img
@@ -271,9 +379,14 @@ class About extends React.Component {
                     src={quoteMark}
                     alt="Quotation Mark Icon"
                   />
-                  <blockquote className="mb-5 text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl xl:text-5xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse in eros elementum tristique.
+                  <blockquote className="mb-5 text-xl font-bold text-gray-800 lg:text-4xl xl:text-3xl">
+                    Having an eye problem can often be stressful and worrying.
+                    My aim is to put you at ease whilst helping you through your
+                    eye care journey. I will make sure you fully understand the
+                    problem and feel relaxed as possible during discussions and
+                    any required treatment. Finally, you cn rest assured I will
+                    only ever recommend treatment when I feel it is a good
+                    solution for you.
                   </blockquote>
                   <p className="text-xl font-bold text-gray-800">
                     Mr James Neffendorf
@@ -286,72 +399,30 @@ class About extends React.Component {
           {/* Education */}
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
-              <h2 className="leading-[1.2]">Education </h2>
+              <h2 className="leading-[1.2]">Extra-curricular Interests </h2>
               <div>
                 <div className="grid grid-cols-1 gap-4 py-2">
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        src={iconEducation}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
                     <p>
-                      <span className="font-bold"> 2023 </span> Excellence in
-                      Ophthalmic Research Medal
+                      <span className="font-bold text-gray-900">
+                        {' '}
+                        Associate Member{' '}
+                      </span>{' '}
+                      (Marylebone Cricket Club, MCC)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        src={iconEducation}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
                     <p>
-                      <span className="font-bold"> 2021 </span> AI in Medicine
-                      Honorary Distinction
+                      <span className="font-bold text-gray-900"> Member </span>{' '}
+                      (Oxford and Cambridge Club)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        src={iconEducation}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
                     <p>
-                      <span className="font-bold"> 2019 </span> The Golden Lens
-                      Award
-                    </p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        src={iconEducation}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <p>
-                      <span className="font-bold"> 2021 </span> AI in Medicine
-                      Honorary Distinction
-                    </p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-4">
-                      <img
-                        src={iconEducation}
-                        alt="Placeholder image 1"
-                        className="object-cover h-8 size-full"
-                      />
-                    </div>
-                    <p>
-                      <span className="font-bold"> 2021 </span> AI in Medicine
-                      Honorary Distinction
+                      <span className="font-bold text-gray-900">
+                        {' '}
+                        Enjoys playing tennis, golf and skiing in spare time{' '}
+                      </span>{' '}
                     </p>
                   </div>
                 </div>

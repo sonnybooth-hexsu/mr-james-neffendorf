@@ -38,11 +38,11 @@ export const Navigation = () => {
   }
 
   const getLinkClass = (path) =>
-    `relative block py-3 mx-auto transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-3 lg:text-base ${
+    `relative block py-3 mx-auto transition-colors tracking-normal duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
       location.pathname === path
-        ? 'text-gray-800 active-link'
-        : 'hover:text-jamesBlue'
-    }`
+        ? 'text-gray-900 active-link'
+        : 'hover:text-gray-900'
+    } nav-link`
 
   return (
     <nav className="flex fixed bg-jamesWhite border-b z-50 w-full items-center lg:min-h-28 lg:px-[5%]">
@@ -63,7 +63,7 @@ export const Navigation = () => {
           </button>
         </div>
         <div
-          className={`mobile-nav overflow-hidden px-[5%] text-gray-500 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${
+          className={`mobile-nav overflow-hidden px-[5%] tracking-wide text-gray-900 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ${
             menuOpen ? 'block' : 'hidden'
           } lg:block`}
         >
@@ -93,12 +93,12 @@ export const Navigation = () => {
               Retina
             </a>
           </div>
-          <div className="first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <button
-              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-wider text-left transition-colors duration-300 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-jamesBlue"
+              className="flex items-center justify-between w-full gap-2 py-3 font-medium tracking-normal transition-colors duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base hover:text-gray-900 nav-link"
               onClick={(e) => toggleSubMenu(e, 'EyeCare')}
             >
-              <span>Eye Care</span>
+              <span className="text-md">Eye Care</span>
               <div>
                 <svg
                   stroke="currentColor"
@@ -121,7 +121,9 @@ export const Navigation = () => {
             </button>
             <div
               ref={(el) => (dropdownRefs.current[2] = el)}
-              className={`lg:absolute top-minus-full lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${subMenuOpen['EyeCare'] ? 'block' : 'hidden'}`}
+              className={`lg:absolute top-minus-full lg:mt-2 lg:bg-white lg:shadow-lg lg:rounded lg:w-48 lg:py-2 ${
+                subMenuOpen['EyeCare'] ? 'block' : 'hidden'
+              }`}
             >
               {linkData?.allContentfulEyeCare?.nodes.map(
                 ({ heading, slug }, id) => (
@@ -136,7 +138,7 @@ export const Navigation = () => {
               )}
             </div>
           </div>
-          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
               href="/research-interests"
               className={getLinkClass('/research-interests/')}
@@ -144,12 +146,12 @@ export const Navigation = () => {
               Research
             </a>
           </div>
-          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/patient-hub" className={getLinkClass('/patient-hub/')}>
-              Patient Hub
+              Patient Info
             </a>
           </div>
-          <div className="text-base font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/contact" className={getLinkClass('/contact/')}>
               Contact
             </a>

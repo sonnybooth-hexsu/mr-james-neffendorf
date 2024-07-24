@@ -5,6 +5,8 @@ import doctifyLogo from '../assets/doctify-logo.svg'
 import hub from '../assets/hub.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
+import iconEducation from '../assets/education.svg'
+import book from '../assets/book_2.svg'
 
 class ResearchInterests extends React.Component {
   constructor(props) {
@@ -179,31 +181,24 @@ class ResearchInterests extends React.Component {
                   Clinical Interests & Research
                 </h1>
                 <p className="mb-4 text-gray-500 opacity-75 lg:w-1/2 md:text-md lg:text-lg fade-in lg:ml-4">
-                  Mr James Neffendorf has been involved in a wide range of
-                  academic research, and is currently focusing his interests on
-                  vitreoretinal surgery, retinal detachment, artificial
-                  intelligence, and the exploration of ocular biomarkers for
-                  neurological diseases.
+                  James is involved in a wide range of academic research,
+                  currently focussing his interests on vitreoretinal surgery,
+                  age-related macular degeneration, artificial intelligence and
+                  the exploration or ocular biomarkers for neurological disease.
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-4 mt-8 lg:mt-12 md:grid-cols-3">
+              <div className="grid grid-cols-2 gap-4 mt-8 lg:mt-12 md:grid-cols-2">
                 <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
-                    14+
-                  </p>
-                  <p className="text-gray-500">Years of Experience</p>
-                </div>
-                <div className="pl-4 text-left border-l-8 border-jamesBlue">
-                  <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
-                    100+
+                    39
                   </p>
                   <p className="text-gray-500">Published Papers</p>
                 </div>
                 <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
-                    10+
+                    18
                   </p>
-                  <p className="text-gray-500">Awards & Recognitions</p>
+                  <p className="text-gray-500">Awards and Prizes</p>
                 </div>
               </div>
             </div>
@@ -258,7 +253,7 @@ class ResearchInterests extends React.Component {
                 >
                   <ul className="space-y-4 font-bold">
                     {[
-                      'ALL',
+                      'View All',
                       '2023',
                       '2022',
                       '2021',
@@ -288,9 +283,12 @@ class ResearchInterests extends React.Component {
                     <p className="font-semibold text-gray-500">
                       {article.date}
                     </p>
-                    <h3 className="mt-4 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                      {article.title}
-                    </h3>
+                    <div className="flex flex-col items-start">
+                      <img src={book} alt="Hub Image" className="mt-1 mr-2" />
+                      <h3 className="mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                        {article.title}
+                      </h3>
+                    </div>
                     <p className="text-gray-500">
                       <span className="font-semibold text-gray-500">
                         Mr Neffendorf's Summary:{' '}

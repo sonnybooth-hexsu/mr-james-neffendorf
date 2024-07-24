@@ -1,7 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
-import londonClinic from '../assets/london-clinic.jpg'
+import bupaLogo from '../assets/provider-bupa-logo.svg'
+import axaLogo from '../assets/provider-axa-logo.svg'
+import BupaLogo from '../assets/provider-bupa-logo.svg'
+import aetnaLogo from '../assets/provider-aetna-logo.svg'
+import avivaLogo from '../assets/provider-aviva-logo.svg'
+import cignaLogo from '../assets/provider-cigna-logo.jpg'
+import vitalityLogo from '../assets/provider-vitality-logo.svg'
+import wpaLogo from '../assets/provider-wpa-logo.png'
 import underground from '../assets/underground.svg'
+import tfl from '../assets/tfl.svg'
 import kings from '../assets/kings_college_london.svg'
 import walk from '../assets/directions_walk.svg'
 import '../styles/global.css'
@@ -37,29 +45,16 @@ class Contact extends React.Component {
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <h1 className="mb-2 font-bold">Contact Mr Neffendorf</h1>
-                  <p className="md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique.
-                  </p>
-                </div>
-                <div>
-                  <img
-                    src={londonClinic}
-                    className="object-cover w-full rounded-xl"
-                    alt="Placeholder image"
-                  />
+                  <h1 className="mb-2 font-bold">Contact James Neffendorf</h1>
                 </div>
               </div>
             </div>
           </section>
           <section className="px-[5%] border-b py-16 md:py-24 lg:py-28">
-            <div className="container grid items-start grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16">
+            <div className="container grid items-start grid-cols-1 lg:items-center gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16">
               <div>
                 <div className="mb-6 md:mb-8">
-                  <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    Leave a message
-                  </h2>
+                  <h2 className="mb-5 font-bold md:mb-6">Leave a message</h2>
                   <p className="md:text-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
@@ -70,7 +65,7 @@ class Contact extends React.Component {
                         fill="jamesBlue"
                         strokeWidth="0"
                         viewBox="0 0 24 24"
-                        className="flex-none size-6"
+                        className="flex-none size-8"
                         height="1em"
                         width="1em"
                         xmlns="http://www.w3.org/2000/svg"
@@ -90,14 +85,14 @@ class Contact extends React.Component {
                         fill="currentColor"
                         strokeWidth="0"
                         viewBox="0 0 24 24"
-                        className="flex-none size-6"
+                        className="flex-none size-8"
                         height="1em"
                         width="1em"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"></path>
                       </svg>
-                      <p>+XXX XXX XXX</p>
+                      <p>+44 7849 425743</p>
                     </div>
                   </div>
                 </div>
@@ -109,18 +104,56 @@ class Contact extends React.Component {
                   Private Patients
                 </h3>
                 <p className="mt-0 md:mb-4">
-                  James is able to see self paying patients and those who are
-                  registered with the following insurance companies
+                  James sees self-paying patients and those registered with the
+                  following insurance companies
                 </p>
-                <ul className="list-disc list-inside">
-                  <li className="my-2 text-gray-500">
-                    Insurance company logo - James to confirm
+                <ul className="grid grid-cols-2 list-disc list-inside gap-x-4">
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img src={bupaLogo} alt="Bupa Logo" className="h-6 mr-2" />
+                    Bupa
                   </li>
-                  <li className="my-2 text-gray-500">
-                    Insurance company logo - James to confirm
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img src={axaLogo} alt="AXA Logo" className="h-6 mr-2" />
+                    AXA
                   </li>
-                  <li className="my-2 text-gray-500">
-                    Insurance company logo - James to confirm
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img
+                      src={avivaLogo}
+                      alt="Aviva Health Logo"
+                      className="h-6 mr-2"
+                    />
+                    Aviva Health
+                  </li>
+
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img
+                      src={vitalityLogo}
+                      alt="Vitality Health Logo"
+                      className="h-6 mr-2"
+                    />
+                    Vitality Health
+                  </li>
+
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img
+                      src={cignaLogo}
+                      alt="Cigna Logo"
+                      className="h-6 mr-2"
+                    />
+                    Cigna
+                  </li>
+
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img
+                      src={aetnaLogo}
+                      alt="Aetna Logo"
+                      className="h-4 mr-2"
+                    />
+                    Aetna
+                  </li>
+                  <li className="flex items-center my-2 text-gray-500">
+                    <img src={wpaLogo} alt="WPA Logo" className="h-6 mr-2" />
+                    WPA
                   </li>
                 </ul>
                 <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">NHS</h3>
@@ -138,7 +171,7 @@ class Contact extends React.Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      King's College London
+                      King's College Hospital NHS Foundation Trust
                     </a>
                   </p>
                 </div>
@@ -206,7 +239,7 @@ class Contact extends React.Component {
                     </a>
                   </label>
                 </div>
-                <button className="items-center justify-center inline px-4 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                <button className="items-center justify-center inline px-4 text-base font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                   Submit
                 </button>
               </form>
@@ -222,7 +255,7 @@ class Contact extends React.Component {
                   </h2>
 
                   <div className="mt-4 space-y-4">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -241,26 +274,36 @@ class Contact extends React.Component {
                         34 Great Titchfield St, London W1W 8BQ
                       </p>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div>
+                      <p className="pt-8 font-bold text-gray-900 text-md">
+                        {' '}
+                        Easily accessible from all major London transport hubs
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <img
                         src={underground}
                         className="object-cover rounded-xl"
                         alt="Placeholder image"
                       />
                       <p className="text-md">
-                        <span className="font-medium">
+                        <span className="font-medium text-gray-900">
                           Nearest tube station:
                         </span>{' '}
-                        Regent's Park Station
+                        Oxford Circus, 5 min walk
                       </p>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={walk}
-                        className="object-cover rounded-xl"
-                        alt="Placeholder image"
-                      />
-                      <p className="font-medium text-md">5 min walk</p>
+                    <div className="plan-journey">
+                      <button
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
+                        onClick={() =>
+                          window.open(
+                            'https://www.google.com/maps/dir/?api=1&destination=34+Great+Titchfield+St%2C+London+W1W+8BQ'
+                          )
+                        }
+                      >
+                        Plan my journey
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -288,7 +331,7 @@ class Contact extends React.Component {
                   </h2>
 
                   <div className="mt-4 space-y-4">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -303,29 +346,39 @@ class Contact extends React.Component {
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
                       <p className="text-md">
-                        18-22 Queen Anne St, Marylebone, London W1G 8HU
+                        King’s College Hospital, Denmark Hill, London SE5 9RS
                       </p>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div>
+                      <p className="pt-8 font-bold text-gray-900 text-md">
+                        {' '}
+                        Easily accessible from all major London transport hubs
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <img
-                        src={underground}
-                        className="object-cover rounded-xl"
+                        src={tfl}
+                        className="object-cover h-5 rounded-xl"
                         alt="Underground icon"
                       />
                       <p className="text-md">
-                        <span className="font-medium">
-                          Nearest tube station:
+                        <span className="font-medium text-gray-900">
+                          Nearest station:
                         </span>{' '}
-                        Bond Street Station
+                        Denmark Hill, 4 min walk
                       </p>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={walk}
-                        className="object-cover rounded-xl"
-                        alt="Walking icon"
-                      />
-                      <p className="font-medium text-md">6 min walk</p>
+                    <div className="plan-journey">
+                      <button
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
+                        onClick={() =>
+                          window.open(
+                            'https://www.google.com/maps/dir/?api=1&destination=King’s+College+Hospital,+Denmark+Hill,+London+SE5+9RS'
+                          )
+                        }
+                      >
+                        Plan my journey
+                      </button>
                     </div>
                   </div>
                 </div>
