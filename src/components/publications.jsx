@@ -8,33 +8,32 @@ export const Publications = () => {
       allContentfulPublications {
         nodes {
           title
-          summary
+          summary {
+            summary
+          }
+          contributors
           date
         }
       }
     }
   `)
 
-  const [sortBy] = useState('Date')
-  const [selectedYear, setSelectedYear] = useState('ALL')
+  const fullList = publicationsData.allContentfulPublications.nodes
+  const [articles, setArticles] = useState(fullList)
+  const [selectedYear, setSelectedYear] = useState('View All')
 
   const handleFilterChange = (year) => {
-    setSelectedYear(year)
+    let newList
 
-    if (selectedYear === 'ALL') {
-      setArticles(publicationsData.allContentfulPublications.nodes)
+    if (year === 'View All') {
+      newList = fullList
+    } else {
+      newList = fullList.filter((article) => article.date.includes(year))
     }
 
-    setArticles(
-      publicationsData.allContentfulPublications.nodes.filter((article) =>
-        article.date.includes(selectedYear)
-      )
-    )
+    setArticles(newList)
+    setSelectedYear(year)
   }
-
-  const [articles, setArticles] = useState(
-    publicationsData.allContentfulPublications.nodes
-  )
 
   return (
     <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16 fade-in">
@@ -42,11 +41,12 @@ export const Publications = () => {
         <div className="md:col-span-4 lg:col-span-2">
           <div
             id="filters"
-            className="hidden overflow-hidden lg:block transition-max-height max-h-0 md:max-h-full md:overflow-visible"
+            className="overflow-hidden lg:block transition-max-height max-h-0 md:max-h-full md:overflow-visible"
           >
-            <ul className="space-y-4 font-bold">
+            <ul className="hidden space-y-4 font-bold lg:block">
               {[
                 'View All',
+                '2024',
                 '2023',
                 '2022',
                 '2021',
@@ -68,12 +68,27 @@ export const Publications = () => {
                 </li>
               ))}
             </ul>
+            <select onChange={(e) => handleFilterChange(e.target.value)}>
+              <option value="View All">View All</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+            </select>
           </div>
         </div>
         <div className="md:col-span-4 lg:col-span-8 fade-in">
           {articles.map((article, index) => (
             <div className="pb-4 mb-8 border-b" key={index}>
-              <p className="font-semibold text-gray-500">{article.date}</p>
+              <p className="font-semibold text-gray-500">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
               <div className="flex flex-col items-start">
                 <img src={book} alt="Hub Image" className="mt-1 mr-2" />
                 <h3 className="mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
@@ -84,7 +99,7 @@ export const Publications = () => {
                 <span className="font-semibold text-gray-500">
                   Mr Neffendorf's Summary:{' '}
                 </span>
-                {article.summary}
+                {article.summary.raw}
               </p>
               <p className="mt-2 font-semibold text-gray-500">
                 {article.contributors}
