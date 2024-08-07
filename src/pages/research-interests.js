@@ -2,18 +2,13 @@ import React from 'react'
 import Layout from '../components/layout'
 import Publications from '../components/publications'
 import doctifyLogo from '../assets/doctify-logo.svg'
-import hub from '../assets/hub.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
-import iconEducation from '../assets/education.svg'
-import book from '../assets/book_2.svg'
 
 class ResearchInterests extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedYear: 'ALL',
-      sortBy: 'Date',
       articles: [
         {
           date: 'Feb 2023',
@@ -131,42 +126,7 @@ class ResearchInterests extends React.Component {
     })
   }
 
-  handleFilterChange = (year) => {
-    this.setState({ selectedYear: year })
-  }
-
-  handleSortChange = (sortBy) => {
-    this.setState({ sortBy })
-  }
-
-  filterArticles = () => {
-    const { selectedYear, articles } = this.state
-    if (selectedYear === 'ALL') {
-      return articles
-    }
-    return articles.filter((article) => article.date.includes(selectedYear))
-  }
-
-  sortArticles = (articles) => {
-    const { sortBy } = this.state
-    return articles.sort((a, b) => {
-      if (sortBy === 'Date') {
-        const dateA = new Date(a.date.split(' ')[1])
-        const dateB = new Date(b.date.split(' ')[1])
-        return dateB - dateA
-      }
-      if (sortBy === 'Title') {
-        return a.title.localeCompare(b.title)
-      }
-      return articles
-    })
-  }
-
   render() {
-    const { selectedYear, sortBy } = this.state
-    const filteredArticles = this.filterArticles()
-    const sortedArticles = this.sortArticles(filteredArticles)
-
     return (
       <Layout>
         <div className="main-content">
@@ -204,108 +164,8 @@ class ResearchInterests extends React.Component {
             </div>
           </header>
 
-          <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16 fade-in">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-12">
-              <div className="md:col-span-4 lg:col-span-2">
-                <div className="flex gap-4 mb-4 lg:hidden">
-                  <button
-                    className="flex items-center justify-center w-1/2 gap-2 px-4 py-2 text-gray-500 border border-gray-300 rounded"
-                    onClick={() => this.handleFilterChange('ALL')}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-.293.707L13 10.414V15a1 1 0 01-.553.894l-3 1.5A1 1 0 018 16.5v-6.086L3.293 6.707A1 1 0 013 6V4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Filters
-                  </button>
-                  <div className="relative w-1/2">
-                    <select
-                      className="block w-full px-4 py-4 pr-8 leading-tight bg-white border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:bg-white focus:border-gray-500"
-                      onChange={(e) => this.handleSortChange(e.target.value)}
-                      value={sortBy}
-                    >
-                      <option value="Date">Sort By</option>
-                      <option value="Date">Date</option>
-                      <option value="Title">Title</option>
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
-                      <svg
-                        className="w-4 h-4 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="filters"
-                  className="hidden overflow-hidden lg:block transition-max-height max-h-0 md:max-h-full md:overflow-visible"
-                >
-                  <ul className="space-y-4 font-bold">
-                    {[
-                      'View All',
-                      '2023',
-                      '2022',
-                      '2021',
-                      '2020',
-                      '2019',
-                      '2018',
-                      '2017',
-                      '2016',
-                      '2015',
-                      '2014',
-                      '2013',
-                    ].map((year) => (
-                      <li
-                        key={year}
-                        className={`cursor-pointer ${selectedYear === year ? 'text-jamesBlue' : 'text-gray-500'}`}
-                        onClick={() => this.handleFilterChange(year)}
-                      >
-                        {year}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="md:col-span-4 lg:col-span-8 fade-in">
-                {sortedArticles.map((article, index) => (
-                  <div className="pb-4 mb-8 border-b" key={index}>
-                    <p className="font-semibold text-gray-500">
-                      {article.date}
-                    </p>
-                    <div className="flex flex-col items-start">
-                      <img src={book} alt="Hub Image" className="mt-1 mr-2" />
-                      <h3 className="mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                        {article.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-500">
-                      <span className="font-semibold text-gray-500">
-                        Mr Neffendorf's Summary:{' '}
-                      </span>
-                      {article.summary}
-                    </p>
-                    <p className="mt-2 font-semibold text-gray-500">
-                      {article.contributors}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="hidden lg:block lg:col-span-2 fade-in"></div>
-            </div>
-          </div>
-
           <Publications />
+
           {/* Call To Action */}
           <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
             <img
