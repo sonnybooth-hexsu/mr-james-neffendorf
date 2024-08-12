@@ -72,7 +72,7 @@ class AccordionItem extends React.Component {
           <p className="text-gray-800 text-md md:text-lg">{content}</p>
           <a
             href={link}
-            className="block mt-4 text-gray-500 text-md md:text-lg"
+            className="block mt-4 text-gray-600 text-md md:text-lg"
           >
             Details
           </a>
@@ -141,7 +141,7 @@ class RootIndex extends React.Component {
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
 
-                  <h2 className="text-base font-bold tracking-wide text-gray-500 md:text-md xl:text-lg">
+                  <h2 className="text-base font-bold tracking-wide text-gray-600 md:text-md xl:text-lg">
                     Consultant Ophthalmologist, Cataract &amp; Retinal Surgeon
                   </h2>
 
@@ -263,7 +263,7 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
                 <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
-                  <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
+                  <h1 className="text-base text-gray-600 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
                     Professional affiliations
                   </h1>
                 </div>
@@ -575,7 +575,7 @@ class RootIndex extends React.Component {
                     what he has done to help me see properly again.’
                   </blockquote>
                 </div>
-                <div className="bg-gray-200 md:col-span-1 md:col-start-3 ">
+                <div className="bg-gray-300 md:col-span-1 md:col-start-3 ">
                   <img
                     src={patient}
                     className="object-cover w-full p-20 rounded-md md:p-0"

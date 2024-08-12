@@ -104,7 +104,7 @@ class RetinaTemplate extends React.Component {
 
                     <h2 className="mb-2 font-semibold">Symptoms</h2>
                     <div
-                      className="mb-4 text-gray-500"
+                      className="mb-4 text-gray-600"
                       dangerouslySetInnerHTML={{
                         __html: documentToHtmlString(symptomsDocument, options),
                       }}
@@ -112,7 +112,7 @@ class RetinaTemplate extends React.Component {
                     {post.solutions && (
                       <>
                         <h2 className="mt-10 mb-4">{post.solutionTitle}</h2>
-                        <p className="mb-4 text-gray-500">{post.solutions}</p>
+                        <p className="mb-4 text-gray-600">{post.solutions}</p>
                       </>
                     )}
                     {post.solutionsAccordion && (
@@ -129,7 +129,7 @@ class RetinaTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-500">{content}</p>
+                                  <p className="text-gray-600">{content}</p>
                                 </AccordionContent>
                               </AccordionItem>
                             )
@@ -154,7 +154,7 @@ class RetinaTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-500">{content}</p>
+                                  <p className="text-gray-600">{content}</p>
                                 </AccordionContent>
                               </AccordionItem>
                             ))}

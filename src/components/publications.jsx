@@ -58,7 +58,7 @@ export const Publications = () => {
               ].map((year) => (
                 <li
                   key={year}
-                  className={`cursor-pointer ${selectedYear === year ? 'text-jamesBlue' : 'text-gray-500'}`}
+                  className={`cursor-pointer ${selectedYear === year ? 'text-jamesBlue' : 'text-gray-600'}`}
                   onClick={() => handleFilterChange(year)}
                 >
                   {year}
@@ -92,7 +92,7 @@ export const Publications = () => {
                 <img
                   src={book}
                   alt="Hub Image"
-                  className="h-5 mt-1 mr-1 text-gray-500"
+                  className="h-5 mt-1 mr-1 text-gray-600"
                 />
                 <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
               </div>
@@ -100,13 +100,13 @@ export const Publications = () => {
                 {article.title}
               </h3>
 
-              <p className="text-gray-500">
-                <span className="font-semibold text-gray-500">
+              <p className="text-gray-600">
+                <span className="font-semibold text-gray-600">
                   Mr Neffendorf's Summary:{' '}
                 </span>
                 {article.summary.raw}
               </p>
-              <p className="mt-2 font-semibold text-gray-500">
+              <p className="mt-2 font-semibold text-gray-600">
                 {article.contributors}
               </p>
             </div>

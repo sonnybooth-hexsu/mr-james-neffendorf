@@ -109,15 +109,15 @@ class Contact extends React.Component {
                   following insurance companies
                 </p>
                 <ul className="grid grid-cols-2 list-disc list-inside gap-x-4">
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img src={bupaLogo} alt="Bupa Logo" className="h-6 mr-2" />
                     Bupa
                   </li>
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img src={axaLogo} alt="AXA Logo" className="h-6 mr-2" />
                     AXA
                   </li>
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img
                       src={avivaLogo}
                       alt="Aviva Health Logo"
@@ -126,7 +126,7 @@ class Contact extends React.Component {
                     Aviva Health
                   </li>
 
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img
                       src={vitalityLogo}
                       alt="Vitality Health Logo"
@@ -135,7 +135,7 @@ class Contact extends React.Component {
                     Vitality Health
                   </li>
 
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img
                       src={cignaLogo}
                       alt="Cigna Logo"
@@ -144,7 +144,7 @@ class Contact extends React.Component {
                     Cigna
                   </li>
 
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img
                       src={aetnaLogo}
                       alt="Aetna Logo"
@@ -152,7 +152,7 @@ class Contact extends React.Component {
                     />
                     Aetna
                   </li>
-                  <li className="flex items-center my-2 text-gray-500">
+                  <li className="flex items-center my-2 text-gray-600">
                     <img src={wpaLogo} alt="WPA Logo" className="h-6 mr-2" />
                     WPA
                   </li>

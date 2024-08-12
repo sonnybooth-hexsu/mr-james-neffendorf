@@ -2,8 +2,13 @@ import React from 'react'
 import Layout from '../components/layout'
 import hub from '../assets/hub.svg'
 import downloadIcon from '../assets/download.svg'
-import epiretinalMembrane from '../../static/leaflets/BEAVRS_ERM-2022.pdf'
+import floaters from '../../static/leaflets/Beavrs-leaflet-Floaters-2022.pdf'
 import macularHole from '../../static/leaflets/BEAVRS_MH-2022.pdf'
+import epiretinalMembrane from '../../static/leaflets/BEAVRS_ERM-2022.pdf'
+import retinalDetachmentSurgery from '../../static/leaflets/BEAVRS-leaflet-RD-2022.pdf'
+import vitrectomyForDiabeticVitreousHaemorrhage from '../../static/leaflets/BEAVRS_Vitrectomy-for-diabetic-VH-2022.pdf'
+import nonDiabeticVitreousHaemorrhage from '../../static/leaflets/BEAVRS-leaflet-NDM-VH-2022.pdf'
+import droppedNucleus from '../../static/leaflets/Beavrs-leafletDropped-Nucleus.2022.pdf'
 
 class PatientHub extends React.Component {
   componentDidMount() {
@@ -88,7 +93,7 @@ class PatientHub extends React.Component {
                 'Information Leaflet',
                 'Floaters',
                 'Leaflet on eye floaters, their causes, risks, and treatment options.',
-                epiretinalMembrane
+                floaters
               )}
               {this.renderCard(
                 'Information Leaflet',
@@ -106,25 +111,25 @@ class PatientHub extends React.Component {
                 'Information Leaflet',
                 'Retinal Detachment Surgery',
                 'Leaflet on retinal detachment surgery, covering its causes, procedures, risks, post-operative care, and recovery advice.',
-                epiretinalMembrane
+                retinalDetachmentSurgery
               )}
               {this.renderCard(
                 'Information Leaflet',
                 'Vitrectomy for Diabetic Vitreous Haemorrhage',
                 'Leaflet on vitrectomy for diabetic vitreous haemorrhage, explaining the procedure, potential risks, post-operative care, and recovery advice.',
-                epiretinalMembrane
+                vitrectomyForDiabeticVitreousHaemorrhage
               )}
               {this.renderCard(
                 'Information Leaflet',
                 'Non-Diabetic Vitreous Haemorrhage',
                 'Leaflet on non-diabetic vitreous haemorrhage, explaining its causes, treatment options, follow-up care, and the importance of monitoring vision in both eyes.',
-                epiretinalMembrane
+                nonDiabeticVitreousHaemorrhage
               )}
               {this.renderCard(
                 'Information Leaflet',
                 'Dropped Nucleus',
                 'Leaflet on retained lens after cataract surgery, explaining the causes, treatment options (including vitrectomy), potential risks, post-operative care, and recovery advice.',
-                epiretinalMembrane
+                droppedNucleus
               )}
               {/* Add more cards as needed */}
             </div>
@@ -138,9 +143,9 @@ class PatientHub extends React.Component {
     return (
       <div className="flex flex-col justify-between h-full p-8 bg-white rounded-lg shadow-md border-1">
         <div>
-          <h2 className="mb-2 text-sm font-bold text-gray-500">{category}</h2>
+          <h2 className="mb-2 text-sm font-bold text-gray-600">{category}</h2>
           <h3 className="mb-4 font-semibold text-md">{title}</h3>
-          <p className="mb-4 text-gray-500">{description}</p>
+          <p className="mb-4 text-gray-600">{description}</p>
         </div>
         <div className="flex justify-between mt-auto">
           <div className="grid grid-cols-2 gap-2 md:mt-4 lg:flex lg:space-x-2">

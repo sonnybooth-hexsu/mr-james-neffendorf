@@ -138,7 +138,7 @@ class ResearchInterests extends React.Component {
                 <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
                   Clinical Interests & Research
                 </h1>
-                <p className="mb-4 text-gray-500 opacity-75 lg:w-1/2 md:text-md lg:text-lg fade-in lg:ml-4">
+                <p className="mb-4 text-gray-600 opacity-75 lg:w-1/2 md:text-md lg:text-lg fade-in lg:ml-4">
                   James is involved in a wide range of academic research,
                   currently focussing his interests on vitreoretinal surgery,
                   age-related macular degeneration, artificial intelligence and
@@ -150,13 +150,13 @@ class ResearchInterests extends React.Component {
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
                     39
                   </p>
-                  <p className="text-gray-500">Published Papers</p>
+                  <p className="text-gray-600">Published Papers</p>
                 </div>
                 <div className="pl-4 text-left border-l-8 border-jamesBlue">
                   <p className="text-4xl font-bold text-gray-800 lg:text-7xl">
                     18
                   </p>
-                  <p className="text-gray-500">Awards and Prizes</p>
+                  <p className="text-gray-600">Awards and Prizes</p>
                 </div>
               </div>
             </div>
