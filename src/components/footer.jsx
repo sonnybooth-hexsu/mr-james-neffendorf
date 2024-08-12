@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../assets/logo.png'
 import doctifyIcon from '../assets/doctify-icon.svg'
 
 const Footer = () => (
@@ -120,102 +119,16 @@ const Footer = () => (
             </a>
           </div>
         </div>
-        <div className="grid items-start grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
-          <ul>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link One
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Two
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Three
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Four
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Five
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Six
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Seven
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Eight
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Nine
-              </a>
-            </li>
-            <li className="py-2 font-semibold text-white text-md">
-              <a
-                href="#"
-                className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
-              >
-                Link Ten
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
       <div className="w-full h-px bg-gray-50"></div>
-      <div className="flex flex-col-reverse items-start justify-between pt-6 text-gray-400 md:flex-row md:items-center md:pt-8">
-        <p className="mt-8 text-gray-400 md:mt-0 ">
+      <div className="flex flex-col-reverse items-start justify-between pt-6 text-gray-300 md:flex-row md:items-center md:pt-8">
+        <p className="mt-8 text-gray-300 md:mt-0 ">
           © 2024 Mr James Neffendorf. All rights reserved.
         </p>
         <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
           <li className="underline">
             <a
-              href="#"
+              href="/privacy-policy"
               className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
             >
               Privacy Policy
@@ -223,7 +136,7 @@ const Footer = () => (
           </li>
           <li className="underline">
             <a
-              href="#"
+              href="/terms-of-service"
               className="focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
             >
               Terms of Service

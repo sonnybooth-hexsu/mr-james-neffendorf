@@ -41,7 +41,7 @@ export const Publications = () => {
         <div className="md:col-span-4 lg:col-span-2">
           <div
             id="filters"
-            className="overflow-hidden lg:block transition-max-height max-h-0 md:max-h-full md:overflow-visible"
+            className="overflow-hidden transition-max-height max-h-0 md:max-h-full md:overflow-visible"
           >
             <ul className="hidden space-y-4 font-bold lg:block">
               {[
@@ -68,7 +68,11 @@ export const Publications = () => {
                 </li>
               ))}
             </ul>
-            <select onChange={(e) => handleFilterChange(e.target.value)}>
+            <p>lol</p>
+            <select
+              className="space-y-4"
+              onChange={(e) => handleFilterChange(e.target.value)}
+            >
               <option value="View All">View All</option>
               <option value="2024">2024</option>
               <option value="2023">2023</option>
@@ -88,13 +92,18 @@ export const Publications = () => {
         <div className="md:col-span-4 lg:col-span-8 fade-in">
           {articles.map((article, index) => (
             <div className="pb-4 mb-8 border-b" key={index}>
-              <p className="font-semibold text-gray-500">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
-              <div className="flex flex-col items-start">
-                <img src={book} alt="Hub Image" className="mt-1 mr-2" />
-                <h3 className="mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                  {article.title}
-                </h3>
+              <div className="flex items-center">
+                <img
+                  src={book}
+                  alt="Hub Image"
+                  className="h-5 mt-1 mr-1 text-gray-500"
+                />
+                <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
               </div>
+              <h3 className="mt-2 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                {article.title}
+              </h3>
+
               <p className="text-gray-500">
                 <span className="font-semibold text-gray-500">
                   Mr Neffendorf's Summary:{' '}

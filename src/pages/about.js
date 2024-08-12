@@ -2,9 +2,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import jamesLeaning from '../assets/james-leaning.jpg'
 import jamesSuit from '../assets/james-suit.jpg'
+import research from '../assets/research.jpg'
+import roles from '../assets/roles.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
-import grade from '../assets/grade.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import iconCheckmarkSmall from '../assets/check_small.svg'
@@ -44,14 +45,22 @@ class About extends React.Component {
                   <p className="mb-4 text-sm font-bold text-gray-800 md:text-md md:mb-2">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                   </p>
-                  <p className="md:text-md">
-                    Consultant Ophthalmic and Vitreoretinal Surgeon with
-                    specialist interest in cataract surgery, retinal surgery and
-                    emergency eye care. He is appointed as a Consultant
-                    Ophthalmologist at King’s College Hospital NHS Foundation
-                    Trust and the Deputy Medical Director at the London
-                    Lauriston Private Clinic in Central London.
-                  </p>
+                  <ul class="list-disc pl-5">
+                    <li>Consultant Ophthalmic and Vitreoretinal Surgeon</li>
+                    <li>
+                      Specialist interest in cataract surgery, retinal surgery
+                      and emergency eye care
+                    </li>
+                    <li>
+                      Appointed at King’s College Hospital NHS Foundation Trust
+                      (NHS)
+                    </li>
+                    <li>
+                      Deputy Medical Director at London Lauriston Clinic
+                      (Private Practice)
+                    </li>
+                  </ul>
+
                   <div className="grid mt-4 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                     <button
                       className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
@@ -78,12 +87,6 @@ class About extends React.Component {
                 Educated and trained at world leading institutions
               </h2>
               <div>
-                <p className="mb-5 md:mb-6 md:text-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat.
-                </p>
                 <div className="grid grid-cols-1 gap-4 py-2">
                   <div className="flex self-start">
                     <div className="self-start flex-none mr-2">
@@ -153,41 +156,134 @@ class About extends React.Component {
               </div>
             </div>
           </section>
-          <section className="px-[5%] py-8 md:py-12 lg:py-16 fade-in">
-            <div className="container grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-              <div className="flex flex-col">
-                <h3 className="mb-1 text-2xl font-semibold">Research</h3>
-                <p className="mb-3">
-                  Key research interests in vitreoretinal surgery, new drugs and
-                  devices in retinal diseases such as age-related macular
-                  degeneration and artificial intelligence using ophthalmic
-                  biomarkers.
-                </p>
-                <ul className="mb-6 custom-list">
-                  <li>Published 39 scientific papers</li>
-                  <li>Presented at 40 international and national meetings</li>
-                </ul>
 
-                <h3 className="mb-1 text-2xl font-semibold">Roles</h3>
-                <ul className="mb-6 custom-list">
-                  <li>Examiner for Royal College of Ophthalmologists</li>
-                  <li>Reviewer for many leading scientific journals</li>
-                  <li>Director of Retina and Macula Disease, Ocuplan UK</li>
-                  <li>
-                    Lead, Clinical Innovation and Discovery, Ophthalmology,
-                    Panacea Innovation
-                  </li>
-                  <li>
-                    Medical Director for Ophthalmology, Solvemed (International
-                    Artificial Intelligence Company)
-                  </li>
-                </ul>
+          <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+            <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+              <div className="flex items-center order-2 md:order-1">
+                <div>
+                  <h2 className="mb-6">Research</h2>
+                  <div className="grid grid-cols-1 gap-4 py-2">
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>
+                        Key research interests in vitreoretinal surgery, new
+                        drugs and devices in retinal diseases such as
+                        age-related macular degeneration and artificial
+                        intelligence using ophthalmic biomarkers.
+                      </p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Published 39 scientific papers</p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Presented at 40 international and national meetings</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center justify-center w-full h-auto overflow-hidden">
-                <div style={{ opacity: 1 }}></div>
+              <div className="order-1 md:order-2">
+                <img
+                  src={research}
+                  className="object-cover w-full rounded-xl"
+                  alt="Placeholder image"
+                />
               </div>
             </div>
           </section>
+
+          <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+            <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+              <div className="flex items-center">
+                <img
+                  src={roles}
+                  className="object-cover w-full rounded-xl"
+                  alt="Placeholder image"
+                />
+              </div>
+              <div>
+                <h2 className="mb-6">Roles</h2>
+                <div className="grid grid-cols-1 gap-4 py-2">
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>Examiner for Royal College of Ophthalmologists</p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>Reviewer for many leading scientific journals</p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>Director of Retina and Macula Disease, Ocuplan UK</p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>
+                      Lead, Clinical Innovation and Discovery, Ophthalmology,
+                      Panacea Innovation
+                    </p>
+                  </div>
+                  <div className="flex self-start">
+                    <div className="self-start flex-none mr-2">
+                      <img
+                        className="inline-block size-6"
+                        src={iconCheckmarkSmall}
+                        alt="Checkmark"
+                      />
+                    </div>
+                    <p>
+                      Medical Director for Ophthalmology, Solvemed
+                      (International Artificial Intelligence Company)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Awards & Achievements */}
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container">
@@ -203,11 +299,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2023{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       Kidney Research UK Research Project Grant, Co-Investigator
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2023)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -218,11 +314,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2018{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       Oxford Annual Updates 1st Prize
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2018)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -233,12 +329,12 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2017{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       British and Eire Association of Vitreoretinal Surgeons
                       Certificate of Merit
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2017)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -249,11 +345,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2016{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       EURetina Annual Conference, highest scoring free papers
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2016)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -264,12 +360,12 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2015{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       American Academy of Ophthalmology Annual Conference, Best
                       Poster, Cataract
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2015)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -280,11 +376,12 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2016{' '}
-                    <span className="font-normal text-gray-500">
-                      EURetina Annual Conference, highest scoring free papers
-                    </span>
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
+                      American Academy of Ophthalmology Annual Conference, Best
+                      Poster, Retina
+                    </span>{' '}
+                    <span className="font-normal">(2015)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -295,11 +392,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2016{' '}
-                    <span className="font-normal text-gray-500">
-                      EURetina Annual Conference, highest scoring free papers
-                    </span>
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
+                      World Ophthalmology Congress Travel Grant
+                    </span>{' '}
+                    <span className="font-normal">(2014)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -310,11 +407,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2016{' '}
-                    <span className="font-normal text-gray-500">
-                      EURetina Annual Conference, highest scoring free papers
-                    </span>
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
+                      European Paediatric Ophthalmology Society Travel Grant
+                    </span>{' '}
+                    <span className="font-normal">(2013)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -325,11 +422,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2016{' '}
-                    <span className="font-normal text-gray-500">
-                      EURetina Annual Conference, highest scoring free papers
-                    </span>
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
+                      Distinction in Clinical Medicine and Surgery, UCL
+                    </span>{' '}
+                    <span className="font-normal">(2009)</span>
                   </h3>
                 </div>
                 <div className="flex items-start">
@@ -340,11 +437,11 @@ class About extends React.Component {
                       className="object-cover h-6 size-full"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-gray-800">
-                    2009{' '}
-                    <span className="font-normal text-gray-500">
+                  <h3 className="text-base text-black">
+                    <span className="font-bold">
                       Allen Goldsmith Prize in Ophthalmology, UCL
-                    </span>
+                    </span>{' '}
+                    <span className="font-normal">(2009)</span>
                   </h3>
                 </div>
               </div>
@@ -383,9 +480,9 @@ class About extends React.Component {
                     Having an eye problem can often be stressful and worrying.
                     My aim is to put you at ease whilst helping you through your
                     eye care journey. I will make sure you fully understand the
-                    problem and feel relaxed as possible during discussions and
-                    any required treatment. Finally, you cn rest assured I will
-                    only ever recommend treatment when I feel it is a good
+                    problem and feel as relaxed as possible during discussions
+                    and any required treatment. Finally, you can rest assured I
+                    will only ever recommend treatment when I feel it is a good
                     solution for you.
                   </blockquote>
                   <p className="text-xl font-bold text-gray-800">
@@ -421,7 +518,7 @@ class About extends React.Component {
                     <p>
                       <span className="font-bold text-gray-900">
                         {' '}
-                        Enjoys playing tennis, golf and skiing in spare time{' '}
+                        Tennis, golf and skiing in spare time{' '}
                       </span>{' '}
                     </p>
                   </div>
@@ -430,68 +527,20 @@ class About extends React.Component {
             </div>
           </section>
           {/* Call To Action */}
-          <section className="relative border-t px-[8%] md:px-[10%] lg:px-[5%] overflow-hidden fade-in">
+          <section className="relative border-t px-[5%] lg:px-[5%] overflow-hidden fade-in">
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
-              alt="Placeholder image"
+              alt="Background image"
             />
-            <div className="container relative z-10 py-24 text-center md:py-28 lg:py-40">
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                Book a Consultation
-              </h2>
-              <p className="md:text-md">
-                Book a consultation with Mr James Neffendorf for expert
-                ophthalmic care and treatment.
-              </p>
-              <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:justify-center xslg:space-x-2">
+            <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
+              <div className="flex justify-center mt-4">
                 <button
                   className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                   onClick={() => (window.location.href = '/contact')}
                 >
-                  Contact Mr Neffendorf
+                  Book a Consultation
                 </button>
-
-                <button
-                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
-                  onClick={() => (window.location.href = '/about')}
-                >
-                  About Mr Neffendorf
-                </button>
-              </div>
-              <div className="flex flex-row items-center justify-center mt-8">
-                <p className="mr-2 font-bold text-gray-800">Excellent</p>
-                <img
-                  className="inline-block size-6 reduce-space"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6 reduce-space"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6 reduce-space"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6 reduce-space"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  className="inline-block size-6 reduce-space"
-                  src={grade}
-                  alt="Checkmark"
-                />
-                <img
-                  src={doctifyLogo}
-                  className="ml-2 mr-2 max-h-12"
-                  alt="Doctify logo"
-                />
-                <p className="mr-2">4.94 out of 5</p>
               </div>
             </div>
           </section>

@@ -8,6 +8,7 @@ import avivaLogo from '../assets/provider-aviva-logo.svg'
 import cignaLogo from '../assets/provider-cigna-logo.jpg'
 import vitalityLogo from '../assets/provider-vitality-logo.svg'
 import wpaLogo from '../assets/provider-wpa-logo.png'
+import londonClinic from '../assets/london-clinic.jpg'
 import underground from '../assets/underground.svg'
 import tfl from '../assets/tfl.svg'
 import kings from '../assets/kings_college_london.svg'
@@ -73,7 +74,7 @@ class Contact extends React.Component {
                         <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path>
                       </svg>
                       <a
-                        href="mailto:clinic@drjamesneffendorf.com"
+                        href="mailto:clinic@mrjamesneffendorf.com"
                         className="underline text-jamesBlue"
                       >
                         clinic@drjamesneffendorf.com
@@ -158,11 +159,6 @@ class Contact extends React.Component {
                 </ul>
                 <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">NHS</h3>
                 <div className="flex items-center space-x-2 md:mb-4">
-                  <img
-                    src={kings}
-                    className="object-cover h-6"
-                    alt="Placeholder image"
-                  />
                   <p className="mt-0">
                     James sees NHS patients at{' '}
                     <a
@@ -250,8 +246,13 @@ class Contact extends React.Component {
             <div className="container">
               <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
                 <div>
-                  <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    The London Clinic
+                  <img
+                    src={londonClinic}
+                    alt="Bupa Logo"
+                    className="mr-2 rounded-full h-30 aspect-square"
+                  />
+                  <h2 className="mt-6 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                    London Lauriston Clinic
                   </h2>
 
                   <div className="mt-4 space-y-4">
@@ -349,12 +350,7 @@ class Contact extends React.Component {
                         King’s College Hospital, Denmark Hill, London SE5 9RS
                       </p>
                     </div>
-                    <div>
-                      <p className="pt-8 font-bold text-gray-900 text-md">
-                        {' '}
-                        Easily accessible from all major London transport hubs
-                      </p>
-                    </div>
+
                     <div className="flex items-center gap-2">
                       <img
                         src={tfl}
@@ -384,14 +380,14 @@ class Contact extends React.Component {
                 </div>
                 <div>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.738416202645!2d-0.1438672842073896!3d51.51762311853742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ac6f8a8854d%3A0x2d0f02e5e5a8f9c7!2s34%20Great%20Titchfield%20St%2C%20London%20W1W%208BQ%2C%20UK!5e0!3m2!1sen!2sus!4v1614604722132!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.2561361745863!2d-0.09353648422951412!3d51.46832861949721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876033b8230b20b%3A0x9e65f50829e4e35!2sKing&#39;s%20College%20Hospital!5e0!3m2!1sen!2suk!4v1691771847316!5m2!1sen!2suk"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     title="Google Map"
-                  ></iframe>
+                  />
                 </div>
               </div>
             </div>

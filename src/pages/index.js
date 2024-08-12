@@ -12,11 +12,12 @@ import eurina from '../assets/eurina.svg'
 import rocopth from '../assets/rocopth.svg'
 import cmac from '../assets/cmac.png'
 import topRightSvg from '../assets/top-right.svg'
+import topDoctors from '../assets/top-doctors.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
-import eyeExam from '../assets/eye-exam.jpg'
+import eyeExam from '../assets/excellence-eye.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import patient from '../assets/patient.jpg'
 import iconCheckmarkSmall from '../assets/check_small.svg'
@@ -236,6 +237,7 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
+             
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
@@ -243,11 +245,11 @@ class RootIndex extends React.Component {
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
 
-                  <h2 className="text-xs font-bold tracking-wide text-gray-500 uppercase lg:text-sm md:text-base">
+                  <h2 className="text-base font-bold tracking-wide text-gray-500 uppercase md:text-md xl:text-lg">
                     Consultant ophthalmologist, cataract &amp; retinal surgeon
                   </h2>
 
-                  <p className="mt-1 md:text-md xl:text-lg">
+                  <p className="mt-1 text-md md:text-lg xl:text-xl">
                     A leading London-based consultant eye surgeon.
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
@@ -345,132 +347,144 @@ class RootIndex extends React.Component {
                     </div>
                   </div>
 
-                  {/* Add iframe here */}
-                  {/* <div className="absolute top-0 left-0 z-20 p-2 bg-white rounded-md shadow-xl">
-                    <iframe
-                      src="https://www.topdoctors.co.uk/ws/show_widget/5cc3749a6e56ef6d656735dff9176074/2"
-                      scrolling="no"
-                      style={{
-                        border: '0px',
-                        width: '100%',
-                        height: '100%',
-                        maxWidth: '200px',
-                        overflow: 'hidden',
-                      }}
-                      title="Top Doctors Widget"
-                    ></iframe>
-                  </div> */}
+                  <a
+                    href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="absolute left-0 z-20 p-2 bg-white rounded-md shadow-xl parallax top-30">
+                      <img
+                        src={topDoctors}
+                        className="ml-2"
+                        alt="Placeholder image"
+                      />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </section>
           {/* Professional affiliations Large */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
-            <div className="container mx-auto">
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
-                  <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
-                    Professional affiliations
-                  </h1>
-                </div>
-                <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://www.rcophth.ac.uk/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
-                          src={rocopth}
-                          alt="Rocopth"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://euretina.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
-                          src={eurina}
-                          alt="Eurina"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://www.aao.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
-                          src={aao}
-                          alt="AAO"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://www.cmac.world/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
-                          src={cmac}
-                          alt="CMAC"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://www.escrs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[1.75rem] md:max-h-7 lg:max-h-7 xl:max-h-7"
-                          src={escrs}
-                          alt="ESCRS"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="p-2 lg:p-0">
-                      <a
-                        href="https://www.beavrs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="max-h-[3rem] md:max-h-9 lg:max-h-9 xl:max-h-12"
-                          src={beavrs}
-                          alt="BEAVRS"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+  <div className="container mx-auto">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
+        <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
+          Professional affiliations
+        </h1>
+      </div>
+      <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
+        <a
+          href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="bg-white rounded-md shadow-xl ">
+            <img
+              src={topDoctors}
+              className="ml-2"
+              alt="Placeholder image"
+            />
+          </div>
+        </a>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://www.rcophth.ac.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                src={rocopth}
+                alt="Rocopth"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://euretina.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                src={eurina}
+                alt="Eurina"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://www.aao.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                src={aao}
+                alt="AAO"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://www.cmac.world/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                src={cmac}
+                alt="CMAC"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://www.escrs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[1.5rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
+                src={escrs}
+                alt="ESCRS"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="p-2 lg:p-0">
+            <a
+              href="https://www.beavrs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                src={beavrs}
+                alt="BEAVRS"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
           {/* Benefits */}
-          <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] pt-4 md:pt-8 lg:pt-12 pb-8 md:pb-16 xl:pb-24 fade-in">
+          <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="aspect-w-1 aspect-h-1">
                 <img
@@ -549,17 +563,17 @@ class RootIndex extends React.Component {
                     </div>
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                         onClick={() => (window.location.href = '/contact')}
                       >
-                        Contact Mr Neffendorf
+                        Contact
                       </button>
 
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border border-gray-300 rounded-full btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
                         onClick={() => (window.location.href = '/about')}
                       >
-                        About Mr Neffendorf
+                        About
                       </button>
                     </div>
                   </div>
@@ -761,9 +775,6 @@ class RootIndex extends React.Component {
               alt="Background image"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                Book a Consultation
-              </h2>
               <div className="flex justify-center mt-4">
                 <button
                   className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"

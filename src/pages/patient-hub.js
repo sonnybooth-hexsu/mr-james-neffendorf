@@ -1,9 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import topRightSvg from '../assets/top-right.svg'
-import bottomLeftSvg from '../assets/bottom-left.svg'
-import doctifyLogo from '../assets/doctify-logo.svg'
-import grade from '../assets/grade.svg'
 import hub from '../assets/hub.svg'
 import downloadIcon from '../assets/download.svg'
 
