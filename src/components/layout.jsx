@@ -1,23 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import '../styles/variables.css'
 import '../styles/global.css'
 import Seo from './seo'
 import Navigation from './navigation'
 import Footer from './footer'
-class Template extends React.Component {
-  render() {
-    const { children } = this.props
 
-    return (
-      <>
-        <Seo />
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </>
-    )
-  }
+export const Layout = (props) => {
+  useEffect(() => window.scrollTo(0, 0), [])
+
+  return (
+    <>
+      <Seo />
+      <Navigation />
+      <main>{props.children}</main>
+      <Footer />
+    </>
+  )
 }
 
-export default Template
+export default Layout

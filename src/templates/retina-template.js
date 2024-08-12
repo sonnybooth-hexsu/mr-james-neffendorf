@@ -111,7 +111,7 @@ class RetinaTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mt-10 mb-4">Solutions</h2>
+                        <h2 className="mt-10 mb-4">{post.solutionTitle}</h2>
                         <p className="mb-4 text-gray-500">{post.solutions}</p>
                       </>
                     )}
@@ -280,6 +280,7 @@ export const pageQuery = graphql`
         }
       }
       solutions
+      solutionTitle
     }
   }
 `

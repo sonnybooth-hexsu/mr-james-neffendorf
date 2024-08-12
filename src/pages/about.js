@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import jamesLeaning from '../assets/james-leaning.jpg'
 import jamesSuit from '../assets/james-suit.jpg'
-import research from '../assets/research.jpg'
+import research from '../assets/research-02.jpg'
 import roles from '../assets/roles.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
@@ -45,21 +45,57 @@ class About extends React.Component {
                   <p className="mb-4 text-sm font-bold text-gray-800 md:text-md md:mb-2">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                   </p>
-                  <ul class="list-disc pl-5">
-                    <li>Consultant Ophthalmic and Vitreoretinal Surgeon</li>
-                    <li>
-                      Specialist interest in cataract surgery, retinal surgery
-                      and emergency eye care
-                    </li>
-                    <li>
-                      Appointed at King’s College Hospital NHS Foundation Trust
-                      (NHS)
-                    </li>
-                    <li>
-                      Deputy Medical Director at London Lauriston Clinic
-                      (Private Practice)
-                    </li>
-                  </ul>
+                  <div className="grid grid-cols-1 gap-2 py-2">
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>Consultant Ophthalmic and Vitreoretinal Surgeon</p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>
+                        Specialist interest in cataract surgery, retinal surgery
+                        and emergency eye care
+                      </p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>
+                        Appointed at King’s College Hospital NHS Foundation
+                        Trust (NHS)
+                      </p>
+                    </div>
+                    <div className="flex self-start">
+                      <div className="self-start flex-none mr-2">
+                        <img
+                          className="inline-block size-6"
+                          src={iconCheckmarkSmall}
+                          alt="Checkmark"
+                        />
+                      </div>
+                      <p>
+                        Deputy Medical Director at London Lauriston Clinic
+                        (Private Practice)
+                      </p>
+                    </div>
+                  </div>
 
                   <div className="grid mt-4 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                     <button
@@ -82,74 +118,51 @@ class About extends React.Component {
           </section>
           {/* Intro to James */}
           <section className="px-[5%] py-16 md:py-24 lg:py-28 fade-in">
-            <div className="container grid items-start justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+            <div className="container grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <h2 className="">
                 Educated and trained at world leading institutions
               </h2>
               <div>
-                <div className="grid grid-cols-1 gap-4 py-2">
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark"
-                      />
-                    </div>
+                <div className="grid grid-cols-1 gap-4 py-2 text-gray-900">
+                  <div className="flex self-start text-gray-900">
                     <p>
-                      University of Cambridge - Medical degree (Developmental
-                      Biology and Embryology)
+                      <span className="font-bold text-gray-900">
+                        University of Cambridge
+                      </span>{' '}
+                      - Medical degree (Developmental Biology and Embryology)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark"
-                      />
-                    </div>
                     <p>
-                      University College London - Clinical Medicine and Surgery
-                      degree (Distinction)
+                      <span className="font-bold text-gray-900">
+                        University College London
+                      </span>{' '}
+                      - Clinical Medicine and Surgery degree (Distinction)
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark"
-                      />
-                    </div>
                     <p>
-                      King’s College London - Higher level MD degree in
-                      Age-related Macular Degeneration
+                      <span className="font-bold text-gray-900">
+                        King’s College London
+                      </span>{' '}
+                      - Higher level MD degree in Age-related Macular
+                      Degeneration
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark"
-                      />
-                    </div>
                     <p>
-                      Oxford Medical Deanery - Ophthalmology specialist training
+                      <span className="font-bold text-gray-900">
+                        Oxford Medical Deanery
+                      </span>{' '}
+                      - Ophthalmology specialist training
                     </p>
                   </div>
                   <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark"
-                      />
-                    </div>
                     <p>
-                      St. Thomas’ Hospital London - Advanced senior fellowship
-                      training
+                      <span className="font-bold text-gray-900">
+                        St. Thomas’ Hospital London
+                      </span>{' '}
+                      - Advanced senior fellowship training
                     </p>
                   </div>
                 </div>
@@ -161,23 +174,15 @@ class About extends React.Component {
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="flex items-center order-2 md:order-1">
                 <div>
-                  <h2 className="mb-6">Research</h2>
+                  <h2 className="mb-1">Research</h2>
                   <div className="grid grid-cols-1 gap-4 py-2">
-                    <div className="flex self-start">
-                      <div className="self-start flex-none mr-2">
-                        <img
-                          className="inline-block size-6"
-                          src={iconCheckmarkSmall}
-                          alt="Checkmark"
-                        />
-                      </div>
-                      <p>
-                        Key research interests in vitreoretinal surgery, new
-                        drugs and devices in retinal diseases such as
-                        age-related macular degeneration and artificial
-                        intelligence using ophthalmic biomarkers.
-                      </p>
-                    </div>
+                    <p className="mb-2">
+                      Key research interests in vitreoretinal surgery, new drugs
+                      and devices in retinal diseases such as age-related
+                      macular degeneration and artificial intelligence using
+                      ophthalmic biomarkers.
+                    </p>
+
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
                         <img

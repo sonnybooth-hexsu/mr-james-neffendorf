@@ -1,5 +1,4 @@
 import React from 'react'
-import Slider from 'react-slick'
 import Layout from '../components/layout'
 import jamesMain from '../assets/james-main.png'
 import jamesTreatment from '../assets/james-treatment.jpg'
@@ -21,11 +20,12 @@ import eyeExam from '../assets/excellence-eye.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import patient from '../assets/patient.jpg'
 import iconCheckmarkSmall from '../assets/check_small.svg'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => (
   <div>
     <Helmet>
-      <title>Your Page Title</title>
+      <title>Mr James Neffendorf</title>
       <meta name="description" content="Your page description" />
       <link rel="stylesheet" href="https://use.typekit.net/nak2vhf.css" />
     </Helmet>
@@ -83,8 +83,11 @@ class AccordionItem extends React.Component {
 }
 
 class RootIndex extends React.Component {
-  state = {
-    openIndex: 0,
+  constructor(props) {
+    super(props)
+    this.state = {
+      openIndex: 0,
+    }
   }
 
   componentDidMount() {
@@ -123,112 +126,6 @@ class RootIndex extends React.Component {
   render() {
     const { openIndex } = this.state
 
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      adaptiveHeight: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-          },
-        },
-      ],
-      nextArrow: <SampleNextArrow />,
-    }
-
-    function SampleNextArrow(props) {
-      const { className, style, onClick } = props
-      return (
-        <div
-          className={className}
-          style={{
-            ...style,
-            display: 'block',
-            width: '40px',
-            height: '40px',
-            position: 'absolute',
-            right: '-20px', // Adjust this value to position the arrow as needed
-            top: '50%',
-            transform: 'translateY(-50%)',
-            cursor: 'pointer',
-            borderRadius: '50%',
-            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
-            background: 'white',
-          }}
-          onClick={onClick}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 0,
-              height: 0,
-              borderTop: '8px solid transparent',
-              borderBottom: '8px solid transparent',
-              borderLeft: '12px solid black',
-            }}
-          />
-        </div>
-      )
-    }
-
-    function SamplePrevArrow(props) {
-      const { className, style, onClick } = props
-      return (
-        <div
-          className={className}
-          style={{
-            ...style,
-            display: 'block',
-            width: '40px',
-            height: '40px',
-            position: 'absolute',
-            left: '-50px', // Adjust this value to position the arrow as needed
-            top: '50%',
-            transform: 'translateY(-50%)',
-            cursor: 'pointer',
-            borderRadius: '50%',
-            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
-            background: 'white',
-          }}
-          onClick={onClick}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 0,
-              height: 0,
-              borderTop: '8px solid transparent',
-              borderBottom: '8px solid transparent',
-              borderRight: '12px solid black',
-            }}
-          />
-        </div>
-      )
-    }
-
     return (
       <Layout>
         <Home />
@@ -237,7 +134,6 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:gap-x-10 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
-             
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
@@ -245,8 +141,8 @@ class RootIndex extends React.Component {
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
 
-                  <h2 className="text-base font-bold tracking-wide text-gray-500 uppercase md:text-md xl:text-lg">
-                    Consultant ophthalmologist, cataract &amp; retinal surgeon
+                  <h2 className="text-base font-bold tracking-wide text-gray-500 md:text-md xl:text-lg">
+                    Consultant Ophthalmologist, Cataract &amp; Retinal Surgeon
                   </h2>
 
                   <p className="mt-1 text-md md:text-lg xl:text-xl">
@@ -273,16 +169,14 @@ class RootIndex extends React.Component {
                   <img
                     src={jamesMain}
                     className="relative z-10 object-cover w-full mx-auto lg:w-3/4"
-                    alt="Placeholder image"
+                    alt="Mr James Neffendorf, Ophthalmic Surgeon, wearing a navy blue medical uniform and smiling."
                   />
                   <img
                     src={topRightSvg}
-                    alt="Top right background decoration"
                     className="absolute top-0 right-0 z-0"
                   />
                   <img
                     src={bottomLeftSvg}
-                    alt="Bottom left background decoration"
                     className="absolute z-0 -bottom-10 -left-10"
                   />
                   <div className="absolute left-0 z-20 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
@@ -293,7 +187,7 @@ class RootIndex extends React.Component {
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-10"
-                      alt="Placeholder image"
+                      alt="Doctify Logo"
                     />
                   </div>
                   <div className="absolute right-0 z-10 flex flex-col p-3 mt-4 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
@@ -302,7 +196,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block w-5 h-5"
                           src={iconCheckmark}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p className="text-sm md:text-lg lg:text-base">
@@ -314,7 +208,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block w-5 h-5"
                           src={iconCheckmark}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p className="text-sm md:text-lg lg:text-base">
@@ -326,7 +220,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block w-5 h-5"
                           src={iconCheckmark}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p className="text-sm md:text-lg lg:text-base">
@@ -338,7 +232,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block w-5 h-5"
                           src={iconCheckmark}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p className="text-sm md:text-lg lg:text-base">
@@ -356,7 +250,7 @@ class RootIndex extends React.Component {
                       <img
                         src={topDoctors}
                         className="ml-2"
-                        alt="Placeholder image"
+                        alt="Top Doctors Logo"
                       />
                     </div>
                   </a>
@@ -366,123 +260,121 @@ class RootIndex extends React.Component {
           </section>
           {/* Professional affiliations Large */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
-  <div className="container mx-auto">
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-      <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
-        <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
-          Professional affiliations
-        </h1>
-      </div>
-      <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
-        <a
-          href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="bg-white rounded-md shadow-xl ">
-            <img
-              src={topDoctors}
-              className="ml-2"
-              alt="Placeholder image"
-            />
-          </div>
-        </a>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://www.rcophth.ac.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
-                src={rocopth}
-                alt="Rocopth"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://euretina.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
-                src={eurina}
-                alt="Eurina"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://www.aao.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
-                src={aao}
-                alt="AAO"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://www.cmac.world/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
-                src={cmac}
-                alt="CMAC"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://www.escrs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[1.5rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
-                src={escrs}
-                alt="ESCRS"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="p-2 lg:p-0">
-            <a
-              href="https://www.beavrs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
-                src={beavrs}
-                alt="BEAVRS"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+            <div className="container mx-auto">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
+                  <h1 className="text-base text-gray-500 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
+                    Professional affiliations
+                  </h1>
+                </div>
+                <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
+                  <a
+                    href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="bg-white rounded-md shadow-xl ">
+                      <img
+                        src={topDoctors}
+                        className="ml-2"
+                        alt="Placeholder image"
+                      />
+                    </div>
+                  </a>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.rcophth.ac.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                          src={rocopth}
+                          alt="Rocopth"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://euretina.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                          src={eurina}
+                          alt="Eurina"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.aao.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                          src={aao}
+                          alt="AAO"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.cmac.world/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                          src={cmac}
+                          alt="CMAC"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.escrs.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[1.5rem] md:max-h-6 lg:max-h-6 xl:max-h-6"
+                          src={escrs}
+                          alt="ESCRS"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="p-2 lg:p-0">
+                      <a
+                        href="https://www.beavrs.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
+                          src={beavrs}
+                          alt="BEAVRS"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           {/* Benefits */}
           <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
@@ -490,7 +382,7 @@ class RootIndex extends React.Component {
                 <img
                   src={eyeExam}
                   className="object-cover w-full h-full rounded-xl"
-                  alt="Eye Exam"
+                  alt="Ophthalmologist examining a middle-aged female patient using a slit lamp in an eye clinic."
                 />
               </div>
               <div className="flex items-center">
@@ -510,7 +402,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p>18 academic prizes and awards</p>
@@ -520,7 +412,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p>39 scientific publications</p>
@@ -530,7 +422,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p>
@@ -543,7 +435,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p>
@@ -556,7 +448,7 @@ class RootIndex extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark icon"
                         />
                       </div>
                       <p>Examiner for the Royal College of Ophthalmologists</p>
@@ -595,7 +487,17 @@ class RootIndex extends React.Component {
                     <img
                       className="inline-block size-6 reduce-space"
                       src={grade}
-                      alt="Checkmark"
+                      alt="Checkmark icon"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark icon"
+                    />
+                    <img
+                      className="inline-block size-6 reduce-space"
+                      src={grade}
+                      alt="Checkmark icon"
                     />
                     <img
                       className="inline-block size-6 reduce-space"
@@ -605,17 +507,7 @@ class RootIndex extends React.Component {
                     <img
                       className="inline-block size-6 reduce-space"
                       src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark"
+                      alt="Checkmark icon"
                     />
                   </div>
                   <div className="flex flex-row items-center">
@@ -623,86 +515,12 @@ class RootIndex extends React.Component {
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-12"
-                      alt="Checkmark"
+                      alt="Checkmark icon"
                     />
                   </div>
                 </div>
               </div>
-              <Slider {...settings}>
-                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
-                    If it wasn't for Mr James Neffendorf's diagnosis, quick
-                    response, and brilliant surgery, I’d be blind in one eye
-                    now. Mr Neffendorf has great bedside manner and excellent
-                    communication skills. I have no hesitation in recommending
-                    Mr Neffendorf to any patient, especially those who are
-                    nervous or require complicated surgery.
-                  </blockquote>
-                  <p className="mb-1 font-semibold text-gray-800">
-                    Emergency Ophthalmology Patient
-                  </p>
-                  <p>
-                    <span className="text-xs font-semibold tracking-wider uppercase">
-                      26 Jan 2023
-                    </span>
-                  </p>
-                </div>
-                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
-                    Mr James Neffendorf was friendly, kind, and professional. He
-                    took time to explain every aspect of my treatment and made
-                    me feel comfortable throughout. I have had no complications
-                    following my procedure and for the first time feel informed
-                    on how to effectively manage the care & treatment of my
-                    eyes.
-                  </blockquote>
-                  <p className="mb-1 font-semibold text-gray-800">
-                    Eye problems Patient
-                  </p>
-                  <p>
-                    <span className="text-xs font-semibold tracking-wider uppercase">
-                      03 Jul 2023
-                    </span>
-                  </p>
-                </div>
-                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
-                    James is very professional and experienced and has improved
-                    my sight in both eyes following cataract operations. I am
-                    now able to pursue my hobbies of tennis, dancing and
-                    gardening without glasses. It is extremely important to have
-                    good wellbeing when working long hours in a very tough
-                    business.
-                  </blockquote>
-                  <p className="mb-1 font-semibold text-gray-800">
-                    Cataracts Patient
-                  </p>
-                  <p>
-                    <span className="text-xs font-semibold tracking-wider uppercase">
-                      19 Dec 2023
-                    </span>
-                  </p>
-                </div>
-                <div className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container">
-                  <blockquote className='text-md leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 md:text-xl'>
-                    If it wasn't for Mr James Neffendorf's diagnosis, quick
-                    response, and brilliant surgery, I’d be blind in one eye
-                    now. Mr Neffendorf has great bedside manner and excellent
-                    communication skills. I have no hesitation in recommending
-                    Mr Neffendorf to any patient, especially those who are
-                    nervous or require complicated surgery.
-                  </blockquote>
-
-                  <p className="mb-1 font-semibold text-gray-800">
-                    Cataracts Patient
-                  </p>
-                  <p>
-                    <span className="text-xs font-semibold tracking-wider uppercase">
-                      19 Dec 2023
-                    </span>
-                  </p>
-                </div>
-              </Slider>
+              <Testimonials />
             </div>
           </section>
           {/* Services */}
@@ -729,7 +547,7 @@ class RootIndex extends React.Component {
               <img
                 src={jamesTreatment}
                 className="object-cover w-full h-full"
-                alt="Placeholder image"
+                alt="Mr James Neffendorf conducting an eye examination on a male patient using a specialised slit lamp in a medical office."
               />
               <div className="absolute inset-0 bg-white/55">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/100 to-transparent"></div>
@@ -761,7 +579,7 @@ class RootIndex extends React.Component {
                   <img
                     src={patient}
                     className="object-cover w-full p-20 rounded-md md:p-0"
-                    alt="Placeholder image"
+                    alt="Previous patient image"
                   />
                 </div>
               </div>
@@ -772,7 +590,6 @@ class RootIndex extends React.Component {
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
-              alt="Background image"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">

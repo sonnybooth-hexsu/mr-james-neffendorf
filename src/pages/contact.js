@@ -77,7 +77,7 @@ class Contact extends React.Component {
                         href="mailto:clinic@mrjamesneffendorf.com"
                         className="underline text-jamesBlue"
                       >
-                        clinic@drjamesneffendorf.com
+                        clinic@mrjamesneffendorf.com
                       </a>
                     </div>
                     <div className="flex items-center gap-4">
@@ -328,7 +328,7 @@ class Contact extends React.Component {
               <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
                 <div>
                   <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    The Guthrie Clinic
+                    King's Private
                   </h2>
 
                   <div className="mt-4 space-y-4">
@@ -347,7 +347,8 @@ class Contact extends React.Component {
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
                       <p className="text-md">
-                        King’s College Hospital, Denmark Hill, London SE5 9RS
+                        Guthrie Wing, King’s College Hospital, Denmark Hill,
+                        London SE5 9RS
                       </p>
                     </div>
 
@@ -369,7 +370,7 @@ class Contact extends React.Component {
                         className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
                         onClick={() =>
                           window.open(
-                            'https://www.google.com/maps/dir/?api=1&destination=King’s+College+Hospital,+Denmark+Hill,+London+SE5+9RS'
+                            'https://www.google.com/maps/dir/?api=1&destination=Guthrie+Wing,+King’s+College+Hospital,+Denmark+Hill,+London+SE5+9RS'
                           )
                         }
                       >

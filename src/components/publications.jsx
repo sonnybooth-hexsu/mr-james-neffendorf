@@ -39,10 +39,7 @@ export const Publications = () => {
     <div className="container px-4 py-8 mx-auto lg:py-16 md:px-8 lg:px-16 fade-in">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-12">
         <div className="md:col-span-4 lg:col-span-2">
-          <div
-            id="filters"
-            className="overflow-hidden transition-max-height max-h-0 md:max-h-full md:overflow-visible"
-          >
+          <div id="filters">
             <ul className="hidden space-y-4 font-bold lg:block">
               {[
                 'View All',
@@ -68,9 +65,8 @@ export const Publications = () => {
                 </li>
               ))}
             </ul>
-            <p>lol</p>
             <select
-              className="space-y-4"
+              className="w-full py-2 lg:hidden"
               onChange={(e) => handleFilterChange(e.target.value)}
             >
               <option value="View All">View All</option>

@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import hub from '../assets/hub.svg'
 import downloadIcon from '../assets/download.svg'
+import epiretinalMembrane from '../../static/leaflets/BEAVRS_ERM-2022.pdf'
+import macularHole from '../../static/leaflets/BEAVRS_MH-2022.pdf'
 
 class PatientHub extends React.Component {
   componentDidMount() {
@@ -83,49 +85,46 @@ class PatientHub extends React.Component {
           <section className="px-[5%] bg-gray-100 py-12 shadow-xl fade-in">
             <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {this.renderCard(
-                'Cataract Surgery',
-                'Preparing for Cataract Surgery: A Patient Checklist',
-                'A detailed checklist for patients to prepare for cataract surgery, including what to discuss with your ophthalmologist, medication management, and more.'
+                'Information Leaflet',
+                'Floaters',
+                'Leaflet on eye floaters, their causes, risks, and treatment options.',
+                epiretinalMembrane
               )}
               {this.renderCard(
-                'LASIK Surgery',
-                'Maximising Success in LASIK Surgery',
-                'Tips on how to ensure the best outcomes from LASIK surgery, such as how to choose a surgeon, what tests to expect, and lifestyle preparations.'
+                'Information Leaflet',
+                'Macular Holes',
+                'Leaflet on macular holes, explaining their causes, symptoms, risks, treatment options, and post-surgery care.',
+                macularHole
               )}
               {this.renderCard(
-                'Cataract Surgery',
-                'Preparing for Cataract Surgery: A Patient Checklist',
-                'A detailed checklist for patients to prepare for cataract surgery, including what to discuss with your ophthalmologist, medication management, and more.'
+                'Information Leaflet',
+                'Epiretinal Membrane',
+                'Leaflet on epiretinal membranes, explaining their causes, symptoms, risks, treatment options, and post-surgery care.',
+                epiretinalMembrane
               )}
               {this.renderCard(
-                'LASIK Surgery',
-                'Maximising Success in LASIK Surgery',
-                'Tips on how to ensure the best outcomes from LASIK surgery, such as how to choose a surgeon, what tests to expect, and lifestyle preparations.'
+                'Information Leaflet',
+                'Retinal Detachment Surgery',
+                'Leaflet on retinal detachment surgery, covering its causes, procedures, risks, post-operative care, and recovery advice.',
+                epiretinalMembrane
               )}
               {this.renderCard(
-                'Cataract Surgery',
-                'Preparing for Cataract Surgery: A Patient Checklist',
-                'A detailed checklist for patients to prepare for cataract surgery, including what to discuss with your ophthalmologist, medication management, and more.'
+                'Information Leaflet',
+                'Vitrectomy for Diabetic Vitreous Haemorrhage',
+                'Leaflet on vitrectomy for diabetic vitreous haemorrhage, explaining the procedure, potential risks, post-operative care, and recovery advice.',
+                epiretinalMembrane
               )}
               {this.renderCard(
-                'LASIK Surgery',
-                'Maximising Success in LASIK Surgery',
-                'Tips on how to ensure the best outcomes from LASIK surgery, such as how to choose a surgeon, what tests to expect, and lifestyle preparations.'
+                'Information Leaflet',
+                'Non-Diabetic Vitreous Haemorrhage',
+                'Leaflet on non-diabetic vitreous haemorrhage, explaining its causes, treatment options, follow-up care, and the importance of monitoring vision in both eyes.',
+                epiretinalMembrane
               )}
               {this.renderCard(
-                'Cataract Surgery',
-                'Preparing for Cataract Surgery: A Patient Checklist',
-                'A detailed checklist for patients to prepare for cataract surgery, including what to discuss with your ophthalmologist, medication management, and more.'
-              )}
-              {this.renderCard(
-                'LASIK Surgery',
-                'Maximising Success in LASIK Surgery',
-                'Tips on how to ensure the best outcomes from LASIK surgery, such as how to choose a surgeon, what tests to expect, and lifestyle preparations.'
-              )}
-              {this.renderCard(
-                'Cataract Surgery',
-                'Preparing for Cataract Surgery: A Patient Checklist',
-                'A detailed checklist for patients to prepare for cataract surgery, including what to discuss with your ophthalmologist, medication management, and more.'
+                'Information Leaflet',
+                'Dropped Nucleus',
+                'Leaflet on retained lens after cataract surgery, explaining the causes, treatment options (including vitrectomy), potential risks, post-operative care, and recovery advice.',
+                epiretinalMembrane
               )}
               {/* Add more cards as needed */}
             </div>
@@ -135,7 +134,7 @@ class PatientHub extends React.Component {
     )
   }
 
-  renderCard(category, title, description) {
+  renderCard(category, title, description, pdf) {
     return (
       <div className="flex flex-col justify-between h-full p-8 bg-white rounded-lg shadow-md border-1">
         <div>
@@ -146,11 +145,15 @@ class PatientHub extends React.Component {
         <div className="flex justify-between mt-auto">
           <div className="grid grid-cols-2 gap-2 md:mt-4 lg:flex lg:space-x-2">
             <button className="items-center justify-center inline gap-0 px-8 py-2 mr-0 font-medium transition-colors border border-2 rounded-full shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesBlue hover:text-white">
-              View PDF
+              <a href={pdf} target="_blank">
+                View PDF
+              </a>
             </button>
             <button className="flex items-center justify-center gap-0 px-8 py-2 ml-0 font-medium transition-colors shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue">
               <img src={downloadIcon} alt="Download" className="w-6 h-6" />
-              Download
+              <a href={pdf} download>
+                Download
+              </a>
             </button>
           </div>
         </div>
