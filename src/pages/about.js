@@ -297,11 +297,11 @@ class About extends React.Component {
               </div>
               <div className="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -312,11 +312,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -327,11 +327,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -343,11 +343,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -358,11 +358,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -374,11 +374,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -390,11 +390,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -405,11 +405,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -420,11 +420,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">
@@ -435,11 +435,11 @@ class About extends React.Component {
                   </h3>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-none mr-4">
+                  <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
                       alt="Placeholder image 1"
-                      className="object-cover h-6 size-full"
+                      className="max-h-6"
                     />
                   </div>
                   <h3 className="text-base text-black">

@@ -240,20 +240,6 @@ class RootIndex extends React.Component {
                       </p>
                     </div>
                   </div>
-
-                  <a
-                    href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="absolute left-0 z-20 p-2 bg-white rounded-md shadow-xl parallax top-30">
-                      <img
-                        src={topDoctors}
-                        className="ml-2"
-                        alt="Top Doctors Logo"
-                      />
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>
@@ -261,13 +247,13 @@ class RootIndex extends React.Component {
           {/* Professional affiliations Large */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-                <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left">
-                  <h1 className="text-base text-gray-600 font-medium leading-[1.2] md:text-md md:leading-[1.2]">
+              <div className="flex flex-col lg:flex-row lg:items-center">
+                <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left shrink-0">
+                  <h1 className="text-base text-gray-600 font-medium leading-[1.2] md:text-md md:leading-[1.2] lg:mr-6">
                     Professional affiliations
                   </h1>
                 </div>
-                <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-end lg:space-x-2 xl:space-x-4 lg:p-0">
+                <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-between lg:shrink-0 lg:flex-grow">
                   <a
                     href="https://www.topdoctors.co.uk/doctor/james-neffendorf"
                     target="_blank"
