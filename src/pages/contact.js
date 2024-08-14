@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import bupaLogo from '../assets/provider-bupa-logo.svg'
 import axaLogo from '../assets/provider-axa-logo.svg'
-import BupaLogo from '../assets/provider-bupa-logo.svg'
 import aetnaLogo from '../assets/provider-aetna-logo.svg'
 import avivaLogo from '../assets/provider-aviva-logo.svg'
 import cignaLogo from '../assets/provider-cigna-logo.jpg'
@@ -11,8 +10,6 @@ import wpaLogo from '../assets/provider-wpa-logo.png'
 import londonClinic from '../assets/london-clinic.jpg'
 import underground from '../assets/underground.svg'
 import tfl from '../assets/tfl.svg'
-import kings from '../assets/kings_college_london.svg'
-import walk from '../assets/directions_walk.svg'
 import '../styles/global.css'
 
 class Contact extends React.Component {
@@ -108,53 +105,57 @@ class Contact extends React.Component {
                 </p>
                 <ul className="grid grid-cols-2 list-disc list-inside gap-x-4">
                   <li className="flex items-center my-2 text-gray-600">
-                    <img src={bupaLogo} alt="Bupa Logo" className="h-6 mr-2" />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img src={bupaLogo} alt="Bupa Logo" className="h-6" />
+                    </div>
                     Bupa
                   </li>
                   <li className="flex items-center my-2 text-gray-600">
-                    <img src={axaLogo} alt="AXA Logo" className="h-6 mr-2" />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img src={axaLogo} alt="AXA Logo" className="h-6" />
+                    </div>
                     AXA
                   </li>
                   <li className="flex items-center my-2 text-gray-600">
-                    <img
-                      src={avivaLogo}
-                      alt="Aviva Health Logo"
-                      className="h-6 mr-2"
-                    />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img
+                        src={avivaLogo}
+                        alt="Aviva Health Logo"
+                        className="h-6"
+                      />
+                    </div>
                     Aviva Health
                   </li>
-
                   <li className="flex items-center my-2 text-gray-600">
-                    <img
-                      src={vitalityLogo}
-                      alt="Vitality Health Logo"
-                      className="h-6 mr-2"
-                    />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img
+                        src={vitalityLogo}
+                        alt="Vitality Health Logo"
+                        className="h-6"
+                      />
+                    </div>
                     Vitality Health
                   </li>
-
                   <li className="flex items-center my-2 text-gray-600">
-                    <img
-                      src={cignaLogo}
-                      alt="Cigna Logo"
-                      className="h-6 mr-2"
-                    />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img src={cignaLogo} alt="Cigna Logo" className="h-6" />
+                    </div>
                     Cigna
                   </li>
-
                   <li className="flex items-center my-2 text-gray-600">
-                    <img
-                      src={aetnaLogo}
-                      alt="Aetna Logo"
-                      className="h-4 mr-2"
-                    />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img src={aetnaLogo} alt="Aetna Logo" className="h-4" />
+                    </div>
                     Aetna
                   </li>
                   <li className="flex items-center my-2 text-gray-600">
-                    <img src={wpaLogo} alt="WPA Logo" className="h-6 mr-2" />
+                    <div className="flex items-center justify-start h-8 mr-2 w-9">
+                      <img src={wpaLogo} alt="WPA Logo" className="h-6" />
+                    </div>
                     WPA
                   </li>
                 </ul>
+
                 <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">NHS</h3>
                 <div className="flex items-center space-x-2 md:mb-4">
                   <p className="mt-0">
@@ -180,9 +181,8 @@ class Contact extends React.Component {
                   </label>
                   <input
                     type="text"
-                    className="flex px-3 py-2 align-middle border border-gray-300 size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex px-3 py-2 align-middle border border-gray-300 rounded-md size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                     id="name"
-                    value=""
                   />
                 </div>
                 <div className="grid items-center w-full">
@@ -194,9 +194,8 @@ class Contact extends React.Component {
                   </label>
                   <input
                     type="email"
-                    className="flex px-3 py-2 align-middle border border-gray-300 size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex px-3 py-2 align-middle border border-gray-300 rounded-md size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                     id="email"
-                    value=""
                   />
                 </div>
                 <div className="grid items-center w-full">
@@ -207,7 +206,7 @@ class Contact extends React.Component {
                     Message
                   </label>
                   <textarea
-                    className="flex w-full border border-gray-300 bg-neutral-white p-3 placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 min-h-[11.25rem] overflow-auto"
+                    className="flex rounded-md w-full border border-gray-300 bg-neutral-white p-3 placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 min-h-[11.25rem] overflow-auto"
                     id="message"
                     placeholder="Type your message..."
                   ></textarea>
@@ -226,10 +225,10 @@ class Contact extends React.Component {
                     <a
                       className="underline text-jamesBlue focus-visible:outline-none"
                       href="#"
-                      target="_blank"
+                      target="/terms-of-service"
                       rel="noopener noreferrer"
                     >
-                      Terms & Conditions
+                      Terms of Service
                     </a>
                   </label>
                 </div>
