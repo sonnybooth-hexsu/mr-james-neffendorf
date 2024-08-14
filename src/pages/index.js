@@ -362,7 +362,7 @@ class RootIndex extends React.Component {
             </div>
           </section>
           {/* Benefits */}
-          <section className="px-[8%] bg-white md:px-[10%] lg:px-[5%] fade-in">
+          <section className="px-[8%] pt-6 bg-white md:px-[10%] lg:px-[5%] fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
               <div className="aspect-w-1 aspect-h-1">
                 <img
