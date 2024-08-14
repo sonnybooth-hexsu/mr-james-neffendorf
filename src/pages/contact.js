@@ -245,7 +245,7 @@ class Contact extends React.Component {
                 <div>
                   <img
                     src={londonClinic}
-                    alt="Bupa Logo"
+                    alt="London Lauriston Clinic front"
                     className="mr-2 rounded-full h-30 aspect-square"
                   />
                   <h2 className="mt-6 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -282,7 +282,7 @@ class Contact extends React.Component {
                       <img
                         src={underground}
                         className="object-cover rounded-xl"
-                        alt="Placeholder image"
+                        alt="Underground icon"
                       />
                       <p className="text-md">
                         <span className="font-medium text-gray-900">
@@ -353,7 +353,7 @@ class Contact extends React.Component {
                       <img
                         src={tfl}
                         className="object-cover h-5 rounded-xl"
-                        alt="Underground icon"
+                        alt="TFL icon"
                       />
                       <p className="text-md">
                         <span className="font-medium text-gray-900">

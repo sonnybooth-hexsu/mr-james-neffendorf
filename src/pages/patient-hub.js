@@ -162,7 +162,7 @@ class PatientHub extends React.Component {
               </a>
             </button>
             <button className="flex items-center justify-center gap-0 px-8 py-2 ml-0 font-medium transition-colors shadow-md button-width btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue">
-              <img src={downloadIcon} alt="Download" className="w-6 h-6" />
+              <img src={downloadIcon} alt="Download icon" className="w-6 h-6" />
               <a href={pdf} download>
                 Download
               </a>

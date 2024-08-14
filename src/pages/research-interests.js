@@ -129,10 +129,7 @@ class ResearchInterests extends React.Component {
       <Layout>
         <div className="main-content">
           <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b header-gradient fade-in overflow-hidden">
-            <div
-              className="absolute inset-0 bg-center bg-cover opacity-10"
-              style={{ backgroundImage: "url('path-to-background-image.jpg')" }}
-            ></div>
+            <div className="absolute inset-0 bg-center bg-cover opacity-10"></div>
             <div className="container relative z-10 text-left">
               <div className="lg:flex lg:items-baseline">
                 <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
@@ -168,7 +165,6 @@ class ResearchInterests extends React.Component {
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
-              alt="Background image"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">

@@ -51,7 +51,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>Consultant Ophthalmic and Vitreoretinal Surgeon</p>
@@ -61,7 +61,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>
@@ -74,7 +74,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>
@@ -87,7 +87,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>
@@ -110,7 +110,7 @@ class About extends React.Component {
                   <img
                     src={jamesSuit}
                     className="object-cover w-full rounded-xl"
-                    alt="Placeholder image"
+                    alt="Mr James E. Neffendorf professional headshot in a suit smiling"
                   />
                 </div>
               </div>
@@ -188,7 +188,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>Published 39 scientific papers</p>
@@ -198,7 +198,7 @@ class About extends React.Component {
                         <img
                           className="inline-block size-6"
                           src={iconCheckmarkSmall}
-                          alt="Checkmark"
+                          alt="Checkmark Icon"
                         />
                       </div>
                       <p>Presented at 40 international and national meetings</p>
@@ -210,7 +210,7 @@ class About extends React.Component {
                 <img
                   src={research}
                   className="object-cover w-full rounded-xl"
-                  alt="Placeholder image"
+                  alt="Eye health research"
                 />
               </div>
             </div>
@@ -222,7 +222,7 @@ class About extends React.Component {
                 <img
                   src={roles}
                   className="object-cover w-full rounded-xl"
-                  alt="Placeholder image"
+                  alt="Man giving talk"
                 />
               </div>
               <div>
@@ -233,7 +233,7 @@ class About extends React.Component {
                       <img
                         className="inline-block size-6"
                         src={iconCheckmarkSmall}
-                        alt="Checkmark"
+                        alt="Checkmark Icon"
                       />
                     </div>
                     <p>Examiner for Royal College of Ophthalmologists</p>
@@ -243,7 +243,7 @@ class About extends React.Component {
                       <img
                         className="inline-block size-6"
                         src={iconCheckmarkSmall}
-                        alt="Checkmark"
+                        alt="Checkmark Icon"
                       />
                     </div>
                     <p>Reviewer for many leading scientific journals</p>
@@ -253,7 +253,7 @@ class About extends React.Component {
                       <img
                         className="inline-block size-6"
                         src={iconCheckmarkSmall}
-                        alt="Checkmark"
+                        alt="Checkmark Icon"
                       />
                     </div>
                     <p>Director of Retina and Macula Disease, Ocuplan UK</p>
@@ -263,7 +263,7 @@ class About extends React.Component {
                       <img
                         className="inline-block size-6"
                         src={iconCheckmarkSmall}
-                        alt="Checkmark"
+                        alt="Checkmark Icon"
                       />
                     </div>
                     <p>
@@ -276,7 +276,7 @@ class About extends React.Component {
                       <img
                         className="inline-block size-6"
                         src={iconCheckmarkSmall}
-                        alt="Checkmark"
+                        alt="Checkmark Icon"
                       />
                     </div>
                     <p>
@@ -300,7 +300,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -315,7 +315,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -330,7 +330,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -346,7 +346,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -361,7 +361,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -377,7 +377,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -393,7 +393,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -408,7 +408,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -423,7 +423,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -438,7 +438,7 @@ class About extends React.Component {
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
-                      alt="Placeholder image 1"
+                      alt="Trophy Icon"
                       className="max-h-6"
                     />
                   </div>
@@ -461,7 +461,7 @@ class About extends React.Component {
                   <img
                     src={jamesLeaning}
                     className="object-cover w-full rounded-lg"
-                    alt="Placeholder image"
+                    alt="Mr James E. Neffendorf professional headshot leaning against table smiling"
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
                     <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
@@ -472,7 +472,7 @@ class About extends React.Component {
                       <img
                         src={doctifyLogo}
                         className="ml-2 max-h-12"
-                        alt="Checkmark icon"
+                        alt="Doctify logo"
                       />
                     </a>
                   </div>
@@ -538,7 +538,6 @@ class About extends React.Component {
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
-              alt="Background image"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">

@@ -201,7 +201,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-lg lg:text-base">
+                      <p className="text-sm md:text-base">
                         Consultant Eye Surgeon
                       </p>
                     </div>
@@ -213,7 +213,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-lg lg:text-base">
+                      <p className="text-sm md:text-base">
                         Cataract Specialist
                       </p>
                     </div>
@@ -225,9 +225,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-lg lg:text-base">
-                        Retina Specialist
-                      </p>
+                      <p className="text-sm md:text-base">Retina Specialist</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -237,7 +235,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-lg lg:text-base">
+                      <p className="text-sm md:text-base">
                         14 Years of Experience
                       </p>
                     </div>
@@ -492,7 +490,7 @@ class RootIndex extends React.Component {
                     <img
                       className="inline-block size-6 reduce-space"
                       src={grade}
-                      alt="Checkmark"
+                      alt="Checkmark Icon"
                     />
                     <img
                       className="inline-block size-6 reduce-space"

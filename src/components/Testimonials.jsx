@@ -99,7 +99,7 @@ export const Testimonials = () => {
           </blockquote>
           <p className="mb-1 font-semibold text-gray-800">{patientType}</p>
           <p>
-            <span className="text-xs font-semibold tracking-wider uppercase">
+            <span className="text-sm font-semibold tracking-wider uppercase">
               {`${new Date(date).toLocaleString('default', { month: 'long' })} ${new Date(date).getUTCFullYear()}`}
             </span>
           </p>

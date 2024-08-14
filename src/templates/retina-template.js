@@ -42,27 +42,27 @@ class RetinaTemplate extends React.Component {
                     <div className="flex">
                       <img
                         src={grade}
-                        alt="Star"
+                        alt="Star icon"
                         className="inline-block size-6 reduce-space"
                       />
                       <img
                         src={grade}
-                        alt="Star"
+                        alt="Star icon"
                         className="inline-block size-6 reduce-space"
                       />
                       <img
                         src={grade}
-                        alt="Star"
+                        alt="Star icon"
                         className="inline-block size-6 reduce-space"
                       />
                       <img
                         src={grade}
-                        alt="Star"
+                        alt="Star icon"
                         className="inline-block size-6 reduce-space"
                       />
                       <img
                         src={grade}
-                        alt="Star"
+                        alt="Star icon"
                         className="inline-block size-6 reduce-space"
                       />
                     </div>
@@ -72,7 +72,7 @@ class RetinaTemplate extends React.Component {
                   <img
                     src={post.headingImage.url}
                     className="object-cover w-full rounded-xl "
-                    alt="Placeholder image"
+                    alt="Retina featured image"
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
                     <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
