@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import book from '../assets/book_2.svg'
+import book from '../assets/book.svg'
 
 export const Publications = () => {
   const publicationsData = useStaticQuery(graphql`

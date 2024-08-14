@@ -91,49 +91,49 @@ class PatientHub extends React.Component {
           <section className="px-[5%] bg-gray-100 py-12 shadow-xl fade-in">
             <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Cataracts',
-                'Leaflet on Cataracts, their causes, risks, and treatment options',
+                'Leaflet on cataracts, their causes, risks, and treatment options',
                 cataracts
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Floaters',
                 'Leaflet on eye floaters, explaining their causes, risks, and treatment options.',
                 floaters
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Macular Holes',
                 'Leaflet on macular holes, their causes, symptoms, risks, treatment options, and post-surgery care.',
                 macularHole
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Epiretinal Membrane',
                 'Leaflet on epiretinal membranes, explaining their causes, symptoms, risks, treatment options, and post-surgery care.',
                 epiretinalMembrane
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Retinal Detachment Surgery',
                 'Leaflet on retinal detachment surgery, covering its causes, procedures, risks, post-operative care, and recovery advice.',
                 retinalDetachmentSurgery
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Vitrectomy for Diabetic Vitreous Haemorrhage',
                 'Leaflet on vitrectomy for diabetic vitreous haemorrhage, explaining the procedure, potential risks, post-operative care, and recovery advice.',
                 vitrectomyForDiabeticVitreousHaemorrhage
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Non-Diabetic Vitreous Haemorrhage',
                 'Leaflet on non-diabetic vitreous haemorrhage, explaining its causes, treatment options, follow-up care, and the importance of monitoring vision in both eyes.',
                 nonDiabeticVitreousHaemorrhage
               )}
               {this.renderCard(
-                'Information Leaflet',
+                'Patient Leaflet',
                 'Dropped Nucleus',
                 'Leaflet on retained lens after cataract surgery, explaining the causes, treatment options (including vitrectomy), potential risks, post-operative care, and recovery advice.',
                 droppedNucleus
