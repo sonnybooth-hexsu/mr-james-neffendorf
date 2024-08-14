@@ -187,7 +187,7 @@ class Contact extends React.Component {
                 </div>
                 <div className="grid items-center w-full">
                   <label
-                    className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    className="mb-2 placeholder:text-gray-400 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     htmlFor="email"
                   >
                     Email
@@ -207,12 +207,12 @@ class Contact extends React.Component {
                     Message
                   </label>
                   <textarea
-                    className="flex w-full border border-gray-300 bg-neutral-white p-3 placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 min-h-[11.25rem] overflow-auto"
+                    className="flex w-full border border-gray-300 bg-neutral-white p-3 placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 min-h-[11.25rem] overflow-auto"
                     id="message"
                     placeholder="Type your message..."
                   ></textarea>
                 </div>
-                <div className="flex items-center space-x-2 text-sm md:mb-2">
+                <div className="flex items-center space-x-2 text-base md:mb-2">
                   <input
                     type="checkbox"
                     className="w-6 h-6 custom-checkbox"
