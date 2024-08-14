@@ -56,9 +56,7 @@ class Contact extends React.Component {
               <div>
                 <div className="mb-6 md:mb-8">
                   <h2 className="mb-5 font-bold md:mb-6">Leave a message</h2>
-                  <p className="md:text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
+
                   <div className="grid grid-cols-1 gap-4 py-2 mt-4">
                     <div className="flex items-center gap-4">
                       <svg
@@ -235,7 +233,7 @@ class Contact extends React.Component {
                     </a>
                   </label>
                 </div>
-                <button className="items-center inline px-12 text-base font-medium transition-colors border rounded-full shadow-md justify-self-start btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                <button className="items-center inline px-12 font-medium transition-colors border rounded-full shadow-md text-md justify-self-start btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                   Submit
                 </button>
               </form>
@@ -296,7 +294,7 @@ class Contact extends React.Component {
                     </div>
                     <div className="plan-journey">
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
                         onClick={() =>
                           window.open(
                             'https://www.google.com/maps/dir/?api=1&destination=34+Great+Titchfield+St%2C+London+W1W+8BQ'
@@ -367,7 +365,7 @@ class Contact extends React.Component {
                     </div>
                     <div className="plan-journey">
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-base font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
                         onClick={() =>
                           window.open(
                             'https://www.google.com/maps/dir/?api=1&destination=Guthrie+Wing,+King’s+College+Hospital,+Denmark+Hill,+London+SE5+9RS'

@@ -33,11 +33,12 @@ const Privacy = () => {
                 you first visit our website.
               </p>
               <p>
-                1.4 In this policy, "we", "us" and "our" refer to XXXXXXXXXX.
+                1.4 In this policy, "we", "us" and "our" refer to Harley Street
+                Eyesthetics Ltd.
               </p>
               <p>
                 1.5 We are registered with the Information Commissioner’s Office
-                (ICO) with the following registration number: XXXXXXXX
+                (ICO) with the following registration number: ZB358044
               </p>
 
               <h2 className="mt-4 text-2xl">2. Credit</h2>

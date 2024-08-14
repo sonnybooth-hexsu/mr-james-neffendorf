@@ -9,6 +9,7 @@ import retinalDetachmentSurgery from '../../static/leaflets/BEAVRS-leaflet-RD-20
 import vitrectomyForDiabeticVitreousHaemorrhage from '../../static/leaflets/BEAVRS_Vitrectomy-for-diabetic-VH-2022.pdf'
 import nonDiabeticVitreousHaemorrhage from '../../static/leaflets/BEAVRS-leaflet-NDM-VH-2022.pdf'
 import droppedNucleus from '../../static/leaflets/Beavrs-leafletDropped-Nucleus.2022.pdf'
+import cataracts from '../../static/leaflets/Cataract-Patient-Information-Leaflet.pdf'
 
 class PatientHub extends React.Component {
   componentDidMount() {
@@ -91,14 +92,20 @@ class PatientHub extends React.Component {
             <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {this.renderCard(
                 'Information Leaflet',
+                'Cataracts',
+                'Leaflet on Cataracts, their causes, risks, and treatment options',
+                cataracts
+              )}
+              {this.renderCard(
+                'Information Leaflet',
                 'Floaters',
-                'Leaflet on eye floaters, their causes, risks, and treatment options.',
+                'Leaflet on eye floaters, explaining their causes, risks, and treatment options.',
                 floaters
               )}
               {this.renderCard(
                 'Information Leaflet',
                 'Macular Holes',
-                'Leaflet on macular holes, explaining their causes, symptoms, risks, treatment options, and post-surgery care.',
+                'Leaflet on macular holes, their causes, symptoms, risks, treatment options, and post-surgery care.',
                 macularHole
               )}
               {this.renderCard(
@@ -149,12 +156,12 @@ class PatientHub extends React.Component {
         </div>
         <div className="flex justify-between mt-auto">
           <div className="grid grid-cols-2 gap-2 md:mt-4 lg:flex lg:space-x-2">
-            <button className="items-center justify-center inline gap-0 px-8 py-2 mr-0 font-medium transition-colors border border-2 rounded-full shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesBlue hover:text-white">
+            <button className="items-center justify-center inline gap-0 px-8 py-2 mr-0 font-medium transition-colors border border-2 rounded-full shadow-md button-width btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue hover:bg-jamesBlue hover:text-white">
               <a href={pdf} target="_blank">
                 View PDF
               </a>
             </button>
-            <button className="flex items-center justify-center gap-0 px-8 py-2 ml-0 font-medium transition-colors shadow-md button-width btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue">
+            <button className="flex items-center justify-center gap-0 px-8 py-2 ml-0 font-medium transition-colors shadow-md button-width btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue text-jamesBlue">
               <img src={downloadIcon} alt="Download" className="w-6 h-6" />
               <a href={pdf} download>
                 Download

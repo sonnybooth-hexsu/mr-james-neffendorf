@@ -82,7 +82,7 @@ const Terms = () => {
               <h3 className="mt-4 text-2xl">(1) Introduction</h3>
               <p>
                 These terms and conditions govern your use of our website
-                (www.drelizabethhawkes.com); by using our website, you accept
+                (www.mrjamesneffendorf.com); by using our website, you accept
                 these terms and conditions in full. If you disagree with these
                 terms and conditions or any part of these terms and conditions,
                 you must not use our website. Our website uses cookies. By using
@@ -297,7 +297,10 @@ const Terms = () => {
               </p>
 
               <h3 className="mt-4 text-2xl">(14) Our details:</h3>
-              <p>Registered address: XXXXXXXXXXX</p>
+              <p>
+                Registered address: Harrison House Sheep Walk, Langford Road,
+                Biggleswade, England, SG18 9RB
+              </p>
             </div>
           </div>
         </section>

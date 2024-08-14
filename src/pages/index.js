@@ -150,14 +150,14 @@ class RootIndex extends React.Component {
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                       onClick={() => (window.location.href = '/contact')}
                     >
                       Contact
                     </button>
 
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
                       onClick={() => (window.location.href = '/about')}
                     >
                       About
@@ -169,7 +169,7 @@ class RootIndex extends React.Component {
                   <img
                     src={jamesMain}
                     className="relative z-10 object-cover w-full mx-auto lg:w-3/4"
-                    alt="Mr James Neffendorf, Ophthalmic Surgeon, wearing a navy blue medical uniform and smiling."
+                    alt="Mr James E. Neffendorf, Ophthalmic Surgeon, wearing a navy blue medical uniform and smiling."
                   />
                   <img
                     src={topRightSvg}
@@ -184,11 +184,13 @@ class RootIndex extends React.Component {
                       Rated Excellent
                     </p>
                     <p className="mr-2 text-sm">4.94 out of 5</p>
-                    <img
-                      src={doctifyLogo}
-                      className="ml-2 max-h-10"
-                      alt="Doctify Logo"
-                    />
+                    <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
+                      <img
+                        src={doctifyLogo}
+                        className="ml-1 max-h-12"
+                        alt="Checkmark icon"
+                      />
+                    </a>
                   </div>
                   <div className="absolute right-0 z-10 flex flex-col p-3 mt-4 bg-white rounded-md shadow-xl xl:px-6 xl:py-4 md:p-6 lg:p-4 md:bottom-50 top-40 xl:top-100 parallax absolute-positioned">
                     <div className="flex items-center self-start">
@@ -262,7 +264,7 @@ class RootIndex extends React.Component {
                     <div className="bg-white rounded-md shadow-xl ">
                       <img
                         src={topDoctors}
-                        className="ml-2"
+                        className="h-10 ml-2"
                         alt="Placeholder image"
                       />
                     </div>
@@ -391,7 +393,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p>18 academic prizes and awards</p>
+                      <p className="text-md">18 academic prizes and awards</p>
                     </div>
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -401,7 +403,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p>39 scientific publications</p>
+                      <p className="text-md">39 scientific publications</p>
                     </div>
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -411,7 +413,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p>
+                      <p className="text-md">
                         Regularly presenting research at international
                         conferences
                       </p>
@@ -424,7 +426,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p>
+                      <p className="text-md">
                         NHS consultant at world-leading King’s College Hospital
                         NHS Foundation Trust.
                       </p>
@@ -437,18 +439,20 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p>Examiner for the Royal College of Ophthalmologists</p>
+                      <p className="text-md">
+                        Examiner for the Royal College of Ophthalmologists
+                      </p>
                     </div>
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                         onClick={() => (window.location.href = '/contact')}
                       >
                         Contact
                       </button>
 
                       <button
-                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full text-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
                         onClick={() => (window.location.href = '/about')}
                       >
                         About
@@ -498,11 +502,13 @@ class RootIndex extends React.Component {
                   </div>
                   <div className="flex flex-row items-center">
                     <p className="mr-">4.94 out of 5</p>
-                    <img
-                      src={doctifyLogo}
-                      className="ml-2 max-h-12"
-                      alt="Checkmark icon"
-                    />
+                    <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
+                      <img
+                        src={doctifyLogo}
+                        className="ml-2 max-h-12"
+                        alt="Checkmark icon"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -533,7 +539,7 @@ class RootIndex extends React.Component {
               <img
                 src={jamesTreatment}
                 className="object-cover w-full h-full"
-                alt="Mr James Neffendorf conducting an eye examination on a male patient using a specialised slit lamp in a medical office."
+                alt="Mr James E. Neffendorf conducting an eye examination on a male patient using a specialised slit lamp in a medical office."
               />
               <div className="absolute inset-0 bg-white/55">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/100 to-transparent"></div>
@@ -561,7 +567,7 @@ class RootIndex extends React.Component {
                     what he has done to help me see properly again.’
                   </blockquote>
                 </div>
-                <div className="bg-gray-300 md:col-span-1 md:col-start-3 ">
+                <div className="bg-gray-300 rounded-md md:col-span-1 md:col-start-3 ">
                   <img
                     src={patient}
                     className="object-cover w-full p-20 rounded-md md:p-0"
@@ -580,7 +586,7 @@ class RootIndex extends React.Component {
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">
                 <button
-                  className="inline-flex items-center justify-center gap-3 px-4 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                  className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                   onClick={() => (window.location.href = '/contact')}
                 >
                   Book a Consultation

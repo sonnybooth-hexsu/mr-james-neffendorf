@@ -415,8 +415,19 @@ h5 {
   transition: transform 0.3s ease-out;
 }
 
-.btn-48 {
+.btn-56 {
+  @apply text-md;
   height: 48px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-56 {
+  height: 56px;
   padding-top: 0;
   padding-bottom: 0;
   line-height: normal;

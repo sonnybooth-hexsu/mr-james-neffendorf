@@ -94,7 +94,7 @@ export const Testimonials = () => {
           className="flex flex-col px-0 md:pl-0 md:pr-8 lg:pr-12 lg:pl-0 paragraph-container"
           key={id}
         >
-          <blockquote className='text-sm leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 xxl:text-xl'>
+          <blockquote className='text-md text-gray-600 leading-[1.4] before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 xxl:text-xl'>
             {testimonial.testimonial}
           </blockquote>
           <p className="mb-1 font-semibold text-gray-800">{patientType}</p>

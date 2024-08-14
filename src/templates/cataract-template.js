@@ -234,7 +234,11 @@ class CataractTemplate extends React.Component {
                         </span>
                       </label>
                     </div>
-                    <button className="inline-flex items-center justify-center gap-3 px-12 mb-2 text-sm font-medium transition-colors border rounded-full shadow-md btn-48 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+
+                    <button
+                      className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                      onClick={() => (window.location.href = '/contact')}
+                    >
                       Submit
                     </button>
                   </form>
