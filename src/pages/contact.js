@@ -173,7 +173,8 @@ class Contact extends React.Component {
               </div>
               <form
                 name="contact"
-                netlify
+                method="POST"
+                data-netlify="true"
                 className="grid grid-cols-1 grid-rows-[auto_auto] gap-4"
               >
                 <div className="grid items-center w-full">

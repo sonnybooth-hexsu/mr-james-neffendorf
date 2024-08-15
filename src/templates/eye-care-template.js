@@ -168,7 +168,11 @@ class EyeCareTemplate extends React.Component {
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>
-                  <form name="eye-care-contact" netlify>
+                  <form
+                    name="eye-care-contact"
+                    method="POST"
+                    data-netlify="true"
+                  >
                     <div className="mb-4">
                       <label
                         htmlFor="fullName"
