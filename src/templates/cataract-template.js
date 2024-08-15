@@ -14,7 +14,7 @@ import {
 
 class CataractTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulCataract')
+    const post = get(this.props, 'data.contentfulCataractPage')
     const symptomsDocument = JSON.parse(post.symptoms.raw)
     const overviewDocument = JSON.parse(post.overview.raw)
 
@@ -167,7 +167,7 @@ class CataractTemplate extends React.Component {
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>
-                  <form>
+                  <form name="cataract-contact" netlify>
                     <div className="mb-4">
                       <label
                         htmlFor="fullName"
@@ -176,8 +176,10 @@ class CataractTemplate extends React.Component {
                         Full Name
                       </label>
                       <input
+                        required
                         type="text"
                         id="fullName"
+                        name="fullName"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -189,21 +191,25 @@ class CataractTemplate extends React.Component {
                         Email Address
                       </label>
                       <input
+                        required
                         type="email"
                         id="email"
+                        name="email"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
                     <div className="mb-4">
                       <label
-                        htmlFor="phone"
+                        htmlFor="telephone"
                         className="block mb-2 text-gray-700"
                       >
                         Phone Number
                       </label>
                       <input
-                        type="text"
-                        id="phone"
+                        required
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -215,7 +221,9 @@ class CataractTemplate extends React.Component {
                         Your Message
                       </label>
                       <textarea
+                        required
                         id="message"
+                        name="message"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                         rows="4"
                       ></textarea>
@@ -223,6 +231,7 @@ class CataractTemplate extends React.Component {
                     <div className="mb-4">
                       <label className="inline-flex items-center">
                         <input
+                          required
                           type="checkbox"
                           className="text-blue-600 form-checkbox"
                         />
@@ -235,10 +244,7 @@ class CataractTemplate extends React.Component {
                       </label>
                     </div>
 
-                    <button
-                      className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
-                      onClick={() => (window.location.href = '/contact')}
-                    >
+                    <button className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                       Submit
                     </button>
                   </form>
@@ -256,7 +262,7 @@ export default CataractTemplate
 
 export const pageQuery = graphql`
   query CataractById($id: String!) {
-    contentfulCataract(id: { eq: $id }) {
+    contentfulCataractPage(id: { eq: $id }) {
       heading
       headingImage {
         url

@@ -5,7 +5,7 @@ import book from '../assets/book.svg'
 export const Publications = () => {
   const publicationsData = useStaticQuery(graphql`
     query {
-      allContentfulPublications {
+      allContentfulResearchPublication {
         nodes {
           title
           summary {
@@ -18,7 +18,7 @@ export const Publications = () => {
     }
   `)
 
-  const fullList = publicationsData.allContentfulPublications.nodes
+  const fullList = publicationsData.allContentfulResearchPublication.nodes
   const [articles, setArticles] = useState(fullList)
   const [selectedYear, setSelectedYear] = useState('View All')
 
@@ -100,12 +100,14 @@ export const Publications = () => {
                 {article.title}
               </h3>
 
-              <p className="text-gray-600">
-                <span className="font-semibold text-gray-600">
-                  Mr Neffendorf's Summary:{' '}
-                </span>
-                {article.summary.raw}
-              </p>
+              {article.summary.summary && (
+                <p className="text-gray-600">
+                  <span className="font-semibold text-gray-600">
+                    Mr Neffendorf's Summary:{' '}
+                  </span>
+                  {article.summary.summary}
+                </p>
+              )}
               <p className="mt-2 font-semibold text-gray-600">
                 {article.contributors}
               </p>

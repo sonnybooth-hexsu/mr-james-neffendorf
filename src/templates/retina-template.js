@@ -14,7 +14,7 @@ import {
 
 class RetinaTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulRetina')
+    const post = get(this.props, 'data.contentfulRetinaPage')
     const symptomsDocument = JSON.parse(post.symptoms.raw)
     const overviewDocument = JSON.parse(post.overview.raw)
 
@@ -168,7 +168,7 @@ class RetinaTemplate extends React.Component {
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>
-                  <form>
+                  <form name="retina-contact" netlify>
                     <div className="mb-4">
                       <label
                         htmlFor="fullName"
@@ -177,8 +177,10 @@ class RetinaTemplate extends React.Component {
                         Full Name
                       </label>
                       <input
+                        required
                         type="text"
                         id="fullName"
+                        name="fullName"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -190,21 +192,25 @@ class RetinaTemplate extends React.Component {
                         Email Address
                       </label>
                       <input
+                        required
                         type="email"
                         id="email"
+                        name="email"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
                     <div className="mb-4">
                       <label
-                        htmlFor="phone"
+                        htmlFor="telephone"
                         className="block mb-2 text-gray-700"
                       >
                         Phone Number
                       </label>
                       <input
-                        type="text"
-                        id="phone"
+                        required
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -216,7 +222,9 @@ class RetinaTemplate extends React.Component {
                         Your Message
                       </label>
                       <textarea
+                        required
                         id="message"
+                        name="message"
                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                         rows="4"
                       ></textarea>
@@ -224,6 +232,7 @@ class RetinaTemplate extends React.Component {
                     <div className="mb-4">
                       <label className="inline-flex items-center">
                         <input
+                          required
                           type="checkbox"
                           className="text-blue-600 form-checkbox"
                         />
@@ -235,10 +244,8 @@ class RetinaTemplate extends React.Component {
                         </span>
                       </label>
                     </div>
-                    <button
-                      className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
-                      onClick={() => (window.location.href = '/contact')}
-                    >
+
+                    <button className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
                       Submit
                     </button>
                   </form>
@@ -256,7 +263,7 @@ export default RetinaTemplate
 
 export const pageQuery = graphql`
   query RetinaById($id: String!) {
-    contentfulRetina(id: { eq: $id }) {
+    contentfulRetinaPage(id: { eq: $id }) {
       heading
       headingImage {
         url

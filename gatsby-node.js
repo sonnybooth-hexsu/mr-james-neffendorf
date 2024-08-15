@@ -10,19 +10,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     {
-      allContentfulEyeCare {
+      allContentfulEyeCarePage {
         nodes {
           id
           slug
         }
       }
-      allContentfulCataract {
+      allContentfulCataractPage {
         nodes {
           id
           slug
         }
       }
-      allContentfulRetina {
+      allContentfulRetinaPage {
         nodes {
           id
           slug
@@ -39,9 +39,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const eyeCare = result.data.allContentfulEyeCare.nodes
-  const retina = result.data.allContentfulRetina.nodes
-  const cataract = result.data.allContentfulCataract.nodes
+  const eyeCare = result.data.allContentfulEyeCarePage.nodes
+  const retina = result.data.allContentfulRetinaPage.nodes
+  const cataract = result.data.allContentfulCataractPage.nodes
 
   if (eyeCare.length > 0) {
     eyeCare.forEach(async (post) => {

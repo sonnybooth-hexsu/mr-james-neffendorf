@@ -171,18 +171,24 @@ class Contact extends React.Component {
                   </p>
                 </div>
               </div>
-              <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-4">
+              <form
+                name="contact"
+                netlify
+                className="grid grid-cols-1 grid-rows-[auto_auto] gap-4"
+              >
                 <div className="grid items-center w-full">
                   <label
                     className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    htmlFor="name"
+                    htmlFor="fullName"
                   >
                     Name
                   </label>
                   <input
+                    required
                     type="text"
                     className="flex px-3 py-2 align-middle border border-gray-300 rounded-md size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                    id="name"
+                    id="fullName"
+                    name="fullName"
                   />
                 </div>
                 <div className="grid items-center w-full">
@@ -193,9 +199,26 @@ class Contact extends React.Component {
                     Email
                   </label>
                   <input
+                    required
                     type="email"
                     className="flex px-3 py-2 align-middle border border-gray-300 rounded-md size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                     id="email"
+                    name="email"
+                  />
+                </div>
+                <div className="grid items-center w-full">
+                  <label
+                    className="mb-2 placeholder:text-gray-400 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    htmlFor="telephone"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    required
+                    type="tel"
+                    className="flex px-3 py-2 align-middle border border-gray-300 rounded-md size-full min-h-11 bg-background-primary file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                    id="telephone"
+                    name="telephone"
                   />
                 </div>
                 <div className="grid items-center w-full">
@@ -206,13 +229,16 @@ class Contact extends React.Component {
                     Message
                   </label>
                   <textarea
+                    required
                     className="flex rounded-md w-full border border-gray-300 bg-neutral-white p-3 placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 min-h-[11.25rem] overflow-auto"
                     id="message"
                     placeholder="Type your message..."
+                    name="message"
                   ></textarea>
                 </div>
                 <div className="flex items-center space-x-2 text-base md:mb-2">
                   <input
+                    required
                     type="checkbox"
                     className="w-6 h-6 custom-checkbox"
                     id="terms"

@@ -12,19 +12,19 @@ export const Navigation = () => {
 
   const linkData = useStaticQuery(graphql`
     query {
-      allContentfulEyeCare {
+      allContentfulEyeCarePage {
         nodes {
           heading
           slug
         }
       }
-      allContentfulCataract {
+      allContentfulCataractPage {
         nodes {
           heading
           slug
         }
       }
-      allContentfulRetina {
+      allContentfulRetinaPage {
         nodes {
           heading
           slug
@@ -125,7 +125,7 @@ export const Navigation = () => {
                 subMenuOpen['EyeCare'] ? 'block' : 'hidden'
               }`}
             >
-              {linkData?.allContentfulEyeCare?.nodes.map(
+              {linkData?.allContentfulEyeCarePage?.nodes.map(
                 ({ heading, slug }, id) => (
                   <a
                     key={id}
