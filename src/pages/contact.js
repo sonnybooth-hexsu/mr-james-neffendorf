@@ -254,7 +254,7 @@ class Contact extends React.Component {
                     By submitting I accept the{' '}
                     <a
                       className="underline text-jamesBlue focus-visible:outline-none"
-                      href="#"
+                      href="/terms-of-service/"
                       target="/terms-of-service"
                       rel="noopener noreferrer"
                     >

@@ -249,7 +249,10 @@ class RetinaTemplate extends React.Component {
                         />
                         <span className="ml-2 text-gray-700">
                           I agree to the{' '}
-                          <a href="#" className="text-blue-600 hover:underline">
+                          <a
+                            href="/terms-of-service/"
+                            className="text-blue-600 hover:underline"
+                          >
                             Privacy Policy & Terms & Conditions
                           </a>
                         </span>
