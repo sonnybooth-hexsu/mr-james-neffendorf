@@ -258,7 +258,10 @@ class Contact extends React.Component {
                     </a>
                   </label>
                 </div>
-                <button className="items-center inline px-12 font-medium transition-colors border rounded-full shadow-md text-md justify-self-start btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight">
+                <button
+                  type="submit"
+                  className="items-center inline px-12 font-medium transition-colors border rounded-full shadow-md text-md justify-self-start btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                >
                   Submit
                 </button>
               </form>
