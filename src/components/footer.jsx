@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10">
         {/* Logo Section */}
         <div className="col-span-12 text-gray-508">
-          <h2 className="text-5xl text-gray-50">Mr. James E Neffendorf</h2>
+          <h2 className="text-5xl text-gray-50">Mr James E. Neffendorf</h2>
         </div>
 
         {/* Locations Section */}
