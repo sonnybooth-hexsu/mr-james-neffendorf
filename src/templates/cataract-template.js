@@ -169,9 +169,16 @@ class CataractTemplate extends React.Component {
                   </h3>
                   <form
                     name="cataract-contact"
-                    method="POST"
+                    method="post"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                   >
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="cataract-contact"
+                    />
+                    <input type="hidden" name="bot-field" />
                     <div className="mb-4">
                       <label
                         htmlFor="fullName"

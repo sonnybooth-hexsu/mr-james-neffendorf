@@ -168,7 +168,18 @@ class RetinaTemplate extends React.Component {
                   <h3 className="mb-4 text-2xl font-semibold">
                     Enquire about {post.heading}
                   </h3>
-                  <form name="retina-contact" method="POST" data-netlify="true">
+                  <form
+                    name="retina-contact"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                  >
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="retina-contact"
+                    />
+                    <input type="hidden" name="bot-field" />
                     <div className="mb-4">
                       <label
                         htmlFor="fullName"

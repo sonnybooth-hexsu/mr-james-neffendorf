@@ -173,10 +173,13 @@ class Contact extends React.Component {
               </div>
               <form
                 name="contact"
-                method="POST"
+                method="post"
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 className="grid grid-cols-1 grid-rows-[auto_auto] gap-4"
               >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 <div className="grid items-center w-full">
                   <label
                     className="mb-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
