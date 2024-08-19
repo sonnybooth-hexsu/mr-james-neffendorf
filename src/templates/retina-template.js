@@ -129,7 +129,12 @@ class RetinaTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <div
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             )
@@ -140,7 +145,7 @@ class RetinaTemplate extends React.Component {
                     {post.faqs && (
                       <>
                         <h2 className="mt-10 mb-4">
-                          Frequently asked questions
+                          Frequently Asked Questions
                         </h2>
                         <div className="mb-8">
                           <Accordion type="multiple">
@@ -154,7 +159,12 @@ class RetinaTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <div
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             ))}
@@ -166,7 +176,7 @@ class RetinaTemplate extends React.Component {
                 </div>
                 <div className="rounded-lg shadow-md md:col-span-1 md:col-start-4">
                   <h3 className="mb-4 text-2xl font-semibold">
-                    Enquire about {post.heading}
+                    Enquire about Retina or Vitreous
                   </h3>
                   <form
                     name="retina-contact"

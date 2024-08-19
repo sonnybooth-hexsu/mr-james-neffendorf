@@ -101,7 +101,7 @@ class CataractTemplate extends React.Component {
                       }}
                     />
 
-                    <h2 className="mb-2">Symptoms</h2>
+                    <h2 className="mb-2">Causes</h2>
                     <div
                       className="mb-4 text-gray-600"
                       dangerouslySetInnerHTML={{
@@ -110,7 +110,7 @@ class CataractTemplate extends React.Component {
                     />
                     {post.solutions && (
                       <>
-                        <h2 className="mt-10 mb-4">Solutions</h2>
+                        <h2 className="mt-10 mb-4">How to treat Cataracts</h2>
                         <p className="mb-4 text-gray-600">{post.solutions}</p>
                       </>
                     )}
@@ -128,7 +128,12 @@ class CataractTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <p
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             )
@@ -139,7 +144,7 @@ class CataractTemplate extends React.Component {
                     {post.faqs && (
                       <>
                         <h2 className="mt-10 mb-4">
-                          Frequently asked questions
+                          Frequently Asked Questions
                         </h2>
                         <div className="mb-8">
                           <Accordion type="multiple ">
@@ -153,7 +158,12 @@ class CataractTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <div
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             ))}
@@ -165,7 +175,7 @@ class CataractTemplate extends React.Component {
                 </div>
                 <div className="rounded-lg shadow-md md:col-span-1 md:col-start-4">
                   <h3 className="mb-4 text-2xl font-semibold">
-                    Enquire about {post.heading}
+                    Enquire about Cataract Surgery
                   </h3>
                   <form
                     name="cataract-contact"

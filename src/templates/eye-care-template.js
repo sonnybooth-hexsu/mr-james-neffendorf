@@ -15,7 +15,6 @@ import {
 class EyeCareTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulEyeCarePage')
-    const symptomsDocument = JSON.parse(post.symptoms.raw)
     const overviewDocument = JSON.parse(post.overview.raw)
 
     const options = {
@@ -101,20 +100,9 @@ class EyeCareTemplate extends React.Component {
                         __html: documentToHtmlString(overviewDocument, options),
                       }}
                     />
-
-                    <h2 className="mb-2 font-semibold">Symptoms</h2>
-                    <div
-                      className="mb-4 text-gray-600"
-                      dangerouslySetInnerHTML={{
-                        __html: documentToHtmlString(symptomsDocument, options),
-                      }}
-                    />
-                    {post.solutions && (
-                      <>
-                        <h2 className="mt-10 mb-4">Solutions</h2>
-                        <p className="mb-4 text-gray-600">{post.solutions}</p>
-                      </>
-                    )}
+                    <h2 className="mt-10 mb-4">
+                      Eye Conditions and Investigations
+                    </h2>
                     {post.solutionsAccordion && (
                       <div className="mb-8">
                         <Accordion type="multiple">
@@ -129,7 +117,12 @@ class EyeCareTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <div
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             )
@@ -140,7 +133,7 @@ class EyeCareTemplate extends React.Component {
                     {post.faqs && (
                       <>
                         <h2 className="mt-10 mb-4">
-                          Frequently asked questions
+                          Frequently Asked Questions
                         </h2>
                         <div className="mb-8">
                           <Accordion type="multiple">
@@ -154,7 +147,12 @@ class EyeCareTemplate extends React.Component {
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
-                                  <p className="text-gray-600">{content}</p>
+                                  <div
+                                    className="text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                      __html: content,
+                                    }}
+                                  />
                                 </AccordionContent>
                               </AccordionItem>
                             ))}
@@ -290,9 +288,6 @@ export const pageQuery = graphql`
       overview {
         raw
       }
-      symptoms {
-        raw
-      }
       solutionsAccordion {
         items {
           title
@@ -305,7 +300,6 @@ export const pageQuery = graphql`
           content
         }
       }
-      solutions
     }
   }
 `
