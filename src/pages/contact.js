@@ -97,9 +97,7 @@ class Contact extends React.Component {
                 <h2 className="mt-4 mb-2 text-lg font-bold md:mt-8">
                   Paying for treatment
                 </h2>
-                <h3 className="mt-4 mb-2 text-base font-bold">
-                  Private Patients
-                </h3>
+                <h3 className="mt-4 mb-2 font-bold">Private Patients</h3>
                 <p className="mt-0 md:mb-4">
                   James sees self-paying patients and those registered with the
                   following insurance companies
@@ -157,7 +155,7 @@ class Contact extends React.Component {
                   </li>
                 </ul>
 
-                <h3 className="mt-4 mb-2 text-base font-bold md:mt-8">NHS</h3>
+                <h3 className="mt-4 mb-2 font-bold md:mt-8">NHS</h3>
                 <div className="flex items-center space-x-2 md:mb-4">
                   <p className="mt-0">
                     James sees NHS patients at{' '}
@@ -241,7 +239,7 @@ class Contact extends React.Component {
                     name="message"
                   ></textarea>
                 </div>
-                <div className="flex items-center space-x-2 text-base md:mb-2">
+                <div className="flex items-center space-x-2 md:mb-2">
                   <input
                     required
                     type="checkbox"
@@ -265,7 +263,7 @@ class Contact extends React.Component {
                 </div>
                 <button
                   type="submit"
-                  className="items-center inline px-12 font-medium transition-colors border rounded-full shadow-md text-md justify-self-start btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                  className="items-center inline px-12 font-medium transition-colors border rounded-full shadow-md justify-self-start btn-56 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
                 >
                   Submit
                 </button>
@@ -302,22 +300,20 @@ class Contact extends React.Component {
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
 
-                      <p className="text-md">
-                        34 Great Titchfield St, London W1W 8BQ
-                      </p>
+                      <p className="">34 Great Titchfield St, London W1W 8BQ</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <img src={linkIcon} alt="link" />
                       <a
                         href="https://www.llclinics.co.uk/"
                         target="_blank"
-                        className="text-gray-600 text-md"
+                        className="text-gray-600 "
                       >
                         www.llclinics.co.uk
                       </a>
                     </div>
                     <div>
-                      <p className="pt-8 font-bold text-gray-900 text-md">
+                      <p className="pt-8 font-bold text-gray-900 ">
                         {' '}
                         Easily accessible from all major London transport hubs
                       </p>
@@ -328,7 +324,7 @@ class Contact extends React.Component {
                         className="object-cover rounded-xl"
                         alt="Underground icon"
                       />
-                      <p className="text-md">
+                      <p className="">
                         <span className="font-medium text-gray-900">
                           Nearest tube station:
                         </span>{' '}
@@ -387,7 +383,7 @@ class Contact extends React.Component {
                         <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
-                      <p className="text-md">
+                      <p className="">
                         Guthrie Wing, King’s College Hospital, Denmark Hill,
                         London SE5 9RS
                       </p>
@@ -399,7 +395,7 @@ class Contact extends React.Component {
                         className="object-cover h-5 rounded-xl"
                         alt="TFL icon"
                       />
-                      <p className="text-md">
+                      <p className="">
                         <span className="font-medium text-gray-900">
                           Nearest station:
                         </span>{' '}

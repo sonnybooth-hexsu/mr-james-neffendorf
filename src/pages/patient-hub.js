@@ -151,7 +151,7 @@ class PatientHub extends React.Component {
       <div className="flex flex-col justify-between h-full p-8 bg-white rounded-lg shadow-md border-1">
         <div>
           <h2 className="mb-2 text-sm font-bold text-gray-600">{category}</h2>
-          <h3 className="mb-4 font-semibold text-md">{title}</h3>
+          <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
           <p className="mb-4 text-gray-600">{description}</p>
         </div>
         <div className="flex justify-between mt-auto">

@@ -69,11 +69,8 @@ class AccordionItem extends React.Component {
         <div
           className={`overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
         >
-          <p className="text-gray-800 text-md md:text-lg">{content}</p>
-          <a
-            href={link}
-            className="block mt-4 text-gray-600 text-md md:text-lg"
-          >
+          <p className="text-gray-800 md:text-lg">{content}</p>
+          <a href={link} className="block mt-4 text-gray-600 md:text-lg">
             Details
           </a>
         </div>
@@ -137,15 +134,15 @@ class RootIndex extends React.Component {
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="mb-4 text-base tracking-wide uppercase lg:text-md font-md">
+                  <h2 className="mb-4 tracking-wide uppercase lg:text-lg font-md">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
 
-                  <h2 className="text-base font-bold tracking-wide text-gray-600 md:text-md xl:text-lg">
+                  <h2 className="font-bold tracking-wide text-gray-600 md:text-lg xl:text-lg">
                     Consultant Ophthalmologist, Cataract &amp; Retinal Surgeon
                   </h2>
 
-                  <p className="mt-1 text-md md:text-lg xl:text-xl">
+                  <p className="mt-1 md:text-lg xl:text-xl">
                     A leading London-based consultant eye surgeon.
                   </p>
                   <div className="grid mt-6 md:gap-2 md:grid-cols-2 md:mt-8 lg:flex lg:space-x-2">
@@ -201,9 +198,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-base">
-                        Consultant Eye Surgeon
-                      </p>
+                      <p className="text-sm md:">Consultant Eye Surgeon</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -213,9 +208,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-base">
-                        Cataract Specialist
-                      </p>
+                      <p className="text-sm md:">Cataract Specialist</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -225,7 +218,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-base">Retina Specialist</p>
+                      <p className="text-sm md:">Retina Specialist</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -235,9 +228,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:text-base">
-                        14 Years of Experience
-                      </p>
+                      <p className="text-sm md:">14 Years of Experience</p>
                     </div>
                   </div>
                 </div>
@@ -249,7 +240,7 @@ class RootIndex extends React.Component {
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:items-center">
                 <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left shrink-0">
-                  <h1 className="text-base text-gray-600 font-medium leading-[1.2] md:text-md md:leading-[1.2] lg:mr-6">
+                  <h1 className=" text-gray-600 font-medium leading-[1.2] md:text-lg md:leading-[1.2] lg:mr-6">
                     Professional affiliations
                   </h1>
                 </div>
@@ -376,7 +367,7 @@ class RootIndex extends React.Component {
                   <h2 className="font-bold leading-[1.2] mb-4 md:mb-4">
                     Excellence in Personalised Eye Care
                   </h2>
-                  <p className="mb-5 md:mb-4 md:text-md">
+                  <p className="mb-5 md:mb-4 md:">
                     A Cambridge educated surgeon who places high priority on
                     providing bespoke care using the latest technology for his
                     patients. Plays a major role training, teaching and
@@ -391,7 +382,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-md">18 academic prizes and awards</p>
+                      <p className="">18 academic prizes and awards</p>
                     </div>
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -401,7 +392,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-md">39 scientific publications</p>
+                      <p className="">39 scientific publications</p>
                     </div>
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -411,7 +402,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-md">
+                      <p className="">
                         Regularly presenting research at international
                         conferences
                       </p>
@@ -424,7 +415,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-md">
+                      <p className="">
                         NHS consultant at world-leading King’s College Hospital
                         NHS Foundation Trust.
                       </p>
@@ -437,7 +428,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-md">
+                      <p className="">
                         Examiner for the Royal College of Ophthalmologists
                       </p>
                     </div>

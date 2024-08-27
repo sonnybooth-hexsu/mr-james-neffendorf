@@ -88,6 +88,7 @@ html {
 body {
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
+  font-size: 20px;
   font-style: normal;
   @apply bg-jamesWhite;
 }
@@ -105,12 +106,6 @@ p {
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.overlined {
-  font-weight: bold;
-  @apply tracking-wider;
-  @apply text-base;
 }
 
 /* Headings */
@@ -416,7 +411,6 @@ h5 {
 }
 
 .btn-56 {
-  @apply text-md;
   height: 48px;
   padding-top: 0;
   padding-bottom: 0;

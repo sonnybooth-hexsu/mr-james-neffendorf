@@ -135,7 +135,7 @@ class ResearchInterests extends React.Component {
                 <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
                   Clinical Interests & Research
                 </h1>
-                <p className="mb-4 text-gray-600 opacity-75 lg:w-1/2 md:text-md lg:text-lg fade-in lg:ml-4">
+                <p className="mb-4 text-gray-600 opacity-75 lg:w-1/2 md:text-lg lg:text-lg fade-in lg:ml-4">
                   James is involved in a wide range of academic research,
                   currently focussing his interests on vitreoretinal surgery,
                   age-related macular degeneration, artificial intelligence and

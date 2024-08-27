@@ -30,7 +30,7 @@ class RetinaTemplate extends React.Component {
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 md:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mt-4 mb-4 font-bold">{post.heading}</h1>
-                  <p className="mb-8 md:text-md">
+                  <p className="mb-8 md:">
                     {post.introductionText.introductionText}
                   </p>
                   <div className="flex items-center">
@@ -125,7 +125,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-lg md:text-lg p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -155,7 +155,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-lg md:text-lg  p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">

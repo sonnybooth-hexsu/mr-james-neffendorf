@@ -29,12 +29,12 @@ const Footer = () => (
               <a
                 href="www.llclinics.co.uk"
                 target="_blank"
-                className="ml-2 font-semibold text-white underline text-md"
+                className="ml-2 font-semibold text-white underline"
               >
                 London Lauriston Clinic
               </a>
             </div>
-            <p className="ml-8 text-md text-gray-50">
+            <p className="ml-8 text-gray-50">
               34 Great Titchfield St., London W1W 8BQ
             </p>
           </div>
@@ -52,11 +52,11 @@ const Footer = () => (
                 <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
                 <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
               </svg>
-              <p className="ml-2 font-semibold text-white text-md">
+              <p className="ml-2 font-semibold text-white ">
                 The Guthrie Clinic
               </p>
             </div>
-            <p className="ml-8 text-md text-gray-50">
+            <p className="ml-8 text-gray-50">
               King’s College Hospital, Denmark Hill, London SE5 9RS
             </p>
           </div>
@@ -64,17 +64,17 @@ const Footer = () => (
 
         {/* Contact Details */}
         <div className="col-span-12 lg:col-span-4 text-gray-50">
-          <p className="mb-2 font-semibold text-white text-md">Contact</p>
+          <p className="mb-2 font-semibold text-white ">Contact</p>
           <p className="flex flex-col text-sm underline decoration-gray-50 underline-offset-1">
             <a
               href="tel:1800 123 4567"
-              className="mb-1 text-gray-100 text-md focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
+              className="mb-1 text-gray-100 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
             >
               +44 7849 425743
             </a>
             <a
               href="mailto:clinic@mrjamesneffendorf.com"
-              className="text-gray-100 text-md focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
+              className="text-gray-100 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
             >
               clinic@mrjamesneffendorf.com
             </a>

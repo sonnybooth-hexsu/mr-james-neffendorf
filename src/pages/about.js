@@ -42,7 +42,7 @@ class About extends React.Component {
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mb-2">Meet Mr Neffendorf </h1>
-                  <p className="mb-4 text-sm font-bold text-gray-800 md:text-md md:mb-2">
+                  <p className="mb-4 text-sm font-bold text-gray-800 md:text-lg md:mb-2">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
                   </p>
                   <div className="grid grid-cols-1 gap-2 py-2">
@@ -296,7 +296,7 @@ class About extends React.Component {
                 <h2>Selected Awards and Prizes</h2>
               </div>
               <div className="grid grid-cols-1 gap-6 py-2 md:grid-cols-2">
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -304,14 +304,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       Kidney Research UK Research Project Grant, Co-Investigator
                     </span>{' '}
                     <span className="font-normal">(2023)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -319,14 +319,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       Oxford Annual Updates 1st Prize
                     </span>{' '}
                     <span className="font-normal">(2018)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -334,7 +334,7 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       British and Eire Association of Vitreoretinal Surgeons
                       Certificate of Merit
@@ -342,7 +342,7 @@ class About extends React.Component {
                     <span className="font-normal">(2017)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -350,14 +350,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       EURetina Annual Conference, highest scoring free papers
                     </span>{' '}
                     <span className="font-normal">(2016)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -365,7 +365,7 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       American Academy of Ophthalmology Annual Conference, Best
                       Poster, Cataract
@@ -373,7 +373,7 @@ class About extends React.Component {
                     <span className="font-normal">(2015)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -381,7 +381,7 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       American Academy of Ophthalmology Annual Conference, Best
                       Poster, Retina
@@ -389,7 +389,7 @@ class About extends React.Component {
                     <span className="font-normal">(2015)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -397,14 +397,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       World Ophthalmology Congress Travel Grant
                     </span>{' '}
                     <span className="font-normal">(2014)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -412,14 +412,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       European Paediatric Ophthalmology Society Travel Grant
                     </span>{' '}
                     <span className="font-normal">(2013)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -427,14 +427,14 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       Distinction in Clinical Medicine and Surgery, UCL
                     </span>{' '}
                     <span className="font-normal">(2009)</span>
                   </h3>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="mr-2 shrink-0">
                     <img
                       src={iconTrophy}
@@ -442,7 +442,7 @@ class About extends React.Component {
                       className="max-h-6"
                     />
                   </div>
-                  <h3 className="text-base text-black">
+                  <h3 className="text-lg text-black">
                     <span className="font-bold">
                       Allen Goldsmith Prize in Ophthalmology, UCL
                     </span>{' '}

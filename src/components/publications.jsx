@@ -99,7 +99,7 @@ export const Publications = () => {
                   />
                   <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
                 </div>
-                <h3 className="mt-2 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                <h3 className="mt-2 mb-2 font-bold text-gray-800 md:text-3xl lg:text-2xl">
                   {article.title}
                 </h3>
 
