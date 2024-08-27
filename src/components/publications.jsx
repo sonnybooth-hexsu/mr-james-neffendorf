@@ -86,7 +86,7 @@ export const Publications = () => {
           </div>
         </div>
         <div className="md:col-span-4 lg:col-span-8 fade-in">
-          {articles.map((article, index) => (
+          {articles.slice().reverse().map((article, index) => (
             <div className="pb-4 mb-8 border-b" key={index}>
               <div className="flex items-center">
                 <img
