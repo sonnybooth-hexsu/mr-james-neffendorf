@@ -280,7 +280,7 @@ class About extends React.Component {
                       />
                     </div>
                     <p>
-                      Medical Director for Ophthalmology, Solvemed
+                      Honorary Medical Director for Ophthalmology, Solvemed
                       (International Artificial Intelligence Company)
                     </p>
                   </div>

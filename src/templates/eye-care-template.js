@@ -113,7 +113,7 @@ class EyeCareTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -132,9 +132,7 @@ class EyeCareTemplate extends React.Component {
                     )}
                     {post.faqs && (
                       <>
-                        <h2 className="mt-10 mb-4">
-                          Frequently Asked Questions
-                        </h2>
+                        <h2 className="mt-10 mb-4">Emergency Eye Care</h2>
                         <div className="mb-8">
                           <Accordion type="multiple">
                             {post.faqs.items.map(({ title, content }, id) => (
@@ -143,7 +141,7 @@ class EyeCareTemplate extends React.Component {
                                 value={`faq${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">

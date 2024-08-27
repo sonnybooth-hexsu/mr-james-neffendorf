@@ -125,7 +125,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -155,7 +155,7 @@ class RetinaTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-md p-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">

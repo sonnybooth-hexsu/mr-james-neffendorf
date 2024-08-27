@@ -6,6 +6,7 @@ import aetnaLogo from '../assets/provider-aetna-logo.svg'
 import avivaLogo from '../assets/provider-aviva-logo.svg'
 import cignaLogo from '../assets/provider-cigna-logo.jpg'
 import vitalityLogo from '../assets/provider-vitality-logo.svg'
+import linkIcon from '../assets/link.svg'
 import wpaLogo from '../assets/provider-wpa-logo.png'
 import londonClinic from '../assets/london-clinic.jpg'
 import underground from '../assets/underground.svg'
@@ -304,6 +305,16 @@ class Contact extends React.Component {
                       <p className="text-md">
                         34 Great Titchfield St, London W1W 8BQ
                       </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img src={linkIcon} alt="link" />
+                      <a
+                        href="https://www.llclinics.co.uk/"
+                        target="_blank"
+                        className="text-gray-600 text-md"
+                      >
+                        www.llclinics.co.uk
+                      </a>
                     </div>
                     <div>
                       <p className="pt-8 font-bold text-gray-900 text-md">

@@ -86,33 +86,36 @@ export const Publications = () => {
           </div>
         </div>
         <div className="md:col-span-4 lg:col-span-8 fade-in">
-          {articles.slice().reverse().map((article, index) => (
-            <div className="pb-4 mb-8 border-b" key={index}>
-              <div className="flex items-center">
-                <img
-                  src={book}
-                  alt="Hub Image"
-                  className="h-5 mt-1 mr-1 text-gray-600"
-                />
-                <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
-              </div>
-              <h3 className="mt-2 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
-                {article.title}
-              </h3>
+          {articles
+            .slice()
+            .reverse()
+            .map((article, index) => (
+              <div className="pb-4 mb-8 border-b" key={index}>
+                <div className="flex items-center">
+                  <img
+                    src={book}
+                    alt="Hub Image"
+                    className="h-5 mt-1 mr-1 text-gray-600"
+                  />
+                  <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getUTCFullYear()}`}</p>
+                </div>
+                <h3 className="mt-2 mb-2 text-base font-bold text-gray-800 md:text-3xl lg:text-2xl">
+                  {article.title}
+                </h3>
 
-              {article.summary.summary && (
-                <p className="text-gray-600">
-                  <span className="font-semibold text-gray-600">
-                    Mr Neffendorf's Summary:{' '}
-                  </span>
-                  {article.summary.summary}
+                {article.summary.summary && (
+                  <p className="text-gray-600">
+                    <span className="font-semibold text-gray-600">
+                      Mr Neffendorf's Summary:{' '}
+                    </span>
+                    {article.summary.summary}
+                  </p>
+                )}
+                <p className="mt-2 font-semibold text-gray-600">
+                  {article.contributors}
                 </p>
-              )}
-              <p className="mt-2 font-semibold text-gray-600">
-                {article.contributors}
-              </p>
-            </div>
-          ))}
+              </div>
+            ))}
         </div>
         <div className="hidden lg:block lg:col-span-2 fade-in"></div>
       </div>

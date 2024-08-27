@@ -124,7 +124,7 @@ class CataractTemplate extends React.Component {
                                 value={`solution${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md py-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-md py-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
@@ -154,7 +154,7 @@ class CataractTemplate extends React.Component {
                                 value={`faq${id}`}
                                 className={id === 0 ? 'border-top-none' : ''}
                               >
-                                <AccordionTrigger className="cursor-pointer text-md border-top-nonep-4 min-h-[48px] flex items-center justify-between">
+                                <AccordionTrigger className="text-left cursor-pointer text-md border-top-nonep-4 min-h-[48px] flex items-center justify-between">
                                   {title}
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4">
