@@ -10,13 +10,13 @@ const Terms = () => {
             <div>
               <h1 className="text-5xl">Terms and conditions of use</h1>
 
-              <h2 class="mt-8 text-3xl">Credit</h2>
+              <h2 className="mt-8 text-3xl">Credit</h2>
               <p>
                 This document was created using a template from SEQ Legal (
                 <a href="https://seqlegal.com">https://seqlegal.com</a>).
               </p>
 
-              <h2 class="mt-8 text-3xl">Medical disclaimer</h2>
+              <h2 className="mt-8 text-3xl">Medical disclaimer</h2>
 
               <h3 className="mt-4 text-2xl">(1) Information on this site</h3>
               <p>
@@ -75,7 +75,7 @@ const Terms = () => {
                 under applicable law.
               </p>
 
-              <h2 class="mt-8 text-3xl">
+              <h2 className="mt-8 text-3xl">
                 Terms & conditions of use of this website
               </h2>
 

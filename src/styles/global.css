@@ -291,7 +291,7 @@ h5 {
   overflow-y: auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .mobile-nav {
     height: auto;
   }
@@ -469,7 +469,7 @@ h5 {
 }
 
 .paragraph-container {
-  height: 320px; /* Adjust this value as needed */
+  min-height: 320px; /* Adjust this value as needed */
   overflow: hidden;
   display: flex;
   flex-direction: column;

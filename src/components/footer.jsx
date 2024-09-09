@@ -65,7 +65,7 @@ const Footer = () => (
         {/* Contact Details */}
         <div className="col-span-12 lg:col-span-4 text-gray-50">
           <p className="mb-2 font-semibold text-white ">Contact</p>
-          <p className="flex flex-col text-sm underline decoration-gray-50 underline-offset-1">
+          <p className="flex flex-col underline decoration-gray-50 underline-offset-1">
             <a
               href="tel:1800 123 4567"
               className="mb-1 text-gray-100 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"

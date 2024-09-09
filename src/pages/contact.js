@@ -160,7 +160,7 @@ class Contact extends React.Component {
                   <p className="mt-0">
                     James sees NHS patients at{' '}
                     <a
-                      href="https://www.kcl.ac.uk/"
+                      href="https://www.kch.nhs.uk/"
                       className="underline text-jamesBlue"
                       target="_blank"
                       rel="noopener noreferrer"

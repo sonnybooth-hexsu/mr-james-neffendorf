@@ -106,7 +106,7 @@ export const Navigation = () => {
               href="/research-interests"
               className={getLinkClass('/research-interests/')}
             >
-              Research
+              News
             </a>
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">

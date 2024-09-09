@@ -133,13 +133,15 @@ class ResearchInterests extends React.Component {
             <div className="container relative z-10 text-left">
               <div className="lg:flex lg:items-baseline">
                 <h1 className="my-4 tracking-wide text-gray-800 lg:w-1/2 fade-in">
-                  Clinical Interests & Research
+                  Research, News and Events
                 </h1>
                 <p className="mb-4 text-gray-600 opacity-75 lg:w-1/2 md:text-lg lg:text-lg fade-in lg:ml-4">
                   James is involved in a wide range of academic research,
                   currently focussing his interests on vitreoretinal surgery,
                   age-related macular degeneration, artificial intelligence and
                   the exploration or ocular biomarkers for neurological disease.
+                  He is also actively involved in educational meetings and
+                  working with the leading UK eye charities.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8 lg:mt-12 md:grid-cols-2">
