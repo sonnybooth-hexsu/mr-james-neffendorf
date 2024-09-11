@@ -135,7 +135,6 @@ export const Testimonials = () => {
     <Slider {...settings}>
       {testimonials
         .slice()
-        .reverse()
         .map(({ testimonial, patientType, date }, id) => (
           <div
             className="flex flex-col px-8 lg:px-12 paragraph-container"
