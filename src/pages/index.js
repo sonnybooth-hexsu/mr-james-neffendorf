@@ -134,11 +134,10 @@ class RootIndex extends React.Component {
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="mb-4 tracking-wide uppercase lg:text-lg font-md">
+                  <h2 className="mb-4 tracking-wide uppercase sm:text-lg font-md">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
-
-                  <h2 className="font-bold tracking-wide text-gray-600 md:text-lg xl:text-lg">
+                  <h2 className="text-lg font-bold tracking-wide text-gray-600 xl:text-lg">
                     Consultant Ophthalmologist, Cataract &amp; Retinal Surgeon
                   </h2>
 
@@ -154,7 +153,7 @@ class RootIndex extends React.Component {
                     </button>
 
                     <button
-                      className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border border-gray-300 rounded-full btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
+                      className="inline-flex items-center justify-center gap-3 mb-2 font-medium transition-colors border border-gray-300 rounded-full px- btn-56 lg:px-14 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary"
                       onClick={() => (window.location.href = '/about')}
                     >
                       About
@@ -177,10 +176,10 @@ class RootIndex extends React.Component {
                     className="absolute z-0 -bottom-10 -left-10"
                   />
                   <div className="absolute left-0 z-20 flex p-4 bg-white rounded-md shadow-xl lg:px-6 bottom-10 md:left-0 parallax">
-                    <p className="mr-2 text-sm font-bold text-gray-800">
+                    <p className="mr-2 text-base font-bold text-gray-800">
                       Rated Excellent
                     </p>
-                    <p className="mr-2 text-sm">4.94 out of 5</p>
+                    <p className="mr-2 text-base">4.94 out of 5</p>
                     <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
                       <img
                         src={doctifyLogo}
@@ -198,7 +197,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:">Consultant Eye Surgeon</p>
+                      <p className="text-base">Consultant Eye Surgeon</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -208,7 +207,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:">Cataract Specialist</p>
+                      <p className="text-base">Cataract Specialist</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -218,7 +217,7 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:">Retina Specialist</p>
+                      <p className="text-base">Retina Specialist</p>
                     </div>
                     <div className="flex items-center self-start">
                       <div className="self-start flex-none mr-1">
@@ -228,21 +227,21 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="text-sm md:">14 Years of Experience</p>
+                      <p className="text-base">14 Years of Experience</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* Professional affiliations Large */}
+          {/* Professional Affiliations */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
               <div className="flex flex-col lg:flex-row lg:items-center">
                 <div className="w-full mb-8 text-center lg:w-auto lg:mb-0 lg:text-left shrink-0">
-                  <h1 className=" text-gray-600 font-medium leading-[1.2] md:text-lg md:leading-[1.2] lg:mr-6">
+                  <p className="text-gray-600 text-2xl font-medium leading-[1.2] md:leading-[1.2] lg:mr-6">
                     Professional affiliations
-                  </h1>
+                  </p>
                 </div>
                 <div className="grid grid-cols-2 gap-5 justify-items-center sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-between lg:shrink-0 lg:flex-grow">
                   <a
@@ -452,7 +451,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-          {/* Testimonials */}
+          {/* Patient Testimonials */}
           <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container mx-auto">
               <div className="flex flex-col mb-12 md:flex-row md:justify-between md:items-center">
@@ -556,11 +555,11 @@ class RootIndex extends React.Component {
                     what he has done to help me see properly again.’
                   </blockquote>
                 </div>
-                <div className="bg-gray-300 rounded-md md:col-span-1 md:col-start-3 ">
+                <div className="overflow-hidden bg-gray-300 rounded-md md:col-span-1 md:col-start-3">
                   <img
                     src={patient}
-                    className="object-cover w-full p-20 rounded-md md:p-0"
-                    alt="Previous patient image"
+                    className="object-cover w-full p-20 rounded-xl md:p-0"
+                    alt="Previous patient"
                   />
                 </div>
               </div>

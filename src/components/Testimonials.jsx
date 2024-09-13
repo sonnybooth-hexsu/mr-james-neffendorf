@@ -133,25 +133,23 @@ export const Testimonials = () => {
 
   return (
     <Slider {...settings}>
-      {testimonials
-        .slice()
-        .map(({ testimonial, patientType, date }, id) => (
-          <div
-            className="flex flex-col px-8 lg:px-12 paragraph-container"
-            key={id}
-          >
-            <div></div>
-            <blockquote className='text-gray-600 leading-[1.4] text-md before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 xxl:text-xl'>
-              {testimonial.testimonial}
-            </blockquote>
-            <p className="mb-1 font-semibold text-gray-800">{patientType}</p>
-            <p>
-              <span className="text-sm font-semibold tracking-wider uppercase">
-                {`${new Date(date).toLocaleString('default', { month: 'long' })} ${new Date(date).getUTCFullYear()}`}
-              </span>
-            </p>
-          </div>
-        ))}
+      {testimonials.slice().map(({ testimonial, patientType, date }, id) => (
+        <div
+          className="flex flex-col px-8 lg:px-12 paragraph-container"
+          key={id}
+        >
+          <div></div>
+          <blockquote className='text-gray-600 leading-[1.4] text-md before:content-["\201C"] my-4 after:content-["\201D"] md:my-8 xxl:text-xl'>
+            {testimonial.testimonial}
+          </blockquote>
+          <p className="mb-1 font-semibold text-gray-800">{patientType}</p>
+          <p>
+            <span className="text-sm font-semibold tracking-wider uppercase">
+              {`${new Date(date).toLocaleString('default', { month: 'long' })} ${new Date(date).getUTCFullYear()}`}
+            </span>
+          </p>
+        </div>
+      ))}
     </Slider>
   )
 }

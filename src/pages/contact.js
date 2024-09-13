@@ -9,6 +9,7 @@ import vitalityLogo from '../assets/provider-vitality-logo.svg'
 import linkIcon from '../assets/link.svg'
 import wpaLogo from '../assets/provider-wpa-logo.png'
 import londonClinic from '../assets/london-clinic.jpg'
+import kingsPrivate from '../assets/kings-private.jpg'
 import underground from '../assets/underground.svg'
 import tfl from '../assets/tfl.svg'
 import '../styles/global.css'
@@ -364,7 +365,12 @@ class Contact extends React.Component {
             <div className="container">
               <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
                 <div>
-                  <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                  <img
+                    src={kingsPrivate}
+                    alt="Kings Private"
+                    className="mr-2 rounded-full h-30 aspect-square"
+                  />
+                  <h2 className="mt-6 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
                     King's Private
                   </h2>
 

@@ -42,9 +42,9 @@ class About extends React.Component {
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mb-2">Meet Mr Neffendorf </h1>
-                  <p className="mb-4 text-sm font-bold text-gray-800 md:text-lg md:mb-2">
-                    MA (Cantab) MBBS (Lond) MD (Res) FRCOphth{' '}
-                  </p>
+                  <h2 className="mb-4 tracking-wide uppercase sm:text-lg font-md">
+                    MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
+                  </h2>
                   <div className="grid grid-cols-1 gap-2 py-2">
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -464,10 +464,10 @@ class About extends React.Component {
                     alt="Mr James E. Neffendorf professional headshot leaning against table smiling"
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
-                    <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
+                    <p className="mr-2 text-base font-bold text-gray-800">
                       Rated Excellent
                     </p>
-                    <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
+                    <p className="mr-2 text-base">4.94 out of 5</p>
                     <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
                       <img
                         src={doctifyLogo}
@@ -534,7 +534,7 @@ class About extends React.Component {
             </div>
           </section>
           {/* Call To Action */}
-          <section className="relative border-t px-[5%] lg:px-[5%] overflow-hidden fade-in">
+          <section className="relative border-t px-[5%] lg:px-[5%] fade-in">
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"

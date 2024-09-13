@@ -74,10 +74,10 @@ class EyeCareTemplate extends React.Component {
                     alt="Featured image"
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
-                    <p className="mr-2 text-xs font-bold text-gray-800 md:text-sm">
+                    <p className="mr-2 text-base font-bold text-gray-800">
                       Excellent
                     </p>
-                    <p className="mr-2 text-xs md:text-sm">4.94 out of 5</p>
+                    <p className="mr-2 text-base">4.94 out of 5</p>
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-12"
