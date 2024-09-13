@@ -106,11 +106,6 @@ export const Publications = () => {
           {articles.map((article, index) => (
             <div className="pb-4 mb-8 border-b" key={index}>
               <div className="flex items-center">
-                <img
-                  src={book}
-                  alt="Hub Image"
-                  className="h-5 mt-1 mr-1 text-gray-600"
-                />
                 <p className="mt-1 font-semibold">{`${new Date(article.date).toLocaleString('default', { month: 'long' })} ${new Date(article.date).getFullYear()}`}</p>
               </div>
               <h3 className="mt-2 mb-2 font-bold text-gray-800 md:text-3xl lg:text-2xl">
