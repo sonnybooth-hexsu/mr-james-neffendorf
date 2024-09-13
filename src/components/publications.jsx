@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import book from '../assets/book.svg'
 
 export const Publications = () => {
@@ -9,7 +10,10 @@ export const Publications = () => {
         nodes {
           title
           summary {
-            summary
+            raw
+          }
+          summaryImage {
+            url
           }
           contributors
           date
@@ -17,6 +21,10 @@ export const Publications = () => {
       }
     }
   `)
+
+  const options = {
+    preserveWhitespace: true,
+  }
 
   const fullList = publicationsData.allContentfulResearchPublication.nodes
 
@@ -109,8 +117,19 @@ export const Publications = () => {
                 {article.title}
               </h3>
 
-              {article.summary.summary && (
-                <p className="text-gray-600">{article.summary.summary}</p>
+              {article?.summaryImage?.url && (
+                <img src={article.summaryImage.url} />
+              )}
+
+              {article?.summary?.raw && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: documentToHtmlString(
+                      JSON.parse(article.summary.raw),
+                      options
+                    ),
+                  }}
+                />
               )}
               <p className="mt-2 font-semibold text-gray-600">
                 {article.contributors}
