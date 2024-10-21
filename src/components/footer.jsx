@@ -29,7 +29,7 @@ const Footer = () => (
               <a
                 href="https://www.llclinics.co.uk"
                 target="_blank"
-                className="ml-2 font-semibold text-white underline"
+                className="ml-2 font-semibold text-white underline" rel="noreferrer"
               >
                 London Lauriston Clinic
               </a>
@@ -70,7 +70,7 @@ const Footer = () => (
               href="tel:1800 123 4567"
               className="mb-1 text-gray-100 focus-visible:outline-none hover:text-blue-500 hover:decoration-blue-500"
             >
-              +44 7849 425743
+              +44 20 4600 8699
             </a>
             <a
               href="mailto:clinic@mrjamesneffendorf.com"
