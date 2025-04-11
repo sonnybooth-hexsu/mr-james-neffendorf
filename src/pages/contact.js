@@ -13,6 +13,7 @@ import kingsPrivate from '../assets/kings-private.jpg'
 import underground from '../assets/underground.svg'
 import tfl from '../assets/tfl.svg'
 import '../styles/global.css'
+import Seo from '../components/seo'
 
 class Contact extends React.Component {
   componentDidMount() {
@@ -39,6 +40,7 @@ class Contact extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title='Contact Mr James Neffendorf | Eye Specialist in London' description="Get in touch with Mr James Neffendorf, London's leading eye specialist. Book consultations, ask questions, or enquire about treatments and procedures." />
         <div className="main-content">
           {/* Hero */}
           <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">

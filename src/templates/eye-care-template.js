@@ -5,6 +5,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import grade from '../assets/grade.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import Layout from '../components/layout'
+import Seo from '../components/seo'
 import {
   Accordion,
   AccordionContent,
@@ -23,6 +24,7 @@ class EyeCareTemplate extends React.Component {
 
     return (
       <Layout>
+        <Seo title={post.seoTitle} description={post.metaDescription} />
         <div className="main-content">
           <section className="px-[5%] border-b py-16 md:py-24 lg:py-28">
             <div className="container">
@@ -298,6 +300,8 @@ export const pageQuery = graphql`
           content
         }
       }
+      seoTitle
+      metaDescription
     }
   }
 `

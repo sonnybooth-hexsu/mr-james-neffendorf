@@ -9,6 +9,7 @@ import doctifyLogo from '../assets/doctify-logo.svg'
 import iconTrophy from '../assets/icon-trophy.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import iconCheckmarkSmall from '../assets/check_small.svg'
+import Seo from '../components/seo'
 
 class About extends React.Component {
   componentDidMount() {
@@ -35,6 +36,7 @@ class About extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title='Mr James Neffendorf | Expert Eye Surgeon & Specialist London' description='Mr James Neffendorf provides specialist eye care in London, offering advanced treatments for cataracts, retinal conditions, and personalised vision care.' />
         {/* Hero */}
         <div className="main-content">
           <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">
@@ -538,6 +540,7 @@ class About extends React.Component {
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
+              alt="Visual brand element in the shape of an eye"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">

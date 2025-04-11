@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 
 import '../styles/variables.css'
 import '../styles/global.css'
-import Seo from './seo'
 import Navigation from './navigation'
 import Footer from './footer'
 
@@ -11,7 +10,6 @@ export const Layout = (props) => {
 
   return (
     <>
-      <Seo />
       <Navigation />
       <main>{props.children}</main>
       <Footer />

@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 const Terms = () => {
   return (
     <Layout>
+      <Seo title='Terms & Conditions of Use | Mr James Neffendorf Eye Care' description='Read the terms and conditions for using Mr James Neffendorf’s website. Understand your rights, responsibilities, and our commitment to clear communication.' />
       <div className="main-content">
         <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20">
           <div className="container">

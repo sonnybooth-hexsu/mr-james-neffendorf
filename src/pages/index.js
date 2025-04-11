@@ -570,6 +570,7 @@ class RootIndex extends React.Component {
             <img
               src={swoosh2}
               className="absolute inset-0 object-cover w-full h-full"
+              alt="Visual brand element in the shape of an eye"
             />
             <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
               <div className="flex justify-center mt-4">
