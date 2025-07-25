@@ -8,6 +8,7 @@ import cignaLogo from '../assets/provider-cigna-logo.jpg'
 import vitalityLogo from '../assets/provider-vitality-logo.svg'
 import linkIcon from '../assets/link.svg'
 import wpaLogo from '../assets/provider-wpa-logo.png'
+import theLondonClinic from '../assets/the-london-clinic-logo.png'
 import londonClinic from '../assets/london-clinic.jpg'
 import kingsPrivate from '../assets/kings-private.jpg'
 import underground from '../assets/underground.svg'
@@ -427,6 +428,81 @@ class Contact extends React.Component {
                 <div>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.2561361745863!2d-0.09353648422951412!3d51.46832861949721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876033b8230b20b%3A0x9e65f50829e4e35!2sKing&#39;s%20College%20Hospital!5e0!3m2!1sen!2suk!4v1691771847316!5m2!1sen!2suk"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Google Map"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="px-[5%] border-t py-16 md:py-24 lg:py-28">
+            <div className="container">
+              <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+                <div>
+                  <img
+                    src={theLondonClinic}
+                    alt="The london clinic"
+                    className="mr-2 rounded-full h-30 aspect-square"
+                  />
+                  <h2 className="mt-6 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                    The London Clinic
+                  </h2>
+
+                  <div className="mt-4 space-y-4">
+                    <div className="flex items-center gap-2">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 24 24"
+                        className="flex-none size-6"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+                        <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+                      </svg>
+                      <p className="">
+                        The London Clinic Eye Centre 119 Harley Street, London W1G 6AU
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={tfl}
+                        className="object-cover h-5 rounded-xl"
+                        alt="TFL icon"
+                      />
+                      <p className="">
+                        <span className="font-medium text-gray-900">
+                          Nearest station:
+                        </span>{' '}
+                        Regent's Park, 5 min walk. Easily accessible from multiple nearby train stations.
+                      </p>
+                    </div>
+                    <div className="plan-journey">
+                      <button
+                        className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium text-white transition-colors border rounded-full shadow-md bg-jamesBlue border-jamesBlue btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:bg-blue-700 hover:border-blue-700"
+                        onClick={() =>
+                          window.open(
+                            'https://www.google.com/maps/dir/?api=1&destination=London+W1G+6AU'
+                          )
+                        }
+                      >
+                        Plan my journey
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.532878836176!2d-0.15109932337904486!3d51.521785371816634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad0e2ea3e69%3A0x2535aad5b5ab3e50!2sThe%20London%20Clinic%20Eye%20Centre!5e0!3m2!1sen!2suk!4v1753455945868!5m2!1sen!2suk"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
