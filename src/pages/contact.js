@@ -396,18 +396,33 @@ class Contact extends React.Component {
                         The London Clinic Eye Centre 119 Harley Street, London W1G 6AU
                       </p>
                     </div>
-
+                    <div className="flex items-center gap-2">
+                      <img src={linkIcon} alt="link" />
+                      <a
+                        href="https://www.thelondonclinic.co.uk/"
+                        target="_blank"
+                        className="text-gray-600 "
+                      >
+                        www.thelondonclinic.co.uk
+                      </a>
+                    </div>
+                    <div>
+                      <p className="pt-8 font-bold text-gray-900 ">
+                        {' '}
+                        Easily accessible from multiple nearby train stations
+                      </p>
+                    </div>
                     <div className="flex items-center gap-2">
                       <img
-                        src={tfl}
-                        className="object-cover h-5 rounded-xl"
-                        alt="TFL icon"
+                        src={underground}
+                        className="object-cover rounded-xl"
+                        alt="Underground icon"
                       />
                       <p className="">
                         <span className="font-medium text-gray-900">
-                          Nearest station:
+                          Nearest tube station:
                         </span>{' '}
-                        Regent's Park, 5 min walk. Easily accessible from multiple nearby train stations.
+                        Regent's Park, 5 min walk
                       </p>
                     </div>
                     <div className="plan-journey">
