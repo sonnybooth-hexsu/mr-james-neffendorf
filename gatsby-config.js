@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful Starter',
     description: 'Official Contentful Gatsby Starter',
+    siteUrl: `https://mrjamesneffendorf.com/`,
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -13,6 +14,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
+    `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-source-contentful',
       options: {
