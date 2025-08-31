@@ -36,24 +36,24 @@ const accordionData = [
   {
     title: 'Cataract Surgery',
     content: 'Complex and routine cataract surgery',
-    link: '/cataract/cataract-1/',
+    link: '/cataract/treatment-and-services/',
   },
   {
     title: 'Retina Conditions and Surgery',
     content:
       'Age-related Macular Degeneration (AMD), Epiretinal Membrane, Macular Hole, Diabetic Eye Disease, Retinal Detachment.',
-    link: '/retina/retina-1/',
+    link: '/retina/treatment-and-services/',
   },
   {
     title: 'Emergency Eye Care',
     content: 'Red Eye, Painful Eye, Loss of Vision.',
-    link: '/eye-care/eye-care-1/',
+    link: '/eye-care/treatment-and-services/',
   },
   {
     title: 'General Eye Care',
     content:
       'Conditions such as Dry Eye, Blepharitis,Chalazion (stye) and Glaucoma.',
-    link: '/eye-care/eye-care-1/',
+    link: '/eye-care/treatment-and-services/',
   },
 ]
 

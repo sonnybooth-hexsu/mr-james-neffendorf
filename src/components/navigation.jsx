@@ -79,7 +79,7 @@ export const Navigation = () => {
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
-              href="/cataract/cataract-1/"
+              href="/cataract/treatment-and-services/"
               className={getLinkClass('/cataract/cataract-1/')}
             >
               Cataract
@@ -87,7 +87,7 @@ export const Navigation = () => {
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
-              href="/retina/retina-1/"
+              href="/retina/treatment-and-services/"
               className={getLinkClass('/retina/retina-1/')}
             >
               Retina
@@ -95,7 +95,7 @@ export const Navigation = () => {
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a
-              href="/eye-care/eye-care-1/"
+              href="/eye-care/treatment-and-services/"
               className={getLinkClass('/eye-care/eye-conditions/')}
             >
               Eye Conditions
