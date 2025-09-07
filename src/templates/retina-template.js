@@ -3,15 +3,10 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import grade from '../assets/grade.svg'
+import arrow from '../assets/arrow.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@relume_io/relume-ui'
 
 class RetinaTemplate extends React.Component {
   render() {
@@ -119,29 +114,27 @@ class RetinaTemplate extends React.Component {
                     )}
                     {post.solutionsAccordion && (
                       <div className="mb-8">
-                        <Accordion type="multiple">
                           {post.solutionsAccordion.items.map(
                             ({ title, content }, id) => (
-                              <AccordionItem
-                                key={id}
-                                value={`solution${id}`}
-                                className={id === 0 ? 'border-top-none' : ''}
-                              >
-                                <AccordionTrigger className="text-left cursor-pointer text-lg md:text-lg p-4 min-h-[48px] flex items-center justify-between">
-                                  {title}
-                                </AccordionTrigger>
-                                <AccordionContent className="p-4">
-                                  <div
-                                    className="text-gray-600"
+                              <details key={id}>
+                                <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                                  <h2 className="text-lg font-bold"> {title}</h2>
+                                  <img
+                                    src={arrow}
+                                    alt="arrow"
+                                    width={32}
+                                    height={32}
+                                  />
+                                </summary>
+                                 <div
+                                    className="px-4 pt-8 pb-6 text-gray-600"
                                     dangerouslySetInnerHTML={{
                                       __html: content,
                                     }}
                                   />
-                                </AccordionContent>
-                              </AccordionItem>
+                              </details>
                             )
                           )}
-                        </Accordion>
                       </div>
                     )}
                     {post.faqs && (
@@ -150,27 +143,25 @@ class RetinaTemplate extends React.Component {
                           Frequently Asked Questions
                         </h2>
                         <div className="mb-8">
-                          <Accordion type="multiple">
                             {post.faqs.items.map(({ title, content }, id) => (
-                              <AccordionItem
-                                key={id}
-                                value={`solution${id}`}
-                                className={id === 0 ? 'border-top-none' : ''}
-                              >
-                                <AccordionTrigger className="text-left cursor-pointer text-lg md:text-lg  p-4 min-h-[48px] flex items-center justify-between">
-                                  {title}
-                                </AccordionTrigger>
-                                <AccordionContent className="p-4">
-                                  <div
-                                    className="text-gray-600"
+                              <details key={id}>
+                                <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                                  <h2 className="text-lg font-bold"> {title}</h2>
+                                  <img
+                                    src={arrow}
+                                    alt="arrow"
+                                    width={32}
+                                    height={32}
+                                  />
+                                </summary>
+                                 <div
+                                    className="px-4 pt-8 pb-6 text-gray-600"
                                     dangerouslySetInnerHTML={{
                                       __html: content,
                                     }}
                                   />
-                                </AccordionContent>
-                              </AccordionItem>
+                              </details>
                             ))}
-                          </Accordion>
                         </div>
                       </>
                     )}
