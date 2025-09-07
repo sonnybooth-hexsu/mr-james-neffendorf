@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful Starter',
     description: 'Official Contentful Gatsby Starter',
-    siteUrl: `https://mrjamesneffendorf.com/`,
+    siteUrl: `https://mrjamesneffendorf.com`,
   },
   plugins: [
     'gatsby-plugin-postcss',
