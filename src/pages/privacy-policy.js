@@ -5,7 +5,10 @@ import Seo from '../components/seo'
 const Privacy = () => {
   return (
     <Layout>
-      <Seo title='Privacy Policy | Mr James Neffendorf Eye Care, London' description='Read the privacy policy for Mr James Neffendorf Eye Care. Learn how your personal information is handled, protected, and respected in full compliance.' />
+      <Seo
+        title="Privacy Policy | Mr James Neffendorf Eye Care, London"
+        description="Read the privacy policy for Mr James Neffendorf Eye Care. Learn how your personal information is handled, protected, and respected in full compliance."
+      />
       <div className="main-content">
         <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20">
           <div className="container">

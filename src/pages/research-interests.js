@@ -128,7 +128,10 @@ class ResearchInterests extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title='Latest News & Updates | Mr James Neffendorf Eye Care' description='Stay informed with the latest news, updates, and insights on eye health, treatments, and innovations from London eye specialist Mr James Neffendorf.' />
+        <Seo
+          title="Latest News & Updates | Mr James Neffendorf Eye Care"
+          description="Stay informed with the latest news, updates, and insights on eye health, treatments, and innovations from London eye specialist Mr James Neffendorf."
+        />
         <div className="main-content">
           <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b header-gradient fade-in overflow-hidden">
             <div className="absolute inset-0 bg-center bg-cover opacity-10"></div>

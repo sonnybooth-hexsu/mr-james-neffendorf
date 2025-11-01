@@ -4,9 +4,15 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { useLocation } from '@reach/router'
 
 const Seo = ({ description = '', title = '' }) => {
-  const { site } = useStaticQuery(graphql`{
-    site { siteMetadata { siteUrl } }
-  }`)
+  const { site } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
   const { pathname } = useLocation()
   const canonical = `${site.siteMetadata.siteUrl}${pathname}`
 

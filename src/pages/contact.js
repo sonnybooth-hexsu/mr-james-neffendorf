@@ -41,7 +41,10 @@ class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title='Contact Mr James Neffendorf | Eye Specialist in London' description="Get in touch with Mr James Neffendorf, London's leading eye specialist. Book consultations, ask questions, or enquire about treatments and procedures." />
+        <Seo
+          title="Contact Mr James Neffendorf | Eye Specialist in London"
+          description="Get in touch with Mr James Neffendorf, London's leading eye specialist. Book consultations, ask questions, or enquire about treatments and procedures."
+        />
         <div className="main-content">
           {/* Hero */}
           <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">
@@ -393,7 +396,8 @@ class Contact extends React.Component {
                         <path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
                       </svg>
                       <p className="">
-                        The London Clinic Eye Centre 119 Harley Street, London W1G 6AU
+                        The London Clinic Eye Centre 119 Harley Street, London
+                        W1G 6AU
                       </p>
                     </div>
                     <div className="flex items-center gap-2">

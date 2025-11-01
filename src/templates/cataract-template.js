@@ -113,27 +113,27 @@ class CataractTemplate extends React.Component {
                     )}
                     {post.solutionsAccordion && (
                       <div className="mb-8">
-                          {post.solutionsAccordion.items.map(
-                            ({ title, content }, id) => (
-                              <details key={id}>
-                                <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
-                                  <h2 className="text-lg font-bold"> {title}</h2>
-                                  <img
-                                    src={arrow}
-                                    alt="arrow"
-                                    width={32}
-                                    height={32}
-                                  />
-                                </summary>
-                                  <div
-                                    className="px-0 pt-8 pb-6 text-gray-600"
-                                    dangerouslySetInnerHTML={{
-                                      __html: content,
-                                    }}
-                                  />
-                              </details>
-                            )
-                          )}
+                        {post.solutionsAccordion.items.map(
+                          ({ title, content }, id) => (
+                            <details key={id}>
+                              <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                                <h2 className="text-lg font-bold"> {title}</h2>
+                                <img
+                                  src={arrow}
+                                  alt="arrow"
+                                  width={32}
+                                  height={32}
+                                />
+                              </summary>
+                              <div
+                                className="px-0 pt-8 pb-6 text-gray-600"
+                                dangerouslySetInnerHTML={{
+                                  __html: content,
+                                }}
+                              />
+                            </details>
+                          )
+                        )}
                       </div>
                     )}
                     {post.faqs && (
@@ -142,25 +142,25 @@ class CataractTemplate extends React.Component {
                           Frequently Asked Questions
                         </h2>
                         <div className="mb-8">
-                            {post.faqs.items.map(({ title, content }, id) => (
-                              <details key={id}>
-                                <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
-                                  <h2 className="text-lg font-bold"> {title}</h2>
-                                  <img
-                                    src={arrow}
-                                    alt="arrow"
-                                    width={32}
-                                    height={32}
-                                  />
-                                </summary>
-                                  <div
-                                    className="px-0 pt-8 pb-6 text-gray-600"
-                                    dangerouslySetInnerHTML={{
-                                      __html: content,
-                                    }}
-                                  />
-                              </details>
-                            ))}
+                          {post.faqs.items.map(({ title, content }, id) => (
+                            <details key={id}>
+                              <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                                <h2 className="text-lg font-bold"> {title}</h2>
+                                <img
+                                  src={arrow}
+                                  alt="arrow"
+                                  width={32}
+                                  height={32}
+                                />
+                              </summary>
+                              <div
+                                className="px-0 pt-8 pb-6 text-gray-600"
+                                dangerouslySetInnerHTML={{
+                                  __html: content,
+                                }}
+                              />
+                            </details>
+                          ))}
                         </div>
                       </>
                     )}

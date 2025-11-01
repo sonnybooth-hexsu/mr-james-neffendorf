@@ -29,7 +29,8 @@ const Footer = () => (
               <a
                 href="https://www.llclinics.co.uk"
                 target="_blank"
-                className="ml-2 font-semibold text-white underline" rel="noreferrer"
+                className="ml-2 font-semibold text-white underline"
+                rel="noreferrer"
               >
                 London Lauriston Clinic
               </a>
@@ -57,7 +58,7 @@ const Footer = () => (
               </p>
             </div>
             <p className="ml-8 text-gray-50">
-            The London Clinic Eye Centre 119 Harley Street, London W1G 6AU
+              The London Clinic Eye Centre 119 Harley Street, London W1G 6AU
             </p>
           </div>
           <div className="mt-6">

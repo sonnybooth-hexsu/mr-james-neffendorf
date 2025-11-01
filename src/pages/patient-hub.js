@@ -37,7 +37,10 @@ class PatientHub extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title='Patient Hub | Resources & Support | Mr James Neffendorf' description="Explore helpful patient resources, treatment guidance, and support information from Mr James Neffendorf, London's trusted expert in ophthalmic care." />
+        <Seo
+          title="Patient Hub | Resources & Support | Mr James Neffendorf"
+          description="Explore helpful patient resources, treatment guidance, and support information from Mr James Neffendorf, London's trusted expert in ophthalmic care."
+        />
         {/* Hero */}
         <div className="main-content">
           <section className="relative px-[5%] bg-jamesBlue py-16 md:py-20 fade-in overflow-hidden">

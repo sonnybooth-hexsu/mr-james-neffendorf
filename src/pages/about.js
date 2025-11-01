@@ -36,7 +36,10 @@ class About extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title='Mr James Neffendorf | Expert Eye Surgeon & Specialist London' description='Mr James Neffendorf provides specialist eye care in London, offering advanced treatments for cataracts, retinal conditions, and personalised vision care.' />
+        <Seo
+          title="Mr James Neffendorf | Expert Eye Surgeon & Specialist London"
+          description="Mr James Neffendorf provides specialist eye care in London, offering advanced treatments for cataracts, retinal conditions, and personalised vision care."
+        />
         {/* Hero */}
         <div className="main-content">
           <section className="px-[5%] border-b bg-gray-50 py-16 md:py-20 fade-in">

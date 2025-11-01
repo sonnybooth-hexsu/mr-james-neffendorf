@@ -115,6 +115,11 @@ export const Navigation = () => {
             </a>
           </div>
           <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
+            <a href="/blog" className={getLinkClass('/blog/')}>
+              Blog
+            </a>
+          </div>
+          <div className="font-medium tracking-wider first:pt-4 lg:first:pt-0 lg:flex lg:items-center lg:justify-center">
             <a href="/contact" className={getLinkClass('/contact/')}>
               Contact
             </a>

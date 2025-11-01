@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           slug
         }
-      } 
+      }
     }
   `)
 
@@ -63,7 +63,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-   if (blog.length > 0) {
+  if (blog.length > 0) {
     blog.forEach(async (post) => {
       createPage({
         path: `/blog/${post.slug}/`,
