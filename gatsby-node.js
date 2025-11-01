@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const eyeCarePost = path.resolve('./src/templates/eye-care-template.js')
   const retinaPost = path.resolve('./src/templates/retina-template.js')
   const cataractPost = path.resolve('./src/templates/cataract-template.js')
+  const blogPost = path.resolve('./src/templates/blog-template.js')
 
   const result = await graphql(`
     {
@@ -28,6 +29,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           slug
         }
       }
+      allContentfulBlogPage {
+        nodes {
+          id
+          slug
+        }
+      } 
     }
   `)
 
@@ -42,12 +49,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const eyeCare = result.data.allContentfulEyeCarePage.nodes
   const retina = result.data.allContentfulRetinaPage.nodes
   const cataract = result.data.allContentfulCataractPage.nodes
+  const blog = result.data.allContentfulBlogPage.nodes
 
   if (eyeCare.length > 0) {
     eyeCare.forEach(async (post) => {
       createPage({
         path: `/eye-care/${post.slug}/`,
         component: eyeCarePost,
+        context: {
+          id: post.id,
+        },
+      })
+    })
+  }
+
+   if (blog.length > 0) {
+    blog.forEach(async (post) => {
+      createPage({
+        path: `/blog/${post.slug}/`,
+        component: blogPost,
         context: {
           id: post.id,
         },
