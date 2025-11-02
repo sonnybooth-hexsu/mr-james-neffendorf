@@ -60,11 +60,11 @@ export const BlogPosts = () => {
                     className="object-cover border border-solid rounded-full border-grey-100 inset-shadow-sm size-12 min-h-12 min-w-12"
                   />
                 </div>
-                <div className="flex items-center gap-1 text-base text-gray-700">
-                  <h6 className="text-base font-normal text-gray-900">
+
+                <div className="flex flex-col gap-1 text-base text-gray-700">
+                  <h6 className="text-base font-medium text-gray-900">
                     {item.author}
                   </h6>
-                  <span className="text-gray-400">•</span>
                   <p>{moment(item.authDate).format('DD MMM YYYY')}</p>
                 </div>
               </div>
