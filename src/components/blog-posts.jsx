@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import moment from 'moment'
+
 export const BlogPosts = () => {
   const blogs = useStaticQuery(graphql`
     query {
@@ -24,42 +25,51 @@ export const BlogPosts = () => {
 
   return (
     <div className="container">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-y-12 lg:grid-cols-3">
+      <div className="grid items-stretch grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-y-12 lg:grid-cols-3">
         {blogs.allContentfulBlogPage.nodes.map((item, index) => (
-          <div key={index}>
+          <article key={index} className="flex flex-col h-full">
+            {/* Media */}
             <a href={item.slug} className="inline-block w-full max-w-full mb-6">
-              <div className="w-full overflow-hidden">
+              <div className="w-full overflow-hidden rounded-lg">
                 <img
                   src={item.banner.url}
-                  className="aspect-[3/2] rounded-lg size-full object-cover"
+                  alt=""
+                  className="aspect-[3/2] size-full object-cover"
                 />
               </div>
             </a>
-            <a
-              href={item.slug}
-              className="inline-block max-w-full mb-2 mr-4 text-sm font-semibold tag"
-            >
-              {item.category}
-            </a>
-            <a href={item.slug} className="block max-w-full mb-2">
-              <h2 className="text-3xl font-bold">{item.heading}</h2>
-            </a>
-            <div className="flex items-center mt-6">
-              <div className="mr-4 shrink-0">
-                <img
-                  src={item.authImage.url}
-                  className="object-cover rounded-full size-12 min-h-12 min-w-12"
-                />
-              </div>
+
+            {/* Body (flex-1 keeps the footer pinned) */}
+            <div className="flex-1">
+              <a href={item.slug} className="inline-block max-w-full tag">
+                {item.category}
+              </a>
+
+              <a href={item.slug} className="block max-w-full mb-2">
+                <h2 className="mt-2 text-3xl font-bold">{item.heading}</h2>
+              </a>
+            </div>
+
+            {/* Footer pinned to bottom */}
+            <div className="flex items-center pt-6 mt-auto">
               <div className="flex items-center">
-                <h6 className="text-base font-semibold">{item.author}</h6>
-                <span className="mx-2">•</span>
-                <p className="text-base">
-                  {moment(item.authDate).format('DD MMM YYYY')}
-                </p>
+                <div className="mr-4 shrink-0">
+                  <img
+                    src={item.authImage.url}
+                    alt={item.author}
+                    className="object-cover border border-solid rounded-full border-grey-100 inset-shadow-sm size-12 min-h-12 min-w-12"
+                  />
+                </div>
+                <div className="flex items-center gap-1 text-base text-gray-700">
+                  <h6 className="text-base font-normal text-gray-900">
+                    {item.author}
+                  </h6>
+                  <span className="text-gray-400">•</span>
+                  <p>{moment(item.authDate).format('DD MMM YYYY')}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

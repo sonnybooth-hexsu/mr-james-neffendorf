@@ -60,6 +60,8 @@ export const Publications = () => {
             <ul className="hidden space-y-4 font-bold lg:block">
               {[
                 'View All',
+                '2026',
+                '2025',
                 '2024',
                 '2023',
                 '2022',

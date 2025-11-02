@@ -38,11 +38,11 @@ class Blog extends React.Component {
           description="Stay informed with the latest news, updates, and insights on eye health, treatments, and innovations from London eye specialist Mr James Neffendorf."
         />
         <div className="main-content">
-          <header className="relative px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b header-gradient fade-in overflow-hidden">
+          <header className="px-[5%] bg-gray-50 py-16 md:py-24 lg:py-28 border-b header-gradient fade-in overflow-hidden">
             <div className="absolute inset-0 bg-center bg-cover opacity-10"></div>
             <div className="container relative z-10 text-left">
               <div className="lg:flex lg:items-baseline">
-                <h1 className="my-4 text-5xl tracking-wide text-gray-800 lg:w-1/2 fade-in">
+                <h1 className="my-4 text-6xl tracking-wide text-gray-800 md:text-7xl lg:text-8xl lg:w-1/2 fade-in">
                   Blog
                 </h1>
                 <p className="mb-4 text-gray-600 opacity-75 lg:w-1/2 md:text-lg lg:text-lg fade-in lg:ml-4">

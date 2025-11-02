@@ -494,13 +494,17 @@ h5 {
 }
 
 .tag {
-  background-color: #1C58A6;
-  color: white; /* text black */
+  @apply bg-blue-100;
+  @apply text-blue-600;
+  @apply  border-blue-500;
+  @apply border;
+  @apply border-solid;
   display: inline-block;
-  padding: 2px 12px; /* double the padding horizontally */
+  padding: 4px 10px; /* double the padding horizontally */
   border-radius: 10px; /* rounded-full */
   font-size: 1rem; /* extra small font size */
-  font-weight: semibold;
+  font-weight: light;
+  @apply leading-none;
 }
 
 .top-minus-full {

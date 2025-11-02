@@ -472,7 +472,7 @@ class About extends React.Component {
                     <p className="mr-2 text-base font-bold text-gray-800">
                       Rated Excellent
                     </p>
-                    <p className="mr-2 text-base">4.94 out of 5</p>
+                    <p className="mr-2 text-base">4.96 out of 5</p>
                     <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
                       <img
                         src={doctifyLogo}

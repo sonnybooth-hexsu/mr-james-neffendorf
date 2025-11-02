@@ -74,7 +74,7 @@ class EyeCareTemplate extends React.Component {
                     <p className="mr-2 text-base font-bold text-gray-800">
                       Excellent
                     </p>
-                    <p className="mr-2 text-base">4.94 out of 5</p>
+                    <p className="mr-2 text-base">4.96 out of 5</p>
                     <img
                       src={doctifyLogo}
                       className="ml-2 max-h-12"
