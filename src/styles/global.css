@@ -494,14 +494,13 @@ h5 {
 }
 
 .tag {
-  background-color: #0092D0;
+  background-color: #1C58A6;
   color: white; /* text black */
   display: inline-block;
-  padding: 0.25rem 1rem; /* double the padding horizontally */
-  border-radius: 9999px; /* rounded-full */
-  font-size: 0.75rem; /* extra small font size */
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 2px 12px; /* double the padding horizontally */
+  border-radius: 10px; /* rounded-full */
+  font-size: 1rem; /* extra small font size */
+  font-weight: semibold;
 }
 
 .top-minus-full {
@@ -585,4 +584,15 @@ h5 {
     width: 100%;
     left: 0;
   }
+}
+
+/* Global styles for content rendered via documentToHtmlString */
+.prose-content img {
+  @apply rounded-3xl; /* adjust radius to taste (e.g. 0.5rem or 50% for circular) */
+}
+
+/* Reduce spacing on H2s within this content */
+.prose-content h2 {
+  margin-top: 3rem; /* reduce top margin */
+  margin-bottom: 0.75rem; /* reduce bottom margin */
 }

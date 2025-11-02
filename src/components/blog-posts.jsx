@@ -31,18 +31,18 @@ export const BlogPosts = () => {
               <div className="w-full overflow-hidden">
                 <img
                   src={item.banner.url}
-                  className="aspect-[3/2] size-full object-cover"
+                  className="aspect-[3/2] rounded-lg size-full object-cover"
                 />
               </div>
             </a>
             <a
               href={item.slug}
-              className="inline-block max-w-full mb-2 mr-4 text-sm font-semibold"
+              className="inline-block max-w-full mb-2 mr-4 text-sm font-semibold tag"
             >
               {item.category}
             </a>
             <a href={item.slug} className="block max-w-full mb-2">
-              <h5 className="text-xl font-bold md:text-2xl">{item.heading}</h5>
+              <h2 className="text-3xl font-bold">{item.heading}</h2>
             </a>
             <div className="flex items-center mt-6">
               <div className="mr-4 shrink-0">
@@ -52,9 +52,9 @@ export const BlogPosts = () => {
                 />
               </div>
               <div className="flex items-center">
-                <h6 className="text-sm font-semibold">{item.author}</h6>
+                <h6 className="text-base font-semibold">{item.author}</h6>
                 <span className="mx-2">•</span>
-                <p className="text-sm">
+                <p className="text-base">
                   {moment(item.authDate).format('DD MMM YYYY')}
                 </p>
               </div>

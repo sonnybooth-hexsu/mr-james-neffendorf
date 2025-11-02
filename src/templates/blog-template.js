@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import Seo from '../components/seo'
 import moment from 'moment'
+import swoosh2 from '../assets/swoosh-2.svg'
 
 class BlogTemplate extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class BlogTemplate extends React.Component {
               <p className="inline-flex tag items-center gap-1.5">
                 {post.category}
               </p>
-              <h1 className="mt-6 mb-8 text-5xl font-bold md:mb-10 md:text-7xl lg:mb-12 lg:text-8xl">
+              <h1 className="mt-6 mb-8 font-bold text-7xl md:mb-10 md:text-7xl lg:mb-12 lg:text-8xl">
                 {post.heading}
               </h1>
               <div className="flex flex-col items-start justify-between w-full sm:flex-row sm:items-end">
@@ -36,84 +37,57 @@ class BlogTemplate extends React.Component {
                     />
                   </div>
                   <div>
-                    <h6 className="font-semibold">by {post.author}</h6>
+                    <h6 className="font-medium">{post.author}</h6>
                     <div className="flex mt-1">
-                      <p className="text-sm">
+                      <p className="text-base">
                         {moment(post.authDate).format('DD MMM YYYY')}
                       </p>
                       <span className="mx-2">•</span>
-                      <p className="text-sm">{post.readTime} read</p>
+                      <p className="text-base">{post.readTime} read</p>
                     </div>
                   </div>
                 </div>
-                <div className="rt-4 mt-4 grid grid-flow-col grid-cols-[max-content] items-start gap-2">
-                  <a
-                    href="#"
-                    className="rounded-[1.25rem] bg-background-secondary p-1"
-                  >
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 24 24"
-                      className="size-6"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M4.222 19.778a4.983 4.983 0 0 0 3.535 1.462 4.986 4.986 0 0 0 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829a3.007 3.007 0 0 1-4.243 0 3.005 3.005 0 0 1 0-4.243l2.829-2.828-1.414-1.414-2.829 2.828a5.006 5.006 0 0 0 0 7.071zm15.556-8.485a5.008 5.008 0 0 0 0-7.071 5.006 5.006 0 0 0-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829a3.007 3.007 0 0 1 4.243 0 3.005 3.005 0 0 1 0 4.243l-2.829 2.828 1.414 1.414 2.829-2.828z"></path>
-                      <path d="m8.464 16.95-1.415-1.414 8.487-8.486 1.414 1.415z"></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="rounded-[1.25rem] bg-background-secondary p-1"
-                  >
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 24 24"
-                      className="size-6"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
-                    </svg>
-                  </a>
-                </div>
+                <div className="rt-4 mt-4 grid grid-flow-col grid-cols-[max-content] items-start gap-2"></div>
               </div>
             </div>
-            <div className="w-full mx-auto overflow-hidden">
-              <img className="w-full aspect-video" src={post.banner.url} />
+            <div className="w-full overflow-hidden rounded-3xl aspect-w-16 aspect-h-9">
+              <img
+                src={post.banner.url}
+                alt=""
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </section>
-        <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+        <section id="relume" className="px-[5%] pb-16 md:pb-24 lg:pb-28">
           <div className="container">
             <div className="max-w-lg mx-auto">
               <div className="mb-12 prose md:prose-md lg:prose-lg md:mb-20">
                 <div
-                  className="mb-4 text-gray-600"
+                  className="mb-4 text-lg text-gray-700 prose-content"
                   dangerouslySetInnerHTML={{
                     __html: documentToHtmlString(bodyDocument, options),
                   }}
                 />
               </div>
-
-              <div className="h-px my-8 bg-border-primary md:my-12"></div>
-              <div className="flex items-center gap-4">
-                <div>
-                  <img
-                    src={post.authImage.url}
-                    className="object-cover rounded-full size-14"
-                  />
-                </div>
-                <div className="grow">
-                  <p className="font-semibold md:text-md">{post.author}</p>
-                </div>
-              </div>
+            </div>
+          </div>
+        </section>
+        {/* Call To Action */}
+        <section className="relative border-t px-[5%] lg:px-[5%] overflow-hidden fade-in">
+          <img
+            src={swoosh2}
+            className="absolute inset-0 object-cover w-full h-full"
+            alt="Visual brand element in the shape of an eye"
+          />
+          <div className="container relative z-10 flex flex-col items-center justify-center py-20 text-center md:py-28 lg:py-40">
+            <div className="flex justify-center mt-4">
+              <button
+                className="inline-flex items-center justify-center gap-3 px-8 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
+                onClick={() => (window.location.href = '/contact')}
+              >
+                Book a Consultation
+              </button>
             </div>
           </div>
         </section>
