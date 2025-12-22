@@ -21,7 +21,7 @@ class RetinaTemplate extends React.Component {
     return (
       <Layout>
         <Seo title={post.seoTitle} description={post.metaDescription} />
-        <div className="main-content">
+        <div className="main-content cms-page">
           <section className="px-[5%] border-b py-16 md:py-24 lg:py-28">
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 md:grid-cols-2 lg:items-center">
@@ -116,18 +116,19 @@ class RetinaTemplate extends React.Component {
                       <div className="mb-8">
                         {post.solutionsAccordion.items.map(
                           ({ title, content }, id) => (
-                            <details key={id}>
-                              <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                            <details key={id} className="accordion">
+                              <summary className="cursor-pointer text-lg md:text-lg py-6 min-h-[48px] flex items-center justify-between border-b border-gray-500">
                                 <h2 className="text-lg font-bold"> {title}</h2>
                                 <img
                                   src={arrow}
                                   alt="arrow"
                                   width={32}
                                   height={32}
+                                  className="cms-accordion__icon"
                                 />
                               </summary>
                               <div
-                                className="px-4 pt-8 pb-6 text-gray-600"
+                                className="cms-accordion__content"
                                 dangerouslySetInnerHTML={{
                                   __html: content,
                                 }}
@@ -144,18 +145,19 @@ class RetinaTemplate extends React.Component {
                         </h2>
                         <div className="mb-8">
                           {post.faqs.items.map(({ title, content }, id) => (
-                            <details key={id}>
-                              <summary className="cursor-pointer text-lg md:text-lg py-4 min-h-[48px] flex items-center justify-between border-b border-gray-500">
+                            <details key={id} className="accordion">
+                              <summary className="cursor-pointer text-lg md:text-lg py-6 min-h-[48px] flex items-center justify-between border-b border-gray-500">
                                 <h2 className="text-lg font-bold"> {title}</h2>
                                 <img
                                   src={arrow}
                                   alt="arrow"
                                   width={32}
                                   height={32}
+                                  className="cms-accordion__icon"
                                 />
                               </summary>
                               <div
-                                className="px-4 pt-8 pb-6 text-gray-600"
+                                className="pt-4 pb-6 pr-4 text-gray-600"
                                 dangerouslySetInnerHTML={{
                                   __html: content,
                                 }}

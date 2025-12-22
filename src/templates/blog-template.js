@@ -17,7 +17,7 @@ class BlogTemplate extends React.Component {
 
     return (
       <Layout>
-        <div className="main-content">
+        <div className="main-content cms-page">
           <Seo title={post.seoTitle} description={post.metaDescription} />
           <section id="relume" className="px-[5%] py-20 md:py-24 lg:py-28">
             <div className="container">

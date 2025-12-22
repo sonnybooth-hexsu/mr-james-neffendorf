@@ -595,6 +595,87 @@ h5 {
   @apply rounded-3xl; /* adjust radius to taste (e.g. 0.5rem or 50% for circular) */
 }
 
+.cms-page h2,
+.cms-page h3 {
+  @apply mt-12;
+}
+
+.cms-page p {
+  @apply mt-3;
+}
+
+ul {
+  @apply pl-5 list-disc;
+}
+
+ol {
+  @apply pl-5 list-decimal;
+}
+
+.cms-page li p {
+  @apply mt-1;
+}
+
+.cms-page li p {
+  @apply mt-1;
+}
+
+.cms-page summary h2 {
+  margin-top: 0;
+}
+
+details[open] > summary {
+  border-bottom: none;
+}
+
+.cms-accordion__content {
+  padding: 2rem 1rem 1.5rem; /* px-4 pt-8 pb-6 */
+  color: #4b5563; /* gray-600 */
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+details[open] .cms-accordion__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix spacing inside accordion content */
+.cms-accordion__content p {
+  margin-top: 0.5rem;
+}
+
+.cms-accordion__content p:first-child {
+  margin-top: 0;
+}
+
+.cms-accordion__content ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.cms-accordion__content li p {
+  margin-top: 0;
+}
+
+/* Smooth chevron rotation */
+.cms-accordion__icon {
+  transition: transform 200ms ease;
+  transform-origin: center;
+}
+
+details[open] .cms-accordion__icon {
+  transform: rotate(180deg);
+}
+
+details:last-of-type > summary {
+  border-bottom: none;
+}
+
+
+
 /* Reduce spacing on H2s within this content */
 .prose-content h2 {
   margin-top: 3rem; /* reduce top margin */
