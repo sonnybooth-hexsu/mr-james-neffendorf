@@ -20,7 +20,15 @@ import eyeExam from '../assets/excellence-eye.jpg'
 import quoteMark from '../assets/quote-mark.svg'
 import patient from '../assets/patient.jpg'
 import iconCheckmarkSmall from '../assets/check_small.svg'
-import Testimonials from '../components/Testimonials'
+// import Testimonials from '../components/Testimonials'
+
+const DOCTIFY_CONTAINER_ID = '0a40ty6s'
+const DOCTIFY_WIDGET_NAME = 'average-carousel-rating-widget'
+const DOCTIFY_TENANT_ID = 'athena-uk'
+
+const DOCTIFY_IFRAME_SRC = `https://www.doctify.com/wv2/${DOCTIFY_WIDGET_NAME}?containerId=${DOCTIFY_CONTAINER_ID}&dotsArrowsColor=4C5870&language=en&profileType=specialist&slugs=james-neffendorf&tenantId=${DOCTIFY_TENANT_ID}&theme=white&widgetName=${DOCTIFY_WIDGET_NAME}`
+
+const DOCTIFY_SCRIPT_SRC = `https://www.doctify.com/wv2/doctify-widget-autoresize-plugin.js?tenantId=${DOCTIFY_TENANT_ID}&widgetName=${DOCTIFY_WIDGET_NAME}&containerId=${DOCTIFY_CONTAINER_ID}`
 
 const Home = () => (
   <div>
@@ -62,12 +70,16 @@ class AccordionItem extends React.Component {
     const { title, content, isOpen, onClick, link } = this.props
     return (
       <div
-        className={`border-l-8 p-6 transition-all duration-300 ${isOpen ? 'border-jamesBlue' : 'border-gray-300'}`}
+        className={`border-l-8 p-6 transition-all duration-300 ${
+          isOpen ? 'border-jamesBlue' : 'border-gray-300'
+        }`}
         onClick={onClick}
       >
         <h2 className="mb-3 font-bold cursor-pointer">{title}</h2>
         <div
-          className={`overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}
+          className={`overflow-hidden transition-opacity duration-300 ${
+            isOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'
+          }`}
         >
           <p className="text-gray-800 md:text-lg">{content}</p>
           <a href={link} className="block mt-4 text-gray-600 md:text-lg">
@@ -90,6 +102,17 @@ class RootIndex extends React.Component {
   componentDidMount() {
     this.handleScroll()
     window.addEventListener('scroll', this.handleScroll)
+
+    // Inject Doctify autoresize script (client-side only), once
+    const existing = document.querySelector(
+      `script[src="${DOCTIFY_SCRIPT_SRC}"]`
+    )
+    if (!existing) {
+      const script = document.createElement('script')
+      script.src = DOCTIFY_SCRIPT_SRC
+      script.async = true
+      document.body.appendChild(script)
+    }
   }
 
   componentWillUnmount() {
@@ -110,7 +133,7 @@ class RootIndex extends React.Component {
     const parallaxElements = document.querySelectorAll('.parallax')
     parallaxElements.forEach((el) => {
       const scrollPosition = window.scrollY
-      const maxMovement = 20 // Maximum movement in pixels
+      const maxMovement = 20
       const movement = Math.min(scrollPosition * 0.1, maxMovement)
       el.style.transform = `translateY(${movement}px)`
     })
@@ -160,7 +183,7 @@ class RootIndex extends React.Component {
                     </button>
                   </div>
                 </div>
-                {/* right col */}
+
                 <div className="relative">
                   <img
                     src={jamesMain}
@@ -184,7 +207,7 @@ class RootIndex extends React.Component {
                       <img
                         src={doctifyLogo}
                         className="ml-1 max-h-12"
-                        alt="Checkmark icon"
+                        alt="Doctify logo"
                       />
                     </a>
                   </div>
@@ -234,6 +257,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
+
           {/* Professional Affiliations */}
           <section className="px-[8%] lg:px-[5%] py-12 overflow-hidden bg-white md:py-16 lg:py-16 fade-in">
             <div className="container mx-auto">
@@ -253,10 +277,11 @@ class RootIndex extends React.Component {
                       <img
                         src={topDoctors}
                         className="h-10 ml-2"
-                        alt="Placeholder image"
+                        alt="Top Doctors"
                       />
                     </div>
                   </a>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -267,11 +292,12 @@ class RootIndex extends React.Component {
                         <img
                           className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
                           src={rocopth}
-                          alt="Rocopth"
+                          alt="Royal College of Ophthalmologists"
                         />
                       </a>
                     </div>
                   </div>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -282,11 +308,12 @@ class RootIndex extends React.Component {
                         <img
                           className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
                           src={eurina}
-                          alt="Eurina"
+                          alt="Euretina"
                         />
                       </a>
                     </div>
                   </div>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -297,11 +324,12 @@ class RootIndex extends React.Component {
                         <img
                           className="max-h-[2.5rem] md:max-h-7 lg:max-h-7 xl:max-h-10"
                           src={aao}
-                          alt="AAO"
+                          alt="American Academy of Ophthalmology"
                         />
                       </a>
                     </div>
                   </div>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -317,6 +345,7 @@ class RootIndex extends React.Component {
                       </a>
                     </div>
                   </div>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -332,6 +361,7 @@ class RootIndex extends React.Component {
                       </a>
                     </div>
                   </div>
+
                   <div className="flex justify-center">
                     <div className="p-2 lg:p-0">
                       <a
@@ -351,6 +381,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
+
           {/* Benefits */}
           <section className="px-[8%] pt-6 bg-white md:px-[10%] lg:px-[5%] fade-in">
             <div className="container grid items-center justify-between grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
@@ -366,12 +397,13 @@ class RootIndex extends React.Component {
                   <h2 className="font-bold leading-[1.2] mb-4 md:mb-4">
                     Excellence in Personalised Eye Care
                   </h2>
-                  <p className="mb-5 md:mb-4 md:">
+                  <p className="mb-5 md:mb-4">
                     A Cambridge educated surgeon who places high priority on
                     providing bespoke care using the latest technology for his
                     patients. Plays a major role training, teaching and
                     educating the next generation of eye surgeons.
                   </p>
+
                   <div className="grid grid-cols-1 gap-4 py-2 lg:gap-2">
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
@@ -381,8 +413,9 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="">18 academic prizes and awards</p>
+                      <p>18 academic prizes and awards</p>
                     </div>
+
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
                         <img
@@ -391,8 +424,9 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="">39 scientific publications</p>
+                      <p>39 scientific publications</p>
                     </div>
+
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
                         <img
@@ -401,11 +435,12 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="">
+                      <p>
                         Regularly presenting research at international
                         conferences
                       </p>
                     </div>
+
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
                         <img
@@ -414,11 +449,12 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="">
+                      <p>
                         NHS consultant at world-leading King’s College Hospital
                         NHS Foundation Trust.
                       </p>
                     </div>
+
                     <div className="flex self-start">
                       <div className="self-start flex-none mr-2">
                         <img
@@ -427,10 +463,9 @@ class RootIndex extends React.Component {
                           alt="Checkmark icon"
                         />
                       </div>
-                      <p className="">
-                        Examiner for the Royal College of Ophthalmologists
-                      </p>
+                      <p>Examiner for the Royal College of Ophthalmologists</p>
                     </div>
+
                     <div className="grid mt-2 md:gap-2 md:grid-cols-2 md:mt-4 lg:flex lg:space-x-2">
                       <button
                         className="inline-flex items-center justify-center gap-3 px-4 mb-2 font-medium transition-colors border rounded-full shadow-md btn-56 lg:px-12 focus-visible:ring-border-primary whitespace-nowrap ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-jamesBlue bg-jamesBlue text-text-alternative hover:bg-jamesLight hover:border-jamesLight"
@@ -451,58 +486,29 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
-          {/* Patient Testimonials */}
-          <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
+          {/* Doctify Reviews Widget (separate section) */}
+          <section className="px-[8%] md:px-[10%] lg:px-[5%] py-16 md:py-24 lg:py-28 bg-white fade-in">
             <div className="container mx-auto">
-              <div className="flex flex-col mb-12 md:flex-row md:justify-between md:items-center">
-                <div className="lg:w-2/3 lg:pr-12">
-                  <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    Patient Testimonials
-                  </h1>
-                </div>
-                <div className="flex flex-col justify-end lg:flex-row lg:w-full lg:items-center">
-                  <div className="flex flex-row mb-4 mr-4 lg:mb-0">
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark icon"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark icon"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark icon"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark Icon"
-                    />
-                    <img
-                      className="inline-block size-6 reduce-space"
-                      src={grade}
-                      alt="Checkmark icon"
-                    />
-                  </div>
-                  <div className="flex flex-row items-center">
-                    <p className="mr-">4.96 out of 5</p>
-                    <a href="https://www.doctify.com/uk/specialist/james-neffendorf">
-                      <img
-                        src={doctifyLogo}
-                        className="ml-2 max-h-12"
-                        alt="Checkmark icon"
-                      />
-                    </a>
-                  </div>
-                </div>
+              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+                Patient Testimonials
+              </h2>
+              <div className="w-full">
+                <iframe
+                  id={DOCTIFY_CONTAINER_ID}
+                  className="doctify-widget w-full block min-h-[500px] md:min-h-[400px] lg:min-h-[300px] xl:min-h-[300px]"
+                  src={DOCTIFY_IFRAME_SRC}
+                  width="100%"
+                  scrolling="no"
+                  frameBorder="0"
+                  title="Doctify patient ratings"
+                  loading="lazy"
+                >
+                  Browser does not support frames
+                </iframe>
               </div>
-              <Testimonials />
             </div>
           </section>
+
           {/* Services */}
           <header className="relative py-12 md:py-16 lg:py-24 px-[8%] md:px-[10%] lg:px-[5%] fade-in">
             <div className="container">
@@ -523,6 +529,7 @@ class RootIndex extends React.Component {
                 </div>
               </div>
             </div>
+
             <div className="absolute inset-0 -z-10">
               <img
                 src={jamesTreatment}
@@ -534,6 +541,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </header>
+
           {/* Patient Story */}
           <section className="px-[5%] bg-gray-50 lg:px-[5%] py-16 md:py-24 lg:py-28 fade-in">
             <div className="container">
@@ -543,7 +551,7 @@ class RootIndex extends React.Component {
                   <img
                     className="m-2 mb-5 max-h-6 shrink-0"
                     src={quoteMark}
-                    alt="Quotation Mark Icon"
+                    alt="Quotation mark icon"
                   />
                   <blockquote className="text-xl text-gray-800 md:col-span-2 md:text-2xl">
                     ‘I had cataract surgery on both eyes under James’ care. I am
@@ -565,6 +573,7 @@ class RootIndex extends React.Component {
               </div>
             </div>
           </section>
+
           {/* Call To Action */}
           <section className="relative border-t px-[5%] lg:px-[5%] overflow-hidden fade-in">
             <img
