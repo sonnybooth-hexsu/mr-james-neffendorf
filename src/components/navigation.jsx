@@ -39,7 +39,7 @@ export const Navigation = () => {
   }
 
   const getLinkClass = (path) =>
-    `relative block py-3 mx-auto transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
+    `relative block py-2 mx-auto transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
       location.pathname === path
         ? 'text-gray-900 active-link'
         : 'hover:text-gray-900'
