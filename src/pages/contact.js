@@ -51,7 +51,9 @@ class Contact extends React.Component {
             <div className="container">
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <h1 className="mb-2 font-bold">Contact James Neffendorf</h1>
+                  <h1 className="mb-2 font-bold">
+                    Contact Mr James Neffendorf
+                  </h1>
                 </div>
               </div>
             </div>

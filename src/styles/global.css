@@ -343,16 +343,12 @@ h5 {
   top: 12px;
 }
 
-@media (min-width: 1024px) {
-  .menu-icon {
-    display: none;
-  }
+@media (min-width: 992px) {
+  .menu-icon { display: none; }
 }
 
-@media (max-width: 1023px) {
-  .menu-icon {
-    display: flex;
-  }
+@media (max-width: 991px) {
+  .menu-icon { display: flex; }
 }
 
 /* Main content padding adjustment */
