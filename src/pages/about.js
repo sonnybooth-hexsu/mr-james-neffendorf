@@ -47,7 +47,7 @@ class About extends React.Component {
               <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
                 <div>
                   <h1 className="mb-2">Meet Mr Neffendorf </h1>
-                  <h2 className="mb-4 tracking-wide uppercase sm:text-lg font-md">
+                  <h2 className="mb-4 text-xl tracking-wide uppercase font-md">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
                   <div className="grid grid-cols-1 gap-2 py-2">

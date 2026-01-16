@@ -157,7 +157,7 @@ class RootIndex extends React.Component {
                   <h1 className="mt-4 mb-0 font-bold mb:mb-2">
                     Mr James E. Neffendorf
                   </h1>
-                  <h2 className="mb-4 tracking-wide uppercase sm:text-lg font-md">
+                  <h2 className="mb-4 text-xl tracking-wide uppercase font-md">
                     MA (Cantab) MBBS (Lond) MD (Res) FRCOphth
                   </h2>
                   <h2 className="text-lg font-bold tracking-wide text-gray-600 xl:text-lg">
