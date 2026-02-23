@@ -128,19 +128,19 @@ export const Navigation = () => {
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out lg:absolute lg:top-full lg:left-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-lg lg:min-w-[220px] lg:z-50 ${
                     subMenuOpen['retina']
-                      ? 'max-h-40 opacity-100 mt-1 pl-4 lg:pl-0 lg:mt-0 lg:py-2'
+                      ? 'max-h-40 opacity-100 mt-1 pl-4 lg:pl-0 lg:mt-0 lg:py-3'
                       : 'max-h-0 opacity-0 pointer-events-none'
                   }`}
                 >
                   <a
                     href="/retina/retinal-detachment/"
-                    className="block py-3 px-3 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 lg:py-4 lg:px-5 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     Retinal Detachment Surgery
                   </a>
                   <a
                     href="/retina/"
-                    className="block py-3 px-3 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 lg:py-4 lg:px-5 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     All Retinal Services
                   </a>
