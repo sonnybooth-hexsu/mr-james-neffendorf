@@ -122,7 +122,7 @@ export const Navigation = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 <div
@@ -134,13 +134,13 @@ export const Navigation = () => {
                 >
                   <a
                     href="/retina/retinal-detachment/"
-                    className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-2 px-4 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     Retinal Detachment Surgery
                   </a>
                   <a
                     href="/retina/"
-                    className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-2 px-4 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     All Retinal Services
                   </a>
