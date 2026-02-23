@@ -109,7 +109,7 @@ export const Navigation = () => {
                 <button
                   onClick={(e) => toggleSubMenu(e, 'retina')}
                   aria-expanded={!!subMenuOpen['retina']}
-                  className={`relative flex items-center gap-1 py-2 mx-auto bg-transparent border-0 cursor-pointer transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
+                  className={`relative flex items-center gap-1 py-2 w-full lg:w-auto bg-transparent border-0 cursor-pointer transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
                     location.pathname.startsWith('/retina/')
                       ? 'text-gray-900 active-link'
                       : 'hover:text-gray-900'
