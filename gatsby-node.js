@@ -54,7 +54,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (eyeCare.length > 0) {
     eyeCare.forEach(async (post) => {
       createPage({
-        path: `/eye-care/${post.slug}/`,
+        path: post.slug === 'index' || post.slug === '/' ? `/eye-care/` : `/eye-care/${post.slug}/`,
         component: eyeCarePost,
         context: {
           id: post.id,
@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (retina.length > 0) {
     retina.forEach(async (post) => {
       createPage({
-        path: `/retina/${post.slug}/`,
+        path: post.slug === 'index' || post.slug === '/' ? `/retina/` : `/retina/${post.slug}/`,
         component: retinaPost,
         context: {
           id: post.id,
@@ -90,7 +90,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (cataract.length > 0) {
     cataract.forEach(async (post) => {
       createPage({
-        path: `/cataract/${post.slug}/`,
+        path: post.slug === 'index' || post.slug === '/' ? `/cataract/` : `/cataract/${post.slug}/`,
         component: cataractPost,
         context: {
           id: post.id,
