@@ -580,7 +580,7 @@ h5 {
 
 /* Hover effect applied only on large screens and above */
 @media (min-width: 1024px) {
-  .nav-link:hover::after {
+  .nav-link:not(.active-link):hover::after {
     width: 0;
   }
 }
