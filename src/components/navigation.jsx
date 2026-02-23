@@ -134,13 +134,13 @@ export const Navigation = () => {
                 >
                   <a
                     href="/retina/retinal-detachment/"
-                    className="block py-2 px-4 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     Retinal Detachment Surgery
                   </a>
                   <a
                     href="/retina/"
-                    className="block py-2 px-4 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
                   >
                     All Retinal Services
                   </a>
