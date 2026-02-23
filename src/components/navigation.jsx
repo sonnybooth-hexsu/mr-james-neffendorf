@@ -42,7 +42,7 @@ export const Navigation = () => {
     `relative block py-2 mx-auto transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
       location.pathname === path
         ? 'text-gray-900 active-link'
-        : 'hover:text-gray-900'
+        : 'hover:text-jamesBlue'
     } nav-link`
 
   return (
@@ -112,7 +112,7 @@ export const Navigation = () => {
                   className={`relative flex items-center gap-1 py-2 w-full lg:w-auto bg-transparent border-0 cursor-pointer transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
                     location.pathname.startsWith('/retina/')
                       ? 'text-gray-900 active-link'
-                      : 'hover:text-gray-900'
+                      : 'hover:text-jamesBlue'
                   } nav-link`}
                 >
                   Retina
@@ -134,13 +134,13 @@ export const Navigation = () => {
                 >
                   <a
                     href="/retina/retinal-detachment/"
-                    className="block py-3 px-3 lg:py-4 lg:px-5 text-lg tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 lg:py-4 lg:px-5 text-lg tracking-normal transition-colors duration-300 hover:text-jamesBlue hover:bg-gray-50"
                   >
                     Retinal Detachment Surgery
                   </a>
                   <a
                     href="/retina/"
-                    className="block py-3 px-3 lg:py-4 lg:px-5 text-lg tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    className="block py-3 px-3 lg:py-4 lg:px-5 text-lg tracking-normal transition-colors duration-300 hover:text-jamesBlue hover:bg-gray-50"
                   >
                     All Retinal Services
                   </a>

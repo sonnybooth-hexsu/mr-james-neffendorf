@@ -436,13 +436,13 @@ h5 {
 }
 
 .active-link {
-  color: var(--correct-blue);
   padding-bottom: 12px;
 }
 
 @media (min-width: 1024px) {
-  .active-link {
-    @apply text-jamesBlue; 
+  .active-link::after {
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -581,8 +581,7 @@ h5 {
 /* Hover effect applied only on large screens and above */
 @media (min-width: 1024px) {
   .nav-link:hover::after {
-    width: 100%;
-    left: 0;
+    width: 0;
   }
 }
 
