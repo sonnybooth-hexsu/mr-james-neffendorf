@@ -11,7 +11,7 @@ import arrow from '../assets/arrow.svg'
 class EyeCareTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulEyeCarePage')
-    const overviewDocument = JSON.parse(post.overview.raw)
+    const overviewDocument = post.overview ? JSON.parse(post.overview.raw) : null
 
     const options = {
       preserveWhitespace: true,
@@ -91,12 +91,14 @@ class EyeCareTemplate extends React.Component {
               <div className="grid md:grid-cols-4 md:gap-x-10">
                 <div className="md:col-span-3 md:col-start-1">
                   <section>
-                    <div
-                      className="mb-8"
-                      dangerouslySetInnerHTML={{
-                        __html: documentToHtmlString(overviewDocument, options),
-                      }}
-                    />
+                    {overviewDocument && (
+                      <div
+                        className="mb-8"
+                        dangerouslySetInnerHTML={{
+                          __html: documentToHtmlString(overviewDocument, options),
+                        }}
+                      />
+                    )}
                     <h2 className="mt-10 mb-4">
                       Eye Conditions and Investigations
                     </h2>
