@@ -11,8 +11,8 @@ import Seo from '../components/seo'
 class RetinaTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulRetinaPage')
-    const symptomsDocument = JSON.parse(post.symptoms.raw)
-    const overviewDocument = JSON.parse(post.overview.raw)
+    const symptomsDocument = post.symptoms ? JSON.parse(post.symptoms.raw) : null
+    const overviewDocument = post.overview ? JSON.parse(post.overview.raw) : null
 
     const options = {
       preserveWhitespace: true,
@@ -92,20 +92,26 @@ class RetinaTemplate extends React.Component {
               <div className="grid md:grid-cols-4 md:gap-x-10">
                 <div className="md:col-span-3 md:col-start-1">
                   <section>
-                    <div
-                      className="mb-8"
-                      dangerouslySetInnerHTML={{
-                        __html: documentToHtmlString(overviewDocument, options),
-                      }}
-                    />
+                    {overviewDocument && (
+                      <div
+                        className="mb-8"
+                        dangerouslySetInnerHTML={{
+                          __html: documentToHtmlString(overviewDocument, options),
+                        }}
+                      />
+                    )}
 
-                    <h2 className="mb-2 font-semibold">Symptoms</h2>
-                    <div
-                      className="mb-4 text-gray-600"
-                      dangerouslySetInnerHTML={{
-                        __html: documentToHtmlString(symptomsDocument, options),
-                      }}
-                    />
+                    {symptomsDocument && (
+                      <>
+                        <h2 className="mb-2 font-semibold">Symptoms</h2>
+                        <div
+                          className="mb-4 text-gray-600"
+                          dangerouslySetInnerHTML={{
+                            __html: documentToHtmlString(symptomsDocument, options),
+                          }}
+                        />
+                      </>
+                    )}
                     {post.solutions && (
                       <>
                         <h2 className="mt-10 mb-4">{post.solutionTitle}</h2>
