@@ -126,7 +126,7 @@ export const Navigation = () => {
                   </svg>
                 </button>
                 <div
-                  className={`overflow-hidden lg:overflow-visible transition-all duration-300 ease-in-out lg:absolute lg:top-full lg:left-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-xl lg:min-w-[440px] lg:z-50 ${
+                  className={`overflow-hidden lg:overflow-visible transition-all duration-300 ease-in-out lg:absolute lg:top-full lg:left-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-xl lg:min-w-[220px] lg:z-50 ${
                     subMenuOpen['retina']
                       ? 'max-h-56 opacity-100 mt-1 pl-4 lg:pl-0 lg:mt-0 lg:py-5'
                       : 'max-h-0 opacity-0 pointer-events-none'
