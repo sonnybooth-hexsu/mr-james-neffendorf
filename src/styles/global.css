@@ -440,7 +440,7 @@ h5 {
 }
 
 @media (min-width: 1024px) {
-  .active-link::after {
+  .nav-link.active-link::after {
     width: 100%;
     left: 0;
   }
