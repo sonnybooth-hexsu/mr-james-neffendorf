@@ -109,7 +109,7 @@ export const Navigation = () => {
                 <button
                   onClick={(e) => toggleSubMenu(e, 'retina')}
                   aria-expanded={!!subMenuOpen['retina']}
-                  className={`relative flex items-center gap-1 py-2 mx-auto transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
+                  className={`relative flex items-center gap-1 py-2 mx-auto bg-transparent border-0 cursor-pointer transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
                     location.pathname.startsWith('/retina/')
                       ? 'text-gray-900 active-link'
                       : 'hover:text-gray-900'
@@ -117,7 +117,7 @@ export const Navigation = () => {
                 >
                   Retina
                   <svg
-                    className={`w-3 h-3 transition-transform ${subMenuOpen['retina'] ? 'rotate-180' : ''}`}
+                    className={`w-3 h-3 transition-transform duration-300 ease-in-out ${subMenuOpen['retina'] ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -125,22 +125,26 @@ export const Navigation = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {subMenuOpen['retina'] && (
-                  <div className="pl-4 mt-1 lg:pl-0 lg:absolute lg:top-full lg:left-0 lg:mt-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-lg lg:min-w-[220px] lg:py-2 lg:z-50">
-                    <a
-                      href="/retina/retinal-detachment/"
-                      className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      Retinal Detachment Surgery
-                    </a>
-                    <a
-                      href="/retina/"
-                      className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      All Retinal Services
-                    </a>
-                  </div>
-                )}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out lg:absolute lg:top-full lg:left-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-lg lg:min-w-[220px] lg:z-50 ${
+                    subMenuOpen['retina']
+                      ? 'max-h-40 opacity-100 mt-1 pl-4 lg:pl-0 lg:mt-0 lg:py-2'
+                      : 'max-h-0 opacity-0 pointer-events-none'
+                  }`}
+                >
+                  <a
+                    href="/retina/retinal-detachment/"
+                    className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                  >
+                    Retinal Detachment Surgery
+                  </a>
+                  <a
+                    href="/retina/"
+                    className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                  >
+                    All Retinal Services
+                  </a>
+                </div>
               </div>
 
               <div className="font-medium tracking-wider lg:flex lg:items-center lg:justify-center">
