@@ -98,26 +98,55 @@ export const Navigation = () => {
 
               <div className="font-medium tracking-wider lg:flex lg:items-center lg:justify-center">
                 <a
-                  href="/cataract/treatment-and-services/"
-                  className={getLinkClass('/cataract/cataract-1/')}
+                  href="/cataract/"
+                  className={getLinkClass('/cataract/')}
                 >
                   Cataract
                 </a>
               </div>
 
-              <div className="font-medium tracking-wider lg:flex lg:items-center lg:justify-center">
-                <a
-                  href="/retina/treatment-and-services/"
-                  className={getLinkClass('/retina/retina-1/')}
+              <div className="relative font-medium tracking-wider lg:flex lg:items-center lg:justify-center">
+                <button
+                  onClick={(e) => toggleSubMenu(e, 'retina')}
+                  aria-expanded={!!subMenuOpen['retina']}
+                  className={`relative flex items-center gap-1 py-2 mx-auto transition-colors tracking-normal duration-300 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 ${
+                    location.pathname.startsWith('/retina/')
+                      ? 'text-gray-900 active-link'
+                      : 'hover:text-gray-900'
+                  } nav-link`}
                 >
                   Retina
-                </a>
+                  <svg
+                    className={`w-3 h-3 transition-transform ${subMenuOpen['retina'] ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {subMenuOpen['retina'] && (
+                  <div className="pl-4 mt-1 lg:pl-0 lg:absolute lg:top-full lg:left-0 lg:mt-0 lg:bg-jamesWhite lg:border lg:border-gray-100 lg:rounded-md lg:shadow-lg lg:min-w-[220px] lg:py-2 lg:z-50">
+                    <a
+                      href="/retina/retinal-detachment/"
+                      className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    >
+                      Retinal Detachment Surgery
+                    </a>
+                    <a
+                      href="/retina/"
+                      className="block py-2 px-4 text-sm tracking-normal transition-colors duration-300 hover:text-gray-900 hover:bg-gray-50"
+                    >
+                      All Retinal Services
+                    </a>
+                  </div>
+                )}
               </div>
 
               <div className="font-medium tracking-wider lg:flex lg:items-center lg:justify-center">
                 <a
-                  href="/eye-care/treatment-and-services/"
-                  className={getLinkClass('/eye-care/eye-conditions/')}
+                  href="/eye-care/"
+                  className={getLinkClass('/eye-care/')}
                 >
                   Eye Conditions
                 </a>
