@@ -1,8 +1,17 @@
-/retina/retina-1        /retina/treatment-and-services/        301!
-/retina/retina-1/       /retina/treatment-and-services/        301!
+# --- RETINA HUB CONSOLIDATION ---
+/retina/treatment-and-services    /retina/    301!
+/retina/treatment-and-services/   /retina/    301!
+/retina/retina-1                  /retina/    301!
+/retina/retina-1/                 /retina/    301!
 
-/cataract/cataract-1    /cataract/treatment-and-services/      301!
-/cataract/cataract-1/   /cataract/treatment-and-services/      301!
+# --- CATARACT HUB CONSOLIDATION ---
+/cataract/treatment-and-services    /cataract/    301!
+/cataract/treatment-and-services/   /cataract/    301!
+/cataract/cataract-1                /cataract/    301!
+/cataract/cataract-1/               /cataract/    301!
 
-/eye-care/eye-care-1    /eye-care/treatment-and-services/      301!
-/eye-care/eye-care-1/   /eye-care/treatment-and-services/      301!
+# --- EYE CARE HUB CONSOLIDATION ---
+/eye-care/treatment-and-services    /eye-care/    301!
+/eye-care/treatment-and-services/   /eye-care/    301!
+/eye-care/eye-care-1                /eye-care/    301!
+/eye-care/eye-care-1/               /eye-care/    301!
