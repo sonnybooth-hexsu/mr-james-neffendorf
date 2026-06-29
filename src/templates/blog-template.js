@@ -4,11 +4,14 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import Seo from '../components/seo'
+import JsonLd from '../components/json-ld'
+import { buildBlogPostingSchema } from '../utils/structured-data'
 import moment from 'moment'
 
 class BlogTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPage')
+    const pathname = get(this.props, 'location.pathname', '/')
     const bodyDocument = JSON.parse(post.bodyText.raw)
 
     const options = {
@@ -19,6 +22,7 @@ class BlogTemplate extends React.Component {
       <Layout>
         <div className="main-content cms-page">
           <Seo title={post.seoTitle} description={post.metaDescription} />
+          <JsonLd data={buildBlogPostingSchema(post, pathname)} />
           <section id="relume" className="px-[5%] py-20 md:py-24 lg:py-28">
             <div className="container">
               <div className="flex flex-col items-start justify-start w-full max-w-lg mx-auto mb-12 md:mb-16 lg:mb-20">

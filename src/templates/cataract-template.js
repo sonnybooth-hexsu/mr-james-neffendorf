@@ -6,6 +6,8 @@ import grade from '../assets/grade.svg'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import JsonLd from '../components/json-ld'
+import { buildFaqPageSchema } from '../utils/structured-data'
 import arrow from '../assets/arrow.svg'
 
 class CataractTemplate extends React.Component {
@@ -21,6 +23,7 @@ class CataractTemplate extends React.Component {
     return (
       <Layout>
         <Seo title={post.seoTitle} description={post.metaDescription} />
+        <JsonLd data={buildFaqPageSchema(get(post, 'faqs.items'))} />
         <div className="main-content cms-page">
           <section className="px-[5%] border-b py-16 md:py-24 lg:py-28">
             <div className="container">

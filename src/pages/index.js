@@ -33,8 +33,11 @@ const DOCTIFY_SCRIPT_SRC = `https://www.doctify.com/wv2/doctify-widget-autoresiz
 const Home = () => (
   <div>
     <Helmet>
-      <title>Mr James Neffendorf</title>
-      <meta name="description" content="Your page description" />
+      <title>Mr James Neffendorf | Consultant Eye Surgeon in London</title>
+      <meta
+        name="description"
+        content="Mr James Neffendorf is a leading London consultant ophthalmologist and vitreoretinal surgeon, specialising in cataract surgery and retinal conditions. Book a private consultation today."
+      />
       <link rel="stylesheet" href="https://use.typekit.net/nak2vhf.css" />
     </Helmet>
   </div>
