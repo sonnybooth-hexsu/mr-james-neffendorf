@@ -12,7 +12,7 @@ const PERSON_ID = `${SITE_URL}/#james-neffendorf`
 const WEBSITE_ID = `${SITE_URL}/#website`
 
 // Clinics where Mr Neffendorf consults (see src/pages/contact.js).
-const workLocations = [
+const clinics = [
   {
     '@type': 'MedicalClinic',
     name: 'The London Clinic Eye Centre',
@@ -80,8 +80,7 @@ const personSchema = {
     name: 'University of Cambridge',
   },
   affiliation: affiliations,
-  worksFor: workLocations,
-  workLocation: workLocations,
+  worksFor: clinics,
   sameAs: [
     'https://www.doctify.com/uk/specialist/james-neffendorf',
     'https://www.linkedin.com/in/james-neffendorf-0b601a90/',
