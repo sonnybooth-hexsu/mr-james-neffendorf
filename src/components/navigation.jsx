@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLocation } from '@reach/router'
-import logo from '../assets/logo.png'
-import patientExperience from '../assets/2025-outstanding-patient-experience-doctify.png'
+import logo from '../assets/logo.webp'
+import patientExperience from '../assets/2025-outstanding-patient-experience-doctify.webp'
 import '../styles/global.css'
 
 export const Navigation = () => {

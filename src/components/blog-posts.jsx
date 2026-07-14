@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import moment from 'moment'
+import { ctfImage } from '../utils/images'
 
 export const BlogPosts = () => {
   const blogs = useStaticQuery(graphql`
@@ -32,7 +33,8 @@ export const BlogPosts = () => {
             <a href={item.slug} className="inline-block w-full max-w-full mb-6">
               <div className="w-full overflow-hidden rounded-lg">
                 <img
-                  src={item.banner.url}
+                  src={ctfImage(item.banner.url, 800)}
+                  loading="lazy"
                   alt={item.heading}
                   className="aspect-[3/2] size-full object-cover"
                 />

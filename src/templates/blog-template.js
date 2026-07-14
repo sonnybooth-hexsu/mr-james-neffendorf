@@ -6,6 +6,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import Seo from '../components/seo'
 import JsonLd from '../components/json-ld'
 import { buildBlogPostingSchema } from '../utils/structured-data'
+import { ctfImage } from '../utils/images'
 import moment from 'moment'
 
 class BlogTemplate extends React.Component {
@@ -64,7 +65,9 @@ class BlogTemplate extends React.Component {
                   <div className="flex items-center mb-4 rb-4 sm:mb-0">
                     <div className="mr-4 shrink-0">
                       <img
-                        src={post.authImage.url}
+                        src={ctfImage(post.authImage.url, 120)}
+                        loading="lazy"
+                        alt={post.author}
                         className="object-cover rounded-full size-14 min-h-14 min-w-14"
                       />
                     </div>
@@ -84,7 +87,7 @@ class BlogTemplate extends React.Component {
               </div>
               <div className="w-full overflow-hidden rounded-3xl aspect-w-16 aspect-h-9">
                 <img
-                  src={post.banner.url}
+                  src={ctfImage(post.banner.url, 1200)}
                   alt={post.heading}
                   className="object-cover w-full h-full"
                 />

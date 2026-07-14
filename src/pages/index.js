@@ -1,24 +1,24 @@
 import React from 'react'
 import Layout from '../components/layout'
-import jamesMain from '../assets/james-main.png'
-import jamesTreatment from '../assets/james-treatment.jpg'
+import jamesMain from '../assets/james-main.webp'
+import jamesTreatment from '../assets/james-treatment.webp'
 import doctifyLogo from '../assets/doctify-logo.svg'
 import iconCheckmark from '../assets/checkmark.svg'
-import aao from '../assets/aao.png'
+import aao from '../assets/aao.webp'
 import beavrs from '../assets/beavrs.svg'
 import escrs from '../assets/escrs.svg'
 import eurina from '../assets/eurina.svg'
 import rocopth from '../assets/rocopth.svg'
-import cmac from '../assets/cmac.png'
+import cmac from '../assets/cmac.webp'
 import topRightSvg from '../assets/top-right.svg'
 import topDoctors from '../assets/top-doctors.svg'
 import bottomLeftSvg from '../assets/bottom-left.svg'
 import swoosh2 from '../assets/swoosh-2.svg'
 import grade from '../assets/grade.svg'
 import { Helmet } from 'react-helmet'
-import eyeExam from '../assets/excellence-eye.jpg'
+import eyeExam from '../assets/excellence-eye.webp'
 import quoteMark from '../assets/quote-mark.svg'
-import patient from '../assets/patient.jpg'
+import patient from '../assets/patient.webp'
 import iconCheckmarkSmall from '../assets/check_small.svg'
 // import Testimonials from '../components/Testimonials'
 
@@ -205,6 +205,9 @@ class RootIndex extends React.Component {
                 <div className="relative">
                   <img
                     src={jamesMain}
+                    fetchPriority="high"
+                    width="568"
+                    height="720"
                     className="relative z-10 object-cover w-full mx-auto lg:w-3/4"
                     alt="Mr James E. Neffendorf, Ophthalmic Surgeon, wearing a navy blue medical uniform and smiling."
                   />
@@ -406,6 +409,7 @@ class RootIndex extends React.Component {
               <div className="aspect-w-1 aspect-h-1">
                 <img
                   src={eyeExam}
+                  loading="lazy"
                   className="object-cover w-full h-full rounded-xl"
                   alt="Ophthalmologist examining a middle-aged female patient using a slit lamp in an eye clinic."
                 />
@@ -551,6 +555,7 @@ class RootIndex extends React.Component {
             <div className="absolute inset-0 -z-10">
               <img
                 src={jamesTreatment}
+                loading="lazy"
                 className="object-cover w-full h-full"
                 alt="Mr James E. Neffendorf conducting an eye examination on a male patient using a specialised slit lamp in a medical office."
               />
@@ -584,8 +589,9 @@ class RootIndex extends React.Component {
                 <div className="overflow-hidden bg-gray-300 rounded-md md:col-span-1 md:col-start-3">
                   <img
                     src={patient}
+                    loading="lazy"
                     className="object-cover w-full p-20 rounded-xl md:p-0"
-                    alt="Previous patient"
+                    alt="A previous patient of Mr James Neffendorf smiling after eye treatment."
                   />
                 </div>
               </div>

@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import JsonLd from '../components/json-ld'
 import { buildFaqPageSchema } from '../utils/structured-data'
+import { ctfImage } from '../utils/images'
 import arrow from '../assets/arrow.svg'
 
 class EyeCareTemplate extends React.Component {
@@ -69,9 +70,9 @@ class EyeCareTemplate extends React.Component {
                 </div>
                 <div className="relative">
                   <img
-                    src={post.headingImage.url}
+                    src={ctfImage(post.headingImage.url, 1000)}
                     className="object-cover w-full rounded-xl "
-                    alt="Featured image"
+                    alt={post.heading}
                   />
                   <div className="absolute flex items-center p-4 bg-white rounded-md shadow-xl bottom-4 right-4">
                     <p className="mr-2 text-base font-bold text-gray-800">
