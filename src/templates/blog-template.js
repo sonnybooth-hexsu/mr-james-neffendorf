@@ -21,7 +21,12 @@ class BlogTemplate extends React.Component {
     return (
       <Layout>
         <div className="main-content cms-page">
-          <Seo title={post.seoTitle} description={post.metaDescription} />
+          <Seo
+            title={post.seoTitle}
+            description={post.metaDescription}
+            image={get(post, 'banner.url')}
+            type="article"
+          />
           <JsonLd data={buildBlogPostingSchema(post, pathname)} />
           <section id="relume" className="px-[5%] py-20 md:py-24 lg:py-28">
             <div className="container">
@@ -80,7 +85,7 @@ class BlogTemplate extends React.Component {
               <div className="w-full overflow-hidden rounded-3xl aspect-w-16 aspect-h-9">
                 <img
                   src={post.banner.url}
-                  alt=""
+                  alt={post.heading}
                   className="object-cover w-full h-full"
                 />
               </div>

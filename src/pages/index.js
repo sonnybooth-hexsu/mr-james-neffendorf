@@ -30,14 +30,29 @@ const DOCTIFY_IFRAME_SRC = `https://www.doctify.com/wv2/${DOCTIFY_WIDGET_NAME}?c
 
 const DOCTIFY_SCRIPT_SRC = `https://www.doctify.com/wv2/doctify-widget-autoresize-plugin.js?tenantId=${DOCTIFY_TENANT_ID}&widgetName=${DOCTIFY_WIDGET_NAME}&containerId=${DOCTIFY_CONTAINER_ID}`
 
+const HOME_TITLE = 'Mr James Neffendorf | Consultant Eye Surgeon in London'
+const HOME_DESCRIPTION =
+  'Mr James Neffendorf is a leading London consultant ophthalmologist and vitreoretinal surgeon, specialising in cataract surgery and retinal conditions. Book a private consultation today.'
+const HOME_URL = 'https://mrjamesneffendorf.com/'
+const HOME_IMAGE = 'https://mrjamesneffendorf.com/james-neffendorf.jpg'
+
 const Home = () => (
   <div>
     <Helmet>
-      <title>Mr James Neffendorf | Consultant Eye Surgeon in London</title>
-      <meta
-        name="description"
-        content="Mr James Neffendorf is a leading London consultant ophthalmologist and vitreoretinal surgeon, specialising in cataract surgery and retinal conditions. Book a private consultation today."
-      />
+      <title>{HOME_TITLE}</title>
+      <meta name="description" content={HOME_DESCRIPTION} />
+      <link rel="canonical" href={HOME_URL} />
+      <meta property="og:title" content={HOME_TITLE} />
+      <meta property="og:description" content={HOME_DESCRIPTION} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={HOME_URL} />
+      <meta property="og:image" content={HOME_IMAGE} />
+      <meta property="og:site_name" content="Mr James Neffendorf" />
+      <meta property="og:locale" content="en_GB" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={HOME_TITLE} />
+      <meta name="twitter:description" content={HOME_DESCRIPTION} />
+      <meta name="twitter:image" content={HOME_IMAGE} />
       <link rel="stylesheet" href="https://use.typekit.net/nak2vhf.css" />
     </Helmet>
   </div>

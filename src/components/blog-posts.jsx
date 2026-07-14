@@ -33,7 +33,7 @@ export const BlogPosts = () => {
               <div className="w-full overflow-hidden rounded-lg">
                 <img
                   src={item.banner.url}
-                  alt=""
+                  alt={item.heading}
                   className="aspect-[3/2] size-full object-cover"
                 />
               </div>

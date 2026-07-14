@@ -4,8 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful Starter',
-    description: 'Official Contentful Gatsby Starter',
+    title: 'Mr James Neffendorf',
+    description:
+      'Consultant ophthalmologist and vitreoretinal surgeon in London, specialising in cataract and retinal surgery.',
     siteUrl: `https://mrjamesneffendorf.com`,
   },
   plugins: [
