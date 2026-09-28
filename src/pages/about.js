@@ -261,16 +261,6 @@ class About extends React.Component {
                         alt="Checkmark Icon"
                       />
                     </div>
-                    <p>Director of Retina and Macula Disease, Ocuplan UK</p>
-                  </div>
-                  <div className="flex self-start">
-                    <div className="self-start flex-none mr-2">
-                      <img
-                        className="inline-block size-6"
-                        src={iconCheckmarkSmall}
-                        alt="Checkmark Icon"
-                      />
-                    </div>
                     <p>
                       Lead, Clinical Innovation and Discovery, Ophthalmology,
                       Panacea Innovation
